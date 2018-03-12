@@ -19,307 +19,453 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "Pinpoint" :: String
-
 
 -- | Creates or updates an app.
 createApp :: forall eff. CreateAppRequest -> Aff (exception :: EXCEPTION | eff) CreateAppResponse
-createApp = Request.request serviceName "createApp" 
+createApp = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "createApp"
 
 
 -- | Creates or updates a campaign.
 createCampaign :: forall eff. CreateCampaignRequest -> Aff (exception :: EXCEPTION | eff) CreateCampaignResponse
-createCampaign = Request.request serviceName "createCampaign" 
+createCampaign = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "createCampaign"
+
+
+-- | Creates an export job.
+createExportJob :: forall eff. CreateExportJobRequest -> Aff (exception :: EXCEPTION | eff) CreateExportJobResponse
+createExportJob = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "createExportJob"
 
 
 -- | Creates or updates an import job.
 createImportJob :: forall eff. CreateImportJobRequest -> Aff (exception :: EXCEPTION | eff) CreateImportJobResponse
-createImportJob = Request.request serviceName "createImportJob" 
+createImportJob = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "createImportJob"
 
 
 -- | Used to create or update a segment.
 createSegment :: forall eff. CreateSegmentRequest -> Aff (exception :: EXCEPTION | eff) CreateSegmentResponse
-createSegment = Request.request serviceName "createSegment" 
+createSegment = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "createSegment"
 
 
 -- | Delete an ADM channel
 deleteAdmChannel :: forall eff. DeleteAdmChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteAdmChannelResponse
-deleteAdmChannel = Request.request serviceName "deleteAdmChannel" 
+deleteAdmChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteAdmChannel"
 
 
 -- | Deletes the APNs channel for an app.
 deleteApnsChannel :: forall eff. DeleteApnsChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteApnsChannelResponse
-deleteApnsChannel = Request.request serviceName "deleteApnsChannel" 
+deleteApnsChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteApnsChannel"
 
 
 -- | Delete an APNS sandbox channel
 deleteApnsSandboxChannel :: forall eff. DeleteApnsSandboxChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteApnsSandboxChannelResponse
-deleteApnsSandboxChannel = Request.request serviceName "deleteApnsSandboxChannel" 
+deleteApnsSandboxChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteApnsSandboxChannel"
 
 
 -- | Delete an APNS VoIP channel
 deleteApnsVoipChannel :: forall eff. DeleteApnsVoipChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteApnsVoipChannelResponse
-deleteApnsVoipChannel = Request.request serviceName "deleteApnsVoipChannel" 
+deleteApnsVoipChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteApnsVoipChannel"
 
 
 -- | Delete an APNS VoIP sandbox channel
 deleteApnsVoipSandboxChannel :: forall eff. DeleteApnsVoipSandboxChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteApnsVoipSandboxChannelResponse
-deleteApnsVoipSandboxChannel = Request.request serviceName "deleteApnsVoipSandboxChannel" 
+deleteApnsVoipSandboxChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteApnsVoipSandboxChannel"
 
 
 -- | Deletes an app.
 deleteApp :: forall eff. DeleteAppRequest -> Aff (exception :: EXCEPTION | eff) DeleteAppResponse
-deleteApp = Request.request serviceName "deleteApp" 
+deleteApp = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteApp"
 
 
 -- | Delete a BAIDU GCM channel
 deleteBaiduChannel :: forall eff. DeleteBaiduChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteBaiduChannelResponse
-deleteBaiduChannel = Request.request serviceName "deleteBaiduChannel" 
+deleteBaiduChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteBaiduChannel"
 
 
 -- | Deletes a campaign.
 deleteCampaign :: forall eff. DeleteCampaignRequest -> Aff (exception :: EXCEPTION | eff) DeleteCampaignResponse
-deleteCampaign = Request.request serviceName "deleteCampaign" 
+deleteCampaign = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteCampaign"
 
 
 -- | Delete an email channel
 deleteEmailChannel :: forall eff. DeleteEmailChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteEmailChannelResponse
-deleteEmailChannel = Request.request serviceName "deleteEmailChannel" 
+deleteEmailChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteEmailChannel"
 
 
 -- | Deletes the event stream for an app.
 deleteEventStream :: forall eff. DeleteEventStreamRequest -> Aff (exception :: EXCEPTION | eff) DeleteEventStreamResponse
-deleteEventStream = Request.request serviceName "deleteEventStream" 
+deleteEventStream = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteEventStream"
 
 
 -- | Deletes the GCM channel for an app.
 deleteGcmChannel :: forall eff. DeleteGcmChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteGcmChannelResponse
-deleteGcmChannel = Request.request serviceName "deleteGcmChannel" 
+deleteGcmChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteGcmChannel"
 
 
 -- | Deletes a segment.
 deleteSegment :: forall eff. DeleteSegmentRequest -> Aff (exception :: EXCEPTION | eff) DeleteSegmentResponse
-deleteSegment = Request.request serviceName "deleteSegment" 
+deleteSegment = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteSegment"
 
 
 -- | Delete an SMS channel
 deleteSmsChannel :: forall eff. DeleteSmsChannelRequest -> Aff (exception :: EXCEPTION | eff) DeleteSmsChannelResponse
-deleteSmsChannel = Request.request serviceName "deleteSmsChannel" 
+deleteSmsChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "deleteSmsChannel"
 
 
 -- | Get an ADM channel
 getAdmChannel :: forall eff. GetAdmChannelRequest -> Aff (exception :: EXCEPTION | eff) GetAdmChannelResponse
-getAdmChannel = Request.request serviceName "getAdmChannel" 
+getAdmChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getAdmChannel"
 
 
 -- | Returns information about the APNs channel for an app.
 getApnsChannel :: forall eff. GetApnsChannelRequest -> Aff (exception :: EXCEPTION | eff) GetApnsChannelResponse
-getApnsChannel = Request.request serviceName "getApnsChannel" 
+getApnsChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApnsChannel"
 
 
 -- | Get an APNS sandbox channel
 getApnsSandboxChannel :: forall eff. GetApnsSandboxChannelRequest -> Aff (exception :: EXCEPTION | eff) GetApnsSandboxChannelResponse
-getApnsSandboxChannel = Request.request serviceName "getApnsSandboxChannel" 
+getApnsSandboxChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApnsSandboxChannel"
 
 
 -- | Get an APNS VoIP channel
 getApnsVoipChannel :: forall eff. GetApnsVoipChannelRequest -> Aff (exception :: EXCEPTION | eff) GetApnsVoipChannelResponse
-getApnsVoipChannel = Request.request serviceName "getApnsVoipChannel" 
+getApnsVoipChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApnsVoipChannel"
 
 
--- | Get an APNS VoipSandbox channel
+-- | Get an APNS VoIPSandbox channel
 getApnsVoipSandboxChannel :: forall eff. GetApnsVoipSandboxChannelRequest -> Aff (exception :: EXCEPTION | eff) GetApnsVoipSandboxChannelResponse
-getApnsVoipSandboxChannel = Request.request serviceName "getApnsVoipSandboxChannel" 
+getApnsVoipSandboxChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApnsVoipSandboxChannel"
 
 
 -- | Returns information about an app.
 getApp :: forall eff. GetAppRequest -> Aff (exception :: EXCEPTION | eff) GetAppResponse
-getApp = Request.request serviceName "getApp" 
+getApp = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApp"
 
 
 -- | Used to request the settings for an app.
 getApplicationSettings :: forall eff. GetApplicationSettingsRequest -> Aff (exception :: EXCEPTION | eff) GetApplicationSettingsResponse
-getApplicationSettings = Request.request serviceName "getApplicationSettings" 
+getApplicationSettings = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApplicationSettings"
 
 
 -- | Returns information about your apps.
 getApps :: forall eff. GetAppsRequest -> Aff (exception :: EXCEPTION | eff) GetAppsResponse
-getApps = Request.request serviceName "getApps" 
+getApps = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getApps"
 
 
 -- | Get a BAIDU GCM channel
 getBaiduChannel :: forall eff. GetBaiduChannelRequest -> Aff (exception :: EXCEPTION | eff) GetBaiduChannelResponse
-getBaiduChannel = Request.request serviceName "getBaiduChannel" 
+getBaiduChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getBaiduChannel"
 
 
 -- | Returns information about a campaign.
 getCampaign :: forall eff. GetCampaignRequest -> Aff (exception :: EXCEPTION | eff) GetCampaignResponse
-getCampaign = Request.request serviceName "getCampaign" 
+getCampaign = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getCampaign"
 
 
 -- | Returns information about the activity performed by a campaign.
 getCampaignActivities :: forall eff. GetCampaignActivitiesRequest -> Aff (exception :: EXCEPTION | eff) GetCampaignActivitiesResponse
-getCampaignActivities = Request.request serviceName "getCampaignActivities" 
+getCampaignActivities = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getCampaignActivities"
 
 
 -- | Returns information about a specific version of a campaign.
 getCampaignVersion :: forall eff. GetCampaignVersionRequest -> Aff (exception :: EXCEPTION | eff) GetCampaignVersionResponse
-getCampaignVersion = Request.request serviceName "getCampaignVersion" 
+getCampaignVersion = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getCampaignVersion"
 
 
 -- | Returns information about your campaign versions.
 getCampaignVersions :: forall eff. GetCampaignVersionsRequest -> Aff (exception :: EXCEPTION | eff) GetCampaignVersionsResponse
-getCampaignVersions = Request.request serviceName "getCampaignVersions" 
+getCampaignVersions = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getCampaignVersions"
 
 
 -- | Returns information about your campaigns.
 getCampaigns :: forall eff. GetCampaignsRequest -> Aff (exception :: EXCEPTION | eff) GetCampaignsResponse
-getCampaigns = Request.request serviceName "getCampaigns" 
+getCampaigns = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getCampaigns"
 
 
 -- | Get an email channel
 getEmailChannel :: forall eff. GetEmailChannelRequest -> Aff (exception :: EXCEPTION | eff) GetEmailChannelResponse
-getEmailChannel = Request.request serviceName "getEmailChannel" 
+getEmailChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getEmailChannel"
 
 
 -- | Returns information about an endpoint.
 getEndpoint :: forall eff. GetEndpointRequest -> Aff (exception :: EXCEPTION | eff) GetEndpointResponse
-getEndpoint = Request.request serviceName "getEndpoint" 
+getEndpoint = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getEndpoint"
 
 
 -- | Returns the event stream for an app.
 getEventStream :: forall eff. GetEventStreamRequest -> Aff (exception :: EXCEPTION | eff) GetEventStreamResponse
-getEventStream = Request.request serviceName "getEventStream" 
+getEventStream = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getEventStream"
+
+
+-- | Returns information about an export job.
+getExportJob :: forall eff. GetExportJobRequest -> Aff (exception :: EXCEPTION | eff) GetExportJobResponse
+getExportJob = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getExportJob"
+
+
+-- | Returns information about your export jobs.
+getExportJobs :: forall eff. GetExportJobsRequest -> Aff (exception :: EXCEPTION | eff) GetExportJobsResponse
+getExportJobs = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getExportJobs"
 
 
 -- | Returns information about the GCM channel for an app.
 getGcmChannel :: forall eff. GetGcmChannelRequest -> Aff (exception :: EXCEPTION | eff) GetGcmChannelResponse
-getGcmChannel = Request.request serviceName "getGcmChannel" 
+getGcmChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getGcmChannel"
 
 
 -- | Returns information about an import job.
 getImportJob :: forall eff. GetImportJobRequest -> Aff (exception :: EXCEPTION | eff) GetImportJobResponse
-getImportJob = Request.request serviceName "getImportJob" 
+getImportJob = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getImportJob"
 
 
 -- | Returns information about your import jobs.
 getImportJobs :: forall eff. GetImportJobsRequest -> Aff (exception :: EXCEPTION | eff) GetImportJobsResponse
-getImportJobs = Request.request serviceName "getImportJobs" 
+getImportJobs = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getImportJobs"
 
 
 -- | Returns information about a segment.
 getSegment :: forall eff. GetSegmentRequest -> Aff (exception :: EXCEPTION | eff) GetSegmentResponse
-getSegment = Request.request serviceName "getSegment" 
+getSegment = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSegment"
+
+
+-- | Returns a list of export jobs for a specific segment.
+getSegmentExportJobs :: forall eff. GetSegmentExportJobsRequest -> Aff (exception :: EXCEPTION | eff) GetSegmentExportJobsResponse
+getSegmentExportJobs = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSegmentExportJobs"
 
 
 -- | Returns a list of import jobs for a specific segment.
 getSegmentImportJobs :: forall eff. GetSegmentImportJobsRequest -> Aff (exception :: EXCEPTION | eff) GetSegmentImportJobsResponse
-getSegmentImportJobs = Request.request serviceName "getSegmentImportJobs" 
+getSegmentImportJobs = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSegmentImportJobs"
 
 
 -- | Returns information about a segment version.
 getSegmentVersion :: forall eff. GetSegmentVersionRequest -> Aff (exception :: EXCEPTION | eff) GetSegmentVersionResponse
-getSegmentVersion = Request.request serviceName "getSegmentVersion" 
+getSegmentVersion = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSegmentVersion"
 
 
 -- | Returns information about your segment versions.
 getSegmentVersions :: forall eff. GetSegmentVersionsRequest -> Aff (exception :: EXCEPTION | eff) GetSegmentVersionsResponse
-getSegmentVersions = Request.request serviceName "getSegmentVersions" 
+getSegmentVersions = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSegmentVersions"
 
 
 -- | Used to get information about your segments.
 getSegments :: forall eff. GetSegmentsRequest -> Aff (exception :: EXCEPTION | eff) GetSegmentsResponse
-getSegments = Request.request serviceName "getSegments" 
+getSegments = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSegments"
 
 
 -- | Get an SMS channel
 getSmsChannel :: forall eff. GetSmsChannelRequest -> Aff (exception :: EXCEPTION | eff) GetSmsChannelResponse
-getSmsChannel = Request.request serviceName "getSmsChannel" 
+getSmsChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "getSmsChannel"
 
 
 -- | Use to create or update the event stream for an app.
 putEventStream :: forall eff. PutEventStreamRequest -> Aff (exception :: EXCEPTION | eff) PutEventStreamResponse
-putEventStream = Request.request serviceName "putEventStream" 
+putEventStream = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "putEventStream"
 
 
 -- | Send a batch of messages
 sendMessages :: forall eff. SendMessagesRequest -> Aff (exception :: EXCEPTION | eff) SendMessagesResponse
-sendMessages = Request.request serviceName "sendMessages" 
+sendMessages = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "sendMessages"
 
 
 -- | Send a batch of messages to users
 sendUsersMessages :: forall eff. SendUsersMessagesRequest -> Aff (exception :: EXCEPTION | eff) SendUsersMessagesResponse
-sendUsersMessages = Request.request serviceName "sendUsersMessages" 
+sendUsersMessages = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "sendUsersMessages"
 
 
 -- | Update an ADM channel
 updateAdmChannel :: forall eff. UpdateAdmChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateAdmChannelResponse
-updateAdmChannel = Request.request serviceName "updateAdmChannel" 
+updateAdmChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateAdmChannel"
 
 
 -- | Use to update the APNs channel for an app.
 updateApnsChannel :: forall eff. UpdateApnsChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateApnsChannelResponse
-updateApnsChannel = Request.request serviceName "updateApnsChannel" 
+updateApnsChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateApnsChannel"
 
 
 -- | Update an APNS sandbox channel
 updateApnsSandboxChannel :: forall eff. UpdateApnsSandboxChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateApnsSandboxChannelResponse
-updateApnsSandboxChannel = Request.request serviceName "updateApnsSandboxChannel" 
+updateApnsSandboxChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateApnsSandboxChannel"
 
 
 -- | Update an APNS VoIP channel
 updateApnsVoipChannel :: forall eff. UpdateApnsVoipChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateApnsVoipChannelResponse
-updateApnsVoipChannel = Request.request serviceName "updateApnsVoipChannel" 
+updateApnsVoipChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateApnsVoipChannel"
 
 
 -- | Update an APNS VoIP sandbox channel
 updateApnsVoipSandboxChannel :: forall eff. UpdateApnsVoipSandboxChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateApnsVoipSandboxChannelResponse
-updateApnsVoipSandboxChannel = Request.request serviceName "updateApnsVoipSandboxChannel" 
+updateApnsVoipSandboxChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateApnsVoipSandboxChannel"
 
 
 -- | Used to update the settings for an app.
 updateApplicationSettings :: forall eff. UpdateApplicationSettingsRequest -> Aff (exception :: EXCEPTION | eff) UpdateApplicationSettingsResponse
-updateApplicationSettings = Request.request serviceName "updateApplicationSettings" 
+updateApplicationSettings = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateApplicationSettings"
 
 
 -- | Update a BAIDU GCM channel
 updateBaiduChannel :: forall eff. UpdateBaiduChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateBaiduChannelResponse
-updateBaiduChannel = Request.request serviceName "updateBaiduChannel" 
+updateBaiduChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateBaiduChannel"
 
 
 -- | Use to update a campaign.
 updateCampaign :: forall eff. UpdateCampaignRequest -> Aff (exception :: EXCEPTION | eff) UpdateCampaignResponse
-updateCampaign = Request.request serviceName "updateCampaign" 
+updateCampaign = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateCampaign"
 
 
 -- | Update an email channel
 updateEmailChannel :: forall eff. UpdateEmailChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateEmailChannelResponse
-updateEmailChannel = Request.request serviceName "updateEmailChannel" 
+updateEmailChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateEmailChannel"
 
 
 -- | Use to update an endpoint.
 updateEndpoint :: forall eff. UpdateEndpointRequest -> Aff (exception :: EXCEPTION | eff) UpdateEndpointResponse
-updateEndpoint = Request.request serviceName "updateEndpoint" 
+updateEndpoint = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateEndpoint"
 
 
 -- | Use to update a batch of endpoints.
 updateEndpointsBatch :: forall eff. UpdateEndpointsBatchRequest -> Aff (exception :: EXCEPTION | eff) UpdateEndpointsBatchResponse
-updateEndpointsBatch = Request.request serviceName "updateEndpointsBatch" 
+updateEndpointsBatch = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateEndpointsBatch"
 
 
 -- | Use to update the GCM channel for an app.
 updateGcmChannel :: forall eff. UpdateGcmChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateGcmChannelResponse
-updateGcmChannel = Request.request serviceName "updateGcmChannel" 
+updateGcmChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateGcmChannel"
 
 
 -- | Use to update a segment.
 updateSegment :: forall eff. UpdateSegmentRequest -> Aff (exception :: EXCEPTION | eff) UpdateSegmentResponse
-updateSegment = Request.request serviceName "updateSegment" 
+updateSegment = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateSegment"
 
 
 -- | Update an SMS channel
 updateSmsChannel :: forall eff. UpdateSmsChannelRequest -> Aff (exception :: EXCEPTION | eff) UpdateSmsChannelResponse
-updateSmsChannel = Request.request serviceName "updateSmsChannel" 
+updateSmsChannel = Request.request service method  where
+    service = Request.ServiceName "Pinpoint"
+    method = Request.MethodName "updateSmsChannel"
 
 
 -- | Amazon Device Messaging channel definition.
@@ -853,6 +999,7 @@ newApplicationResponse'  customize = (ApplicationResponse <<< customize) { "Id":
 -- | Application settings.
 newtype ApplicationSettingsResource = ApplicationSettingsResource 
   { "ApplicationId" :: NullOrUndefined.NullOrUndefined (String)
+  , "CampaignHook" :: NullOrUndefined.NullOrUndefined (CampaignHook)
   , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String)
   , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits)
   , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime)
@@ -868,12 +1015,12 @@ instance encodeApplicationSettingsResource :: Encode ApplicationSettingsResource
 
 -- | Constructs ApplicationSettingsResource from required parameters
 newApplicationSettingsResource :: ApplicationSettingsResource
-newApplicationSettingsResource  = ApplicationSettingsResource { "ApplicationId": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newApplicationSettingsResource  = ApplicationSettingsResource { "ApplicationId": (NullOrUndefined Nothing), "CampaignHook": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
 
 -- | Constructs ApplicationSettingsResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationSettingsResource' :: ( { "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } -> {"ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } ) -> ApplicationSettingsResource
-newApplicationSettingsResource'  customize = (ApplicationSettingsResource <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newApplicationSettingsResource' :: ( { "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CampaignHook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } -> {"ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CampaignHook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } ) -> ApplicationSettingsResource
+newApplicationSettingsResource'  customize = (ApplicationSettingsResource <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CampaignHook": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
 
 
 
@@ -1087,6 +1234,31 @@ newCampaignEmailMessage'  customize = (CampaignEmailMessage <<< customize) { "Bo
 
 
 
+newtype CampaignHook = CampaignHook 
+  { "LambdaFunctionName" :: NullOrUndefined.NullOrUndefined (String)
+  , "Mode" :: NullOrUndefined.NullOrUndefined (Mode)
+  , "WebUrl" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeCampaignHook :: Newtype CampaignHook _
+derive instance repGenericCampaignHook :: Generic CampaignHook _
+instance showCampaignHook :: Show CampaignHook where
+  show = genericShow
+instance decodeCampaignHook :: Decode CampaignHook where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeCampaignHook :: Encode CampaignHook where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs CampaignHook from required parameters
+newCampaignHook :: CampaignHook
+newCampaignHook  = CampaignHook { "LambdaFunctionName": (NullOrUndefined Nothing), "Mode": (NullOrUndefined Nothing), "WebUrl": (NullOrUndefined Nothing) }
+
+-- | Constructs CampaignHook's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newCampaignHook' :: ( { "LambdaFunctionName" :: NullOrUndefined.NullOrUndefined (String) , "Mode" :: NullOrUndefined.NullOrUndefined (Mode) , "WebUrl" :: NullOrUndefined.NullOrUndefined (String) } -> {"LambdaFunctionName" :: NullOrUndefined.NullOrUndefined (String) , "Mode" :: NullOrUndefined.NullOrUndefined (Mode) , "WebUrl" :: NullOrUndefined.NullOrUndefined (String) } ) -> CampaignHook
+newCampaignHook'  customize = (CampaignHook <<< customize) { "LambdaFunctionName": (NullOrUndefined Nothing), "Mode": (NullOrUndefined Nothing), "WebUrl": (NullOrUndefined Nothing) }
+
+
+
 -- | Campaign Limits are used to limit the number of messages that can be sent to a user.
 newtype CampaignLimits = CampaignLimits 
   { "Daily" :: NullOrUndefined.NullOrUndefined (Int)
@@ -1122,6 +1294,7 @@ newtype CampaignResponse = CampaignResponse
   , "DefaultState" :: NullOrUndefined.NullOrUndefined (CampaignState)
   , "Description" :: NullOrUndefined.NullOrUndefined (String)
   , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int)
+  , "Hook" :: NullOrUndefined.NullOrUndefined (CampaignHook)
   , "Id" :: NullOrUndefined.NullOrUndefined (String)
   , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean)
   , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String)
@@ -1147,12 +1320,12 @@ instance encodeCampaignResponse :: Encode CampaignResponse where
 
 -- | Constructs CampaignResponse from required parameters
 newCampaignResponse :: CampaignResponse
-newCampaignResponse  = CampaignResponse { "AdditionalTreatments": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultState": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCampaignResponse  = CampaignResponse { "AdditionalTreatments": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultState": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
 
 -- | Constructs CampaignResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignResponse' :: ( { "AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfTreatmentResource) , "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CreationDate" :: NullOrUndefined.NullOrUndefined (String) , "DefaultState" :: NullOrUndefined.NullOrUndefined (CampaignState) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "Id" :: NullOrUndefined.NullOrUndefined (String) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "State" :: NullOrUndefined.NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) , "Version" :: NullOrUndefined.NullOrUndefined (Int) } -> {"AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfTreatmentResource) , "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CreationDate" :: NullOrUndefined.NullOrUndefined (String) , "DefaultState" :: NullOrUndefined.NullOrUndefined (CampaignState) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "Id" :: NullOrUndefined.NullOrUndefined (String) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "State" :: NullOrUndefined.NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) , "Version" :: NullOrUndefined.NullOrUndefined (Int) } ) -> CampaignResponse
-newCampaignResponse'  customize = (CampaignResponse <<< customize) { "AdditionalTreatments": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultState": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCampaignResponse' :: ( { "AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfTreatmentResource) , "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CreationDate" :: NullOrUndefined.NullOrUndefined (String) , "DefaultState" :: NullOrUndefined.NullOrUndefined (CampaignState) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "Hook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "Id" :: NullOrUndefined.NullOrUndefined (String) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "State" :: NullOrUndefined.NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) , "Version" :: NullOrUndefined.NullOrUndefined (Int) } -> {"AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfTreatmentResource) , "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CreationDate" :: NullOrUndefined.NullOrUndefined (String) , "DefaultState" :: NullOrUndefined.NullOrUndefined (CampaignState) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "Hook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "Id" :: NullOrUndefined.NullOrUndefined (String) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "LastModifiedDate" :: NullOrUndefined.NullOrUndefined (String) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "State" :: NullOrUndefined.NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) , "Version" :: NullOrUndefined.NullOrUndefined (Int) } ) -> CampaignResponse
+newCampaignResponse'  customize = (CampaignResponse <<< customize) { "AdditionalTreatments": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultState": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
 
 
 
@@ -1369,6 +1542,53 @@ newCreateCampaignResponse _CampaignResponse = CreateCampaignResponse { "Campaign
 --   This may be useful if you need to immediately overwrite some of the optional values
 newCreateCampaignResponse' :: CampaignResponse -> ( { "CampaignResponse" :: (CampaignResponse) } -> {"CampaignResponse" :: (CampaignResponse) } ) -> CreateCampaignResponse
 newCreateCampaignResponse' _CampaignResponse customize = (CreateCampaignResponse <<< customize) { "CampaignResponse": _CampaignResponse }
+
+
+
+newtype CreateExportJobRequest = CreateExportJobRequest 
+  { "ApplicationId" :: (String)
+  , "ExportJobRequest" :: (ExportJobRequest)
+  }
+derive instance newtypeCreateExportJobRequest :: Newtype CreateExportJobRequest _
+derive instance repGenericCreateExportJobRequest :: Generic CreateExportJobRequest _
+instance showCreateExportJobRequest :: Show CreateExportJobRequest where
+  show = genericShow
+instance decodeCreateExportJobRequest :: Decode CreateExportJobRequest where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeCreateExportJobRequest :: Encode CreateExportJobRequest where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs CreateExportJobRequest from required parameters
+newCreateExportJobRequest :: String -> ExportJobRequest -> CreateExportJobRequest
+newCreateExportJobRequest _ApplicationId _ExportJobRequest = CreateExportJobRequest { "ApplicationId": _ApplicationId, "ExportJobRequest": _ExportJobRequest }
+
+-- | Constructs CreateExportJobRequest's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newCreateExportJobRequest' :: String -> ExportJobRequest -> ( { "ApplicationId" :: (String) , "ExportJobRequest" :: (ExportJobRequest) } -> {"ApplicationId" :: (String) , "ExportJobRequest" :: (ExportJobRequest) } ) -> CreateExportJobRequest
+newCreateExportJobRequest' _ApplicationId _ExportJobRequest customize = (CreateExportJobRequest <<< customize) { "ApplicationId": _ApplicationId, "ExportJobRequest": _ExportJobRequest }
+
+
+
+newtype CreateExportJobResponse = CreateExportJobResponse 
+  { "ExportJobResponse" :: (ExportJobResponse)
+  }
+derive instance newtypeCreateExportJobResponse :: Newtype CreateExportJobResponse _
+derive instance repGenericCreateExportJobResponse :: Generic CreateExportJobResponse _
+instance showCreateExportJobResponse :: Show CreateExportJobResponse where
+  show = genericShow
+instance decodeCreateExportJobResponse :: Decode CreateExportJobResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeCreateExportJobResponse :: Encode CreateExportJobResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs CreateExportJobResponse from required parameters
+newCreateExportJobResponse :: ExportJobResponse -> CreateExportJobResponse
+newCreateExportJobResponse _ExportJobResponse = CreateExportJobResponse { "ExportJobResponse": _ExportJobResponse }
+
+-- | Constructs CreateExportJobResponse's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newCreateExportJobResponse' :: ExportJobResponse -> ( { "ExportJobResponse" :: (ExportJobResponse) } -> {"ExportJobResponse" :: (ExportJobResponse) } ) -> CreateExportJobResponse
+newCreateExportJobResponse' _ExportJobResponse customize = (CreateExportJobResponse <<< customize) { "ExportJobResponse": _ExportJobResponse }
 
 
 
@@ -2552,6 +2772,116 @@ newEventStream'  customize = (EventStream <<< customize) { "ApplicationId": (Nul
 
 
 
+newtype ExportJobRequest = ExportJobRequest 
+  { "RoleArn" :: NullOrUndefined.NullOrUndefined (String)
+  , "S3UrlPrefix" :: NullOrUndefined.NullOrUndefined (String)
+  , "SegmentId" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeExportJobRequest :: Newtype ExportJobRequest _
+derive instance repGenericExportJobRequest :: Generic ExportJobRequest _
+instance showExportJobRequest :: Show ExportJobRequest where
+  show = genericShow
+instance decodeExportJobRequest :: Decode ExportJobRequest where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeExportJobRequest :: Encode ExportJobRequest where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs ExportJobRequest from required parameters
+newExportJobRequest :: ExportJobRequest
+newExportJobRequest  = ExportJobRequest { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+
+-- | Constructs ExportJobRequest's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newExportJobRequest' :: ( { "RoleArn" :: NullOrUndefined.NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined.NullOrUndefined (String) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) } -> {"RoleArn" :: NullOrUndefined.NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined.NullOrUndefined (String) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) } ) -> ExportJobRequest
+newExportJobRequest'  customize = (ExportJobRequest <<< customize) { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+
+
+
+newtype ExportJobResource = ExportJobResource 
+  { "RoleArn" :: NullOrUndefined.NullOrUndefined (String)
+  , "S3UrlPrefix" :: NullOrUndefined.NullOrUndefined (String)
+  , "SegmentId" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeExportJobResource :: Newtype ExportJobResource _
+derive instance repGenericExportJobResource :: Generic ExportJobResource _
+instance showExportJobResource :: Show ExportJobResource where
+  show = genericShow
+instance decodeExportJobResource :: Decode ExportJobResource where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeExportJobResource :: Encode ExportJobResource where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs ExportJobResource from required parameters
+newExportJobResource :: ExportJobResource
+newExportJobResource  = ExportJobResource { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+
+-- | Constructs ExportJobResource's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newExportJobResource' :: ( { "RoleArn" :: NullOrUndefined.NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined.NullOrUndefined (String) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) } -> {"RoleArn" :: NullOrUndefined.NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined.NullOrUndefined (String) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) } ) -> ExportJobResource
+newExportJobResource'  customize = (ExportJobResource <<< customize) { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+
+
+
+newtype ExportJobResponse = ExportJobResponse 
+  { "ApplicationId" :: NullOrUndefined.NullOrUndefined (String)
+  , "CompletedPieces" :: NullOrUndefined.NullOrUndefined (Int)
+  , "CompletionDate" :: NullOrUndefined.NullOrUndefined (String)
+  , "CreationDate" :: NullOrUndefined.NullOrUndefined (String)
+  , "Definition" :: NullOrUndefined.NullOrUndefined (ExportJobResource)
+  , "FailedPieces" :: NullOrUndefined.NullOrUndefined (Int)
+  , "Failures" :: NullOrUndefined.NullOrUndefined (ListOf__string)
+  , "Id" :: NullOrUndefined.NullOrUndefined (String)
+  , "JobStatus" :: NullOrUndefined.NullOrUndefined (JobStatus)
+  , "TotalFailures" :: NullOrUndefined.NullOrUndefined (Int)
+  , "TotalPieces" :: NullOrUndefined.NullOrUndefined (Int)
+  , "TotalProcessed" :: NullOrUndefined.NullOrUndefined (Int)
+  , "Type" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeExportJobResponse :: Newtype ExportJobResponse _
+derive instance repGenericExportJobResponse :: Generic ExportJobResponse _
+instance showExportJobResponse :: Show ExportJobResponse where
+  show = genericShow
+instance decodeExportJobResponse :: Decode ExportJobResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeExportJobResponse :: Encode ExportJobResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs ExportJobResponse from required parameters
+newExportJobResponse :: ExportJobResponse
+newExportJobResponse  = ExportJobResponse { "ApplicationId": (NullOrUndefined Nothing), "CompletedPieces": (NullOrUndefined Nothing), "CompletionDate": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "FailedPieces": (NullOrUndefined Nothing), "Failures": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "TotalFailures": (NullOrUndefined Nothing), "TotalPieces": (NullOrUndefined Nothing), "TotalProcessed": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+
+-- | Constructs ExportJobResponse's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newExportJobResponse' :: ( { "ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CompletedPieces" :: NullOrUndefined.NullOrUndefined (Int) , "CompletionDate" :: NullOrUndefined.NullOrUndefined (String) , "CreationDate" :: NullOrUndefined.NullOrUndefined (String) , "Definition" :: NullOrUndefined.NullOrUndefined (ExportJobResource) , "FailedPieces" :: NullOrUndefined.NullOrUndefined (Int) , "Failures" :: NullOrUndefined.NullOrUndefined (ListOf__string) , "Id" :: NullOrUndefined.NullOrUndefined (String) , "JobStatus" :: NullOrUndefined.NullOrUndefined (JobStatus) , "TotalFailures" :: NullOrUndefined.NullOrUndefined (Int) , "TotalPieces" :: NullOrUndefined.NullOrUndefined (Int) , "TotalProcessed" :: NullOrUndefined.NullOrUndefined (Int) , "Type" :: NullOrUndefined.NullOrUndefined (String) } -> {"ApplicationId" :: NullOrUndefined.NullOrUndefined (String) , "CompletedPieces" :: NullOrUndefined.NullOrUndefined (Int) , "CompletionDate" :: NullOrUndefined.NullOrUndefined (String) , "CreationDate" :: NullOrUndefined.NullOrUndefined (String) , "Definition" :: NullOrUndefined.NullOrUndefined (ExportJobResource) , "FailedPieces" :: NullOrUndefined.NullOrUndefined (Int) , "Failures" :: NullOrUndefined.NullOrUndefined (ListOf__string) , "Id" :: NullOrUndefined.NullOrUndefined (String) , "JobStatus" :: NullOrUndefined.NullOrUndefined (JobStatus) , "TotalFailures" :: NullOrUndefined.NullOrUndefined (Int) , "TotalPieces" :: NullOrUndefined.NullOrUndefined (Int) , "TotalProcessed" :: NullOrUndefined.NullOrUndefined (Int) , "Type" :: NullOrUndefined.NullOrUndefined (String) } ) -> ExportJobResponse
+newExportJobResponse'  customize = (ExportJobResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CompletedPieces": (NullOrUndefined Nothing), "CompletionDate": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "FailedPieces": (NullOrUndefined Nothing), "Failures": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "TotalFailures": (NullOrUndefined Nothing), "TotalPieces": (NullOrUndefined Nothing), "TotalProcessed": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+
+
+
+-- | Export job list.
+newtype ExportJobsResponse = ExportJobsResponse 
+  { "Item" :: NullOrUndefined.NullOrUndefined (ListOfExportJobResponse)
+  , "NextToken" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeExportJobsResponse :: Newtype ExportJobsResponse _
+derive instance repGenericExportJobsResponse :: Generic ExportJobsResponse _
+instance showExportJobsResponse :: Show ExportJobsResponse where
+  show = genericShow
+instance decodeExportJobsResponse :: Decode ExportJobsResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeExportJobsResponse :: Encode ExportJobsResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs ExportJobsResponse from required parameters
+newExportJobsResponse :: ExportJobsResponse
+newExportJobsResponse  = ExportJobsResponse { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+
+-- | Constructs ExportJobsResponse's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newExportJobsResponse' :: ( { "Item" :: NullOrUndefined.NullOrUndefined (ListOfExportJobResponse) , "NextToken" :: NullOrUndefined.NullOrUndefined (String) } -> {"Item" :: NullOrUndefined.NullOrUndefined (ListOfExportJobResponse) , "NextToken" :: NullOrUndefined.NullOrUndefined (String) } ) -> ExportJobsResponse
+newExportJobsResponse'  customize = (ExportJobsResponse <<< customize) { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+
+
+
 -- | Simple message object.
 newtype ForbiddenException = ForbiddenException 
   { "Message" :: NullOrUndefined.NullOrUndefined (String)
@@ -3496,6 +3826,101 @@ newGetEventStreamResponse' _EventStream customize = (GetEventStreamResponse <<< 
 
 
 
+newtype GetExportJobRequest = GetExportJobRequest 
+  { "ApplicationId" :: (String)
+  , "JobId" :: (String)
+  }
+derive instance newtypeGetExportJobRequest :: Newtype GetExportJobRequest _
+derive instance repGenericGetExportJobRequest :: Generic GetExportJobRequest _
+instance showGetExportJobRequest :: Show GetExportJobRequest where
+  show = genericShow
+instance decodeGetExportJobRequest :: Decode GetExportJobRequest where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeGetExportJobRequest :: Encode GetExportJobRequest where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs GetExportJobRequest from required parameters
+newGetExportJobRequest :: String -> String -> GetExportJobRequest
+newGetExportJobRequest _ApplicationId _JobId = GetExportJobRequest { "ApplicationId": _ApplicationId, "JobId": _JobId }
+
+-- | Constructs GetExportJobRequest's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newGetExportJobRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "JobId" :: (String) } -> {"ApplicationId" :: (String) , "JobId" :: (String) } ) -> GetExportJobRequest
+newGetExportJobRequest' _ApplicationId _JobId customize = (GetExportJobRequest <<< customize) { "ApplicationId": _ApplicationId, "JobId": _JobId }
+
+
+
+newtype GetExportJobResponse = GetExportJobResponse 
+  { "ExportJobResponse" :: (ExportJobResponse)
+  }
+derive instance newtypeGetExportJobResponse :: Newtype GetExportJobResponse _
+derive instance repGenericGetExportJobResponse :: Generic GetExportJobResponse _
+instance showGetExportJobResponse :: Show GetExportJobResponse where
+  show = genericShow
+instance decodeGetExportJobResponse :: Decode GetExportJobResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeGetExportJobResponse :: Encode GetExportJobResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs GetExportJobResponse from required parameters
+newGetExportJobResponse :: ExportJobResponse -> GetExportJobResponse
+newGetExportJobResponse _ExportJobResponse = GetExportJobResponse { "ExportJobResponse": _ExportJobResponse }
+
+-- | Constructs GetExportJobResponse's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newGetExportJobResponse' :: ExportJobResponse -> ( { "ExportJobResponse" :: (ExportJobResponse) } -> {"ExportJobResponse" :: (ExportJobResponse) } ) -> GetExportJobResponse
+newGetExportJobResponse' _ExportJobResponse customize = (GetExportJobResponse <<< customize) { "ExportJobResponse": _ExportJobResponse }
+
+
+
+newtype GetExportJobsRequest = GetExportJobsRequest 
+  { "ApplicationId" :: (String)
+  , "PageSize" :: NullOrUndefined.NullOrUndefined (String)
+  , "Token" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeGetExportJobsRequest :: Newtype GetExportJobsRequest _
+derive instance repGenericGetExportJobsRequest :: Generic GetExportJobsRequest _
+instance showGetExportJobsRequest :: Show GetExportJobsRequest where
+  show = genericShow
+instance decodeGetExportJobsRequest :: Decode GetExportJobsRequest where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeGetExportJobsRequest :: Encode GetExportJobsRequest where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs GetExportJobsRequest from required parameters
+newGetExportJobsRequest :: String -> GetExportJobsRequest
+newGetExportJobsRequest _ApplicationId = GetExportJobsRequest { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+
+-- | Constructs GetExportJobsRequest's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newGetExportJobsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined.NullOrUndefined (String) , "Token" :: NullOrUndefined.NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined.NullOrUndefined (String) , "Token" :: NullOrUndefined.NullOrUndefined (String) } ) -> GetExportJobsRequest
+newGetExportJobsRequest' _ApplicationId customize = (GetExportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+
+
+
+newtype GetExportJobsResponse = GetExportJobsResponse 
+  { "ExportJobsResponse" :: (ExportJobsResponse)
+  }
+derive instance newtypeGetExportJobsResponse :: Newtype GetExportJobsResponse _
+derive instance repGenericGetExportJobsResponse :: Generic GetExportJobsResponse _
+instance showGetExportJobsResponse :: Show GetExportJobsResponse where
+  show = genericShow
+instance decodeGetExportJobsResponse :: Decode GetExportJobsResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeGetExportJobsResponse :: Encode GetExportJobsResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs GetExportJobsResponse from required parameters
+newGetExportJobsResponse :: ExportJobsResponse -> GetExportJobsResponse
+newGetExportJobsResponse _ExportJobsResponse = GetExportJobsResponse { "ExportJobsResponse": _ExportJobsResponse }
+
+-- | Constructs GetExportJobsResponse's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newGetExportJobsResponse' :: ExportJobsResponse -> ( { "ExportJobsResponse" :: (ExportJobsResponse) } -> {"ExportJobsResponse" :: (ExportJobsResponse) } ) -> GetExportJobsResponse
+newGetExportJobsResponse' _ExportJobsResponse customize = (GetExportJobsResponse <<< customize) { "ExportJobsResponse": _ExportJobsResponse }
+
+
+
 newtype GetGcmChannelRequest = GetGcmChannelRequest 
   { "ApplicationId" :: (String)
   }
@@ -3634,6 +4059,55 @@ newGetImportJobsResponse _ImportJobsResponse = GetImportJobsResponse { "ImportJo
 --   This may be useful if you need to immediately overwrite some of the optional values
 newGetImportJobsResponse' :: ImportJobsResponse -> ( { "ImportJobsResponse" :: (ImportJobsResponse) } -> {"ImportJobsResponse" :: (ImportJobsResponse) } ) -> GetImportJobsResponse
 newGetImportJobsResponse' _ImportJobsResponse customize = (GetImportJobsResponse <<< customize) { "ImportJobsResponse": _ImportJobsResponse }
+
+
+
+newtype GetSegmentExportJobsRequest = GetSegmentExportJobsRequest 
+  { "ApplicationId" :: (String)
+  , "PageSize" :: NullOrUndefined.NullOrUndefined (String)
+  , "SegmentId" :: (String)
+  , "Token" :: NullOrUndefined.NullOrUndefined (String)
+  }
+derive instance newtypeGetSegmentExportJobsRequest :: Newtype GetSegmentExportJobsRequest _
+derive instance repGenericGetSegmentExportJobsRequest :: Generic GetSegmentExportJobsRequest _
+instance showGetSegmentExportJobsRequest :: Show GetSegmentExportJobsRequest where
+  show = genericShow
+instance decodeGetSegmentExportJobsRequest :: Decode GetSegmentExportJobsRequest where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeGetSegmentExportJobsRequest :: Encode GetSegmentExportJobsRequest where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs GetSegmentExportJobsRequest from required parameters
+newGetSegmentExportJobsRequest :: String -> String -> GetSegmentExportJobsRequest
+newGetSegmentExportJobsRequest _ApplicationId _SegmentId = GetSegmentExportJobsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+
+-- | Constructs GetSegmentExportJobsRequest's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newGetSegmentExportJobsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined.NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined.NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined.NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined.NullOrUndefined (String) } ) -> GetSegmentExportJobsRequest
+newGetSegmentExportJobsRequest' _ApplicationId _SegmentId customize = (GetSegmentExportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+
+
+
+newtype GetSegmentExportJobsResponse = GetSegmentExportJobsResponse 
+  { "ExportJobsResponse" :: (ExportJobsResponse)
+  }
+derive instance newtypeGetSegmentExportJobsResponse :: Newtype GetSegmentExportJobsResponse _
+derive instance repGenericGetSegmentExportJobsResponse :: Generic GetSegmentExportJobsResponse _
+instance showGetSegmentExportJobsResponse :: Show GetSegmentExportJobsResponse where
+  show = genericShow
+instance decodeGetSegmentExportJobsResponse :: Decode GetSegmentExportJobsResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeGetSegmentExportJobsResponse :: Encode GetSegmentExportJobsResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+-- | Constructs GetSegmentExportJobsResponse from required parameters
+newGetSegmentExportJobsResponse :: ExportJobsResponse -> GetSegmentExportJobsResponse
+newGetSegmentExportJobsResponse _ExportJobsResponse = GetSegmentExportJobsResponse { "ExportJobsResponse": _ExportJobsResponse }
+
+-- | Constructs GetSegmentExportJobsResponse's fields from required parameters
+--   This may be useful if you need to immediately overwrite some of the optional values
+newGetSegmentExportJobsResponse' :: ExportJobsResponse -> ( { "ExportJobsResponse" :: (ExportJobsResponse) } -> {"ExportJobsResponse" :: (ExportJobsResponse) } ) -> GetSegmentExportJobsResponse
+newGetSegmentExportJobsResponse' _ExportJobsResponse customize = (GetSegmentExportJobsResponse <<< customize) { "ExportJobsResponse": _ExportJobsResponse }
 
 
 
@@ -4129,6 +4603,18 @@ instance encodeListOfEndpointBatchItem :: Encode ListOfEndpointBatchItem where
 
 
 
+newtype ListOfExportJobResponse = ListOfExportJobResponse (Array ExportJobResponse)
+derive instance newtypeListOfExportJobResponse :: Newtype ListOfExportJobResponse _
+derive instance repGenericListOfExportJobResponse :: Generic ListOfExportJobResponse _
+instance showListOfExportJobResponse :: Show ListOfExportJobResponse where
+  show = genericShow
+instance decodeListOfExportJobResponse :: Decode ListOfExportJobResponse where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeListOfExportJobResponse :: Encode ListOfExportJobResponse where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
+
+
+
 newtype ListOfImportJobResponse = ListOfImportJobResponse (Array ImportJobResponse)
 derive instance newtypeListOfImportJobResponse :: Newtype ListOfImportJobResponse _
 derive instance repGenericListOfImportJobResponse :: Generic ListOfImportJobResponse _
@@ -4512,6 +4998,18 @@ newMethodNotAllowedException  = MethodNotAllowedException { "Message": (NullOrUn
 --   This may be useful if you need to immediately overwrite some of the optional values
 newMethodNotAllowedException' :: ( { "Message" :: NullOrUndefined.NullOrUndefined (String) , "RequestID" :: NullOrUndefined.NullOrUndefined (String) } -> {"Message" :: NullOrUndefined.NullOrUndefined (String) , "RequestID" :: NullOrUndefined.NullOrUndefined (String) } ) -> MethodNotAllowedException
 newMethodNotAllowedException'  customize = (MethodNotAllowedException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+
+
+
+newtype Mode = Mode String
+derive instance newtypeMode :: Newtype Mode _
+derive instance repGenericMode :: Generic Mode _
+instance showMode :: Show Mode where
+  show = genericShow
+instance decodeMode :: Decode Mode where
+  decode = genericDecode $ defaultOptions { unwrapSingleConstructors = true }
+instance encodeMode :: Encode Mode where
+  encode = genericEncode $ defaultOptions { unwrapSingleConstructors = true }
 
 
 
@@ -5858,7 +6356,8 @@ newUpdateSmsChannelResponse' _SMSChannelResponse customize = (UpdateSmsChannelRe
 
 -- | Creating application setting request
 newtype WriteApplicationSettingsRequest = WriteApplicationSettingsRequest 
-  { "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits)
+  { "CampaignHook" :: NullOrUndefined.NullOrUndefined (CampaignHook)
+  , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits)
   , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime)
   }
 derive instance newtypeWriteApplicationSettingsRequest :: Newtype WriteApplicationSettingsRequest _
@@ -5872,12 +6371,12 @@ instance encodeWriteApplicationSettingsRequest :: Encode WriteApplicationSetting
 
 -- | Constructs WriteApplicationSettingsRequest from required parameters
 newWriteApplicationSettingsRequest :: WriteApplicationSettingsRequest
-newWriteApplicationSettingsRequest  = WriteApplicationSettingsRequest { "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newWriteApplicationSettingsRequest  = WriteApplicationSettingsRequest { "CampaignHook": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
 
 -- | Constructs WriteApplicationSettingsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteApplicationSettingsRequest' :: ( { "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } -> {"Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } ) -> WriteApplicationSettingsRequest
-newWriteApplicationSettingsRequest'  customize = (WriteApplicationSettingsRequest <<< customize) { "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newWriteApplicationSettingsRequest' :: ( { "CampaignHook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } -> {"CampaignHook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined.NullOrUndefined (QuietTime) } ) -> WriteApplicationSettingsRequest
+newWriteApplicationSettingsRequest'  customize = (WriteApplicationSettingsRequest <<< customize) { "CampaignHook": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
 
 
 
@@ -5886,6 +6385,7 @@ newtype WriteCampaignRequest = WriteCampaignRequest
   { "AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfWriteTreatmentResource)
   , "Description" :: NullOrUndefined.NullOrUndefined (String)
   , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int)
+  , "Hook" :: NullOrUndefined.NullOrUndefined (CampaignHook)
   , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean)
   , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits)
   , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration)
@@ -5907,12 +6407,12 @@ instance encodeWriteCampaignRequest :: Encode WriteCampaignRequest where
 
 -- | Constructs WriteCampaignRequest from required parameters
 newWriteCampaignRequest :: WriteCampaignRequest
-newWriteCampaignRequest  = WriteCampaignRequest { "AdditionalTreatments": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newWriteCampaignRequest  = WriteCampaignRequest { "AdditionalTreatments": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
 
 -- | Constructs WriteCampaignRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteCampaignRequest' :: ( { "AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfWriteTreatmentResource) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) } -> {"AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfWriteTreatmentResource) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) } ) -> WriteCampaignRequest
-newWriteCampaignRequest'  customize = (WriteCampaignRequest <<< customize) { "AdditionalTreatments": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newWriteCampaignRequest' :: ( { "AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfWriteTreatmentResource) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "Hook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) } -> {"AdditionalTreatments" :: NullOrUndefined.NullOrUndefined (ListOfWriteTreatmentResource) , "Description" :: NullOrUndefined.NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined.NullOrUndefined (Int) , "Hook" :: NullOrUndefined.NullOrUndefined (CampaignHook) , "IsPaused" :: NullOrUndefined.NullOrUndefined (Boolean) , "Limits" :: NullOrUndefined.NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined.NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined.NullOrUndefined (String) , "Schedule" :: NullOrUndefined.NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined.NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined.NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined.NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined.NullOrUndefined (String) } ) -> WriteCampaignRequest
+newWriteCampaignRequest'  customize = (WriteCampaignRequest <<< customize) { "AdditionalTreatments": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
 
 
 
