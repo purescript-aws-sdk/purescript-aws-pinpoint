@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype ADMChannelRequest
-  = ADMChannelRequest { "ClientId" :: NullOrUndefined (String), "ClientSecret" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean) }
+  = ADMChannelRequest { "ClientId" :: Maybe (String), "ClientSecret" :: Maybe (String), "Enabled" :: Maybe (Boolean) }
 ```
 
 Amazon Device Messaging channel definition.
@@ -35,7 +35,7 @@ Constructs ADMChannelRequest from required parameters
 #### `newADMChannelRequest'`
 
 ``` purescript
-newADMChannelRequest' :: ({ "ClientId" :: NullOrUndefined (String), "ClientSecret" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean) } -> { "ClientId" :: NullOrUndefined (String), "ClientSecret" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean) }) -> ADMChannelRequest
+newADMChannelRequest' :: ({ "ClientId" :: Maybe (String), "ClientSecret" :: Maybe (String), "Enabled" :: Maybe (Boolean) } -> { "ClientId" :: Maybe (String), "ClientSecret" :: Maybe (String), "Enabled" :: Maybe (Boolean) }) -> ADMChannelRequest
 ```
 
 Constructs ADMChannelRequest's fields from required parameters
@@ -44,7 +44,7 @@ Constructs ADMChannelRequest's fields from required parameters
 
 ``` purescript
 newtype ADMChannelResponse
-  = ADMChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = ADMChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Amazon Device Messaging channel definition.
@@ -69,7 +69,7 @@ Constructs ADMChannelResponse from required parameters
 #### `newADMChannelResponse'`
 
 ``` purescript
-newADMChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> ADMChannelResponse
+newADMChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> ADMChannelResponse
 ```
 
 Constructs ADMChannelResponse's fields from required parameters
@@ -78,7 +78,7 @@ Constructs ADMChannelResponse's fields from required parameters
 
 ``` purescript
 newtype ADMMessage
-  = ADMMessage { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "ConsolidationKey" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "ExpiresAfter" :: NullOrUndefined (String), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "MD5" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }
+  = ADMMessage { "Action" :: Maybe (Action), "Body" :: Maybe (String), "ConsolidationKey" :: Maybe (String), "Data" :: Maybe (MapOf__string), "ExpiresAfter" :: Maybe (String), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "MD5" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) }
 ```
 
 ADM Message.
@@ -103,7 +103,7 @@ Constructs ADMMessage from required parameters
 #### `newADMMessage'`
 
 ``` purescript
-newADMMessage' :: ({ "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "ConsolidationKey" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "ExpiresAfter" :: NullOrUndefined (String), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "MD5" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "ConsolidationKey" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "ExpiresAfter" :: NullOrUndefined (String), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "MD5" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }) -> ADMMessage
+newADMMessage' :: ({ "Action" :: Maybe (Action), "Body" :: Maybe (String), "ConsolidationKey" :: Maybe (String), "Data" :: Maybe (MapOf__string), "ExpiresAfter" :: Maybe (String), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "MD5" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Body" :: Maybe (String), "ConsolidationKey" :: Maybe (String), "Data" :: Maybe (MapOf__string), "ExpiresAfter" :: Maybe (String), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "MD5" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) }) -> ADMMessage
 ```
 
 Constructs ADMMessage's fields from required parameters
@@ -112,7 +112,7 @@ Constructs ADMMessage's fields from required parameters
 
 ``` purescript
 newtype APNSChannelRequest
-  = APNSChannelRequest { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }
+  = APNSChannelRequest { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }
 ```
 
 Apple Push Notification Service channel definition.
@@ -137,7 +137,7 @@ Constructs APNSChannelRequest from required parameters
 #### `newAPNSChannelRequest'`
 
 ``` purescript
-newAPNSChannelRequest' :: ({ "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) } -> { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }) -> APNSChannelRequest
+newAPNSChannelRequest' :: ({ "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) } -> { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }) -> APNSChannelRequest
 ```
 
 Constructs APNSChannelRequest's fields from required parameters
@@ -146,7 +146,7 @@ Constructs APNSChannelRequest's fields from required parameters
 
 ``` purescript
 newtype APNSChannelResponse
-  = APNSChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = APNSChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Apple Distribution Push Notification Service channel definition.
@@ -171,7 +171,7 @@ Constructs APNSChannelResponse from required parameters
 #### `newAPNSChannelResponse'`
 
 ``` purescript
-newAPNSChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> APNSChannelResponse
+newAPNSChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> APNSChannelResponse
 ```
 
 Constructs APNSChannelResponse's fields from required parameters
@@ -180,7 +180,7 @@ Constructs APNSChannelResponse's fields from required parameters
 
 ``` purescript
 newtype APNSMessage
-  = APNSMessage { "Action" :: NullOrUndefined (Action), "Badge" :: NullOrUndefined (Int), "Body" :: NullOrUndefined (String), "Category" :: NullOrUndefined (String), "CollapseId" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "MediaUrl" :: NullOrUndefined (String), "PreferredAuthenticationMethod" :: NullOrUndefined (String), "Priority" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "ThreadId" :: NullOrUndefined (String), "TimeToLive" :: NullOrUndefined (Int), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }
+  = APNSMessage { "Action" :: Maybe (Action), "Badge" :: Maybe (Int), "Body" :: Maybe (String), "Category" :: Maybe (String), "CollapseId" :: Maybe (String), "Data" :: Maybe (MapOf__string), "MediaUrl" :: Maybe (String), "PreferredAuthenticationMethod" :: Maybe (String), "Priority" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "ThreadId" :: Maybe (String), "TimeToLive" :: Maybe (Int), "Title" :: Maybe (String), "Url" :: Maybe (String) }
 ```
 
 APNS Message.
@@ -205,7 +205,7 @@ Constructs APNSMessage from required parameters
 #### `newAPNSMessage'`
 
 ``` purescript
-newAPNSMessage' :: ({ "Action" :: NullOrUndefined (Action), "Badge" :: NullOrUndefined (Int), "Body" :: NullOrUndefined (String), "Category" :: NullOrUndefined (String), "CollapseId" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "MediaUrl" :: NullOrUndefined (String), "PreferredAuthenticationMethod" :: NullOrUndefined (String), "Priority" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "ThreadId" :: NullOrUndefined (String), "TimeToLive" :: NullOrUndefined (Int), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Badge" :: NullOrUndefined (Int), "Body" :: NullOrUndefined (String), "Category" :: NullOrUndefined (String), "CollapseId" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "MediaUrl" :: NullOrUndefined (String), "PreferredAuthenticationMethod" :: NullOrUndefined (String), "Priority" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "ThreadId" :: NullOrUndefined (String), "TimeToLive" :: NullOrUndefined (Int), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }) -> APNSMessage
+newAPNSMessage' :: ({ "Action" :: Maybe (Action), "Badge" :: Maybe (Int), "Body" :: Maybe (String), "Category" :: Maybe (String), "CollapseId" :: Maybe (String), "Data" :: Maybe (MapOf__string), "MediaUrl" :: Maybe (String), "PreferredAuthenticationMethod" :: Maybe (String), "Priority" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "ThreadId" :: Maybe (String), "TimeToLive" :: Maybe (Int), "Title" :: Maybe (String), "Url" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Badge" :: Maybe (Int), "Body" :: Maybe (String), "Category" :: Maybe (String), "CollapseId" :: Maybe (String), "Data" :: Maybe (MapOf__string), "MediaUrl" :: Maybe (String), "PreferredAuthenticationMethod" :: Maybe (String), "Priority" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "ThreadId" :: Maybe (String), "TimeToLive" :: Maybe (Int), "Title" :: Maybe (String), "Url" :: Maybe (String) }) -> APNSMessage
 ```
 
 Constructs APNSMessage's fields from required parameters
@@ -214,7 +214,7 @@ Constructs APNSMessage's fields from required parameters
 
 ``` purescript
 newtype APNSSandboxChannelRequest
-  = APNSSandboxChannelRequest { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }
+  = APNSSandboxChannelRequest { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }
 ```
 
 Apple Development Push Notification Service channel definition.
@@ -239,7 +239,7 @@ Constructs APNSSandboxChannelRequest from required parameters
 #### `newAPNSSandboxChannelRequest'`
 
 ``` purescript
-newAPNSSandboxChannelRequest' :: ({ "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) } -> { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }) -> APNSSandboxChannelRequest
+newAPNSSandboxChannelRequest' :: ({ "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) } -> { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }) -> APNSSandboxChannelRequest
 ```
 
 Constructs APNSSandboxChannelRequest's fields from required parameters
@@ -248,7 +248,7 @@ Constructs APNSSandboxChannelRequest's fields from required parameters
 
 ``` purescript
 newtype APNSSandboxChannelResponse
-  = APNSSandboxChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = APNSSandboxChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Apple Development Push Notification Service channel definition.
@@ -273,7 +273,7 @@ Constructs APNSSandboxChannelResponse from required parameters
 #### `newAPNSSandboxChannelResponse'`
 
 ``` purescript
-newAPNSSandboxChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> APNSSandboxChannelResponse
+newAPNSSandboxChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> APNSSandboxChannelResponse
 ```
 
 Constructs APNSSandboxChannelResponse's fields from required parameters
@@ -282,7 +282,7 @@ Constructs APNSSandboxChannelResponse's fields from required parameters
 
 ``` purescript
 newtype APNSVoipChannelRequest
-  = APNSVoipChannelRequest { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }
+  = APNSVoipChannelRequest { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }
 ```
 
 Apple VoIP Push Notification Service channel definition.
@@ -307,7 +307,7 @@ Constructs APNSVoipChannelRequest from required parameters
 #### `newAPNSVoipChannelRequest'`
 
 ``` purescript
-newAPNSVoipChannelRequest' :: ({ "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) } -> { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }) -> APNSVoipChannelRequest
+newAPNSVoipChannelRequest' :: ({ "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) } -> { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }) -> APNSVoipChannelRequest
 ```
 
 Constructs APNSVoipChannelRequest's fields from required parameters
@@ -316,7 +316,7 @@ Constructs APNSVoipChannelRequest's fields from required parameters
 
 ``` purescript
 newtype APNSVoipChannelResponse
-  = APNSVoipChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = APNSVoipChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Apple VoIP Push Notification Service channel definition.
@@ -341,7 +341,7 @@ Constructs APNSVoipChannelResponse from required parameters
 #### `newAPNSVoipChannelResponse'`
 
 ``` purescript
-newAPNSVoipChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> APNSVoipChannelResponse
+newAPNSVoipChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> APNSVoipChannelResponse
 ```
 
 Constructs APNSVoipChannelResponse's fields from required parameters
@@ -350,7 +350,7 @@ Constructs APNSVoipChannelResponse's fields from required parameters
 
 ``` purescript
 newtype APNSVoipSandboxChannelRequest
-  = APNSVoipSandboxChannelRequest { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }
+  = APNSVoipSandboxChannelRequest { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }
 ```
 
 Apple VoIP Developer Push Notification Service channel definition.
@@ -375,7 +375,7 @@ Constructs APNSVoipSandboxChannelRequest from required parameters
 #### `newAPNSVoipSandboxChannelRequest'`
 
 ``` purescript
-newAPNSVoipSandboxChannelRequest' :: ({ "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) } -> { "BundleId" :: NullOrUndefined (String), "Certificate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "PrivateKey" :: NullOrUndefined (String), "TeamId" :: NullOrUndefined (String), "TokenKey" :: NullOrUndefined (String), "TokenKeyId" :: NullOrUndefined (String) }) -> APNSVoipSandboxChannelRequest
+newAPNSVoipSandboxChannelRequest' :: ({ "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) } -> { "BundleId" :: Maybe (String), "Certificate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "PrivateKey" :: Maybe (String), "TeamId" :: Maybe (String), "TokenKey" :: Maybe (String), "TokenKeyId" :: Maybe (String) }) -> APNSVoipSandboxChannelRequest
 ```
 
 Constructs APNSVoipSandboxChannelRequest's fields from required parameters
@@ -384,7 +384,7 @@ Constructs APNSVoipSandboxChannelRequest's fields from required parameters
 
 ``` purescript
 newtype APNSVoipSandboxChannelResponse
-  = APNSVoipSandboxChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = APNSVoipSandboxChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Apple VoIP Developer Push Notification Service channel definition.
@@ -409,7 +409,7 @@ Constructs APNSVoipSandboxChannelResponse from required parameters
 #### `newAPNSVoipSandboxChannelResponse'`
 
 ``` purescript
-newAPNSVoipSandboxChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultAuthenticationMethod" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "HasTokenKey" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> APNSVoipSandboxChannelResponse
+newAPNSVoipSandboxChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultAuthenticationMethod" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "HasTokenKey" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> APNSVoipSandboxChannelResponse
 ```
 
 Constructs APNSVoipSandboxChannelResponse's fields from required parameters
@@ -434,7 +434,7 @@ Encode Action
 
 ``` purescript
 newtype ActivitiesResponse
-  = ActivitiesResponse { "Item" :: NullOrUndefined (ListOfActivityResponse) }
+  = ActivitiesResponse { "Item" :: Maybe (ListOfActivityResponse) }
 ```
 
 Activities for campaign.
@@ -459,7 +459,7 @@ Constructs ActivitiesResponse from required parameters
 #### `newActivitiesResponse'`
 
 ``` purescript
-newActivitiesResponse' :: ({ "Item" :: NullOrUndefined (ListOfActivityResponse) } -> { "Item" :: NullOrUndefined (ListOfActivityResponse) }) -> ActivitiesResponse
+newActivitiesResponse' :: ({ "Item" :: Maybe (ListOfActivityResponse) } -> { "Item" :: Maybe (ListOfActivityResponse) }) -> ActivitiesResponse
 ```
 
 Constructs ActivitiesResponse's fields from required parameters
@@ -468,7 +468,7 @@ Constructs ActivitiesResponse's fields from required parameters
 
 ``` purescript
 newtype ActivityResponse
-  = ActivityResponse { "ApplicationId" :: NullOrUndefined (String), "CampaignId" :: NullOrUndefined (String), "End" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Result" :: NullOrUndefined (String), "ScheduledStart" :: NullOrUndefined (String), "Start" :: NullOrUndefined (String), "State" :: NullOrUndefined (String), "SuccessfulEndpointCount" :: NullOrUndefined (Int), "TimezonesCompletedCount" :: NullOrUndefined (Int), "TimezonesTotalCount" :: NullOrUndefined (Int), "TotalEndpointCount" :: NullOrUndefined (Int), "TreatmentId" :: NullOrUndefined (String) }
+  = ActivityResponse { "ApplicationId" :: Maybe (String), "CampaignId" :: Maybe (String), "End" :: Maybe (String), "Id" :: Maybe (String), "Result" :: Maybe (String), "ScheduledStart" :: Maybe (String), "Start" :: Maybe (String), "State" :: Maybe (String), "SuccessfulEndpointCount" :: Maybe (Int), "TimezonesCompletedCount" :: Maybe (Int), "TimezonesTotalCount" :: Maybe (Int), "TotalEndpointCount" :: Maybe (Int), "TreatmentId" :: Maybe (String) }
 ```
 
 Activity definition
@@ -493,7 +493,7 @@ Constructs ActivityResponse from required parameters
 #### `newActivityResponse'`
 
 ``` purescript
-newActivityResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CampaignId" :: NullOrUndefined (String), "End" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Result" :: NullOrUndefined (String), "ScheduledStart" :: NullOrUndefined (String), "Start" :: NullOrUndefined (String), "State" :: NullOrUndefined (String), "SuccessfulEndpointCount" :: NullOrUndefined (Int), "TimezonesCompletedCount" :: NullOrUndefined (Int), "TimezonesTotalCount" :: NullOrUndefined (Int), "TotalEndpointCount" :: NullOrUndefined (Int), "TreatmentId" :: NullOrUndefined (String) } -> { "ApplicationId" :: NullOrUndefined (String), "CampaignId" :: NullOrUndefined (String), "End" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Result" :: NullOrUndefined (String), "ScheduledStart" :: NullOrUndefined (String), "Start" :: NullOrUndefined (String), "State" :: NullOrUndefined (String), "SuccessfulEndpointCount" :: NullOrUndefined (Int), "TimezonesCompletedCount" :: NullOrUndefined (Int), "TimezonesTotalCount" :: NullOrUndefined (Int), "TotalEndpointCount" :: NullOrUndefined (Int), "TreatmentId" :: NullOrUndefined (String) }) -> ActivityResponse
+newActivityResponse' :: ({ "ApplicationId" :: Maybe (String), "CampaignId" :: Maybe (String), "End" :: Maybe (String), "Id" :: Maybe (String), "Result" :: Maybe (String), "ScheduledStart" :: Maybe (String), "Start" :: Maybe (String), "State" :: Maybe (String), "SuccessfulEndpointCount" :: Maybe (Int), "TimezonesCompletedCount" :: Maybe (Int), "TimezonesTotalCount" :: Maybe (Int), "TotalEndpointCount" :: Maybe (Int), "TreatmentId" :: Maybe (String) } -> { "ApplicationId" :: Maybe (String), "CampaignId" :: Maybe (String), "End" :: Maybe (String), "Id" :: Maybe (String), "Result" :: Maybe (String), "ScheduledStart" :: Maybe (String), "Start" :: Maybe (String), "State" :: Maybe (String), "SuccessfulEndpointCount" :: Maybe (Int), "TimezonesCompletedCount" :: Maybe (Int), "TimezonesTotalCount" :: Maybe (Int), "TotalEndpointCount" :: Maybe (Int), "TreatmentId" :: Maybe (String) }) -> ActivityResponse
 ```
 
 Constructs ActivityResponse's fields from required parameters
@@ -502,7 +502,7 @@ Constructs ActivityResponse's fields from required parameters
 
 ``` purescript
 newtype AddressConfiguration
-  = AddressConfiguration { "BodyOverride" :: NullOrUndefined (String), "ChannelType" :: NullOrUndefined (ChannelType), "Context" :: NullOrUndefined (MapOf__string), "RawContent" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TitleOverride" :: NullOrUndefined (String) }
+  = AddressConfiguration { "BodyOverride" :: Maybe (String), "ChannelType" :: Maybe (ChannelType), "Context" :: Maybe (MapOf__string), "RawContent" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TitleOverride" :: Maybe (String) }
 ```
 
 Address configuration.
@@ -527,7 +527,7 @@ Constructs AddressConfiguration from required parameters
 #### `newAddressConfiguration'`
 
 ``` purescript
-newAddressConfiguration' :: ({ "BodyOverride" :: NullOrUndefined (String), "ChannelType" :: NullOrUndefined (ChannelType), "Context" :: NullOrUndefined (MapOf__string), "RawContent" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TitleOverride" :: NullOrUndefined (String) } -> { "BodyOverride" :: NullOrUndefined (String), "ChannelType" :: NullOrUndefined (ChannelType), "Context" :: NullOrUndefined (MapOf__string), "RawContent" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TitleOverride" :: NullOrUndefined (String) }) -> AddressConfiguration
+newAddressConfiguration' :: ({ "BodyOverride" :: Maybe (String), "ChannelType" :: Maybe (ChannelType), "Context" :: Maybe (MapOf__string), "RawContent" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TitleOverride" :: Maybe (String) } -> { "BodyOverride" :: Maybe (String), "ChannelType" :: Maybe (ChannelType), "Context" :: Maybe (MapOf__string), "RawContent" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TitleOverride" :: Maybe (String) }) -> AddressConfiguration
 ```
 
 Constructs AddressConfiguration's fields from required parameters
@@ -536,7 +536,7 @@ Constructs AddressConfiguration's fields from required parameters
 
 ``` purescript
 newtype ApplicationResponse
-  = ApplicationResponse { "Id" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }
+  = ApplicationResponse { "Id" :: Maybe (String), "Name" :: Maybe (String) }
 ```
 
 Application Response.
@@ -561,7 +561,7 @@ Constructs ApplicationResponse from required parameters
 #### `newApplicationResponse'`
 
 ``` purescript
-newApplicationResponse' :: ({ "Id" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) } -> { "Id" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String) }) -> ApplicationResponse
+newApplicationResponse' :: ({ "Id" :: Maybe (String), "Name" :: Maybe (String) } -> { "Id" :: Maybe (String), "Name" :: Maybe (String) }) -> ApplicationResponse
 ```
 
 Constructs ApplicationResponse's fields from required parameters
@@ -570,7 +570,7 @@ Constructs ApplicationResponse's fields from required parameters
 
 ``` purescript
 newtype ApplicationSettingsResource
-  = ApplicationSettingsResource { "ApplicationId" :: NullOrUndefined (String), "CampaignHook" :: NullOrUndefined (CampaignHook), "LastModifiedDate" :: NullOrUndefined (String), "Limits" :: NullOrUndefined (CampaignLimits), "QuietTime" :: NullOrUndefined (QuietTime) }
+  = ApplicationSettingsResource { "ApplicationId" :: Maybe (String), "CampaignHook" :: Maybe (CampaignHook), "LastModifiedDate" :: Maybe (String), "Limits" :: Maybe (CampaignLimits), "QuietTime" :: Maybe (QuietTime) }
 ```
 
 Application settings.
@@ -595,7 +595,7 @@ Constructs ApplicationSettingsResource from required parameters
 #### `newApplicationSettingsResource'`
 
 ``` purescript
-newApplicationSettingsResource' :: ({ "ApplicationId" :: NullOrUndefined (String), "CampaignHook" :: NullOrUndefined (CampaignHook), "LastModifiedDate" :: NullOrUndefined (String), "Limits" :: NullOrUndefined (CampaignLimits), "QuietTime" :: NullOrUndefined (QuietTime) } -> { "ApplicationId" :: NullOrUndefined (String), "CampaignHook" :: NullOrUndefined (CampaignHook), "LastModifiedDate" :: NullOrUndefined (String), "Limits" :: NullOrUndefined (CampaignLimits), "QuietTime" :: NullOrUndefined (QuietTime) }) -> ApplicationSettingsResource
+newApplicationSettingsResource' :: ({ "ApplicationId" :: Maybe (String), "CampaignHook" :: Maybe (CampaignHook), "LastModifiedDate" :: Maybe (String), "Limits" :: Maybe (CampaignLimits), "QuietTime" :: Maybe (QuietTime) } -> { "ApplicationId" :: Maybe (String), "CampaignHook" :: Maybe (CampaignHook), "LastModifiedDate" :: Maybe (String), "Limits" :: Maybe (CampaignLimits), "QuietTime" :: Maybe (QuietTime) }) -> ApplicationSettingsResource
 ```
 
 Constructs ApplicationSettingsResource's fields from required parameters
@@ -604,7 +604,7 @@ Constructs ApplicationSettingsResource's fields from required parameters
 
 ``` purescript
 newtype ApplicationsResponse
-  = ApplicationsResponse { "Item" :: NullOrUndefined (ListOfApplicationResponse), "NextToken" :: NullOrUndefined (String) }
+  = ApplicationsResponse { "Item" :: Maybe (ListOfApplicationResponse), "NextToken" :: Maybe (String) }
 ```
 
 Get Applications Result.
@@ -629,7 +629,7 @@ Constructs ApplicationsResponse from required parameters
 #### `newApplicationsResponse'`
 
 ``` purescript
-newApplicationsResponse' :: ({ "Item" :: NullOrUndefined (ListOfApplicationResponse), "NextToken" :: NullOrUndefined (String) } -> { "Item" :: NullOrUndefined (ListOfApplicationResponse), "NextToken" :: NullOrUndefined (String) }) -> ApplicationsResponse
+newApplicationsResponse' :: ({ "Item" :: Maybe (ListOfApplicationResponse), "NextToken" :: Maybe (String) } -> { "Item" :: Maybe (ListOfApplicationResponse), "NextToken" :: Maybe (String) }) -> ApplicationsResponse
 ```
 
 Constructs ApplicationsResponse's fields from required parameters
@@ -638,7 +638,7 @@ Constructs ApplicationsResponse's fields from required parameters
 
 ``` purescript
 newtype AttributeDimension
-  = AttributeDimension { "AttributeType" :: NullOrUndefined (AttributeType), "Values" :: NullOrUndefined (ListOf__string) }
+  = AttributeDimension { "AttributeType" :: Maybe (AttributeType), "Values" :: Maybe (ListOf__string) }
 ```
 
 Custom attibute dimension
@@ -663,7 +663,7 @@ Constructs AttributeDimension from required parameters
 #### `newAttributeDimension'`
 
 ``` purescript
-newAttributeDimension' :: ({ "AttributeType" :: NullOrUndefined (AttributeType), "Values" :: NullOrUndefined (ListOf__string) } -> { "AttributeType" :: NullOrUndefined (AttributeType), "Values" :: NullOrUndefined (ListOf__string) }) -> AttributeDimension
+newAttributeDimension' :: ({ "AttributeType" :: Maybe (AttributeType), "Values" :: Maybe (ListOf__string) } -> { "AttributeType" :: Maybe (AttributeType), "Values" :: Maybe (ListOf__string) }) -> AttributeDimension
 ```
 
 Constructs AttributeDimension's fields from required parameters
@@ -688,7 +688,7 @@ Encode AttributeType
 
 ``` purescript
 newtype BadRequestException
-  = BadRequestException { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = BadRequestException { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -713,7 +713,7 @@ Constructs BadRequestException from required parameters
 #### `newBadRequestException'`
 
 ``` purescript
-newBadRequestException' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> BadRequestException
+newBadRequestException' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> BadRequestException
 ```
 
 Constructs BadRequestException's fields from required parameters
@@ -722,7 +722,7 @@ Constructs BadRequestException's fields from required parameters
 
 ``` purescript
 newtype BaiduChannelRequest
-  = BaiduChannelRequest { "ApiKey" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "SecretKey" :: NullOrUndefined (String) }
+  = BaiduChannelRequest { "ApiKey" :: Maybe (String), "Enabled" :: Maybe (Boolean), "SecretKey" :: Maybe (String) }
 ```
 
 Baidu Cloud Push credentials
@@ -747,7 +747,7 @@ Constructs BaiduChannelRequest from required parameters
 #### `newBaiduChannelRequest'`
 
 ``` purescript
-newBaiduChannelRequest' :: ({ "ApiKey" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "SecretKey" :: NullOrUndefined (String) } -> { "ApiKey" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "SecretKey" :: NullOrUndefined (String) }) -> BaiduChannelRequest
+newBaiduChannelRequest' :: ({ "ApiKey" :: Maybe (String), "Enabled" :: Maybe (Boolean), "SecretKey" :: Maybe (String) } -> { "ApiKey" :: Maybe (String), "Enabled" :: Maybe (Boolean), "SecretKey" :: Maybe (String) }) -> BaiduChannelRequest
 ```
 
 Constructs BaiduChannelRequest's fields from required parameters
@@ -756,7 +756,7 @@ Constructs BaiduChannelRequest's fields from required parameters
 
 ``` purescript
 newtype BaiduChannelResponse
-  = BaiduChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Credential" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = BaiduChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Credential" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Baidu Cloud Messaging channel definition
@@ -781,7 +781,7 @@ Constructs BaiduChannelResponse from required parameters
 #### `newBaiduChannelResponse'`
 
 ``` purescript
-newBaiduChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Credential" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Credential" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> BaiduChannelResponse
+newBaiduChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Credential" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Credential" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> BaiduChannelResponse
 ```
 
 Constructs BaiduChannelResponse's fields from required parameters
@@ -790,7 +790,7 @@ Constructs BaiduChannelResponse's fields from required parameters
 
 ``` purescript
 newtype BaiduMessage
-  = BaiduMessage { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }
+  = BaiduMessage { "Action" :: Maybe (Action), "Body" :: Maybe (String), "Data" :: Maybe (MapOf__string), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) }
 ```
 
 Baidu Message.
@@ -815,7 +815,7 @@ Constructs BaiduMessage from required parameters
 #### `newBaiduMessage'`
 
 ``` purescript
-newBaiduMessage' :: ({ "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }) -> BaiduMessage
+newBaiduMessage' :: ({ "Action" :: Maybe (Action), "Body" :: Maybe (String), "Data" :: Maybe (MapOf__string), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Body" :: Maybe (String), "Data" :: Maybe (MapOf__string), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) }) -> BaiduMessage
 ```
 
 Constructs BaiduMessage's fields from required parameters
@@ -824,7 +824,7 @@ Constructs BaiduMessage's fields from required parameters
 
 ``` purescript
 newtype CampaignEmailMessage
-  = CampaignEmailMessage { "Body" :: NullOrUndefined (String), "FromAddress" :: NullOrUndefined (String), "HtmlBody" :: NullOrUndefined (String), "Title" :: NullOrUndefined (String) }
+  = CampaignEmailMessage { "Body" :: Maybe (String), "FromAddress" :: Maybe (String), "HtmlBody" :: Maybe (String), "Title" :: Maybe (String) }
 ```
 
 The email message configuration.
@@ -849,7 +849,7 @@ Constructs CampaignEmailMessage from required parameters
 #### `newCampaignEmailMessage'`
 
 ``` purescript
-newCampaignEmailMessage' :: ({ "Body" :: NullOrUndefined (String), "FromAddress" :: NullOrUndefined (String), "HtmlBody" :: NullOrUndefined (String), "Title" :: NullOrUndefined (String) } -> { "Body" :: NullOrUndefined (String), "FromAddress" :: NullOrUndefined (String), "HtmlBody" :: NullOrUndefined (String), "Title" :: NullOrUndefined (String) }) -> CampaignEmailMessage
+newCampaignEmailMessage' :: ({ "Body" :: Maybe (String), "FromAddress" :: Maybe (String), "HtmlBody" :: Maybe (String), "Title" :: Maybe (String) } -> { "Body" :: Maybe (String), "FromAddress" :: Maybe (String), "HtmlBody" :: Maybe (String), "Title" :: Maybe (String) }) -> CampaignEmailMessage
 ```
 
 Constructs CampaignEmailMessage's fields from required parameters
@@ -858,7 +858,7 @@ Constructs CampaignEmailMessage's fields from required parameters
 
 ``` purescript
 newtype CampaignHook
-  = CampaignHook { "LambdaFunctionName" :: NullOrUndefined (String), "Mode" :: NullOrUndefined (Mode), "WebUrl" :: NullOrUndefined (String) }
+  = CampaignHook { "LambdaFunctionName" :: Maybe (String), "Mode" :: Maybe (Mode), "WebUrl" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -881,7 +881,7 @@ Constructs CampaignHook from required parameters
 #### `newCampaignHook'`
 
 ``` purescript
-newCampaignHook' :: ({ "LambdaFunctionName" :: NullOrUndefined (String), "Mode" :: NullOrUndefined (Mode), "WebUrl" :: NullOrUndefined (String) } -> { "LambdaFunctionName" :: NullOrUndefined (String), "Mode" :: NullOrUndefined (Mode), "WebUrl" :: NullOrUndefined (String) }) -> CampaignHook
+newCampaignHook' :: ({ "LambdaFunctionName" :: Maybe (String), "Mode" :: Maybe (Mode), "WebUrl" :: Maybe (String) } -> { "LambdaFunctionName" :: Maybe (String), "Mode" :: Maybe (Mode), "WebUrl" :: Maybe (String) }) -> CampaignHook
 ```
 
 Constructs CampaignHook's fields from required parameters
@@ -890,7 +890,7 @@ Constructs CampaignHook's fields from required parameters
 
 ``` purescript
 newtype CampaignLimits
-  = CampaignLimits { "Daily" :: NullOrUndefined (Int), "MaximumDuration" :: NullOrUndefined (Int), "MessagesPerSecond" :: NullOrUndefined (Int), "Total" :: NullOrUndefined (Int) }
+  = CampaignLimits { "Daily" :: Maybe (Int), "MaximumDuration" :: Maybe (Int), "MessagesPerSecond" :: Maybe (Int), "Total" :: Maybe (Int) }
 ```
 
 Campaign Limits are used to limit the number of messages that can be sent to a user.
@@ -915,7 +915,7 @@ Constructs CampaignLimits from required parameters
 #### `newCampaignLimits'`
 
 ``` purescript
-newCampaignLimits' :: ({ "Daily" :: NullOrUndefined (Int), "MaximumDuration" :: NullOrUndefined (Int), "MessagesPerSecond" :: NullOrUndefined (Int), "Total" :: NullOrUndefined (Int) } -> { "Daily" :: NullOrUndefined (Int), "MaximumDuration" :: NullOrUndefined (Int), "MessagesPerSecond" :: NullOrUndefined (Int), "Total" :: NullOrUndefined (Int) }) -> CampaignLimits
+newCampaignLimits' :: ({ "Daily" :: Maybe (Int), "MaximumDuration" :: Maybe (Int), "MessagesPerSecond" :: Maybe (Int), "Total" :: Maybe (Int) } -> { "Daily" :: Maybe (Int), "MaximumDuration" :: Maybe (Int), "MessagesPerSecond" :: Maybe (Int), "Total" :: Maybe (Int) }) -> CampaignLimits
 ```
 
 Constructs CampaignLimits's fields from required parameters
@@ -924,7 +924,7 @@ Constructs CampaignLimits's fields from required parameters
 
 ``` purescript
 newtype CampaignResponse
-  = CampaignResponse { "AdditionalTreatments" :: NullOrUndefined (ListOfTreatmentResource), "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultState" :: NullOrUndefined (CampaignState), "Description" :: NullOrUndefined (String), "HoldoutPercent" :: NullOrUndefined (Int), "Hook" :: NullOrUndefined (CampaignHook), "Id" :: NullOrUndefined (String), "IsPaused" :: NullOrUndefined (Boolean), "LastModifiedDate" :: NullOrUndefined (String), "Limits" :: NullOrUndefined (CampaignLimits), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Name" :: NullOrUndefined (String), "Schedule" :: NullOrUndefined (Schedule), "SegmentId" :: NullOrUndefined (String), "SegmentVersion" :: NullOrUndefined (Int), "State" :: NullOrUndefined (CampaignState), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = CampaignResponse { "AdditionalTreatments" :: Maybe (ListOfTreatmentResource), "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultState" :: Maybe (CampaignState), "Description" :: Maybe (String), "HoldoutPercent" :: Maybe (Int), "Hook" :: Maybe (CampaignHook), "Id" :: Maybe (String), "IsPaused" :: Maybe (Boolean), "LastModifiedDate" :: Maybe (String), "Limits" :: Maybe (CampaignLimits), "MessageConfiguration" :: Maybe (MessageConfiguration), "Name" :: Maybe (String), "Schedule" :: Maybe (Schedule), "SegmentId" :: Maybe (String), "SegmentVersion" :: Maybe (Int), "State" :: Maybe (CampaignState), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Campaign definition
@@ -949,7 +949,7 @@ Constructs CampaignResponse from required parameters
 #### `newCampaignResponse'`
 
 ``` purescript
-newCampaignResponse' :: ({ "AdditionalTreatments" :: NullOrUndefined (ListOfTreatmentResource), "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultState" :: NullOrUndefined (CampaignState), "Description" :: NullOrUndefined (String), "HoldoutPercent" :: NullOrUndefined (Int), "Hook" :: NullOrUndefined (CampaignHook), "Id" :: NullOrUndefined (String), "IsPaused" :: NullOrUndefined (Boolean), "LastModifiedDate" :: NullOrUndefined (String), "Limits" :: NullOrUndefined (CampaignLimits), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Name" :: NullOrUndefined (String), "Schedule" :: NullOrUndefined (Schedule), "SegmentId" :: NullOrUndefined (String), "SegmentVersion" :: NullOrUndefined (Int), "State" :: NullOrUndefined (CampaignState), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "AdditionalTreatments" :: NullOrUndefined (ListOfTreatmentResource), "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "DefaultState" :: NullOrUndefined (CampaignState), "Description" :: NullOrUndefined (String), "HoldoutPercent" :: NullOrUndefined (Int), "Hook" :: NullOrUndefined (CampaignHook), "Id" :: NullOrUndefined (String), "IsPaused" :: NullOrUndefined (Boolean), "LastModifiedDate" :: NullOrUndefined (String), "Limits" :: NullOrUndefined (CampaignLimits), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Name" :: NullOrUndefined (String), "Schedule" :: NullOrUndefined (Schedule), "SegmentId" :: NullOrUndefined (String), "SegmentVersion" :: NullOrUndefined (Int), "State" :: NullOrUndefined (CampaignState), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> CampaignResponse
+newCampaignResponse' :: ({ "AdditionalTreatments" :: Maybe (ListOfTreatmentResource), "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultState" :: Maybe (CampaignState), "Description" :: Maybe (String), "HoldoutPercent" :: Maybe (Int), "Hook" :: Maybe (CampaignHook), "Id" :: Maybe (String), "IsPaused" :: Maybe (Boolean), "LastModifiedDate" :: Maybe (String), "Limits" :: Maybe (CampaignLimits), "MessageConfiguration" :: Maybe (MessageConfiguration), "Name" :: Maybe (String), "Schedule" :: Maybe (Schedule), "SegmentId" :: Maybe (String), "SegmentVersion" :: Maybe (Int), "State" :: Maybe (CampaignState), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String), "Version" :: Maybe (Int) } -> { "AdditionalTreatments" :: Maybe (ListOfTreatmentResource), "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "DefaultState" :: Maybe (CampaignState), "Description" :: Maybe (String), "HoldoutPercent" :: Maybe (Int), "Hook" :: Maybe (CampaignHook), "Id" :: Maybe (String), "IsPaused" :: Maybe (Boolean), "LastModifiedDate" :: Maybe (String), "Limits" :: Maybe (CampaignLimits), "MessageConfiguration" :: Maybe (MessageConfiguration), "Name" :: Maybe (String), "Schedule" :: Maybe (Schedule), "SegmentId" :: Maybe (String), "SegmentVersion" :: Maybe (Int), "State" :: Maybe (CampaignState), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String), "Version" :: Maybe (Int) }) -> CampaignResponse
 ```
 
 Constructs CampaignResponse's fields from required parameters
@@ -958,7 +958,7 @@ Constructs CampaignResponse's fields from required parameters
 
 ``` purescript
 newtype CampaignSmsMessage
-  = CampaignSmsMessage { "Body" :: NullOrUndefined (String), "MessageType" :: NullOrUndefined (MessageType), "SenderId" :: NullOrUndefined (String) }
+  = CampaignSmsMessage { "Body" :: Maybe (String), "MessageType" :: Maybe (MessageType), "SenderId" :: Maybe (String) }
 ```
 
 SMS message configuration.
@@ -983,7 +983,7 @@ Constructs CampaignSmsMessage from required parameters
 #### `newCampaignSmsMessage'`
 
 ``` purescript
-newCampaignSmsMessage' :: ({ "Body" :: NullOrUndefined (String), "MessageType" :: NullOrUndefined (MessageType), "SenderId" :: NullOrUndefined (String) } -> { "Body" :: NullOrUndefined (String), "MessageType" :: NullOrUndefined (MessageType), "SenderId" :: NullOrUndefined (String) }) -> CampaignSmsMessage
+newCampaignSmsMessage' :: ({ "Body" :: Maybe (String), "MessageType" :: Maybe (MessageType), "SenderId" :: Maybe (String) } -> { "Body" :: Maybe (String), "MessageType" :: Maybe (MessageType), "SenderId" :: Maybe (String) }) -> CampaignSmsMessage
 ```
 
 Constructs CampaignSmsMessage's fields from required parameters
@@ -992,7 +992,7 @@ Constructs CampaignSmsMessage's fields from required parameters
 
 ``` purescript
 newtype CampaignState
-  = CampaignState { "CampaignStatus" :: NullOrUndefined (CampaignStatus) }
+  = CampaignState { "CampaignStatus" :: Maybe (CampaignStatus) }
 ```
 
 State of the Campaign
@@ -1017,7 +1017,7 @@ Constructs CampaignState from required parameters
 #### `newCampaignState'`
 
 ``` purescript
-newCampaignState' :: ({ "CampaignStatus" :: NullOrUndefined (CampaignStatus) } -> { "CampaignStatus" :: NullOrUndefined (CampaignStatus) }) -> CampaignState
+newCampaignState' :: ({ "CampaignStatus" :: Maybe (CampaignStatus) } -> { "CampaignStatus" :: Maybe (CampaignStatus) }) -> CampaignState
 ```
 
 Constructs CampaignState's fields from required parameters
@@ -1042,7 +1042,7 @@ Encode CampaignStatus
 
 ``` purescript
 newtype CampaignsResponse
-  = CampaignsResponse { "Item" :: NullOrUndefined (ListOfCampaignResponse), "NextToken" :: NullOrUndefined (String) }
+  = CampaignsResponse { "Item" :: Maybe (ListOfCampaignResponse), "NextToken" :: Maybe (String) }
 ```
 
 List of available campaigns.
@@ -1067,7 +1067,7 @@ Constructs CampaignsResponse from required parameters
 #### `newCampaignsResponse'`
 
 ``` purescript
-newCampaignsResponse' :: ({ "Item" :: NullOrUndefined (ListOfCampaignResponse), "NextToken" :: NullOrUndefined (String) } -> { "Item" :: NullOrUndefined (ListOfCampaignResponse), "NextToken" :: NullOrUndefined (String) }) -> CampaignsResponse
+newCampaignsResponse' :: ({ "Item" :: Maybe (ListOfCampaignResponse), "NextToken" :: Maybe (String) } -> { "Item" :: Maybe (ListOfCampaignResponse), "NextToken" :: Maybe (String) }) -> CampaignsResponse
 ```
 
 Constructs CampaignsResponse's fields from required parameters
@@ -1156,7 +1156,7 @@ Constructs CreateAppResponse's fields from required parameters
 
 ``` purescript
 newtype CreateApplicationRequest
-  = CreateApplicationRequest { "Name" :: NullOrUndefined (String) }
+  = CreateApplicationRequest { "Name" :: Maybe (String) }
 ```
 
 Application Request.
@@ -1181,7 +1181,7 @@ Constructs CreateApplicationRequest from required parameters
 #### `newCreateApplicationRequest'`
 
 ``` purescript
-newCreateApplicationRequest' :: ({ "Name" :: NullOrUndefined (String) } -> { "Name" :: NullOrUndefined (String) }) -> CreateApplicationRequest
+newCreateApplicationRequest' :: ({ "Name" :: Maybe (String) } -> { "Name" :: Maybe (String) }) -> CreateApplicationRequest
 ```
 
 Constructs CreateApplicationRequest's fields from required parameters
@@ -1446,7 +1446,7 @@ Constructs CreateSegmentResponse's fields from required parameters
 
 ``` purescript
 newtype DefaultMessage
-  = DefaultMessage { "Body" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string) }
+  = DefaultMessage { "Body" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string) }
 ```
 
 Default Message across push notification, email, and sms.
@@ -1471,7 +1471,7 @@ Constructs DefaultMessage from required parameters
 #### `newDefaultMessage'`
 
 ``` purescript
-newDefaultMessage' :: ({ "Body" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string) } -> { "Body" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string) }) -> DefaultMessage
+newDefaultMessage' :: ({ "Body" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string) } -> { "Body" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string) }) -> DefaultMessage
 ```
 
 Constructs DefaultMessage's fields from required parameters
@@ -1480,7 +1480,7 @@ Constructs DefaultMessage's fields from required parameters
 
 ``` purescript
 newtype DefaultPushNotificationMessage
-  = DefaultPushNotificationMessage { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "SilentPush" :: NullOrUndefined (Boolean), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }
+  = DefaultPushNotificationMessage { "Action" :: Maybe (Action), "Body" :: Maybe (String), "Data" :: Maybe (MapOf__string), "SilentPush" :: Maybe (Boolean), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) }
 ```
 
 Default Push Notification Message.
@@ -1505,7 +1505,7 @@ Constructs DefaultPushNotificationMessage from required parameters
 #### `newDefaultPushNotificationMessage'`
 
 ``` purescript
-newDefaultPushNotificationMessage' :: ({ "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "SilentPush" :: NullOrUndefined (Boolean), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "SilentPush" :: NullOrUndefined (Boolean), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }) -> DefaultPushNotificationMessage
+newDefaultPushNotificationMessage' :: ({ "Action" :: Maybe (Action), "Body" :: Maybe (String), "Data" :: Maybe (MapOf__string), "SilentPush" :: Maybe (Boolean), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Body" :: Maybe (String), "Data" :: Maybe (MapOf__string), "SilentPush" :: Maybe (Boolean), "Substitutions" :: Maybe (MapOfListOf__string), "Title" :: Maybe (String), "Url" :: Maybe (String) }) -> DefaultPushNotificationMessage
 ```
 
 Constructs DefaultPushNotificationMessage's fields from required parameters
@@ -2380,7 +2380,7 @@ Encode DimensionType
 
 ``` purescript
 newtype DirectMessageConfiguration
-  = DirectMessageConfiguration { "ADMMessage" :: NullOrUndefined (ADMMessage), "APNSMessage" :: NullOrUndefined (APNSMessage), "BaiduMessage" :: NullOrUndefined (BaiduMessage), "DefaultMessage" :: NullOrUndefined (DefaultMessage), "DefaultPushNotificationMessage" :: NullOrUndefined (DefaultPushNotificationMessage), "GCMMessage" :: NullOrUndefined (GCMMessage), "SMSMessage" :: NullOrUndefined (SMSMessage) }
+  = DirectMessageConfiguration { "ADMMessage" :: Maybe (ADMMessage), "APNSMessage" :: Maybe (APNSMessage), "BaiduMessage" :: Maybe (BaiduMessage), "DefaultMessage" :: Maybe (DefaultMessage), "DefaultPushNotificationMessage" :: Maybe (DefaultPushNotificationMessage), "GCMMessage" :: Maybe (GCMMessage), "SMSMessage" :: Maybe (SMSMessage) }
 ```
 
 The message configuration.
@@ -2405,7 +2405,7 @@ Constructs DirectMessageConfiguration from required parameters
 #### `newDirectMessageConfiguration'`
 
 ``` purescript
-newDirectMessageConfiguration' :: ({ "ADMMessage" :: NullOrUndefined (ADMMessage), "APNSMessage" :: NullOrUndefined (APNSMessage), "BaiduMessage" :: NullOrUndefined (BaiduMessage), "DefaultMessage" :: NullOrUndefined (DefaultMessage), "DefaultPushNotificationMessage" :: NullOrUndefined (DefaultPushNotificationMessage), "GCMMessage" :: NullOrUndefined (GCMMessage), "SMSMessage" :: NullOrUndefined (SMSMessage) } -> { "ADMMessage" :: NullOrUndefined (ADMMessage), "APNSMessage" :: NullOrUndefined (APNSMessage), "BaiduMessage" :: NullOrUndefined (BaiduMessage), "DefaultMessage" :: NullOrUndefined (DefaultMessage), "DefaultPushNotificationMessage" :: NullOrUndefined (DefaultPushNotificationMessage), "GCMMessage" :: NullOrUndefined (GCMMessage), "SMSMessage" :: NullOrUndefined (SMSMessage) }) -> DirectMessageConfiguration
+newDirectMessageConfiguration' :: ({ "ADMMessage" :: Maybe (ADMMessage), "APNSMessage" :: Maybe (APNSMessage), "BaiduMessage" :: Maybe (BaiduMessage), "DefaultMessage" :: Maybe (DefaultMessage), "DefaultPushNotificationMessage" :: Maybe (DefaultPushNotificationMessage), "GCMMessage" :: Maybe (GCMMessage), "SMSMessage" :: Maybe (SMSMessage) } -> { "ADMMessage" :: Maybe (ADMMessage), "APNSMessage" :: Maybe (APNSMessage), "BaiduMessage" :: Maybe (BaiduMessage), "DefaultMessage" :: Maybe (DefaultMessage), "DefaultPushNotificationMessage" :: Maybe (DefaultPushNotificationMessage), "GCMMessage" :: Maybe (GCMMessage), "SMSMessage" :: Maybe (SMSMessage) }) -> DirectMessageConfiguration
 ```
 
 Constructs DirectMessageConfiguration's fields from required parameters
@@ -2430,7 +2430,7 @@ Encode Duration
 
 ``` purescript
 newtype EmailChannelRequest
-  = EmailChannelRequest { "Enabled" :: NullOrUndefined (Boolean), "FromAddress" :: NullOrUndefined (String), "Identity" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }
+  = EmailChannelRequest { "Enabled" :: Maybe (Boolean), "FromAddress" :: Maybe (String), "Identity" :: Maybe (String), "RoleArn" :: Maybe (String) }
 ```
 
 Email Channel Request
@@ -2455,7 +2455,7 @@ Constructs EmailChannelRequest from required parameters
 #### `newEmailChannelRequest'`
 
 ``` purescript
-newEmailChannelRequest' :: ({ "Enabled" :: NullOrUndefined (Boolean), "FromAddress" :: NullOrUndefined (String), "Identity" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) } -> { "Enabled" :: NullOrUndefined (Boolean), "FromAddress" :: NullOrUndefined (String), "Identity" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }) -> EmailChannelRequest
+newEmailChannelRequest' :: ({ "Enabled" :: Maybe (Boolean), "FromAddress" :: Maybe (String), "Identity" :: Maybe (String), "RoleArn" :: Maybe (String) } -> { "Enabled" :: Maybe (Boolean), "FromAddress" :: Maybe (String), "Identity" :: Maybe (String), "RoleArn" :: Maybe (String) }) -> EmailChannelRequest
 ```
 
 Constructs EmailChannelRequest's fields from required parameters
@@ -2464,7 +2464,7 @@ Constructs EmailChannelRequest's fields from required parameters
 
 ``` purescript
 newtype EmailChannelResponse
-  = EmailChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "FromAddress" :: NullOrUndefined (String), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "Identity" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = EmailChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "FromAddress" :: Maybe (String), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "Identity" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "RoleArn" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Email Channel Response.
@@ -2489,7 +2489,7 @@ Constructs EmailChannelResponse from required parameters
 #### `newEmailChannelResponse'`
 
 ``` purescript
-newEmailChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "FromAddress" :: NullOrUndefined (String), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "Identity" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "FromAddress" :: NullOrUndefined (String), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "Identity" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> EmailChannelResponse
+newEmailChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "FromAddress" :: Maybe (String), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "Identity" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "RoleArn" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "FromAddress" :: Maybe (String), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "Identity" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "RoleArn" :: Maybe (String), "Version" :: Maybe (Int) }) -> EmailChannelResponse
 ```
 
 Constructs EmailChannelResponse's fields from required parameters
@@ -2498,7 +2498,7 @@ Constructs EmailChannelResponse's fields from required parameters
 
 ``` purescript
 newtype EndpointBatchItem
-  = EndpointBatchItem { "Address" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) }
+  = EndpointBatchItem { "Address" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Id" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) }
 ```
 
 Endpoint update request
@@ -2523,7 +2523,7 @@ Constructs EndpointBatchItem from required parameters
 #### `newEndpointBatchItem'`
 
 ``` purescript
-newEndpointBatchItem' :: ({ "Address" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) } -> { "Address" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) }) -> EndpointBatchItem
+newEndpointBatchItem' :: ({ "Address" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Id" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) } -> { "Address" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Id" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) }) -> EndpointBatchItem
 ```
 
 Constructs EndpointBatchItem's fields from required parameters
@@ -2532,7 +2532,7 @@ Constructs EndpointBatchItem's fields from required parameters
 
 ``` purescript
 newtype EndpointBatchRequest
-  = EndpointBatchRequest { "Item" :: NullOrUndefined (ListOfEndpointBatchItem) }
+  = EndpointBatchRequest { "Item" :: Maybe (ListOfEndpointBatchItem) }
 ```
 
 Endpoint batch update request.
@@ -2557,7 +2557,7 @@ Constructs EndpointBatchRequest from required parameters
 #### `newEndpointBatchRequest'`
 
 ``` purescript
-newEndpointBatchRequest' :: ({ "Item" :: NullOrUndefined (ListOfEndpointBatchItem) } -> { "Item" :: NullOrUndefined (ListOfEndpointBatchItem) }) -> EndpointBatchRequest
+newEndpointBatchRequest' :: ({ "Item" :: Maybe (ListOfEndpointBatchItem) } -> { "Item" :: Maybe (ListOfEndpointBatchItem) }) -> EndpointBatchRequest
 ```
 
 Constructs EndpointBatchRequest's fields from required parameters
@@ -2566,7 +2566,7 @@ Constructs EndpointBatchRequest's fields from required parameters
 
 ``` purescript
 newtype EndpointDemographic
-  = EndpointDemographic { "AppVersion" :: NullOrUndefined (String), "Locale" :: NullOrUndefined (String), "Make" :: NullOrUndefined (String), "Model" :: NullOrUndefined (String), "ModelVersion" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "PlatformVersion" :: NullOrUndefined (String), "Timezone" :: NullOrUndefined (String) }
+  = EndpointDemographic { "AppVersion" :: Maybe (String), "Locale" :: Maybe (String), "Make" :: Maybe (String), "Model" :: Maybe (String), "ModelVersion" :: Maybe (String), "Platform" :: Maybe (String), "PlatformVersion" :: Maybe (String), "Timezone" :: Maybe (String) }
 ```
 
 Endpoint demographic data
@@ -2591,7 +2591,7 @@ Constructs EndpointDemographic from required parameters
 #### `newEndpointDemographic'`
 
 ``` purescript
-newEndpointDemographic' :: ({ "AppVersion" :: NullOrUndefined (String), "Locale" :: NullOrUndefined (String), "Make" :: NullOrUndefined (String), "Model" :: NullOrUndefined (String), "ModelVersion" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "PlatformVersion" :: NullOrUndefined (String), "Timezone" :: NullOrUndefined (String) } -> { "AppVersion" :: NullOrUndefined (String), "Locale" :: NullOrUndefined (String), "Make" :: NullOrUndefined (String), "Model" :: NullOrUndefined (String), "ModelVersion" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "PlatformVersion" :: NullOrUndefined (String), "Timezone" :: NullOrUndefined (String) }) -> EndpointDemographic
+newEndpointDemographic' :: ({ "AppVersion" :: Maybe (String), "Locale" :: Maybe (String), "Make" :: Maybe (String), "Model" :: Maybe (String), "ModelVersion" :: Maybe (String), "Platform" :: Maybe (String), "PlatformVersion" :: Maybe (String), "Timezone" :: Maybe (String) } -> { "AppVersion" :: Maybe (String), "Locale" :: Maybe (String), "Make" :: Maybe (String), "Model" :: Maybe (String), "ModelVersion" :: Maybe (String), "Platform" :: Maybe (String), "PlatformVersion" :: Maybe (String), "Timezone" :: Maybe (String) }) -> EndpointDemographic
 ```
 
 Constructs EndpointDemographic's fields from required parameters
@@ -2600,7 +2600,7 @@ Constructs EndpointDemographic's fields from required parameters
 
 ``` purescript
 newtype EndpointLocation
-  = EndpointLocation { "City" :: NullOrUndefined (String), "Country" :: NullOrUndefined (String), "Latitude" :: NullOrUndefined (Number), "Longitude" :: NullOrUndefined (Number), "PostalCode" :: NullOrUndefined (String), "Region" :: NullOrUndefined (String) }
+  = EndpointLocation { "City" :: Maybe (String), "Country" :: Maybe (String), "Latitude" :: Maybe (Number), "Longitude" :: Maybe (Number), "PostalCode" :: Maybe (String), "Region" :: Maybe (String) }
 ```
 
 Endpoint location data
@@ -2625,7 +2625,7 @@ Constructs EndpointLocation from required parameters
 #### `newEndpointLocation'`
 
 ``` purescript
-newEndpointLocation' :: ({ "City" :: NullOrUndefined (String), "Country" :: NullOrUndefined (String), "Latitude" :: NullOrUndefined (Number), "Longitude" :: NullOrUndefined (Number), "PostalCode" :: NullOrUndefined (String), "Region" :: NullOrUndefined (String) } -> { "City" :: NullOrUndefined (String), "Country" :: NullOrUndefined (String), "Latitude" :: NullOrUndefined (Number), "Longitude" :: NullOrUndefined (Number), "PostalCode" :: NullOrUndefined (String), "Region" :: NullOrUndefined (String) }) -> EndpointLocation
+newEndpointLocation' :: ({ "City" :: Maybe (String), "Country" :: Maybe (String), "Latitude" :: Maybe (Number), "Longitude" :: Maybe (Number), "PostalCode" :: Maybe (String), "Region" :: Maybe (String) } -> { "City" :: Maybe (String), "Country" :: Maybe (String), "Latitude" :: Maybe (Number), "Longitude" :: Maybe (Number), "PostalCode" :: Maybe (String), "Region" :: Maybe (String) }) -> EndpointLocation
 ```
 
 Constructs EndpointLocation's fields from required parameters
@@ -2634,7 +2634,7 @@ Constructs EndpointLocation's fields from required parameters
 
 ``` purescript
 newtype EndpointMessageResult
-  = EndpointMessageResult { "Address" :: NullOrUndefined (String), "DeliveryStatus" :: NullOrUndefined (DeliveryStatus), "StatusCode" :: NullOrUndefined (Int), "StatusMessage" :: NullOrUndefined (String), "UpdatedToken" :: NullOrUndefined (String) }
+  = EndpointMessageResult { "Address" :: Maybe (String), "DeliveryStatus" :: Maybe (DeliveryStatus), "StatusCode" :: Maybe (Int), "StatusMessage" :: Maybe (String), "UpdatedToken" :: Maybe (String) }
 ```
 
 The result from sending a message to an endpoint.
@@ -2659,7 +2659,7 @@ Constructs EndpointMessageResult from required parameters
 #### `newEndpointMessageResult'`
 
 ``` purescript
-newEndpointMessageResult' :: ({ "Address" :: NullOrUndefined (String), "DeliveryStatus" :: NullOrUndefined (DeliveryStatus), "StatusCode" :: NullOrUndefined (Int), "StatusMessage" :: NullOrUndefined (String), "UpdatedToken" :: NullOrUndefined (String) } -> { "Address" :: NullOrUndefined (String), "DeliveryStatus" :: NullOrUndefined (DeliveryStatus), "StatusCode" :: NullOrUndefined (Int), "StatusMessage" :: NullOrUndefined (String), "UpdatedToken" :: NullOrUndefined (String) }) -> EndpointMessageResult
+newEndpointMessageResult' :: ({ "Address" :: Maybe (String), "DeliveryStatus" :: Maybe (DeliveryStatus), "StatusCode" :: Maybe (Int), "StatusMessage" :: Maybe (String), "UpdatedToken" :: Maybe (String) } -> { "Address" :: Maybe (String), "DeliveryStatus" :: Maybe (DeliveryStatus), "StatusCode" :: Maybe (Int), "StatusMessage" :: Maybe (String), "UpdatedToken" :: Maybe (String) }) -> EndpointMessageResult
 ```
 
 Constructs EndpointMessageResult's fields from required parameters
@@ -2668,7 +2668,7 @@ Constructs EndpointMessageResult's fields from required parameters
 
 ``` purescript
 newtype EndpointRequest
-  = EndpointRequest { "Address" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) }
+  = EndpointRequest { "Address" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) }
 ```
 
 Endpoint update request
@@ -2693,7 +2693,7 @@ Constructs EndpointRequest from required parameters
 #### `newEndpointRequest'`
 
 ``` purescript
-newEndpointRequest' :: ({ "Address" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) } -> { "Address" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) }) -> EndpointRequest
+newEndpointRequest' :: ({ "Address" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) } -> { "Address" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) }) -> EndpointRequest
 ```
 
 Constructs EndpointRequest's fields from required parameters
@@ -2702,7 +2702,7 @@ Constructs EndpointRequest's fields from required parameters
 
 ``` purescript
 newtype EndpointResponse
-  = EndpointResponse { "Address" :: NullOrUndefined (String), "ApplicationId" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "CohortId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) }
+  = EndpointResponse { "Address" :: Maybe (String), "ApplicationId" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "CohortId" :: Maybe (String), "CreationDate" :: Maybe (String), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Id" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) }
 ```
 
 Endpoint response
@@ -2727,7 +2727,7 @@ Constructs EndpointResponse from required parameters
 #### `newEndpointResponse'`
 
 ``` purescript
-newEndpointResponse' :: ({ "Address" :: NullOrUndefined (String), "ApplicationId" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "CohortId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) } -> { "Address" :: NullOrUndefined (String), "ApplicationId" :: NullOrUndefined (String), "Attributes" :: NullOrUndefined (MapOfListOf__string), "ChannelType" :: NullOrUndefined (ChannelType), "CohortId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Demographic" :: NullOrUndefined (EndpointDemographic), "EffectiveDate" :: NullOrUndefined (String), "EndpointStatus" :: NullOrUndefined (String), "Id" :: NullOrUndefined (String), "Location" :: NullOrUndefined (EndpointLocation), "Metrics" :: NullOrUndefined (MapOf__double), "OptOut" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "User" :: NullOrUndefined (EndpointUser) }) -> EndpointResponse
+newEndpointResponse' :: ({ "Address" :: Maybe (String), "ApplicationId" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "CohortId" :: Maybe (String), "CreationDate" :: Maybe (String), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Id" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) } -> { "Address" :: Maybe (String), "ApplicationId" :: Maybe (String), "Attributes" :: Maybe (MapOfListOf__string), "ChannelType" :: Maybe (ChannelType), "CohortId" :: Maybe (String), "CreationDate" :: Maybe (String), "Demographic" :: Maybe (EndpointDemographic), "EffectiveDate" :: Maybe (String), "EndpointStatus" :: Maybe (String), "Id" :: Maybe (String), "Location" :: Maybe (EndpointLocation), "Metrics" :: Maybe (MapOf__double), "OptOut" :: Maybe (String), "RequestId" :: Maybe (String), "User" :: Maybe (EndpointUser) }) -> EndpointResponse
 ```
 
 Constructs EndpointResponse's fields from required parameters
@@ -2736,7 +2736,7 @@ Constructs EndpointResponse's fields from required parameters
 
 ``` purescript
 newtype EndpointSendConfiguration
-  = EndpointSendConfiguration { "BodyOverride" :: NullOrUndefined (String), "Context" :: NullOrUndefined (MapOf__string), "RawContent" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TitleOverride" :: NullOrUndefined (String) }
+  = EndpointSendConfiguration { "BodyOverride" :: Maybe (String), "Context" :: Maybe (MapOf__string), "RawContent" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TitleOverride" :: Maybe (String) }
 ```
 
 Endpoint send configuration.
@@ -2761,7 +2761,7 @@ Constructs EndpointSendConfiguration from required parameters
 #### `newEndpointSendConfiguration'`
 
 ``` purescript
-newEndpointSendConfiguration' :: ({ "BodyOverride" :: NullOrUndefined (String), "Context" :: NullOrUndefined (MapOf__string), "RawContent" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TitleOverride" :: NullOrUndefined (String) } -> { "BodyOverride" :: NullOrUndefined (String), "Context" :: NullOrUndefined (MapOf__string), "RawContent" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TitleOverride" :: NullOrUndefined (String) }) -> EndpointSendConfiguration
+newEndpointSendConfiguration' :: ({ "BodyOverride" :: Maybe (String), "Context" :: Maybe (MapOf__string), "RawContent" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TitleOverride" :: Maybe (String) } -> { "BodyOverride" :: Maybe (String), "Context" :: Maybe (MapOf__string), "RawContent" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TitleOverride" :: Maybe (String) }) -> EndpointSendConfiguration
 ```
 
 Constructs EndpointSendConfiguration's fields from required parameters
@@ -2770,7 +2770,7 @@ Constructs EndpointSendConfiguration's fields from required parameters
 
 ``` purescript
 newtype EndpointUser
-  = EndpointUser { "UserAttributes" :: NullOrUndefined (MapOfListOf__string), "UserId" :: NullOrUndefined (String) }
+  = EndpointUser { "UserAttributes" :: Maybe (MapOfListOf__string), "UserId" :: Maybe (String) }
 ```
 
 Endpoint user specific custom userAttributes
@@ -2795,7 +2795,7 @@ Constructs EndpointUser from required parameters
 #### `newEndpointUser'`
 
 ``` purescript
-newEndpointUser' :: ({ "UserAttributes" :: NullOrUndefined (MapOfListOf__string), "UserId" :: NullOrUndefined (String) } -> { "UserAttributes" :: NullOrUndefined (MapOfListOf__string), "UserId" :: NullOrUndefined (String) }) -> EndpointUser
+newEndpointUser' :: ({ "UserAttributes" :: Maybe (MapOfListOf__string), "UserId" :: Maybe (String) } -> { "UserAttributes" :: Maybe (MapOfListOf__string), "UserId" :: Maybe (String) }) -> EndpointUser
 ```
 
 Constructs EndpointUser's fields from required parameters
@@ -2804,7 +2804,7 @@ Constructs EndpointUser's fields from required parameters
 
 ``` purescript
 newtype EventStream
-  = EventStream { "ApplicationId" :: NullOrUndefined (String), "DestinationStreamArn" :: NullOrUndefined (String), "ExternalId" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "LastUpdatedBy" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }
+  = EventStream { "ApplicationId" :: Maybe (String), "DestinationStreamArn" :: Maybe (String), "ExternalId" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "LastUpdatedBy" :: Maybe (String), "RoleArn" :: Maybe (String) }
 ```
 
 Model for an event publishing subscription export.
@@ -2829,7 +2829,7 @@ Constructs EventStream from required parameters
 #### `newEventStream'`
 
 ``` purescript
-newEventStream' :: ({ "ApplicationId" :: NullOrUndefined (String), "DestinationStreamArn" :: NullOrUndefined (String), "ExternalId" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "LastUpdatedBy" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) } -> { "ApplicationId" :: NullOrUndefined (String), "DestinationStreamArn" :: NullOrUndefined (String), "ExternalId" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "LastUpdatedBy" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }) -> EventStream
+newEventStream' :: ({ "ApplicationId" :: Maybe (String), "DestinationStreamArn" :: Maybe (String), "ExternalId" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "LastUpdatedBy" :: Maybe (String), "RoleArn" :: Maybe (String) } -> { "ApplicationId" :: Maybe (String), "DestinationStreamArn" :: Maybe (String), "ExternalId" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "LastUpdatedBy" :: Maybe (String), "RoleArn" :: Maybe (String) }) -> EventStream
 ```
 
 Constructs EventStream's fields from required parameters
@@ -2838,7 +2838,7 @@ Constructs EventStream's fields from required parameters
 
 ``` purescript
 newtype ExportJobRequest
-  = ExportJobRequest { "RoleArn" :: NullOrUndefined (String), "S3UrlPrefix" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String) }
+  = ExportJobRequest { "RoleArn" :: Maybe (String), "S3UrlPrefix" :: Maybe (String), "SegmentId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2861,7 +2861,7 @@ Constructs ExportJobRequest from required parameters
 #### `newExportJobRequest'`
 
 ``` purescript
-newExportJobRequest' :: ({ "RoleArn" :: NullOrUndefined (String), "S3UrlPrefix" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String) } -> { "RoleArn" :: NullOrUndefined (String), "S3UrlPrefix" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String) }) -> ExportJobRequest
+newExportJobRequest' :: ({ "RoleArn" :: Maybe (String), "S3UrlPrefix" :: Maybe (String), "SegmentId" :: Maybe (String) } -> { "RoleArn" :: Maybe (String), "S3UrlPrefix" :: Maybe (String), "SegmentId" :: Maybe (String) }) -> ExportJobRequest
 ```
 
 Constructs ExportJobRequest's fields from required parameters
@@ -2870,7 +2870,7 @@ Constructs ExportJobRequest's fields from required parameters
 
 ``` purescript
 newtype ExportJobResource
-  = ExportJobResource { "RoleArn" :: NullOrUndefined (String), "S3UrlPrefix" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String) }
+  = ExportJobResource { "RoleArn" :: Maybe (String), "S3UrlPrefix" :: Maybe (String), "SegmentId" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2893,7 +2893,7 @@ Constructs ExportJobResource from required parameters
 #### `newExportJobResource'`
 
 ``` purescript
-newExportJobResource' :: ({ "RoleArn" :: NullOrUndefined (String), "S3UrlPrefix" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String) } -> { "RoleArn" :: NullOrUndefined (String), "S3UrlPrefix" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String) }) -> ExportJobResource
+newExportJobResource' :: ({ "RoleArn" :: Maybe (String), "S3UrlPrefix" :: Maybe (String), "SegmentId" :: Maybe (String) } -> { "RoleArn" :: Maybe (String), "S3UrlPrefix" :: Maybe (String), "SegmentId" :: Maybe (String) }) -> ExportJobResource
 ```
 
 Constructs ExportJobResource's fields from required parameters
@@ -2902,7 +2902,7 @@ Constructs ExportJobResource's fields from required parameters
 
 ``` purescript
 newtype ExportJobResponse
-  = ExportJobResponse { "ApplicationId" :: NullOrUndefined (String), "CompletedPieces" :: NullOrUndefined (Int), "CompletionDate" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ExportJobResource), "FailedPieces" :: NullOrUndefined (Int), "Failures" :: NullOrUndefined (ListOf__string), "Id" :: NullOrUndefined (String), "JobStatus" :: NullOrUndefined (JobStatus), "TotalFailures" :: NullOrUndefined (Int), "TotalPieces" :: NullOrUndefined (Int), "TotalProcessed" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (String) }
+  = ExportJobResponse { "ApplicationId" :: Maybe (String), "CompletedPieces" :: Maybe (Int), "CompletionDate" :: Maybe (String), "CreationDate" :: Maybe (String), "Definition" :: Maybe (ExportJobResource), "FailedPieces" :: Maybe (Int), "Failures" :: Maybe (ListOf__string), "Id" :: Maybe (String), "JobStatus" :: Maybe (JobStatus), "TotalFailures" :: Maybe (Int), "TotalPieces" :: Maybe (Int), "TotalProcessed" :: Maybe (Int), "Type" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -2925,7 +2925,7 @@ Constructs ExportJobResponse from required parameters
 #### `newExportJobResponse'`
 
 ``` purescript
-newExportJobResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CompletedPieces" :: NullOrUndefined (Int), "CompletionDate" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ExportJobResource), "FailedPieces" :: NullOrUndefined (Int), "Failures" :: NullOrUndefined (ListOf__string), "Id" :: NullOrUndefined (String), "JobStatus" :: NullOrUndefined (JobStatus), "TotalFailures" :: NullOrUndefined (Int), "TotalPieces" :: NullOrUndefined (Int), "TotalProcessed" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (String) } -> { "ApplicationId" :: NullOrUndefined (String), "CompletedPieces" :: NullOrUndefined (Int), "CompletionDate" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ExportJobResource), "FailedPieces" :: NullOrUndefined (Int), "Failures" :: NullOrUndefined (ListOf__string), "Id" :: NullOrUndefined (String), "JobStatus" :: NullOrUndefined (JobStatus), "TotalFailures" :: NullOrUndefined (Int), "TotalPieces" :: NullOrUndefined (Int), "TotalProcessed" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (String) }) -> ExportJobResponse
+newExportJobResponse' :: ({ "ApplicationId" :: Maybe (String), "CompletedPieces" :: Maybe (Int), "CompletionDate" :: Maybe (String), "CreationDate" :: Maybe (String), "Definition" :: Maybe (ExportJobResource), "FailedPieces" :: Maybe (Int), "Failures" :: Maybe (ListOf__string), "Id" :: Maybe (String), "JobStatus" :: Maybe (JobStatus), "TotalFailures" :: Maybe (Int), "TotalPieces" :: Maybe (Int), "TotalProcessed" :: Maybe (Int), "Type" :: Maybe (String) } -> { "ApplicationId" :: Maybe (String), "CompletedPieces" :: Maybe (Int), "CompletionDate" :: Maybe (String), "CreationDate" :: Maybe (String), "Definition" :: Maybe (ExportJobResource), "FailedPieces" :: Maybe (Int), "Failures" :: Maybe (ListOf__string), "Id" :: Maybe (String), "JobStatus" :: Maybe (JobStatus), "TotalFailures" :: Maybe (Int), "TotalPieces" :: Maybe (Int), "TotalProcessed" :: Maybe (Int), "Type" :: Maybe (String) }) -> ExportJobResponse
 ```
 
 Constructs ExportJobResponse's fields from required parameters
@@ -2934,7 +2934,7 @@ Constructs ExportJobResponse's fields from required parameters
 
 ``` purescript
 newtype ExportJobsResponse
-  = ExportJobsResponse { "Item" :: NullOrUndefined (ListOfExportJobResponse), "NextToken" :: NullOrUndefined (String) }
+  = ExportJobsResponse { "Item" :: Maybe (ListOfExportJobResponse), "NextToken" :: Maybe (String) }
 ```
 
 Export job list.
@@ -2959,7 +2959,7 @@ Constructs ExportJobsResponse from required parameters
 #### `newExportJobsResponse'`
 
 ``` purescript
-newExportJobsResponse' :: ({ "Item" :: NullOrUndefined (ListOfExportJobResponse), "NextToken" :: NullOrUndefined (String) } -> { "Item" :: NullOrUndefined (ListOfExportJobResponse), "NextToken" :: NullOrUndefined (String) }) -> ExportJobsResponse
+newExportJobsResponse' :: ({ "Item" :: Maybe (ListOfExportJobResponse), "NextToken" :: Maybe (String) } -> { "Item" :: Maybe (ListOfExportJobResponse), "NextToken" :: Maybe (String) }) -> ExportJobsResponse
 ```
 
 Constructs ExportJobsResponse's fields from required parameters
@@ -2968,7 +2968,7 @@ Constructs ExportJobsResponse's fields from required parameters
 
 ``` purescript
 newtype ForbiddenException
-  = ForbiddenException { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = ForbiddenException { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -2993,7 +2993,7 @@ Constructs ForbiddenException from required parameters
 #### `newForbiddenException'`
 
 ``` purescript
-newForbiddenException' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> ForbiddenException
+newForbiddenException' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> ForbiddenException
 ```
 
 Constructs ForbiddenException's fields from required parameters
@@ -3034,7 +3034,7 @@ Encode Frequency
 
 ``` purescript
 newtype GCMChannelRequest
-  = GCMChannelRequest { "ApiKey" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean) }
+  = GCMChannelRequest { "ApiKey" :: Maybe (String), "Enabled" :: Maybe (Boolean) }
 ```
 
 Google Cloud Messaging credentials
@@ -3059,7 +3059,7 @@ Constructs GCMChannelRequest from required parameters
 #### `newGCMChannelRequest'`
 
 ``` purescript
-newGCMChannelRequest' :: ({ "ApiKey" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean) } -> { "ApiKey" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean) }) -> GCMChannelRequest
+newGCMChannelRequest' :: ({ "ApiKey" :: Maybe (String), "Enabled" :: Maybe (Boolean) } -> { "ApiKey" :: Maybe (String), "Enabled" :: Maybe (Boolean) }) -> GCMChannelRequest
 ```
 
 Constructs GCMChannelRequest's fields from required parameters
@@ -3068,7 +3068,7 @@ Constructs GCMChannelRequest's fields from required parameters
 
 ``` purescript
 newtype GCMChannelResponse
-  = GCMChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Credential" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = GCMChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Credential" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 Google Cloud Messaging channel definition
@@ -3093,7 +3093,7 @@ Constructs GCMChannelResponse from required parameters
 #### `newGCMChannelResponse'`
 
 ``` purescript
-newGCMChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Credential" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Credential" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> GCMChannelResponse
+newGCMChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Credential" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Credential" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "Version" :: Maybe (Int) }) -> GCMChannelResponse
 ```
 
 Constructs GCMChannelResponse's fields from required parameters
@@ -3102,7 +3102,7 @@ Constructs GCMChannelResponse's fields from required parameters
 
 ``` purescript
 newtype GCMMessage
-  = GCMMessage { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "CollapseKey" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "Priority" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "RestrictedPackageName" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TimeToLive" :: NullOrUndefined (Int), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }
+  = GCMMessage { "Action" :: Maybe (Action), "Body" :: Maybe (String), "CollapseKey" :: Maybe (String), "Data" :: Maybe (MapOf__string), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "Priority" :: Maybe (String), "RawContent" :: Maybe (String), "RestrictedPackageName" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TimeToLive" :: Maybe (Int), "Title" :: Maybe (String), "Url" :: Maybe (String) }
 ```
 
 GCM Message.
@@ -3127,7 +3127,7 @@ Constructs GCMMessage from required parameters
 #### `newGCMMessage'`
 
 ``` purescript
-newGCMMessage' :: ({ "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "CollapseKey" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "Priority" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "RestrictedPackageName" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TimeToLive" :: NullOrUndefined (Int), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "CollapseKey" :: NullOrUndefined (String), "Data" :: NullOrUndefined (MapOf__string), "IconReference" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "Priority" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "RestrictedPackageName" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "SmallImageIconUrl" :: NullOrUndefined (String), "Sound" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string), "TimeToLive" :: NullOrUndefined (Int), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }) -> GCMMessage
+newGCMMessage' :: ({ "Action" :: Maybe (Action), "Body" :: Maybe (String), "CollapseKey" :: Maybe (String), "Data" :: Maybe (MapOf__string), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "Priority" :: Maybe (String), "RawContent" :: Maybe (String), "RestrictedPackageName" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TimeToLive" :: Maybe (Int), "Title" :: Maybe (String), "Url" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Body" :: Maybe (String), "CollapseKey" :: Maybe (String), "Data" :: Maybe (MapOf__string), "IconReference" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "Priority" :: Maybe (String), "RawContent" :: Maybe (String), "RestrictedPackageName" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "SmallImageIconUrl" :: Maybe (String), "Sound" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string), "TimeToLive" :: Maybe (Int), "Title" :: Maybe (String), "Url" :: Maybe (String) }) -> GCMMessage
 ```
 
 Constructs GCMMessage's fields from required parameters
@@ -3584,7 +3584,7 @@ Constructs GetApplicationSettingsResponse's fields from required parameters
 
 ``` purescript
 newtype GetAppsRequest
-  = GetAppsRequest { "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetAppsRequest { "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3607,7 +3607,7 @@ Constructs GetAppsRequest from required parameters
 #### `newGetAppsRequest'`
 
 ``` purescript
-newGetAppsRequest' :: ({ "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetAppsRequest
+newGetAppsRequest' :: ({ "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetAppsRequest
 ```
 
 Constructs GetAppsRequest's fields from required parameters
@@ -3712,7 +3712,7 @@ Constructs GetBaiduChannelResponse's fields from required parameters
 
 ``` purescript
 newtype GetCampaignActivitiesRequest
-  = GetCampaignActivitiesRequest { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetCampaignActivitiesRequest { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3735,7 +3735,7 @@ Constructs GetCampaignActivitiesRequest from required parameters
 #### `newGetCampaignActivitiesRequest'`
 
 ``` purescript
-newGetCampaignActivitiesRequest' :: String -> String -> ({ "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetCampaignActivitiesRequest
+newGetCampaignActivitiesRequest' :: String -> String -> ({ "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetCampaignActivitiesRequest
 ```
 
 Constructs GetCampaignActivitiesRequest's fields from required parameters
@@ -3904,7 +3904,7 @@ Constructs GetCampaignVersionResponse's fields from required parameters
 
 ``` purescript
 newtype GetCampaignVersionsRequest
-  = GetCampaignVersionsRequest { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetCampaignVersionsRequest { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3927,7 +3927,7 @@ Constructs GetCampaignVersionsRequest from required parameters
 #### `newGetCampaignVersionsRequest'`
 
 ``` purescript
-newGetCampaignVersionsRequest' :: String -> String -> ({ "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetCampaignVersionsRequest
+newGetCampaignVersionsRequest' :: String -> String -> ({ "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "CampaignId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetCampaignVersionsRequest
 ```
 
 Constructs GetCampaignVersionsRequest's fields from required parameters
@@ -3968,7 +3968,7 @@ Constructs GetCampaignVersionsResponse's fields from required parameters
 
 ``` purescript
 newtype GetCampaignsRequest
-  = GetCampaignsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetCampaignsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -3991,7 +3991,7 @@ Constructs GetCampaignsRequest from required parameters
 #### `newGetCampaignsRequest'`
 
 ``` purescript
-newGetCampaignsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetCampaignsRequest
+newGetCampaignsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetCampaignsRequest
 ```
 
 Constructs GetCampaignsRequest's fields from required parameters
@@ -4290,7 +4290,7 @@ Constructs GetExportJobResponse's fields from required parameters
 
 ``` purescript
 newtype GetExportJobsRequest
-  = GetExportJobsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetExportJobsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4313,7 +4313,7 @@ Constructs GetExportJobsRequest from required parameters
 #### `newGetExportJobsRequest'`
 
 ``` purescript
-newGetExportJobsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetExportJobsRequest
+newGetExportJobsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetExportJobsRequest
 ```
 
 Constructs GetExportJobsRequest's fields from required parameters
@@ -4482,7 +4482,7 @@ Constructs GetImportJobResponse's fields from required parameters
 
 ``` purescript
 newtype GetImportJobsRequest
-  = GetImportJobsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetImportJobsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4505,7 +4505,7 @@ Constructs GetImportJobsRequest from required parameters
 #### `newGetImportJobsRequest'`
 
 ``` purescript
-newGetImportJobsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetImportJobsRequest
+newGetImportJobsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetImportJobsRequest
 ```
 
 Constructs GetImportJobsRequest's fields from required parameters
@@ -4546,7 +4546,7 @@ Constructs GetImportJobsResponse's fields from required parameters
 
 ``` purescript
 newtype GetSegmentExportJobsRequest
-  = GetSegmentExportJobsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) }
+  = GetSegmentExportJobsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4569,7 +4569,7 @@ Constructs GetSegmentExportJobsRequest from required parameters
 #### `newGetSegmentExportJobsRequest'`
 
 ``` purescript
-newGetSegmentExportJobsRequest' :: String -> String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) }) -> GetSegmentExportJobsRequest
+newGetSegmentExportJobsRequest' :: String -> String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) }) -> GetSegmentExportJobsRequest
 ```
 
 Constructs GetSegmentExportJobsRequest's fields from required parameters
@@ -4610,7 +4610,7 @@ Constructs GetSegmentExportJobsResponse's fields from required parameters
 
 ``` purescript
 newtype GetSegmentImportJobsRequest
-  = GetSegmentImportJobsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) }
+  = GetSegmentImportJobsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4633,7 +4633,7 @@ Constructs GetSegmentImportJobsRequest from required parameters
 #### `newGetSegmentImportJobsRequest'`
 
 ``` purescript
-newGetSegmentImportJobsRequest' :: String -> String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) }) -> GetSegmentImportJobsRequest
+newGetSegmentImportJobsRequest' :: String -> String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) }) -> GetSegmentImportJobsRequest
 ```
 
 Constructs GetSegmentImportJobsRequest's fields from required parameters
@@ -4802,7 +4802,7 @@ Constructs GetSegmentVersionResponse's fields from required parameters
 
 ``` purescript
 newtype GetSegmentVersionsRequest
-  = GetSegmentVersionsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) }
+  = GetSegmentVersionsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4825,7 +4825,7 @@ Constructs GetSegmentVersionsRequest from required parameters
 #### `newGetSegmentVersionsRequest'`
 
 ``` purescript
-newGetSegmentVersionsRequest' :: String -> String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "SegmentId" :: String, "Token" :: NullOrUndefined (String) }) -> GetSegmentVersionsRequest
+newGetSegmentVersionsRequest' :: String -> String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "SegmentId" :: String, "Token" :: Maybe (String) }) -> GetSegmentVersionsRequest
 ```
 
 Constructs GetSegmentVersionsRequest's fields from required parameters
@@ -4866,7 +4866,7 @@ Constructs GetSegmentVersionsResponse's fields from required parameters
 
 ``` purescript
 newtype GetSegmentsRequest
-  = GetSegmentsRequest { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }
+  = GetSegmentsRequest { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -4889,7 +4889,7 @@ Constructs GetSegmentsRequest from required parameters
 #### `newGetSegmentsRequest'`
 
 ``` purescript
-newGetSegmentsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) } -> { "ApplicationId" :: String, "PageSize" :: NullOrUndefined (String), "Token" :: NullOrUndefined (String) }) -> GetSegmentsRequest
+newGetSegmentsRequest' :: String -> ({ "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) } -> { "ApplicationId" :: String, "PageSize" :: Maybe (String), "Token" :: Maybe (String) }) -> GetSegmentsRequest
 ```
 
 Constructs GetSegmentsRequest's fields from required parameters
@@ -4994,7 +4994,7 @@ Constructs GetSmsChannelResponse's fields from required parameters
 
 ``` purescript
 newtype ImportJobRequest
-  = ImportJobRequest { "DefineSegment" :: NullOrUndefined (Boolean), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RegisterEndpoints" :: NullOrUndefined (Boolean), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String), "SegmentName" :: NullOrUndefined (String) }
+  = ImportJobRequest { "DefineSegment" :: Maybe (Boolean), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RegisterEndpoints" :: Maybe (Boolean), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "SegmentId" :: Maybe (String), "SegmentName" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5017,7 +5017,7 @@ Constructs ImportJobRequest from required parameters
 #### `newImportJobRequest'`
 
 ``` purescript
-newImportJobRequest' :: ({ "DefineSegment" :: NullOrUndefined (Boolean), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RegisterEndpoints" :: NullOrUndefined (Boolean), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String), "SegmentName" :: NullOrUndefined (String) } -> { "DefineSegment" :: NullOrUndefined (Boolean), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RegisterEndpoints" :: NullOrUndefined (Boolean), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String), "SegmentName" :: NullOrUndefined (String) }) -> ImportJobRequest
+newImportJobRequest' :: ({ "DefineSegment" :: Maybe (Boolean), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RegisterEndpoints" :: Maybe (Boolean), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "SegmentId" :: Maybe (String), "SegmentName" :: Maybe (String) } -> { "DefineSegment" :: Maybe (Boolean), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RegisterEndpoints" :: Maybe (Boolean), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "SegmentId" :: Maybe (String), "SegmentName" :: Maybe (String) }) -> ImportJobRequest
 ```
 
 Constructs ImportJobRequest's fields from required parameters
@@ -5026,7 +5026,7 @@ Constructs ImportJobRequest's fields from required parameters
 
 ``` purescript
 newtype ImportJobResource
-  = ImportJobResource { "DefineSegment" :: NullOrUndefined (Boolean), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RegisterEndpoints" :: NullOrUndefined (Boolean), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String), "SegmentName" :: NullOrUndefined (String) }
+  = ImportJobResource { "DefineSegment" :: Maybe (Boolean), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RegisterEndpoints" :: Maybe (Boolean), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "SegmentId" :: Maybe (String), "SegmentName" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5049,7 +5049,7 @@ Constructs ImportJobResource from required parameters
 #### `newImportJobResource'`
 
 ``` purescript
-newImportJobResource' :: ({ "DefineSegment" :: NullOrUndefined (Boolean), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RegisterEndpoints" :: NullOrUndefined (Boolean), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String), "SegmentName" :: NullOrUndefined (String) } -> { "DefineSegment" :: NullOrUndefined (Boolean), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RegisterEndpoints" :: NullOrUndefined (Boolean), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "SegmentId" :: NullOrUndefined (String), "SegmentName" :: NullOrUndefined (String) }) -> ImportJobResource
+newImportJobResource' :: ({ "DefineSegment" :: Maybe (Boolean), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RegisterEndpoints" :: Maybe (Boolean), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "SegmentId" :: Maybe (String), "SegmentName" :: Maybe (String) } -> { "DefineSegment" :: Maybe (Boolean), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RegisterEndpoints" :: Maybe (Boolean), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "SegmentId" :: Maybe (String), "SegmentName" :: Maybe (String) }) -> ImportJobResource
 ```
 
 Constructs ImportJobResource's fields from required parameters
@@ -5058,7 +5058,7 @@ Constructs ImportJobResource's fields from required parameters
 
 ``` purescript
 newtype ImportJobResponse
-  = ImportJobResponse { "ApplicationId" :: NullOrUndefined (String), "CompletedPieces" :: NullOrUndefined (Int), "CompletionDate" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ImportJobResource), "FailedPieces" :: NullOrUndefined (Int), "Failures" :: NullOrUndefined (ListOf__string), "Id" :: NullOrUndefined (String), "JobStatus" :: NullOrUndefined (JobStatus), "TotalFailures" :: NullOrUndefined (Int), "TotalPieces" :: NullOrUndefined (Int), "TotalProcessed" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (String) }
+  = ImportJobResponse { "ApplicationId" :: Maybe (String), "CompletedPieces" :: Maybe (Int), "CompletionDate" :: Maybe (String), "CreationDate" :: Maybe (String), "Definition" :: Maybe (ImportJobResource), "FailedPieces" :: Maybe (Int), "Failures" :: Maybe (ListOf__string), "Id" :: Maybe (String), "JobStatus" :: Maybe (JobStatus), "TotalFailures" :: Maybe (Int), "TotalPieces" :: Maybe (Int), "TotalProcessed" :: Maybe (Int), "Type" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5081,7 +5081,7 @@ Constructs ImportJobResponse from required parameters
 #### `newImportJobResponse'`
 
 ``` purescript
-newImportJobResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CompletedPieces" :: NullOrUndefined (Int), "CompletionDate" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ImportJobResource), "FailedPieces" :: NullOrUndefined (Int), "Failures" :: NullOrUndefined (ListOf__string), "Id" :: NullOrUndefined (String), "JobStatus" :: NullOrUndefined (JobStatus), "TotalFailures" :: NullOrUndefined (Int), "TotalPieces" :: NullOrUndefined (Int), "TotalProcessed" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (String) } -> { "ApplicationId" :: NullOrUndefined (String), "CompletedPieces" :: NullOrUndefined (Int), "CompletionDate" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Definition" :: NullOrUndefined (ImportJobResource), "FailedPieces" :: NullOrUndefined (Int), "Failures" :: NullOrUndefined (ListOf__string), "Id" :: NullOrUndefined (String), "JobStatus" :: NullOrUndefined (JobStatus), "TotalFailures" :: NullOrUndefined (Int), "TotalPieces" :: NullOrUndefined (Int), "TotalProcessed" :: NullOrUndefined (Int), "Type" :: NullOrUndefined (String) }) -> ImportJobResponse
+newImportJobResponse' :: ({ "ApplicationId" :: Maybe (String), "CompletedPieces" :: Maybe (Int), "CompletionDate" :: Maybe (String), "CreationDate" :: Maybe (String), "Definition" :: Maybe (ImportJobResource), "FailedPieces" :: Maybe (Int), "Failures" :: Maybe (ListOf__string), "Id" :: Maybe (String), "JobStatus" :: Maybe (JobStatus), "TotalFailures" :: Maybe (Int), "TotalPieces" :: Maybe (Int), "TotalProcessed" :: Maybe (Int), "Type" :: Maybe (String) } -> { "ApplicationId" :: Maybe (String), "CompletedPieces" :: Maybe (Int), "CompletionDate" :: Maybe (String), "CreationDate" :: Maybe (String), "Definition" :: Maybe (ImportJobResource), "FailedPieces" :: Maybe (Int), "Failures" :: Maybe (ListOf__string), "Id" :: Maybe (String), "JobStatus" :: Maybe (JobStatus), "TotalFailures" :: Maybe (Int), "TotalPieces" :: Maybe (Int), "TotalProcessed" :: Maybe (Int), "Type" :: Maybe (String) }) -> ImportJobResponse
 ```
 
 Constructs ImportJobResponse's fields from required parameters
@@ -5090,7 +5090,7 @@ Constructs ImportJobResponse's fields from required parameters
 
 ``` purescript
 newtype ImportJobsResponse
-  = ImportJobsResponse { "Item" :: NullOrUndefined (ListOfImportJobResponse), "NextToken" :: NullOrUndefined (String) }
+  = ImportJobsResponse { "Item" :: Maybe (ListOfImportJobResponse), "NextToken" :: Maybe (String) }
 ```
 
 Import job list.
@@ -5115,7 +5115,7 @@ Constructs ImportJobsResponse from required parameters
 #### `newImportJobsResponse'`
 
 ``` purescript
-newImportJobsResponse' :: ({ "Item" :: NullOrUndefined (ListOfImportJobResponse), "NextToken" :: NullOrUndefined (String) } -> { "Item" :: NullOrUndefined (ListOfImportJobResponse), "NextToken" :: NullOrUndefined (String) }) -> ImportJobsResponse
+newImportJobsResponse' :: ({ "Item" :: Maybe (ListOfImportJobResponse), "NextToken" :: Maybe (String) } -> { "Item" :: Maybe (ListOfImportJobResponse), "NextToken" :: Maybe (String) }) -> ImportJobsResponse
 ```
 
 Constructs ImportJobsResponse's fields from required parameters
@@ -5124,7 +5124,7 @@ Constructs ImportJobsResponse's fields from required parameters
 
 ``` purescript
 newtype InternalServerErrorException
-  = InternalServerErrorException { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = InternalServerErrorException { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -5149,7 +5149,7 @@ Constructs InternalServerErrorException from required parameters
 #### `newInternalServerErrorException'`
 
 ``` purescript
-newInternalServerErrorException' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> InternalServerErrorException
+newInternalServerErrorException' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> InternalServerErrorException
 ```
 
 Constructs InternalServerErrorException's fields from required parameters
@@ -5494,7 +5494,7 @@ Encode MapOf__string
 
 ``` purescript
 newtype Message
-  = Message { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageSmallIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "JsonBody" :: NullOrUndefined (String), "MediaUrl" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }
+  = Message { "Action" :: Maybe (Action), "Body" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageSmallIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "JsonBody" :: Maybe (String), "MediaUrl" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "Title" :: Maybe (String), "Url" :: Maybe (String) }
 ```
 
 ##### Instances
@@ -5517,7 +5517,7 @@ Constructs Message from required parameters
 #### `newMessage'`
 
 ``` purescript
-newMessage' :: ({ "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageSmallIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "JsonBody" :: NullOrUndefined (String), "MediaUrl" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) } -> { "Action" :: NullOrUndefined (Action), "Body" :: NullOrUndefined (String), "ImageIconUrl" :: NullOrUndefined (String), "ImageSmallIconUrl" :: NullOrUndefined (String), "ImageUrl" :: NullOrUndefined (String), "JsonBody" :: NullOrUndefined (String), "MediaUrl" :: NullOrUndefined (String), "RawContent" :: NullOrUndefined (String), "SilentPush" :: NullOrUndefined (Boolean), "Title" :: NullOrUndefined (String), "Url" :: NullOrUndefined (String) }) -> Message
+newMessage' :: ({ "Action" :: Maybe (Action), "Body" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageSmallIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "JsonBody" :: Maybe (String), "MediaUrl" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "Title" :: Maybe (String), "Url" :: Maybe (String) } -> { "Action" :: Maybe (Action), "Body" :: Maybe (String), "ImageIconUrl" :: Maybe (String), "ImageSmallIconUrl" :: Maybe (String), "ImageUrl" :: Maybe (String), "JsonBody" :: Maybe (String), "MediaUrl" :: Maybe (String), "RawContent" :: Maybe (String), "SilentPush" :: Maybe (Boolean), "Title" :: Maybe (String), "Url" :: Maybe (String) }) -> Message
 ```
 
 Constructs Message's fields from required parameters
@@ -5526,7 +5526,7 @@ Constructs Message's fields from required parameters
 
 ``` purescript
 newtype MessageBody
-  = MessageBody { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = MessageBody { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -5551,7 +5551,7 @@ Constructs MessageBody from required parameters
 #### `newMessageBody'`
 
 ``` purescript
-newMessageBody' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> MessageBody
+newMessageBody' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> MessageBody
 ```
 
 Constructs MessageBody's fields from required parameters
@@ -5560,7 +5560,7 @@ Constructs MessageBody's fields from required parameters
 
 ``` purescript
 newtype MessageConfiguration
-  = MessageConfiguration { "ADMMessage" :: NullOrUndefined (Message), "APNSMessage" :: NullOrUndefined (Message), "BaiduMessage" :: NullOrUndefined (Message), "DefaultMessage" :: NullOrUndefined (Message), "EmailMessage" :: NullOrUndefined (CampaignEmailMessage), "GCMMessage" :: NullOrUndefined (Message), "SMSMessage" :: NullOrUndefined (CampaignSmsMessage) }
+  = MessageConfiguration { "ADMMessage" :: Maybe (Message), "APNSMessage" :: Maybe (Message), "BaiduMessage" :: Maybe (Message), "DefaultMessage" :: Maybe (Message), "EmailMessage" :: Maybe (CampaignEmailMessage), "GCMMessage" :: Maybe (Message), "SMSMessage" :: Maybe (CampaignSmsMessage) }
 ```
 
 Message configuration for a campaign.
@@ -5585,7 +5585,7 @@ Constructs MessageConfiguration from required parameters
 #### `newMessageConfiguration'`
 
 ``` purescript
-newMessageConfiguration' :: ({ "ADMMessage" :: NullOrUndefined (Message), "APNSMessage" :: NullOrUndefined (Message), "BaiduMessage" :: NullOrUndefined (Message), "DefaultMessage" :: NullOrUndefined (Message), "EmailMessage" :: NullOrUndefined (CampaignEmailMessage), "GCMMessage" :: NullOrUndefined (Message), "SMSMessage" :: NullOrUndefined (CampaignSmsMessage) } -> { "ADMMessage" :: NullOrUndefined (Message), "APNSMessage" :: NullOrUndefined (Message), "BaiduMessage" :: NullOrUndefined (Message), "DefaultMessage" :: NullOrUndefined (Message), "EmailMessage" :: NullOrUndefined (CampaignEmailMessage), "GCMMessage" :: NullOrUndefined (Message), "SMSMessage" :: NullOrUndefined (CampaignSmsMessage) }) -> MessageConfiguration
+newMessageConfiguration' :: ({ "ADMMessage" :: Maybe (Message), "APNSMessage" :: Maybe (Message), "BaiduMessage" :: Maybe (Message), "DefaultMessage" :: Maybe (Message), "EmailMessage" :: Maybe (CampaignEmailMessage), "GCMMessage" :: Maybe (Message), "SMSMessage" :: Maybe (CampaignSmsMessage) } -> { "ADMMessage" :: Maybe (Message), "APNSMessage" :: Maybe (Message), "BaiduMessage" :: Maybe (Message), "DefaultMessage" :: Maybe (Message), "EmailMessage" :: Maybe (CampaignEmailMessage), "GCMMessage" :: Maybe (Message), "SMSMessage" :: Maybe (CampaignSmsMessage) }) -> MessageConfiguration
 ```
 
 Constructs MessageConfiguration's fields from required parameters
@@ -5594,7 +5594,7 @@ Constructs MessageConfiguration's fields from required parameters
 
 ``` purescript
 newtype MessageRequest
-  = MessageRequest { "Addresses" :: NullOrUndefined (MapOfAddressConfiguration), "Context" :: NullOrUndefined (MapOf__string), "Endpoints" :: NullOrUndefined (MapOfEndpointSendConfiguration), "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) }
+  = MessageRequest { "Addresses" :: Maybe (MapOfAddressConfiguration), "Context" :: Maybe (MapOf__string), "Endpoints" :: Maybe (MapOfEndpointSendConfiguration), "MessageConfiguration" :: Maybe (DirectMessageConfiguration) }
 ```
 
 Send message request.
@@ -5619,7 +5619,7 @@ Constructs MessageRequest from required parameters
 #### `newMessageRequest'`
 
 ``` purescript
-newMessageRequest' :: ({ "Addresses" :: NullOrUndefined (MapOfAddressConfiguration), "Context" :: NullOrUndefined (MapOf__string), "Endpoints" :: NullOrUndefined (MapOfEndpointSendConfiguration), "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) } -> { "Addresses" :: NullOrUndefined (MapOfAddressConfiguration), "Context" :: NullOrUndefined (MapOf__string), "Endpoints" :: NullOrUndefined (MapOfEndpointSendConfiguration), "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) }) -> MessageRequest
+newMessageRequest' :: ({ "Addresses" :: Maybe (MapOfAddressConfiguration), "Context" :: Maybe (MapOf__string), "Endpoints" :: Maybe (MapOfEndpointSendConfiguration), "MessageConfiguration" :: Maybe (DirectMessageConfiguration) } -> { "Addresses" :: Maybe (MapOfAddressConfiguration), "Context" :: Maybe (MapOf__string), "Endpoints" :: Maybe (MapOfEndpointSendConfiguration), "MessageConfiguration" :: Maybe (DirectMessageConfiguration) }) -> MessageRequest
 ```
 
 Constructs MessageRequest's fields from required parameters
@@ -5628,7 +5628,7 @@ Constructs MessageRequest's fields from required parameters
 
 ``` purescript
 newtype MessageResponse
-  = MessageResponse { "ApplicationId" :: NullOrUndefined (String), "EndpointResult" :: NullOrUndefined (MapOfEndpointMessageResult), "RequestId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (MapOfMessageResult) }
+  = MessageResponse { "ApplicationId" :: Maybe (String), "EndpointResult" :: Maybe (MapOfEndpointMessageResult), "RequestId" :: Maybe (String), "Result" :: Maybe (MapOfMessageResult) }
 ```
 
 Send message response.
@@ -5653,7 +5653,7 @@ Constructs MessageResponse from required parameters
 #### `newMessageResponse'`
 
 ``` purescript
-newMessageResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "EndpointResult" :: NullOrUndefined (MapOfEndpointMessageResult), "RequestId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (MapOfMessageResult) } -> { "ApplicationId" :: NullOrUndefined (String), "EndpointResult" :: NullOrUndefined (MapOfEndpointMessageResult), "RequestId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (MapOfMessageResult) }) -> MessageResponse
+newMessageResponse' :: ({ "ApplicationId" :: Maybe (String), "EndpointResult" :: Maybe (MapOfEndpointMessageResult), "RequestId" :: Maybe (String), "Result" :: Maybe (MapOfMessageResult) } -> { "ApplicationId" :: Maybe (String), "EndpointResult" :: Maybe (MapOfEndpointMessageResult), "RequestId" :: Maybe (String), "Result" :: Maybe (MapOfMessageResult) }) -> MessageResponse
 ```
 
 Constructs MessageResponse's fields from required parameters
@@ -5662,7 +5662,7 @@ Constructs MessageResponse's fields from required parameters
 
 ``` purescript
 newtype MessageResult
-  = MessageResult { "DeliveryStatus" :: NullOrUndefined (DeliveryStatus), "StatusCode" :: NullOrUndefined (Int), "StatusMessage" :: NullOrUndefined (String), "UpdatedToken" :: NullOrUndefined (String) }
+  = MessageResult { "DeliveryStatus" :: Maybe (DeliveryStatus), "StatusCode" :: Maybe (Int), "StatusMessage" :: Maybe (String), "UpdatedToken" :: Maybe (String) }
 ```
 
 The result from sending a message to an address.
@@ -5687,7 +5687,7 @@ Constructs MessageResult from required parameters
 #### `newMessageResult'`
 
 ``` purescript
-newMessageResult' :: ({ "DeliveryStatus" :: NullOrUndefined (DeliveryStatus), "StatusCode" :: NullOrUndefined (Int), "StatusMessage" :: NullOrUndefined (String), "UpdatedToken" :: NullOrUndefined (String) } -> { "DeliveryStatus" :: NullOrUndefined (DeliveryStatus), "StatusCode" :: NullOrUndefined (Int), "StatusMessage" :: NullOrUndefined (String), "UpdatedToken" :: NullOrUndefined (String) }) -> MessageResult
+newMessageResult' :: ({ "DeliveryStatus" :: Maybe (DeliveryStatus), "StatusCode" :: Maybe (Int), "StatusMessage" :: Maybe (String), "UpdatedToken" :: Maybe (String) } -> { "DeliveryStatus" :: Maybe (DeliveryStatus), "StatusCode" :: Maybe (Int), "StatusMessage" :: Maybe (String), "UpdatedToken" :: Maybe (String) }) -> MessageResult
 ```
 
 Constructs MessageResult's fields from required parameters
@@ -5712,7 +5712,7 @@ Encode MessageType
 
 ``` purescript
 newtype MethodNotAllowedException
-  = MethodNotAllowedException { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = MethodNotAllowedException { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -5737,7 +5737,7 @@ Constructs MethodNotAllowedException from required parameters
 #### `newMethodNotAllowedException'`
 
 ``` purescript
-newMethodNotAllowedException' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> MethodNotAllowedException
+newMethodNotAllowedException' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> MethodNotAllowedException
 ```
 
 Constructs MethodNotAllowedException's fields from required parameters
@@ -5762,7 +5762,7 @@ Encode Mode
 
 ``` purescript
 newtype NotFoundException
-  = NotFoundException { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = NotFoundException { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -5787,7 +5787,7 @@ Constructs NotFoundException from required parameters
 #### `newNotFoundException'`
 
 ``` purescript
-newNotFoundException' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> NotFoundException
+newNotFoundException' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> NotFoundException
 ```
 
 Constructs NotFoundException's fields from required parameters
@@ -5860,7 +5860,7 @@ Constructs PutEventStreamResponse's fields from required parameters
 
 ``` purescript
 newtype QuietTime
-  = QuietTime { "End" :: NullOrUndefined (String), "Start" :: NullOrUndefined (String) }
+  = QuietTime { "End" :: Maybe (String), "Start" :: Maybe (String) }
 ```
 
 Quiet Time
@@ -5885,7 +5885,7 @@ Constructs QuietTime from required parameters
 #### `newQuietTime'`
 
 ``` purescript
-newQuietTime' :: ({ "End" :: NullOrUndefined (String), "Start" :: NullOrUndefined (String) } -> { "End" :: NullOrUndefined (String), "Start" :: NullOrUndefined (String) }) -> QuietTime
+newQuietTime' :: ({ "End" :: Maybe (String), "Start" :: Maybe (String) } -> { "End" :: Maybe (String), "Start" :: Maybe (String) }) -> QuietTime
 ```
 
 Constructs QuietTime's fields from required parameters
@@ -5894,7 +5894,7 @@ Constructs QuietTime's fields from required parameters
 
 ``` purescript
 newtype RecencyDimension
-  = RecencyDimension { "Duration" :: NullOrUndefined (Duration), "RecencyType" :: NullOrUndefined (RecencyType) }
+  = RecencyDimension { "Duration" :: Maybe (Duration), "RecencyType" :: Maybe (RecencyType) }
 ```
 
 Define how a segment based on recency of use.
@@ -5919,7 +5919,7 @@ Constructs RecencyDimension from required parameters
 #### `newRecencyDimension'`
 
 ``` purescript
-newRecencyDimension' :: ({ "Duration" :: NullOrUndefined (Duration), "RecencyType" :: NullOrUndefined (RecencyType) } -> { "Duration" :: NullOrUndefined (Duration), "RecencyType" :: NullOrUndefined (RecencyType) }) -> RecencyDimension
+newRecencyDimension' :: ({ "Duration" :: Maybe (Duration), "RecencyType" :: Maybe (RecencyType) } -> { "Duration" :: Maybe (Duration), "RecencyType" :: Maybe (RecencyType) }) -> RecencyDimension
 ```
 
 Constructs RecencyDimension's fields from required parameters
@@ -5944,7 +5944,7 @@ Encode RecencyType
 
 ``` purescript
 newtype SMSChannelRequest
-  = SMSChannelRequest { "Enabled" :: NullOrUndefined (Boolean), "SenderId" :: NullOrUndefined (String), "ShortCode" :: NullOrUndefined (String) }
+  = SMSChannelRequest { "Enabled" :: Maybe (Boolean), "SenderId" :: Maybe (String), "ShortCode" :: Maybe (String) }
 ```
 
 SMS Channel Request
@@ -5969,7 +5969,7 @@ Constructs SMSChannelRequest from required parameters
 #### `newSMSChannelRequest'`
 
 ``` purescript
-newSMSChannelRequest' :: ({ "Enabled" :: NullOrUndefined (Boolean), "SenderId" :: NullOrUndefined (String), "ShortCode" :: NullOrUndefined (String) } -> { "Enabled" :: NullOrUndefined (Boolean), "SenderId" :: NullOrUndefined (String), "ShortCode" :: NullOrUndefined (String) }) -> SMSChannelRequest
+newSMSChannelRequest' :: ({ "Enabled" :: Maybe (Boolean), "SenderId" :: Maybe (String), "ShortCode" :: Maybe (String) } -> { "Enabled" :: Maybe (Boolean), "SenderId" :: Maybe (String), "ShortCode" :: Maybe (String) }) -> SMSChannelRequest
 ```
 
 Constructs SMSChannelRequest's fields from required parameters
@@ -5978,7 +5978,7 @@ Constructs SMSChannelRequest's fields from required parameters
 
 ``` purescript
 newtype SMSChannelResponse
-  = SMSChannelResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "SenderId" :: NullOrUndefined (String), "ShortCode" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }
+  = SMSChannelResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "SenderId" :: Maybe (String), "ShortCode" :: Maybe (String), "Version" :: Maybe (Int) }
 ```
 
 SMS Channel Response.
@@ -6003,7 +6003,7 @@ Constructs SMSChannelResponse from required parameters
 #### `newSMSChannelResponse'`
 
 ``` purescript
-newSMSChannelResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "SenderId" :: NullOrUndefined (String), "ShortCode" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Enabled" :: NullOrUndefined (Boolean), "HasCredential" :: NullOrUndefined (Boolean), "Id" :: NullOrUndefined (String), "IsArchived" :: NullOrUndefined (Boolean), "LastModifiedBy" :: NullOrUndefined (String), "LastModifiedDate" :: NullOrUndefined (String), "Platform" :: NullOrUndefined (String), "SenderId" :: NullOrUndefined (String), "ShortCode" :: NullOrUndefined (String), "Version" :: NullOrUndefined (Int) }) -> SMSChannelResponse
+newSMSChannelResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "SenderId" :: Maybe (String), "ShortCode" :: Maybe (String), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Enabled" :: Maybe (Boolean), "HasCredential" :: Maybe (Boolean), "Id" :: Maybe (String), "IsArchived" :: Maybe (Boolean), "LastModifiedBy" :: Maybe (String), "LastModifiedDate" :: Maybe (String), "Platform" :: Maybe (String), "SenderId" :: Maybe (String), "ShortCode" :: Maybe (String), "Version" :: Maybe (Int) }) -> SMSChannelResponse
 ```
 
 Constructs SMSChannelResponse's fields from required parameters
@@ -6012,7 +6012,7 @@ Constructs SMSChannelResponse's fields from required parameters
 
 ``` purescript
 newtype SMSMessage
-  = SMSMessage { "Body" :: NullOrUndefined (String), "MessageType" :: NullOrUndefined (MessageType), "SenderId" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string) }
+  = SMSMessage { "Body" :: Maybe (String), "MessageType" :: Maybe (MessageType), "SenderId" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string) }
 ```
 
 SMS Message.
@@ -6037,7 +6037,7 @@ Constructs SMSMessage from required parameters
 #### `newSMSMessage'`
 
 ``` purescript
-newSMSMessage' :: ({ "Body" :: NullOrUndefined (String), "MessageType" :: NullOrUndefined (MessageType), "SenderId" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string) } -> { "Body" :: NullOrUndefined (String), "MessageType" :: NullOrUndefined (MessageType), "SenderId" :: NullOrUndefined (String), "Substitutions" :: NullOrUndefined (MapOfListOf__string) }) -> SMSMessage
+newSMSMessage' :: ({ "Body" :: Maybe (String), "MessageType" :: Maybe (MessageType), "SenderId" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string) } -> { "Body" :: Maybe (String), "MessageType" :: Maybe (MessageType), "SenderId" :: Maybe (String), "Substitutions" :: Maybe (MapOfListOf__string) }) -> SMSMessage
 ```
 
 Constructs SMSMessage's fields from required parameters
@@ -6046,7 +6046,7 @@ Constructs SMSMessage's fields from required parameters
 
 ``` purescript
 newtype Schedule
-  = Schedule { "EndTime" :: NullOrUndefined (String), "Frequency" :: NullOrUndefined (Frequency), "IsLocalTime" :: NullOrUndefined (Boolean), "QuietTime" :: NullOrUndefined (QuietTime), "StartTime" :: NullOrUndefined (String), "Timezone" :: NullOrUndefined (String) }
+  = Schedule { "EndTime" :: Maybe (String), "Frequency" :: Maybe (Frequency), "IsLocalTime" :: Maybe (Boolean), "QuietTime" :: Maybe (QuietTime), "StartTime" :: Maybe (String), "Timezone" :: Maybe (String) }
 ```
 
 Shcedule that defines when a campaign is run.
@@ -6071,7 +6071,7 @@ Constructs Schedule from required parameters
 #### `newSchedule'`
 
 ``` purescript
-newSchedule' :: ({ "EndTime" :: NullOrUndefined (String), "Frequency" :: NullOrUndefined (Frequency), "IsLocalTime" :: NullOrUndefined (Boolean), "QuietTime" :: NullOrUndefined (QuietTime), "StartTime" :: NullOrUndefined (String), "Timezone" :: NullOrUndefined (String) } -> { "EndTime" :: NullOrUndefined (String), "Frequency" :: NullOrUndefined (Frequency), "IsLocalTime" :: NullOrUndefined (Boolean), "QuietTime" :: NullOrUndefined (QuietTime), "StartTime" :: NullOrUndefined (String), "Timezone" :: NullOrUndefined (String) }) -> Schedule
+newSchedule' :: ({ "EndTime" :: Maybe (String), "Frequency" :: Maybe (Frequency), "IsLocalTime" :: Maybe (Boolean), "QuietTime" :: Maybe (QuietTime), "StartTime" :: Maybe (String), "Timezone" :: Maybe (String) } -> { "EndTime" :: Maybe (String), "Frequency" :: Maybe (Frequency), "IsLocalTime" :: Maybe (Boolean), "QuietTime" :: Maybe (QuietTime), "StartTime" :: Maybe (String), "Timezone" :: Maybe (String) }) -> Schedule
 ```
 
 Constructs Schedule's fields from required parameters
@@ -6080,7 +6080,7 @@ Constructs Schedule's fields from required parameters
 
 ``` purescript
 newtype SegmentBehaviors
-  = SegmentBehaviors { "Recency" :: NullOrUndefined (RecencyDimension) }
+  = SegmentBehaviors { "Recency" :: Maybe (RecencyDimension) }
 ```
 
 Segment behavior dimensions
@@ -6105,7 +6105,7 @@ Constructs SegmentBehaviors from required parameters
 #### `newSegmentBehaviors'`
 
 ``` purescript
-newSegmentBehaviors' :: ({ "Recency" :: NullOrUndefined (RecencyDimension) } -> { "Recency" :: NullOrUndefined (RecencyDimension) }) -> SegmentBehaviors
+newSegmentBehaviors' :: ({ "Recency" :: Maybe (RecencyDimension) } -> { "Recency" :: Maybe (RecencyDimension) }) -> SegmentBehaviors
 ```
 
 Constructs SegmentBehaviors's fields from required parameters
@@ -6114,7 +6114,7 @@ Constructs SegmentBehaviors's fields from required parameters
 
 ``` purescript
 newtype SegmentDemographics
-  = SegmentDemographics { "AppVersion" :: NullOrUndefined (SetDimension), "Channel" :: NullOrUndefined (SetDimension), "DeviceType" :: NullOrUndefined (SetDimension), "Make" :: NullOrUndefined (SetDimension), "Model" :: NullOrUndefined (SetDimension), "Platform" :: NullOrUndefined (SetDimension) }
+  = SegmentDemographics { "AppVersion" :: Maybe (SetDimension), "Channel" :: Maybe (SetDimension), "DeviceType" :: Maybe (SetDimension), "Make" :: Maybe (SetDimension), "Model" :: Maybe (SetDimension), "Platform" :: Maybe (SetDimension) }
 ```
 
 Segment demographic dimensions
@@ -6139,7 +6139,7 @@ Constructs SegmentDemographics from required parameters
 #### `newSegmentDemographics'`
 
 ``` purescript
-newSegmentDemographics' :: ({ "AppVersion" :: NullOrUndefined (SetDimension), "Channel" :: NullOrUndefined (SetDimension), "DeviceType" :: NullOrUndefined (SetDimension), "Make" :: NullOrUndefined (SetDimension), "Model" :: NullOrUndefined (SetDimension), "Platform" :: NullOrUndefined (SetDimension) } -> { "AppVersion" :: NullOrUndefined (SetDimension), "Channel" :: NullOrUndefined (SetDimension), "DeviceType" :: NullOrUndefined (SetDimension), "Make" :: NullOrUndefined (SetDimension), "Model" :: NullOrUndefined (SetDimension), "Platform" :: NullOrUndefined (SetDimension) }) -> SegmentDemographics
+newSegmentDemographics' :: ({ "AppVersion" :: Maybe (SetDimension), "Channel" :: Maybe (SetDimension), "DeviceType" :: Maybe (SetDimension), "Make" :: Maybe (SetDimension), "Model" :: Maybe (SetDimension), "Platform" :: Maybe (SetDimension) } -> { "AppVersion" :: Maybe (SetDimension), "Channel" :: Maybe (SetDimension), "DeviceType" :: Maybe (SetDimension), "Make" :: Maybe (SetDimension), "Model" :: Maybe (SetDimension), "Platform" :: Maybe (SetDimension) }) -> SegmentDemographics
 ```
 
 Constructs SegmentDemographics's fields from required parameters
@@ -6148,7 +6148,7 @@ Constructs SegmentDemographics's fields from required parameters
 
 ``` purescript
 newtype SegmentDimensions
-  = SegmentDimensions { "Attributes" :: NullOrUndefined (MapOfAttributeDimension), "Behavior" :: NullOrUndefined (SegmentBehaviors), "Demographic" :: NullOrUndefined (SegmentDemographics), "Location" :: NullOrUndefined (SegmentLocation), "UserAttributes" :: NullOrUndefined (MapOfAttributeDimension) }
+  = SegmentDimensions { "Attributes" :: Maybe (MapOfAttributeDimension), "Behavior" :: Maybe (SegmentBehaviors), "Demographic" :: Maybe (SegmentDemographics), "Location" :: Maybe (SegmentLocation), "UserAttributes" :: Maybe (MapOfAttributeDimension) }
 ```
 
 Segment dimensions
@@ -6173,7 +6173,7 @@ Constructs SegmentDimensions from required parameters
 #### `newSegmentDimensions'`
 
 ``` purescript
-newSegmentDimensions' :: ({ "Attributes" :: NullOrUndefined (MapOfAttributeDimension), "Behavior" :: NullOrUndefined (SegmentBehaviors), "Demographic" :: NullOrUndefined (SegmentDemographics), "Location" :: NullOrUndefined (SegmentLocation), "UserAttributes" :: NullOrUndefined (MapOfAttributeDimension) } -> { "Attributes" :: NullOrUndefined (MapOfAttributeDimension), "Behavior" :: NullOrUndefined (SegmentBehaviors), "Demographic" :: NullOrUndefined (SegmentDemographics), "Location" :: NullOrUndefined (SegmentLocation), "UserAttributes" :: NullOrUndefined (MapOfAttributeDimension) }) -> SegmentDimensions
+newSegmentDimensions' :: ({ "Attributes" :: Maybe (MapOfAttributeDimension), "Behavior" :: Maybe (SegmentBehaviors), "Demographic" :: Maybe (SegmentDemographics), "Location" :: Maybe (SegmentLocation), "UserAttributes" :: Maybe (MapOfAttributeDimension) } -> { "Attributes" :: Maybe (MapOfAttributeDimension), "Behavior" :: Maybe (SegmentBehaviors), "Demographic" :: Maybe (SegmentDemographics), "Location" :: Maybe (SegmentLocation), "UserAttributes" :: Maybe (MapOfAttributeDimension) }) -> SegmentDimensions
 ```
 
 Constructs SegmentDimensions's fields from required parameters
@@ -6182,7 +6182,7 @@ Constructs SegmentDimensions's fields from required parameters
 
 ``` purescript
 newtype SegmentImportResource
-  = SegmentImportResource { "ChannelCounts" :: NullOrUndefined (MapOf__integer), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "Size" :: NullOrUndefined (Int) }
+  = SegmentImportResource { "ChannelCounts" :: Maybe (MapOf__integer), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "Size" :: Maybe (Int) }
 ```
 
 Segment import definition.
@@ -6207,7 +6207,7 @@ Constructs SegmentImportResource from required parameters
 #### `newSegmentImportResource'`
 
 ``` purescript
-newSegmentImportResource' :: ({ "ChannelCounts" :: NullOrUndefined (MapOf__integer), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "Size" :: NullOrUndefined (Int) } -> { "ChannelCounts" :: NullOrUndefined (MapOf__integer), "ExternalId" :: NullOrUndefined (String), "Format" :: NullOrUndefined (Format), "RoleArn" :: NullOrUndefined (String), "S3Url" :: NullOrUndefined (String), "Size" :: NullOrUndefined (Int) }) -> SegmentImportResource
+newSegmentImportResource' :: ({ "ChannelCounts" :: Maybe (MapOf__integer), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "Size" :: Maybe (Int) } -> { "ChannelCounts" :: Maybe (MapOf__integer), "ExternalId" :: Maybe (String), "Format" :: Maybe (Format), "RoleArn" :: Maybe (String), "S3Url" :: Maybe (String), "Size" :: Maybe (Int) }) -> SegmentImportResource
 ```
 
 Constructs SegmentImportResource's fields from required parameters
@@ -6216,7 +6216,7 @@ Constructs SegmentImportResource's fields from required parameters
 
 ``` purescript
 newtype SegmentLocation
-  = SegmentLocation { "Country" :: NullOrUndefined (SetDimension) }
+  = SegmentLocation { "Country" :: Maybe (SetDimension) }
 ```
 
 Segment location dimensions
@@ -6241,7 +6241,7 @@ Constructs SegmentLocation from required parameters
 #### `newSegmentLocation'`
 
 ``` purescript
-newSegmentLocation' :: ({ "Country" :: NullOrUndefined (SetDimension) } -> { "Country" :: NullOrUndefined (SetDimension) }) -> SegmentLocation
+newSegmentLocation' :: ({ "Country" :: Maybe (SetDimension) } -> { "Country" :: Maybe (SetDimension) }) -> SegmentLocation
 ```
 
 Constructs SegmentLocation's fields from required parameters
@@ -6250,7 +6250,7 @@ Constructs SegmentLocation's fields from required parameters
 
 ``` purescript
 newtype SegmentResponse
-  = SegmentResponse { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Dimensions" :: NullOrUndefined (SegmentDimensions), "Id" :: NullOrUndefined (String), "ImportDefinition" :: NullOrUndefined (SegmentImportResource), "LastModifiedDate" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String), "SegmentType" :: NullOrUndefined (SegmentType), "Version" :: NullOrUndefined (Int) }
+  = SegmentResponse { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Dimensions" :: Maybe (SegmentDimensions), "Id" :: Maybe (String), "ImportDefinition" :: Maybe (SegmentImportResource), "LastModifiedDate" :: Maybe (String), "Name" :: Maybe (String), "SegmentType" :: Maybe (SegmentType), "Version" :: Maybe (Int) }
 ```
 
 Segment definition.
@@ -6275,7 +6275,7 @@ Constructs SegmentResponse from required parameters
 #### `newSegmentResponse'`
 
 ``` purescript
-newSegmentResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Dimensions" :: NullOrUndefined (SegmentDimensions), "Id" :: NullOrUndefined (String), "ImportDefinition" :: NullOrUndefined (SegmentImportResource), "LastModifiedDate" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String), "SegmentType" :: NullOrUndefined (SegmentType), "Version" :: NullOrUndefined (Int) } -> { "ApplicationId" :: NullOrUndefined (String), "CreationDate" :: NullOrUndefined (String), "Dimensions" :: NullOrUndefined (SegmentDimensions), "Id" :: NullOrUndefined (String), "ImportDefinition" :: NullOrUndefined (SegmentImportResource), "LastModifiedDate" :: NullOrUndefined (String), "Name" :: NullOrUndefined (String), "SegmentType" :: NullOrUndefined (SegmentType), "Version" :: NullOrUndefined (Int) }) -> SegmentResponse
+newSegmentResponse' :: ({ "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Dimensions" :: Maybe (SegmentDimensions), "Id" :: Maybe (String), "ImportDefinition" :: Maybe (SegmentImportResource), "LastModifiedDate" :: Maybe (String), "Name" :: Maybe (String), "SegmentType" :: Maybe (SegmentType), "Version" :: Maybe (Int) } -> { "ApplicationId" :: Maybe (String), "CreationDate" :: Maybe (String), "Dimensions" :: Maybe (SegmentDimensions), "Id" :: Maybe (String), "ImportDefinition" :: Maybe (SegmentImportResource), "LastModifiedDate" :: Maybe (String), "Name" :: Maybe (String), "SegmentType" :: Maybe (SegmentType), "Version" :: Maybe (Int) }) -> SegmentResponse
 ```
 
 Constructs SegmentResponse's fields from required parameters
@@ -6300,7 +6300,7 @@ Encode SegmentType
 
 ``` purescript
 newtype SegmentsResponse
-  = SegmentsResponse { "Item" :: NullOrUndefined (ListOfSegmentResponse), "NextToken" :: NullOrUndefined (String) }
+  = SegmentsResponse { "Item" :: Maybe (ListOfSegmentResponse), "NextToken" :: Maybe (String) }
 ```
 
 Segments in your account.
@@ -6325,7 +6325,7 @@ Constructs SegmentsResponse from required parameters
 #### `newSegmentsResponse'`
 
 ``` purescript
-newSegmentsResponse' :: ({ "Item" :: NullOrUndefined (ListOfSegmentResponse), "NextToken" :: NullOrUndefined (String) } -> { "Item" :: NullOrUndefined (ListOfSegmentResponse), "NextToken" :: NullOrUndefined (String) }) -> SegmentsResponse
+newSegmentsResponse' :: ({ "Item" :: Maybe (ListOfSegmentResponse), "NextToken" :: Maybe (String) } -> { "Item" :: Maybe (ListOfSegmentResponse), "NextToken" :: Maybe (String) }) -> SegmentsResponse
 ```
 
 Constructs SegmentsResponse's fields from required parameters
@@ -6398,7 +6398,7 @@ Constructs SendMessagesResponse's fields from required parameters
 
 ``` purescript
 newtype SendUsersMessageRequest
-  = SendUsersMessageRequest { "Context" :: NullOrUndefined (MapOf__string), "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration), "Users" :: NullOrUndefined (MapOfEndpointSendConfiguration) }
+  = SendUsersMessageRequest { "Context" :: Maybe (MapOf__string), "MessageConfiguration" :: Maybe (DirectMessageConfiguration), "Users" :: Maybe (MapOfEndpointSendConfiguration) }
 ```
 
 Send message request.
@@ -6423,7 +6423,7 @@ Constructs SendUsersMessageRequest from required parameters
 #### `newSendUsersMessageRequest'`
 
 ``` purescript
-newSendUsersMessageRequest' :: ({ "Context" :: NullOrUndefined (MapOf__string), "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration), "Users" :: NullOrUndefined (MapOfEndpointSendConfiguration) } -> { "Context" :: NullOrUndefined (MapOf__string), "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration), "Users" :: NullOrUndefined (MapOfEndpointSendConfiguration) }) -> SendUsersMessageRequest
+newSendUsersMessageRequest' :: ({ "Context" :: Maybe (MapOf__string), "MessageConfiguration" :: Maybe (DirectMessageConfiguration), "Users" :: Maybe (MapOfEndpointSendConfiguration) } -> { "Context" :: Maybe (MapOf__string), "MessageConfiguration" :: Maybe (DirectMessageConfiguration), "Users" :: Maybe (MapOfEndpointSendConfiguration) }) -> SendUsersMessageRequest
 ```
 
 Constructs SendUsersMessageRequest's fields from required parameters
@@ -6432,7 +6432,7 @@ Constructs SendUsersMessageRequest's fields from required parameters
 
 ``` purescript
 newtype SendUsersMessageResponse
-  = SendUsersMessageResponse { "ApplicationId" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (MapOfMapOfEndpointMessageResult) }
+  = SendUsersMessageResponse { "ApplicationId" :: Maybe (String), "RequestId" :: Maybe (String), "Result" :: Maybe (MapOfMapOfEndpointMessageResult) }
 ```
 
 User send message response.
@@ -6457,7 +6457,7 @@ Constructs SendUsersMessageResponse from required parameters
 #### `newSendUsersMessageResponse'`
 
 ``` purescript
-newSendUsersMessageResponse' :: ({ "ApplicationId" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (MapOfMapOfEndpointMessageResult) } -> { "ApplicationId" :: NullOrUndefined (String), "RequestId" :: NullOrUndefined (String), "Result" :: NullOrUndefined (MapOfMapOfEndpointMessageResult) }) -> SendUsersMessageResponse
+newSendUsersMessageResponse' :: ({ "ApplicationId" :: Maybe (String), "RequestId" :: Maybe (String), "Result" :: Maybe (MapOfMapOfEndpointMessageResult) } -> { "ApplicationId" :: Maybe (String), "RequestId" :: Maybe (String), "Result" :: Maybe (MapOfMapOfEndpointMessageResult) }) -> SendUsersMessageResponse
 ```
 
 Constructs SendUsersMessageResponse's fields from required parameters
@@ -6530,7 +6530,7 @@ Constructs SendUsersMessagesResponse's fields from required parameters
 
 ``` purescript
 newtype SetDimension
-  = SetDimension { "DimensionType" :: NullOrUndefined (DimensionType), "Values" :: NullOrUndefined (ListOf__string) }
+  = SetDimension { "DimensionType" :: Maybe (DimensionType), "Values" :: Maybe (ListOf__string) }
 ```
 
 Dimension specification of a segment.
@@ -6555,7 +6555,7 @@ Constructs SetDimension from required parameters
 #### `newSetDimension'`
 
 ``` purescript
-newSetDimension' :: ({ "DimensionType" :: NullOrUndefined (DimensionType), "Values" :: NullOrUndefined (ListOf__string) } -> { "DimensionType" :: NullOrUndefined (DimensionType), "Values" :: NullOrUndefined (ListOf__string) }) -> SetDimension
+newSetDimension' :: ({ "DimensionType" :: Maybe (DimensionType), "Values" :: Maybe (ListOf__string) } -> { "DimensionType" :: Maybe (DimensionType), "Values" :: Maybe (ListOf__string) }) -> SetDimension
 ```
 
 Constructs SetDimension's fields from required parameters
@@ -6564,7 +6564,7 @@ Constructs SetDimension's fields from required parameters
 
 ``` purescript
 newtype TooManyRequestsException
-  = TooManyRequestsException { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }
+  = TooManyRequestsException { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }
 ```
 
 Simple message object.
@@ -6589,7 +6589,7 @@ Constructs TooManyRequestsException from required parameters
 #### `newTooManyRequestsException'`
 
 ``` purescript
-newTooManyRequestsException' :: ({ "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) } -> { "Message" :: NullOrUndefined (String), "RequestID" :: NullOrUndefined (String) }) -> TooManyRequestsException
+newTooManyRequestsException' :: ({ "Message" :: Maybe (String), "RequestID" :: Maybe (String) } -> { "Message" :: Maybe (String), "RequestID" :: Maybe (String) }) -> TooManyRequestsException
 ```
 
 Constructs TooManyRequestsException's fields from required parameters
@@ -6598,7 +6598,7 @@ Constructs TooManyRequestsException's fields from required parameters
 
 ``` purescript
 newtype TreatmentResource
-  = TreatmentResource { "Id" :: NullOrUndefined (String), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Schedule" :: NullOrUndefined (Schedule), "SizePercent" :: NullOrUndefined (Int), "State" :: NullOrUndefined (CampaignState), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) }
+  = TreatmentResource { "Id" :: Maybe (String), "MessageConfiguration" :: Maybe (MessageConfiguration), "Schedule" :: Maybe (Schedule), "SizePercent" :: Maybe (Int), "State" :: Maybe (CampaignState), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) }
 ```
 
 Treatment resource
@@ -6623,7 +6623,7 @@ Constructs TreatmentResource from required parameters
 #### `newTreatmentResource'`
 
 ``` purescript
-newTreatmentResource' :: ({ "Id" :: NullOrUndefined (String), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Schedule" :: NullOrUndefined (Schedule), "SizePercent" :: NullOrUndefined (Int), "State" :: NullOrUndefined (CampaignState), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) } -> { "Id" :: NullOrUndefined (String), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Schedule" :: NullOrUndefined (Schedule), "SizePercent" :: NullOrUndefined (Int), "State" :: NullOrUndefined (CampaignState), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) }) -> TreatmentResource
+newTreatmentResource' :: ({ "Id" :: Maybe (String), "MessageConfiguration" :: Maybe (MessageConfiguration), "Schedule" :: Maybe (Schedule), "SizePercent" :: Maybe (Int), "State" :: Maybe (CampaignState), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) } -> { "Id" :: Maybe (String), "MessageConfiguration" :: Maybe (MessageConfiguration), "Schedule" :: Maybe (Schedule), "SizePercent" :: Maybe (Int), "State" :: Maybe (CampaignState), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) }) -> TreatmentResource
 ```
 
 Constructs TreatmentResource's fields from required parameters
@@ -7528,7 +7528,7 @@ Constructs UpdateSmsChannelResponse's fields from required parameters
 
 ``` purescript
 newtype WriteApplicationSettingsRequest
-  = WriteApplicationSettingsRequest { "CampaignHook" :: NullOrUndefined (CampaignHook), "Limits" :: NullOrUndefined (CampaignLimits), "QuietTime" :: NullOrUndefined (QuietTime) }
+  = WriteApplicationSettingsRequest { "CampaignHook" :: Maybe (CampaignHook), "Limits" :: Maybe (CampaignLimits), "QuietTime" :: Maybe (QuietTime) }
 ```
 
 Creating application setting request
@@ -7553,7 +7553,7 @@ Constructs WriteApplicationSettingsRequest from required parameters
 #### `newWriteApplicationSettingsRequest'`
 
 ``` purescript
-newWriteApplicationSettingsRequest' :: ({ "CampaignHook" :: NullOrUndefined (CampaignHook), "Limits" :: NullOrUndefined (CampaignLimits), "QuietTime" :: NullOrUndefined (QuietTime) } -> { "CampaignHook" :: NullOrUndefined (CampaignHook), "Limits" :: NullOrUndefined (CampaignLimits), "QuietTime" :: NullOrUndefined (QuietTime) }) -> WriteApplicationSettingsRequest
+newWriteApplicationSettingsRequest' :: ({ "CampaignHook" :: Maybe (CampaignHook), "Limits" :: Maybe (CampaignLimits), "QuietTime" :: Maybe (QuietTime) } -> { "CampaignHook" :: Maybe (CampaignHook), "Limits" :: Maybe (CampaignLimits), "QuietTime" :: Maybe (QuietTime) }) -> WriteApplicationSettingsRequest
 ```
 
 Constructs WriteApplicationSettingsRequest's fields from required parameters
@@ -7562,7 +7562,7 @@ Constructs WriteApplicationSettingsRequest's fields from required parameters
 
 ``` purescript
 newtype WriteCampaignRequest
-  = WriteCampaignRequest { "AdditionalTreatments" :: NullOrUndefined (ListOfWriteTreatmentResource), "Description" :: NullOrUndefined (String), "HoldoutPercent" :: NullOrUndefined (Int), "Hook" :: NullOrUndefined (CampaignHook), "IsPaused" :: NullOrUndefined (Boolean), "Limits" :: NullOrUndefined (CampaignLimits), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Name" :: NullOrUndefined (String), "Schedule" :: NullOrUndefined (Schedule), "SegmentId" :: NullOrUndefined (String), "SegmentVersion" :: NullOrUndefined (Int), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) }
+  = WriteCampaignRequest { "AdditionalTreatments" :: Maybe (ListOfWriteTreatmentResource), "Description" :: Maybe (String), "HoldoutPercent" :: Maybe (Int), "Hook" :: Maybe (CampaignHook), "IsPaused" :: Maybe (Boolean), "Limits" :: Maybe (CampaignLimits), "MessageConfiguration" :: Maybe (MessageConfiguration), "Name" :: Maybe (String), "Schedule" :: Maybe (Schedule), "SegmentId" :: Maybe (String), "SegmentVersion" :: Maybe (Int), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) }
 ```
 
 Used to create a campaign.
@@ -7587,7 +7587,7 @@ Constructs WriteCampaignRequest from required parameters
 #### `newWriteCampaignRequest'`
 
 ``` purescript
-newWriteCampaignRequest' :: ({ "AdditionalTreatments" :: NullOrUndefined (ListOfWriteTreatmentResource), "Description" :: NullOrUndefined (String), "HoldoutPercent" :: NullOrUndefined (Int), "Hook" :: NullOrUndefined (CampaignHook), "IsPaused" :: NullOrUndefined (Boolean), "Limits" :: NullOrUndefined (CampaignLimits), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Name" :: NullOrUndefined (String), "Schedule" :: NullOrUndefined (Schedule), "SegmentId" :: NullOrUndefined (String), "SegmentVersion" :: NullOrUndefined (Int), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) } -> { "AdditionalTreatments" :: NullOrUndefined (ListOfWriteTreatmentResource), "Description" :: NullOrUndefined (String), "HoldoutPercent" :: NullOrUndefined (Int), "Hook" :: NullOrUndefined (CampaignHook), "IsPaused" :: NullOrUndefined (Boolean), "Limits" :: NullOrUndefined (CampaignLimits), "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Name" :: NullOrUndefined (String), "Schedule" :: NullOrUndefined (Schedule), "SegmentId" :: NullOrUndefined (String), "SegmentVersion" :: NullOrUndefined (Int), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) }) -> WriteCampaignRequest
+newWriteCampaignRequest' :: ({ "AdditionalTreatments" :: Maybe (ListOfWriteTreatmentResource), "Description" :: Maybe (String), "HoldoutPercent" :: Maybe (Int), "Hook" :: Maybe (CampaignHook), "IsPaused" :: Maybe (Boolean), "Limits" :: Maybe (CampaignLimits), "MessageConfiguration" :: Maybe (MessageConfiguration), "Name" :: Maybe (String), "Schedule" :: Maybe (Schedule), "SegmentId" :: Maybe (String), "SegmentVersion" :: Maybe (Int), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) } -> { "AdditionalTreatments" :: Maybe (ListOfWriteTreatmentResource), "Description" :: Maybe (String), "HoldoutPercent" :: Maybe (Int), "Hook" :: Maybe (CampaignHook), "IsPaused" :: Maybe (Boolean), "Limits" :: Maybe (CampaignLimits), "MessageConfiguration" :: Maybe (MessageConfiguration), "Name" :: Maybe (String), "Schedule" :: Maybe (Schedule), "SegmentId" :: Maybe (String), "SegmentVersion" :: Maybe (Int), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) }) -> WriteCampaignRequest
 ```
 
 Constructs WriteCampaignRequest's fields from required parameters
@@ -7596,7 +7596,7 @@ Constructs WriteCampaignRequest's fields from required parameters
 
 ``` purescript
 newtype WriteEventStream
-  = WriteEventStream { "DestinationStreamArn" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }
+  = WriteEventStream { "DestinationStreamArn" :: Maybe (String), "RoleArn" :: Maybe (String) }
 ```
 
 Request to save an EventStream.
@@ -7621,7 +7621,7 @@ Constructs WriteEventStream from required parameters
 #### `newWriteEventStream'`
 
 ``` purescript
-newWriteEventStream' :: ({ "DestinationStreamArn" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) } -> { "DestinationStreamArn" :: NullOrUndefined (String), "RoleArn" :: NullOrUndefined (String) }) -> WriteEventStream
+newWriteEventStream' :: ({ "DestinationStreamArn" :: Maybe (String), "RoleArn" :: Maybe (String) } -> { "DestinationStreamArn" :: Maybe (String), "RoleArn" :: Maybe (String) }) -> WriteEventStream
 ```
 
 Constructs WriteEventStream's fields from required parameters
@@ -7630,7 +7630,7 @@ Constructs WriteEventStream's fields from required parameters
 
 ``` purescript
 newtype WriteSegmentRequest
-  = WriteSegmentRequest { "Dimensions" :: NullOrUndefined (SegmentDimensions), "Name" :: NullOrUndefined (String) }
+  = WriteSegmentRequest { "Dimensions" :: Maybe (SegmentDimensions), "Name" :: Maybe (String) }
 ```
 
 Segment definition.
@@ -7655,7 +7655,7 @@ Constructs WriteSegmentRequest from required parameters
 #### `newWriteSegmentRequest'`
 
 ``` purescript
-newWriteSegmentRequest' :: ({ "Dimensions" :: NullOrUndefined (SegmentDimensions), "Name" :: NullOrUndefined (String) } -> { "Dimensions" :: NullOrUndefined (SegmentDimensions), "Name" :: NullOrUndefined (String) }) -> WriteSegmentRequest
+newWriteSegmentRequest' :: ({ "Dimensions" :: Maybe (SegmentDimensions), "Name" :: Maybe (String) } -> { "Dimensions" :: Maybe (SegmentDimensions), "Name" :: Maybe (String) }) -> WriteSegmentRequest
 ```
 
 Constructs WriteSegmentRequest's fields from required parameters
@@ -7664,7 +7664,7 @@ Constructs WriteSegmentRequest's fields from required parameters
 
 ``` purescript
 newtype WriteTreatmentResource
-  = WriteTreatmentResource { "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Schedule" :: NullOrUndefined (Schedule), "SizePercent" :: NullOrUndefined (Int), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) }
+  = WriteTreatmentResource { "MessageConfiguration" :: Maybe (MessageConfiguration), "Schedule" :: Maybe (Schedule), "SizePercent" :: Maybe (Int), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) }
 ```
 
 Used to create a campaign treatment.
@@ -7689,7 +7689,7 @@ Constructs WriteTreatmentResource from required parameters
 #### `newWriteTreatmentResource'`
 
 ``` purescript
-newWriteTreatmentResource' :: ({ "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Schedule" :: NullOrUndefined (Schedule), "SizePercent" :: NullOrUndefined (Int), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) } -> { "MessageConfiguration" :: NullOrUndefined (MessageConfiguration), "Schedule" :: NullOrUndefined (Schedule), "SizePercent" :: NullOrUndefined (Int), "TreatmentDescription" :: NullOrUndefined (String), "TreatmentName" :: NullOrUndefined (String) }) -> WriteTreatmentResource
+newWriteTreatmentResource' :: ({ "MessageConfiguration" :: Maybe (MessageConfiguration), "Schedule" :: Maybe (Schedule), "SizePercent" :: Maybe (Int), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) } -> { "MessageConfiguration" :: Maybe (MessageConfiguration), "Schedule" :: Maybe (Schedule), "SizePercent" :: Maybe (Int), "TreatmentDescription" :: Maybe (String), "TreatmentName" :: Maybe (String) }) -> WriteTreatmentResource
 ```
 
 Constructs WriteTreatmentResource's fields from required parameters

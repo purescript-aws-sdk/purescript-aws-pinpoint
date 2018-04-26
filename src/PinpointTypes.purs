@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -20,9 +19,9 @@ options = defaultOptions { unwrapSingleConstructors = true }
 
 -- | Amazon Device Messaging channel definition.
 newtype ADMChannelRequest = ADMChannelRequest 
-  { "ClientId" :: NullOrUndefined (String)
-  , "ClientSecret" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
+  { "ClientId" :: Maybe (String)
+  , "ClientSecret" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
   }
 derive instance newtypeADMChannelRequest :: Newtype ADMChannelRequest _
 derive instance repGenericADMChannelRequest :: Generic ADMChannelRequest _
@@ -32,27 +31,27 @@ instance encodeADMChannelRequest :: Encode ADMChannelRequest where encode = gene
 
 -- | Constructs ADMChannelRequest from required parameters
 newADMChannelRequest :: ADMChannelRequest
-newADMChannelRequest  = ADMChannelRequest { "ClientId": (NullOrUndefined Nothing), "ClientSecret": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing) }
+newADMChannelRequest  = ADMChannelRequest { "ClientId": Nothing, "ClientSecret": Nothing, "Enabled": Nothing }
 
 -- | Constructs ADMChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newADMChannelRequest' :: ( { "ClientId" :: NullOrUndefined (String) , "ClientSecret" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) } -> {"ClientId" :: NullOrUndefined (String) , "ClientSecret" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) } ) -> ADMChannelRequest
-newADMChannelRequest'  customize = (ADMChannelRequest <<< customize) { "ClientId": (NullOrUndefined Nothing), "ClientSecret": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing) }
+newADMChannelRequest' :: ( { "ClientId" :: Maybe (String) , "ClientSecret" :: Maybe (String) , "Enabled" :: Maybe (Boolean) } -> {"ClientId" :: Maybe (String) , "ClientSecret" :: Maybe (String) , "Enabled" :: Maybe (Boolean) } ) -> ADMChannelRequest
+newADMChannelRequest'  customize = (ADMChannelRequest <<< customize) { "ClientId": Nothing, "ClientSecret": Nothing, "Enabled": Nothing }
 
 
 
 -- | Amazon Device Messaging channel definition.
 newtype ADMChannelResponse = ADMChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeADMChannelResponse :: Newtype ADMChannelResponse _
 derive instance repGenericADMChannelResponse :: Generic ADMChannelResponse _
@@ -62,33 +61,33 @@ instance encodeADMChannelResponse :: Encode ADMChannelResponse where encode = ge
 
 -- | Constructs ADMChannelResponse from required parameters
 newADMChannelResponse :: ADMChannelResponse
-newADMChannelResponse  = ADMChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newADMChannelResponse  = ADMChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs ADMChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newADMChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> ADMChannelResponse
-newADMChannelResponse'  customize = (ADMChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newADMChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> ADMChannelResponse
+newADMChannelResponse'  customize = (ADMChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
 -- | ADM Message.
 newtype ADMMessage = ADMMessage 
-  { "Action" :: NullOrUndefined (Action)
-  , "Body" :: NullOrUndefined (String)
-  , "ConsolidationKey" :: NullOrUndefined (String)
-  , "Data" :: NullOrUndefined (MapOf__string)
-  , "ExpiresAfter" :: NullOrUndefined (String)
-  , "IconReference" :: NullOrUndefined (String)
-  , "ImageIconUrl" :: NullOrUndefined (String)
-  , "ImageUrl" :: NullOrUndefined (String)
-  , "MD5" :: NullOrUndefined (String)
-  , "RawContent" :: NullOrUndefined (String)
-  , "SilentPush" :: NullOrUndefined (Boolean)
-  , "SmallImageIconUrl" :: NullOrUndefined (String)
-  , "Sound" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "Title" :: NullOrUndefined (String)
-  , "Url" :: NullOrUndefined (String)
+  { "Action" :: Maybe (Action)
+  , "Body" :: Maybe (String)
+  , "ConsolidationKey" :: Maybe (String)
+  , "Data" :: Maybe (MapOf__string)
+  , "ExpiresAfter" :: Maybe (String)
+  , "IconReference" :: Maybe (String)
+  , "ImageIconUrl" :: Maybe (String)
+  , "ImageUrl" :: Maybe (String)
+  , "MD5" :: Maybe (String)
+  , "RawContent" :: Maybe (String)
+  , "SilentPush" :: Maybe (Boolean)
+  , "SmallImageIconUrl" :: Maybe (String)
+  , "Sound" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "Title" :: Maybe (String)
+  , "Url" :: Maybe (String)
   }
 derive instance newtypeADMMessage :: Newtype ADMMessage _
 derive instance repGenericADMMessage :: Generic ADMMessage _
@@ -98,25 +97,25 @@ instance encodeADMMessage :: Encode ADMMessage where encode = genericEncode opti
 
 -- | Constructs ADMMessage from required parameters
 newADMMessage :: ADMMessage
-newADMMessage  = ADMMessage { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "ConsolidationKey": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "ExpiresAfter": (NullOrUndefined Nothing), "IconReference": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "MD5": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "SmallImageIconUrl": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newADMMessage  = ADMMessage { "Action": Nothing, "Body": Nothing, "ConsolidationKey": Nothing, "Data": Nothing, "ExpiresAfter": Nothing, "IconReference": Nothing, "ImageIconUrl": Nothing, "ImageUrl": Nothing, "MD5": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "SmallImageIconUrl": Nothing, "Sound": Nothing, "Substitutions": Nothing, "Title": Nothing, "Url": Nothing }
 
 -- | Constructs ADMMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newADMMessage' :: ( { "Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "ConsolidationKey" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "ExpiresAfter" :: NullOrUndefined (String) , "IconReference" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "MD5" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "SmallImageIconUrl" :: NullOrUndefined (String) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } -> {"Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "ConsolidationKey" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "ExpiresAfter" :: NullOrUndefined (String) , "IconReference" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "MD5" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "SmallImageIconUrl" :: NullOrUndefined (String) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } ) -> ADMMessage
-newADMMessage'  customize = (ADMMessage <<< customize) { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "ConsolidationKey": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "ExpiresAfter": (NullOrUndefined Nothing), "IconReference": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "MD5": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "SmallImageIconUrl": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newADMMessage' :: ( { "Action" :: Maybe (Action) , "Body" :: Maybe (String) , "ConsolidationKey" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "ExpiresAfter" :: Maybe (String) , "IconReference" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "MD5" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "SmallImageIconUrl" :: Maybe (String) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } -> {"Action" :: Maybe (Action) , "Body" :: Maybe (String) , "ConsolidationKey" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "ExpiresAfter" :: Maybe (String) , "IconReference" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "MD5" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "SmallImageIconUrl" :: Maybe (String) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } ) -> ADMMessage
+newADMMessage'  customize = (ADMMessage <<< customize) { "Action": Nothing, "Body": Nothing, "ConsolidationKey": Nothing, "Data": Nothing, "ExpiresAfter": Nothing, "IconReference": Nothing, "ImageIconUrl": Nothing, "ImageUrl": Nothing, "MD5": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "SmallImageIconUrl": Nothing, "Sound": Nothing, "Substitutions": Nothing, "Title": Nothing, "Url": Nothing }
 
 
 
 -- | Apple Push Notification Service channel definition.
 newtype APNSChannelRequest = APNSChannelRequest 
-  { "BundleId" :: NullOrUndefined (String)
-  , "Certificate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "PrivateKey" :: NullOrUndefined (String)
-  , "TeamId" :: NullOrUndefined (String)
-  , "TokenKey" :: NullOrUndefined (String)
-  , "TokenKeyId" :: NullOrUndefined (String)
+  { "BundleId" :: Maybe (String)
+  , "Certificate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "PrivateKey" :: Maybe (String)
+  , "TeamId" :: Maybe (String)
+  , "TokenKey" :: Maybe (String)
+  , "TokenKeyId" :: Maybe (String)
   }
 derive instance newtypeAPNSChannelRequest :: Newtype APNSChannelRequest _
 derive instance repGenericAPNSChannelRequest :: Generic APNSChannelRequest _
@@ -126,29 +125,29 @@ instance encodeAPNSChannelRequest :: Encode APNSChannelRequest where encode = ge
 
 -- | Constructs APNSChannelRequest from required parameters
 newAPNSChannelRequest :: APNSChannelRequest
-newAPNSChannelRequest  = APNSChannelRequest { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSChannelRequest  = APNSChannelRequest { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 -- | Constructs APNSChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSChannelRequest' :: ( { "BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } -> {"BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } ) -> APNSChannelRequest
-newAPNSChannelRequest'  customize = (APNSChannelRequest <<< customize) { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSChannelRequest' :: ( { "BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } -> {"BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } ) -> APNSChannelRequest
+newAPNSChannelRequest'  customize = (APNSChannelRequest <<< customize) { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 
 
 -- | Apple Distribution Push Notification Service channel definition.
 newtype APNSChannelResponse = APNSChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "HasTokenKey" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "HasTokenKey" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeAPNSChannelResponse :: Newtype APNSChannelResponse _
 derive instance repGenericAPNSChannelResponse :: Generic APNSChannelResponse _
@@ -158,34 +157,34 @@ instance encodeAPNSChannelResponse :: Encode APNSChannelResponse where encode = 
 
 -- | Constructs APNSChannelResponse from required parameters
 newAPNSChannelResponse :: APNSChannelResponse
-newAPNSChannelResponse  = APNSChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSChannelResponse  = APNSChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs APNSChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> APNSChannelResponse
-newAPNSChannelResponse'  customize = (APNSChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> APNSChannelResponse
+newAPNSChannelResponse'  customize = (APNSChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
 -- | APNS Message.
 newtype APNSMessage = APNSMessage 
-  { "Action" :: NullOrUndefined (Action)
-  , "Badge" :: NullOrUndefined (Int)
-  , "Body" :: NullOrUndefined (String)
-  , "Category" :: NullOrUndefined (String)
-  , "CollapseId" :: NullOrUndefined (String)
-  , "Data" :: NullOrUndefined (MapOf__string)
-  , "MediaUrl" :: NullOrUndefined (String)
-  , "PreferredAuthenticationMethod" :: NullOrUndefined (String)
-  , "Priority" :: NullOrUndefined (String)
-  , "RawContent" :: NullOrUndefined (String)
-  , "SilentPush" :: NullOrUndefined (Boolean)
-  , "Sound" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "ThreadId" :: NullOrUndefined (String)
-  , "TimeToLive" :: NullOrUndefined (Int)
-  , "Title" :: NullOrUndefined (String)
-  , "Url" :: NullOrUndefined (String)
+  { "Action" :: Maybe (Action)
+  , "Badge" :: Maybe (Int)
+  , "Body" :: Maybe (String)
+  , "Category" :: Maybe (String)
+  , "CollapseId" :: Maybe (String)
+  , "Data" :: Maybe (MapOf__string)
+  , "MediaUrl" :: Maybe (String)
+  , "PreferredAuthenticationMethod" :: Maybe (String)
+  , "Priority" :: Maybe (String)
+  , "RawContent" :: Maybe (String)
+  , "SilentPush" :: Maybe (Boolean)
+  , "Sound" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "ThreadId" :: Maybe (String)
+  , "TimeToLive" :: Maybe (Int)
+  , "Title" :: Maybe (String)
+  , "Url" :: Maybe (String)
   }
 derive instance newtypeAPNSMessage :: Newtype APNSMessage _
 derive instance repGenericAPNSMessage :: Generic APNSMessage _
@@ -195,25 +194,25 @@ instance encodeAPNSMessage :: Encode APNSMessage where encode = genericEncode op
 
 -- | Constructs APNSMessage from required parameters
 newAPNSMessage :: APNSMessage
-newAPNSMessage  = APNSMessage { "Action": (NullOrUndefined Nothing), "Badge": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "Category": (NullOrUndefined Nothing), "CollapseId": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "MediaUrl": (NullOrUndefined Nothing), "PreferredAuthenticationMethod": (NullOrUndefined Nothing), "Priority": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "ThreadId": (NullOrUndefined Nothing), "TimeToLive": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newAPNSMessage  = APNSMessage { "Action": Nothing, "Badge": Nothing, "Body": Nothing, "Category": Nothing, "CollapseId": Nothing, "Data": Nothing, "MediaUrl": Nothing, "PreferredAuthenticationMethod": Nothing, "Priority": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "Sound": Nothing, "Substitutions": Nothing, "ThreadId": Nothing, "TimeToLive": Nothing, "Title": Nothing, "Url": Nothing }
 
 -- | Constructs APNSMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSMessage' :: ( { "Action" :: NullOrUndefined (Action) , "Badge" :: NullOrUndefined (Int) , "Body" :: NullOrUndefined (String) , "Category" :: NullOrUndefined (String) , "CollapseId" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "MediaUrl" :: NullOrUndefined (String) , "PreferredAuthenticationMethod" :: NullOrUndefined (String) , "Priority" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "ThreadId" :: NullOrUndefined (String) , "TimeToLive" :: NullOrUndefined (Int) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } -> {"Action" :: NullOrUndefined (Action) , "Badge" :: NullOrUndefined (Int) , "Body" :: NullOrUndefined (String) , "Category" :: NullOrUndefined (String) , "CollapseId" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "MediaUrl" :: NullOrUndefined (String) , "PreferredAuthenticationMethod" :: NullOrUndefined (String) , "Priority" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "ThreadId" :: NullOrUndefined (String) , "TimeToLive" :: NullOrUndefined (Int) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } ) -> APNSMessage
-newAPNSMessage'  customize = (APNSMessage <<< customize) { "Action": (NullOrUndefined Nothing), "Badge": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "Category": (NullOrUndefined Nothing), "CollapseId": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "MediaUrl": (NullOrUndefined Nothing), "PreferredAuthenticationMethod": (NullOrUndefined Nothing), "Priority": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "ThreadId": (NullOrUndefined Nothing), "TimeToLive": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newAPNSMessage' :: ( { "Action" :: Maybe (Action) , "Badge" :: Maybe (Int) , "Body" :: Maybe (String) , "Category" :: Maybe (String) , "CollapseId" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "MediaUrl" :: Maybe (String) , "PreferredAuthenticationMethod" :: Maybe (String) , "Priority" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "ThreadId" :: Maybe (String) , "TimeToLive" :: Maybe (Int) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } -> {"Action" :: Maybe (Action) , "Badge" :: Maybe (Int) , "Body" :: Maybe (String) , "Category" :: Maybe (String) , "CollapseId" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "MediaUrl" :: Maybe (String) , "PreferredAuthenticationMethod" :: Maybe (String) , "Priority" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "ThreadId" :: Maybe (String) , "TimeToLive" :: Maybe (Int) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } ) -> APNSMessage
+newAPNSMessage'  customize = (APNSMessage <<< customize) { "Action": Nothing, "Badge": Nothing, "Body": Nothing, "Category": Nothing, "CollapseId": Nothing, "Data": Nothing, "MediaUrl": Nothing, "PreferredAuthenticationMethod": Nothing, "Priority": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "Sound": Nothing, "Substitutions": Nothing, "ThreadId": Nothing, "TimeToLive": Nothing, "Title": Nothing, "Url": Nothing }
 
 
 
 -- | Apple Development Push Notification Service channel definition.
 newtype APNSSandboxChannelRequest = APNSSandboxChannelRequest 
-  { "BundleId" :: NullOrUndefined (String)
-  , "Certificate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "PrivateKey" :: NullOrUndefined (String)
-  , "TeamId" :: NullOrUndefined (String)
-  , "TokenKey" :: NullOrUndefined (String)
-  , "TokenKeyId" :: NullOrUndefined (String)
+  { "BundleId" :: Maybe (String)
+  , "Certificate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "PrivateKey" :: Maybe (String)
+  , "TeamId" :: Maybe (String)
+  , "TokenKey" :: Maybe (String)
+  , "TokenKeyId" :: Maybe (String)
   }
 derive instance newtypeAPNSSandboxChannelRequest :: Newtype APNSSandboxChannelRequest _
 derive instance repGenericAPNSSandboxChannelRequest :: Generic APNSSandboxChannelRequest _
@@ -223,29 +222,29 @@ instance encodeAPNSSandboxChannelRequest :: Encode APNSSandboxChannelRequest whe
 
 -- | Constructs APNSSandboxChannelRequest from required parameters
 newAPNSSandboxChannelRequest :: APNSSandboxChannelRequest
-newAPNSSandboxChannelRequest  = APNSSandboxChannelRequest { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSSandboxChannelRequest  = APNSSandboxChannelRequest { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 -- | Constructs APNSSandboxChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSSandboxChannelRequest' :: ( { "BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } -> {"BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } ) -> APNSSandboxChannelRequest
-newAPNSSandboxChannelRequest'  customize = (APNSSandboxChannelRequest <<< customize) { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSSandboxChannelRequest' :: ( { "BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } -> {"BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } ) -> APNSSandboxChannelRequest
+newAPNSSandboxChannelRequest'  customize = (APNSSandboxChannelRequest <<< customize) { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 
 
 -- | Apple Development Push Notification Service channel definition.
 newtype APNSSandboxChannelResponse = APNSSandboxChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "HasTokenKey" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "HasTokenKey" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeAPNSSandboxChannelResponse :: Newtype APNSSandboxChannelResponse _
 derive instance repGenericAPNSSandboxChannelResponse :: Generic APNSSandboxChannelResponse _
@@ -255,25 +254,25 @@ instance encodeAPNSSandboxChannelResponse :: Encode APNSSandboxChannelResponse w
 
 -- | Constructs APNSSandboxChannelResponse from required parameters
 newAPNSSandboxChannelResponse :: APNSSandboxChannelResponse
-newAPNSSandboxChannelResponse  = APNSSandboxChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSSandboxChannelResponse  = APNSSandboxChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs APNSSandboxChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSSandboxChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> APNSSandboxChannelResponse
-newAPNSSandboxChannelResponse'  customize = (APNSSandboxChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSSandboxChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> APNSSandboxChannelResponse
+newAPNSSandboxChannelResponse'  customize = (APNSSandboxChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
 -- | Apple VoIP Push Notification Service channel definition.
 newtype APNSVoipChannelRequest = APNSVoipChannelRequest 
-  { "BundleId" :: NullOrUndefined (String)
-  , "Certificate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "PrivateKey" :: NullOrUndefined (String)
-  , "TeamId" :: NullOrUndefined (String)
-  , "TokenKey" :: NullOrUndefined (String)
-  , "TokenKeyId" :: NullOrUndefined (String)
+  { "BundleId" :: Maybe (String)
+  , "Certificate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "PrivateKey" :: Maybe (String)
+  , "TeamId" :: Maybe (String)
+  , "TokenKey" :: Maybe (String)
+  , "TokenKeyId" :: Maybe (String)
   }
 derive instance newtypeAPNSVoipChannelRequest :: Newtype APNSVoipChannelRequest _
 derive instance repGenericAPNSVoipChannelRequest :: Generic APNSVoipChannelRequest _
@@ -283,29 +282,29 @@ instance encodeAPNSVoipChannelRequest :: Encode APNSVoipChannelRequest where enc
 
 -- | Constructs APNSVoipChannelRequest from required parameters
 newAPNSVoipChannelRequest :: APNSVoipChannelRequest
-newAPNSVoipChannelRequest  = APNSVoipChannelRequest { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSVoipChannelRequest  = APNSVoipChannelRequest { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 -- | Constructs APNSVoipChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSVoipChannelRequest' :: ( { "BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } -> {"BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } ) -> APNSVoipChannelRequest
-newAPNSVoipChannelRequest'  customize = (APNSVoipChannelRequest <<< customize) { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSVoipChannelRequest' :: ( { "BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } -> {"BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } ) -> APNSVoipChannelRequest
+newAPNSVoipChannelRequest'  customize = (APNSVoipChannelRequest <<< customize) { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 
 
 -- | Apple VoIP Push Notification Service channel definition.
 newtype APNSVoipChannelResponse = APNSVoipChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "HasTokenKey" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "HasTokenKey" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeAPNSVoipChannelResponse :: Newtype APNSVoipChannelResponse _
 derive instance repGenericAPNSVoipChannelResponse :: Generic APNSVoipChannelResponse _
@@ -315,25 +314,25 @@ instance encodeAPNSVoipChannelResponse :: Encode APNSVoipChannelResponse where e
 
 -- | Constructs APNSVoipChannelResponse from required parameters
 newAPNSVoipChannelResponse :: APNSVoipChannelResponse
-newAPNSVoipChannelResponse  = APNSVoipChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSVoipChannelResponse  = APNSVoipChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs APNSVoipChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSVoipChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> APNSVoipChannelResponse
-newAPNSVoipChannelResponse'  customize = (APNSVoipChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSVoipChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> APNSVoipChannelResponse
+newAPNSVoipChannelResponse'  customize = (APNSVoipChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
 -- | Apple VoIP Developer Push Notification Service channel definition.
 newtype APNSVoipSandboxChannelRequest = APNSVoipSandboxChannelRequest 
-  { "BundleId" :: NullOrUndefined (String)
-  , "Certificate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "PrivateKey" :: NullOrUndefined (String)
-  , "TeamId" :: NullOrUndefined (String)
-  , "TokenKey" :: NullOrUndefined (String)
-  , "TokenKeyId" :: NullOrUndefined (String)
+  { "BundleId" :: Maybe (String)
+  , "Certificate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "PrivateKey" :: Maybe (String)
+  , "TeamId" :: Maybe (String)
+  , "TokenKey" :: Maybe (String)
+  , "TokenKeyId" :: Maybe (String)
   }
 derive instance newtypeAPNSVoipSandboxChannelRequest :: Newtype APNSVoipSandboxChannelRequest _
 derive instance repGenericAPNSVoipSandboxChannelRequest :: Generic APNSVoipSandboxChannelRequest _
@@ -343,29 +342,29 @@ instance encodeAPNSVoipSandboxChannelRequest :: Encode APNSVoipSandboxChannelReq
 
 -- | Constructs APNSVoipSandboxChannelRequest from required parameters
 newAPNSVoipSandboxChannelRequest :: APNSVoipSandboxChannelRequest
-newAPNSVoipSandboxChannelRequest  = APNSVoipSandboxChannelRequest { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSVoipSandboxChannelRequest  = APNSVoipSandboxChannelRequest { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 -- | Constructs APNSVoipSandboxChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSVoipSandboxChannelRequest' :: ( { "BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } -> {"BundleId" :: NullOrUndefined (String) , "Certificate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "PrivateKey" :: NullOrUndefined (String) , "TeamId" :: NullOrUndefined (String) , "TokenKey" :: NullOrUndefined (String) , "TokenKeyId" :: NullOrUndefined (String) } ) -> APNSVoipSandboxChannelRequest
-newAPNSVoipSandboxChannelRequest'  customize = (APNSVoipSandboxChannelRequest <<< customize) { "BundleId": (NullOrUndefined Nothing), "Certificate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "PrivateKey": (NullOrUndefined Nothing), "TeamId": (NullOrUndefined Nothing), "TokenKey": (NullOrUndefined Nothing), "TokenKeyId": (NullOrUndefined Nothing) }
+newAPNSVoipSandboxChannelRequest' :: ( { "BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } -> {"BundleId" :: Maybe (String) , "Certificate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "PrivateKey" :: Maybe (String) , "TeamId" :: Maybe (String) , "TokenKey" :: Maybe (String) , "TokenKeyId" :: Maybe (String) } ) -> APNSVoipSandboxChannelRequest
+newAPNSVoipSandboxChannelRequest'  customize = (APNSVoipSandboxChannelRequest <<< customize) { "BundleId": Nothing, "Certificate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "PrivateKey": Nothing, "TeamId": Nothing, "TokenKey": Nothing, "TokenKeyId": Nothing }
 
 
 
 -- | Apple VoIP Developer Push Notification Service channel definition.
 newtype APNSVoipSandboxChannelResponse = APNSVoipSandboxChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "DefaultAuthenticationMethod" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "HasTokenKey" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "DefaultAuthenticationMethod" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "HasTokenKey" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeAPNSVoipSandboxChannelResponse :: Newtype APNSVoipSandboxChannelResponse _
 derive instance repGenericAPNSVoipSandboxChannelResponse :: Generic APNSVoipSandboxChannelResponse _
@@ -375,12 +374,12 @@ instance encodeAPNSVoipSandboxChannelResponse :: Encode APNSVoipSandboxChannelRe
 
 -- | Constructs APNSVoipSandboxChannelResponse from required parameters
 newAPNSVoipSandboxChannelResponse :: APNSVoipSandboxChannelResponse
-newAPNSVoipSandboxChannelResponse  = APNSVoipSandboxChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSVoipSandboxChannelResponse  = APNSVoipSandboxChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs APNSVoipSandboxChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAPNSVoipSandboxChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultAuthenticationMethod" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "HasTokenKey" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> APNSVoipSandboxChannelResponse
-newAPNSVoipSandboxChannelResponse'  customize = (APNSVoipSandboxChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultAuthenticationMethod": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "HasTokenKey": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newAPNSVoipSandboxChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultAuthenticationMethod" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "HasTokenKey" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> APNSVoipSandboxChannelResponse
+newAPNSVoipSandboxChannelResponse'  customize = (APNSVoipSandboxChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultAuthenticationMethod": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "HasTokenKey": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
@@ -395,7 +394,7 @@ instance encodeAction :: Encode Action where encode = genericEncode options
 
 -- | Activities for campaign.
 newtype ActivitiesResponse = ActivitiesResponse 
-  { "Item" :: NullOrUndefined (ListOfActivityResponse)
+  { "Item" :: Maybe (ListOfActivityResponse)
   }
 derive instance newtypeActivitiesResponse :: Newtype ActivitiesResponse _
 derive instance repGenericActivitiesResponse :: Generic ActivitiesResponse _
@@ -405,30 +404,30 @@ instance encodeActivitiesResponse :: Encode ActivitiesResponse where encode = ge
 
 -- | Constructs ActivitiesResponse from required parameters
 newActivitiesResponse :: ActivitiesResponse
-newActivitiesResponse  = ActivitiesResponse { "Item": (NullOrUndefined Nothing) }
+newActivitiesResponse  = ActivitiesResponse { "Item": Nothing }
 
 -- | Constructs ActivitiesResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newActivitiesResponse' :: ( { "Item" :: NullOrUndefined (ListOfActivityResponse) } -> {"Item" :: NullOrUndefined (ListOfActivityResponse) } ) -> ActivitiesResponse
-newActivitiesResponse'  customize = (ActivitiesResponse <<< customize) { "Item": (NullOrUndefined Nothing) }
+newActivitiesResponse' :: ( { "Item" :: Maybe (ListOfActivityResponse) } -> {"Item" :: Maybe (ListOfActivityResponse) } ) -> ActivitiesResponse
+newActivitiesResponse'  customize = (ActivitiesResponse <<< customize) { "Item": Nothing }
 
 
 
 -- | Activity definition
 newtype ActivityResponse = ActivityResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CampaignId" :: NullOrUndefined (String)
-  , "End" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Result" :: NullOrUndefined (String)
-  , "ScheduledStart" :: NullOrUndefined (String)
-  , "Start" :: NullOrUndefined (String)
-  , "State" :: NullOrUndefined (String)
-  , "SuccessfulEndpointCount" :: NullOrUndefined (Int)
-  , "TimezonesCompletedCount" :: NullOrUndefined (Int)
-  , "TimezonesTotalCount" :: NullOrUndefined (Int)
-  , "TotalEndpointCount" :: NullOrUndefined (Int)
-  , "TreatmentId" :: NullOrUndefined (String)
+  { "ApplicationId" :: Maybe (String)
+  , "CampaignId" :: Maybe (String)
+  , "End" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Result" :: Maybe (String)
+  , "ScheduledStart" :: Maybe (String)
+  , "Start" :: Maybe (String)
+  , "State" :: Maybe (String)
+  , "SuccessfulEndpointCount" :: Maybe (Int)
+  , "TimezonesCompletedCount" :: Maybe (Int)
+  , "TimezonesTotalCount" :: Maybe (Int)
+  , "TotalEndpointCount" :: Maybe (Int)
+  , "TreatmentId" :: Maybe (String)
   }
 derive instance newtypeActivityResponse :: Newtype ActivityResponse _
 derive instance repGenericActivityResponse :: Generic ActivityResponse _
@@ -438,23 +437,23 @@ instance encodeActivityResponse :: Encode ActivityResponse where encode = generi
 
 -- | Constructs ActivityResponse from required parameters
 newActivityResponse :: ActivityResponse
-newActivityResponse  = ActivityResponse { "ApplicationId": (NullOrUndefined Nothing), "CampaignId": (NullOrUndefined Nothing), "End": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Result": (NullOrUndefined Nothing), "ScheduledStart": (NullOrUndefined Nothing), "Start": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "SuccessfulEndpointCount": (NullOrUndefined Nothing), "TimezonesCompletedCount": (NullOrUndefined Nothing), "TimezonesTotalCount": (NullOrUndefined Nothing), "TotalEndpointCount": (NullOrUndefined Nothing), "TreatmentId": (NullOrUndefined Nothing) }
+newActivityResponse  = ActivityResponse { "ApplicationId": Nothing, "CampaignId": Nothing, "End": Nothing, "Id": Nothing, "Result": Nothing, "ScheduledStart": Nothing, "Start": Nothing, "State": Nothing, "SuccessfulEndpointCount": Nothing, "TimezonesCompletedCount": Nothing, "TimezonesTotalCount": Nothing, "TotalEndpointCount": Nothing, "TreatmentId": Nothing }
 
 -- | Constructs ActivityResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newActivityResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CampaignId" :: NullOrUndefined (String) , "End" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Result" :: NullOrUndefined (String) , "ScheduledStart" :: NullOrUndefined (String) , "Start" :: NullOrUndefined (String) , "State" :: NullOrUndefined (String) , "SuccessfulEndpointCount" :: NullOrUndefined (Int) , "TimezonesCompletedCount" :: NullOrUndefined (Int) , "TimezonesTotalCount" :: NullOrUndefined (Int) , "TotalEndpointCount" :: NullOrUndefined (Int) , "TreatmentId" :: NullOrUndefined (String) } -> {"ApplicationId" :: NullOrUndefined (String) , "CampaignId" :: NullOrUndefined (String) , "End" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Result" :: NullOrUndefined (String) , "ScheduledStart" :: NullOrUndefined (String) , "Start" :: NullOrUndefined (String) , "State" :: NullOrUndefined (String) , "SuccessfulEndpointCount" :: NullOrUndefined (Int) , "TimezonesCompletedCount" :: NullOrUndefined (Int) , "TimezonesTotalCount" :: NullOrUndefined (Int) , "TotalEndpointCount" :: NullOrUndefined (Int) , "TreatmentId" :: NullOrUndefined (String) } ) -> ActivityResponse
-newActivityResponse'  customize = (ActivityResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CampaignId": (NullOrUndefined Nothing), "End": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Result": (NullOrUndefined Nothing), "ScheduledStart": (NullOrUndefined Nothing), "Start": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "SuccessfulEndpointCount": (NullOrUndefined Nothing), "TimezonesCompletedCount": (NullOrUndefined Nothing), "TimezonesTotalCount": (NullOrUndefined Nothing), "TotalEndpointCount": (NullOrUndefined Nothing), "TreatmentId": (NullOrUndefined Nothing) }
+newActivityResponse' :: ( { "ApplicationId" :: Maybe (String) , "CampaignId" :: Maybe (String) , "End" :: Maybe (String) , "Id" :: Maybe (String) , "Result" :: Maybe (String) , "ScheduledStart" :: Maybe (String) , "Start" :: Maybe (String) , "State" :: Maybe (String) , "SuccessfulEndpointCount" :: Maybe (Int) , "TimezonesCompletedCount" :: Maybe (Int) , "TimezonesTotalCount" :: Maybe (Int) , "TotalEndpointCount" :: Maybe (Int) , "TreatmentId" :: Maybe (String) } -> {"ApplicationId" :: Maybe (String) , "CampaignId" :: Maybe (String) , "End" :: Maybe (String) , "Id" :: Maybe (String) , "Result" :: Maybe (String) , "ScheduledStart" :: Maybe (String) , "Start" :: Maybe (String) , "State" :: Maybe (String) , "SuccessfulEndpointCount" :: Maybe (Int) , "TimezonesCompletedCount" :: Maybe (Int) , "TimezonesTotalCount" :: Maybe (Int) , "TotalEndpointCount" :: Maybe (Int) , "TreatmentId" :: Maybe (String) } ) -> ActivityResponse
+newActivityResponse'  customize = (ActivityResponse <<< customize) { "ApplicationId": Nothing, "CampaignId": Nothing, "End": Nothing, "Id": Nothing, "Result": Nothing, "ScheduledStart": Nothing, "Start": Nothing, "State": Nothing, "SuccessfulEndpointCount": Nothing, "TimezonesCompletedCount": Nothing, "TimezonesTotalCount": Nothing, "TotalEndpointCount": Nothing, "TreatmentId": Nothing }
 
 
 
 -- | Address configuration.
 newtype AddressConfiguration = AddressConfiguration 
-  { "BodyOverride" :: NullOrUndefined (String)
-  , "ChannelType" :: NullOrUndefined (ChannelType)
-  , "Context" :: NullOrUndefined (MapOf__string)
-  , "RawContent" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "TitleOverride" :: NullOrUndefined (String)
+  { "BodyOverride" :: Maybe (String)
+  , "ChannelType" :: Maybe (ChannelType)
+  , "Context" :: Maybe (MapOf__string)
+  , "RawContent" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "TitleOverride" :: Maybe (String)
   }
 derive instance newtypeAddressConfiguration :: Newtype AddressConfiguration _
 derive instance repGenericAddressConfiguration :: Generic AddressConfiguration _
@@ -464,19 +463,19 @@ instance encodeAddressConfiguration :: Encode AddressConfiguration where encode 
 
 -- | Constructs AddressConfiguration from required parameters
 newAddressConfiguration :: AddressConfiguration
-newAddressConfiguration  = AddressConfiguration { "BodyOverride": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "Context": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "TitleOverride": (NullOrUndefined Nothing) }
+newAddressConfiguration  = AddressConfiguration { "BodyOverride": Nothing, "ChannelType": Nothing, "Context": Nothing, "RawContent": Nothing, "Substitutions": Nothing, "TitleOverride": Nothing }
 
 -- | Constructs AddressConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAddressConfiguration' :: ( { "BodyOverride" :: NullOrUndefined (String) , "ChannelType" :: NullOrUndefined (ChannelType) , "Context" :: NullOrUndefined (MapOf__string) , "RawContent" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "TitleOverride" :: NullOrUndefined (String) } -> {"BodyOverride" :: NullOrUndefined (String) , "ChannelType" :: NullOrUndefined (ChannelType) , "Context" :: NullOrUndefined (MapOf__string) , "RawContent" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "TitleOverride" :: NullOrUndefined (String) } ) -> AddressConfiguration
-newAddressConfiguration'  customize = (AddressConfiguration <<< customize) { "BodyOverride": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "Context": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "TitleOverride": (NullOrUndefined Nothing) }
+newAddressConfiguration' :: ( { "BodyOverride" :: Maybe (String) , "ChannelType" :: Maybe (ChannelType) , "Context" :: Maybe (MapOf__string) , "RawContent" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "TitleOverride" :: Maybe (String) } -> {"BodyOverride" :: Maybe (String) , "ChannelType" :: Maybe (ChannelType) , "Context" :: Maybe (MapOf__string) , "RawContent" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "TitleOverride" :: Maybe (String) } ) -> AddressConfiguration
+newAddressConfiguration'  customize = (AddressConfiguration <<< customize) { "BodyOverride": Nothing, "ChannelType": Nothing, "Context": Nothing, "RawContent": Nothing, "Substitutions": Nothing, "TitleOverride": Nothing }
 
 
 
 -- | Application Response.
 newtype ApplicationResponse = ApplicationResponse 
-  { "Id" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
+  { "Id" :: Maybe (String)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeApplicationResponse :: Newtype ApplicationResponse _
 derive instance repGenericApplicationResponse :: Generic ApplicationResponse _
@@ -486,22 +485,22 @@ instance encodeApplicationResponse :: Encode ApplicationResponse where encode = 
 
 -- | Constructs ApplicationResponse from required parameters
 newApplicationResponse :: ApplicationResponse
-newApplicationResponse  = ApplicationResponse { "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newApplicationResponse  = ApplicationResponse { "Id": Nothing, "Name": Nothing }
 
 -- | Constructs ApplicationResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationResponse' :: ( { "Id" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } -> {"Id" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) } ) -> ApplicationResponse
-newApplicationResponse'  customize = (ApplicationResponse <<< customize) { "Id": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newApplicationResponse' :: ( { "Id" :: Maybe (String) , "Name" :: Maybe (String) } -> {"Id" :: Maybe (String) , "Name" :: Maybe (String) } ) -> ApplicationResponse
+newApplicationResponse'  customize = (ApplicationResponse <<< customize) { "Id": Nothing, "Name": Nothing }
 
 
 
 -- | Application settings.
 newtype ApplicationSettingsResource = ApplicationSettingsResource 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CampaignHook" :: NullOrUndefined (CampaignHook)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Limits" :: NullOrUndefined (CampaignLimits)
-  , "QuietTime" :: NullOrUndefined (QuietTime)
+  { "ApplicationId" :: Maybe (String)
+  , "CampaignHook" :: Maybe (CampaignHook)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Limits" :: Maybe (CampaignLimits)
+  , "QuietTime" :: Maybe (QuietTime)
   }
 derive instance newtypeApplicationSettingsResource :: Newtype ApplicationSettingsResource _
 derive instance repGenericApplicationSettingsResource :: Generic ApplicationSettingsResource _
@@ -511,19 +510,19 @@ instance encodeApplicationSettingsResource :: Encode ApplicationSettingsResource
 
 -- | Constructs ApplicationSettingsResource from required parameters
 newApplicationSettingsResource :: ApplicationSettingsResource
-newApplicationSettingsResource  = ApplicationSettingsResource { "ApplicationId": (NullOrUndefined Nothing), "CampaignHook": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newApplicationSettingsResource  = ApplicationSettingsResource { "ApplicationId": Nothing, "CampaignHook": Nothing, "LastModifiedDate": Nothing, "Limits": Nothing, "QuietTime": Nothing }
 
 -- | Constructs ApplicationSettingsResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationSettingsResource' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CampaignHook" :: NullOrUndefined (CampaignHook) , "LastModifiedDate" :: NullOrUndefined (String) , "Limits" :: NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined (QuietTime) } -> {"ApplicationId" :: NullOrUndefined (String) , "CampaignHook" :: NullOrUndefined (CampaignHook) , "LastModifiedDate" :: NullOrUndefined (String) , "Limits" :: NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined (QuietTime) } ) -> ApplicationSettingsResource
-newApplicationSettingsResource'  customize = (ApplicationSettingsResource <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CampaignHook": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newApplicationSettingsResource' :: ( { "ApplicationId" :: Maybe (String) , "CampaignHook" :: Maybe (CampaignHook) , "LastModifiedDate" :: Maybe (String) , "Limits" :: Maybe (CampaignLimits) , "QuietTime" :: Maybe (QuietTime) } -> {"ApplicationId" :: Maybe (String) , "CampaignHook" :: Maybe (CampaignHook) , "LastModifiedDate" :: Maybe (String) , "Limits" :: Maybe (CampaignLimits) , "QuietTime" :: Maybe (QuietTime) } ) -> ApplicationSettingsResource
+newApplicationSettingsResource'  customize = (ApplicationSettingsResource <<< customize) { "ApplicationId": Nothing, "CampaignHook": Nothing, "LastModifiedDate": Nothing, "Limits": Nothing, "QuietTime": Nothing }
 
 
 
 -- | Get Applications Result.
 newtype ApplicationsResponse = ApplicationsResponse 
-  { "Item" :: NullOrUndefined (ListOfApplicationResponse)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Item" :: Maybe (ListOfApplicationResponse)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeApplicationsResponse :: Newtype ApplicationsResponse _
 derive instance repGenericApplicationsResponse :: Generic ApplicationsResponse _
@@ -533,19 +532,19 @@ instance encodeApplicationsResponse :: Encode ApplicationsResponse where encode 
 
 -- | Constructs ApplicationsResponse from required parameters
 newApplicationsResponse :: ApplicationsResponse
-newApplicationsResponse  = ApplicationsResponse { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newApplicationsResponse  = ApplicationsResponse { "Item": Nothing, "NextToken": Nothing }
 
 -- | Constructs ApplicationsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newApplicationsResponse' :: ( { "Item" :: NullOrUndefined (ListOfApplicationResponse) , "NextToken" :: NullOrUndefined (String) } -> {"Item" :: NullOrUndefined (ListOfApplicationResponse) , "NextToken" :: NullOrUndefined (String) } ) -> ApplicationsResponse
-newApplicationsResponse'  customize = (ApplicationsResponse <<< customize) { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newApplicationsResponse' :: ( { "Item" :: Maybe (ListOfApplicationResponse) , "NextToken" :: Maybe (String) } -> {"Item" :: Maybe (ListOfApplicationResponse) , "NextToken" :: Maybe (String) } ) -> ApplicationsResponse
+newApplicationsResponse'  customize = (ApplicationsResponse <<< customize) { "Item": Nothing, "NextToken": Nothing }
 
 
 
 -- | Custom attibute dimension
 newtype AttributeDimension = AttributeDimension 
-  { "AttributeType" :: NullOrUndefined (AttributeType)
-  , "Values" :: NullOrUndefined (ListOf__string)
+  { "AttributeType" :: Maybe (AttributeType)
+  , "Values" :: Maybe (ListOf__string)
   }
 derive instance newtypeAttributeDimension :: Newtype AttributeDimension _
 derive instance repGenericAttributeDimension :: Generic AttributeDimension _
@@ -555,12 +554,12 @@ instance encodeAttributeDimension :: Encode AttributeDimension where encode = ge
 
 -- | Constructs AttributeDimension from required parameters
 newAttributeDimension :: AttributeDimension
-newAttributeDimension  = AttributeDimension { "AttributeType": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newAttributeDimension  = AttributeDimension { "AttributeType": Nothing, "Values": Nothing }
 
 -- | Constructs AttributeDimension's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAttributeDimension' :: ( { "AttributeType" :: NullOrUndefined (AttributeType) , "Values" :: NullOrUndefined (ListOf__string) } -> {"AttributeType" :: NullOrUndefined (AttributeType) , "Values" :: NullOrUndefined (ListOf__string) } ) -> AttributeDimension
-newAttributeDimension'  customize = (AttributeDimension <<< customize) { "AttributeType": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newAttributeDimension' :: ( { "AttributeType" :: Maybe (AttributeType) , "Values" :: Maybe (ListOf__string) } -> {"AttributeType" :: Maybe (AttributeType) , "Values" :: Maybe (ListOf__string) } ) -> AttributeDimension
+newAttributeDimension'  customize = (AttributeDimension <<< customize) { "AttributeType": Nothing, "Values": Nothing }
 
 
 
@@ -575,8 +574,8 @@ instance encodeAttributeType :: Encode AttributeType where encode = genericEncod
 
 -- | Simple message object.
 newtype BadRequestException = BadRequestException 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeBadRequestException :: Newtype BadRequestException _
 derive instance repGenericBadRequestException :: Generic BadRequestException _
@@ -586,20 +585,20 @@ instance encodeBadRequestException :: Encode BadRequestException where encode = 
 
 -- | Constructs BadRequestException from required parameters
 newBadRequestException :: BadRequestException
-newBadRequestException  = BadRequestException { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newBadRequestException  = BadRequestException { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs BadRequestException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBadRequestException' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> BadRequestException
-newBadRequestException'  customize = (BadRequestException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newBadRequestException' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> BadRequestException
+newBadRequestException'  customize = (BadRequestException <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
 -- | Baidu Cloud Push credentials
 newtype BaiduChannelRequest = BaiduChannelRequest 
-  { "ApiKey" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "SecretKey" :: NullOrUndefined (String)
+  { "ApiKey" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "SecretKey" :: Maybe (String)
   }
 derive instance newtypeBaiduChannelRequest :: Newtype BaiduChannelRequest _
 derive instance repGenericBaiduChannelRequest :: Generic BaiduChannelRequest _
@@ -609,28 +608,28 @@ instance encodeBaiduChannelRequest :: Encode BaiduChannelRequest where encode = 
 
 -- | Constructs BaiduChannelRequest from required parameters
 newBaiduChannelRequest :: BaiduChannelRequest
-newBaiduChannelRequest  = BaiduChannelRequest { "ApiKey": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "SecretKey": (NullOrUndefined Nothing) }
+newBaiduChannelRequest  = BaiduChannelRequest { "ApiKey": Nothing, "Enabled": Nothing, "SecretKey": Nothing }
 
 -- | Constructs BaiduChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBaiduChannelRequest' :: ( { "ApiKey" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "SecretKey" :: NullOrUndefined (String) } -> {"ApiKey" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "SecretKey" :: NullOrUndefined (String) } ) -> BaiduChannelRequest
-newBaiduChannelRequest'  customize = (BaiduChannelRequest <<< customize) { "ApiKey": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "SecretKey": (NullOrUndefined Nothing) }
+newBaiduChannelRequest' :: ( { "ApiKey" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "SecretKey" :: Maybe (String) } -> {"ApiKey" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "SecretKey" :: Maybe (String) } ) -> BaiduChannelRequest
+newBaiduChannelRequest'  customize = (BaiduChannelRequest <<< customize) { "ApiKey": Nothing, "Enabled": Nothing, "SecretKey": Nothing }
 
 
 
 -- | Baidu Cloud Messaging channel definition
 newtype BaiduChannelResponse = BaiduChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Credential" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Credential" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeBaiduChannelResponse :: Newtype BaiduChannelResponse _
 derive instance repGenericBaiduChannelResponse :: Generic BaiduChannelResponse _
@@ -640,30 +639,30 @@ instance encodeBaiduChannelResponse :: Encode BaiduChannelResponse where encode 
 
 -- | Constructs BaiduChannelResponse from required parameters
 newBaiduChannelResponse :: BaiduChannelResponse
-newBaiduChannelResponse  = BaiduChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Credential": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newBaiduChannelResponse  = BaiduChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "Credential": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs BaiduChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBaiduChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Credential" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Credential" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> BaiduChannelResponse
-newBaiduChannelResponse'  customize = (BaiduChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Credential": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newBaiduChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Credential" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Credential" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> BaiduChannelResponse
+newBaiduChannelResponse'  customize = (BaiduChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "Credential": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
 -- | Baidu Message.
 newtype BaiduMessage = BaiduMessage 
-  { "Action" :: NullOrUndefined (Action)
-  , "Body" :: NullOrUndefined (String)
-  , "Data" :: NullOrUndefined (MapOf__string)
-  , "IconReference" :: NullOrUndefined (String)
-  , "ImageIconUrl" :: NullOrUndefined (String)
-  , "ImageUrl" :: NullOrUndefined (String)
-  , "RawContent" :: NullOrUndefined (String)
-  , "SilentPush" :: NullOrUndefined (Boolean)
-  , "SmallImageIconUrl" :: NullOrUndefined (String)
-  , "Sound" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "Title" :: NullOrUndefined (String)
-  , "Url" :: NullOrUndefined (String)
+  { "Action" :: Maybe (Action)
+  , "Body" :: Maybe (String)
+  , "Data" :: Maybe (MapOf__string)
+  , "IconReference" :: Maybe (String)
+  , "ImageIconUrl" :: Maybe (String)
+  , "ImageUrl" :: Maybe (String)
+  , "RawContent" :: Maybe (String)
+  , "SilentPush" :: Maybe (Boolean)
+  , "SmallImageIconUrl" :: Maybe (String)
+  , "Sound" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "Title" :: Maybe (String)
+  , "Url" :: Maybe (String)
   }
 derive instance newtypeBaiduMessage :: Newtype BaiduMessage _
 derive instance repGenericBaiduMessage :: Generic BaiduMessage _
@@ -673,21 +672,21 @@ instance encodeBaiduMessage :: Encode BaiduMessage where encode = genericEncode 
 
 -- | Constructs BaiduMessage from required parameters
 newBaiduMessage :: BaiduMessage
-newBaiduMessage  = BaiduMessage { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "IconReference": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "SmallImageIconUrl": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newBaiduMessage  = BaiduMessage { "Action": Nothing, "Body": Nothing, "Data": Nothing, "IconReference": Nothing, "ImageIconUrl": Nothing, "ImageUrl": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "SmallImageIconUrl": Nothing, "Sound": Nothing, "Substitutions": Nothing, "Title": Nothing, "Url": Nothing }
 
 -- | Constructs BaiduMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newBaiduMessage' :: ( { "Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "IconReference" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "SmallImageIconUrl" :: NullOrUndefined (String) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } -> {"Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "IconReference" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "SmallImageIconUrl" :: NullOrUndefined (String) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } ) -> BaiduMessage
-newBaiduMessage'  customize = (BaiduMessage <<< customize) { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "IconReference": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "SmallImageIconUrl": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newBaiduMessage' :: ( { "Action" :: Maybe (Action) , "Body" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "IconReference" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "SmallImageIconUrl" :: Maybe (String) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } -> {"Action" :: Maybe (Action) , "Body" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "IconReference" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "SmallImageIconUrl" :: Maybe (String) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } ) -> BaiduMessage
+newBaiduMessage'  customize = (BaiduMessage <<< customize) { "Action": Nothing, "Body": Nothing, "Data": Nothing, "IconReference": Nothing, "ImageIconUrl": Nothing, "ImageUrl": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "SmallImageIconUrl": Nothing, "Sound": Nothing, "Substitutions": Nothing, "Title": Nothing, "Url": Nothing }
 
 
 
 -- | The email message configuration.
 newtype CampaignEmailMessage = CampaignEmailMessage 
-  { "Body" :: NullOrUndefined (String)
-  , "FromAddress" :: NullOrUndefined (String)
-  , "HtmlBody" :: NullOrUndefined (String)
-  , "Title" :: NullOrUndefined (String)
+  { "Body" :: Maybe (String)
+  , "FromAddress" :: Maybe (String)
+  , "HtmlBody" :: Maybe (String)
+  , "Title" :: Maybe (String)
   }
 derive instance newtypeCampaignEmailMessage :: Newtype CampaignEmailMessage _
 derive instance repGenericCampaignEmailMessage :: Generic CampaignEmailMessage _
@@ -697,19 +696,19 @@ instance encodeCampaignEmailMessage :: Encode CampaignEmailMessage where encode 
 
 -- | Constructs CampaignEmailMessage from required parameters
 newCampaignEmailMessage :: CampaignEmailMessage
-newCampaignEmailMessage  = CampaignEmailMessage { "Body": (NullOrUndefined Nothing), "FromAddress": (NullOrUndefined Nothing), "HtmlBody": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing) }
+newCampaignEmailMessage  = CampaignEmailMessage { "Body": Nothing, "FromAddress": Nothing, "HtmlBody": Nothing, "Title": Nothing }
 
 -- | Constructs CampaignEmailMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignEmailMessage' :: ( { "Body" :: NullOrUndefined (String) , "FromAddress" :: NullOrUndefined (String) , "HtmlBody" :: NullOrUndefined (String) , "Title" :: NullOrUndefined (String) } -> {"Body" :: NullOrUndefined (String) , "FromAddress" :: NullOrUndefined (String) , "HtmlBody" :: NullOrUndefined (String) , "Title" :: NullOrUndefined (String) } ) -> CampaignEmailMessage
-newCampaignEmailMessage'  customize = (CampaignEmailMessage <<< customize) { "Body": (NullOrUndefined Nothing), "FromAddress": (NullOrUndefined Nothing), "HtmlBody": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing) }
+newCampaignEmailMessage' :: ( { "Body" :: Maybe (String) , "FromAddress" :: Maybe (String) , "HtmlBody" :: Maybe (String) , "Title" :: Maybe (String) } -> {"Body" :: Maybe (String) , "FromAddress" :: Maybe (String) , "HtmlBody" :: Maybe (String) , "Title" :: Maybe (String) } ) -> CampaignEmailMessage
+newCampaignEmailMessage'  customize = (CampaignEmailMessage <<< customize) { "Body": Nothing, "FromAddress": Nothing, "HtmlBody": Nothing, "Title": Nothing }
 
 
 
 newtype CampaignHook = CampaignHook 
-  { "LambdaFunctionName" :: NullOrUndefined (String)
-  , "Mode" :: NullOrUndefined (Mode)
-  , "WebUrl" :: NullOrUndefined (String)
+  { "LambdaFunctionName" :: Maybe (String)
+  , "Mode" :: Maybe (Mode)
+  , "WebUrl" :: Maybe (String)
   }
 derive instance newtypeCampaignHook :: Newtype CampaignHook _
 derive instance repGenericCampaignHook :: Generic CampaignHook _
@@ -719,21 +718,21 @@ instance encodeCampaignHook :: Encode CampaignHook where encode = genericEncode 
 
 -- | Constructs CampaignHook from required parameters
 newCampaignHook :: CampaignHook
-newCampaignHook  = CampaignHook { "LambdaFunctionName": (NullOrUndefined Nothing), "Mode": (NullOrUndefined Nothing), "WebUrl": (NullOrUndefined Nothing) }
+newCampaignHook  = CampaignHook { "LambdaFunctionName": Nothing, "Mode": Nothing, "WebUrl": Nothing }
 
 -- | Constructs CampaignHook's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignHook' :: ( { "LambdaFunctionName" :: NullOrUndefined (String) , "Mode" :: NullOrUndefined (Mode) , "WebUrl" :: NullOrUndefined (String) } -> {"LambdaFunctionName" :: NullOrUndefined (String) , "Mode" :: NullOrUndefined (Mode) , "WebUrl" :: NullOrUndefined (String) } ) -> CampaignHook
-newCampaignHook'  customize = (CampaignHook <<< customize) { "LambdaFunctionName": (NullOrUndefined Nothing), "Mode": (NullOrUndefined Nothing), "WebUrl": (NullOrUndefined Nothing) }
+newCampaignHook' :: ( { "LambdaFunctionName" :: Maybe (String) , "Mode" :: Maybe (Mode) , "WebUrl" :: Maybe (String) } -> {"LambdaFunctionName" :: Maybe (String) , "Mode" :: Maybe (Mode) , "WebUrl" :: Maybe (String) } ) -> CampaignHook
+newCampaignHook'  customize = (CampaignHook <<< customize) { "LambdaFunctionName": Nothing, "Mode": Nothing, "WebUrl": Nothing }
 
 
 
 -- | Campaign Limits are used to limit the number of messages that can be sent to a user.
 newtype CampaignLimits = CampaignLimits 
-  { "Daily" :: NullOrUndefined (Int)
-  , "MaximumDuration" :: NullOrUndefined (Int)
-  , "MessagesPerSecond" :: NullOrUndefined (Int)
-  , "Total" :: NullOrUndefined (Int)
+  { "Daily" :: Maybe (Int)
+  , "MaximumDuration" :: Maybe (Int)
+  , "MessagesPerSecond" :: Maybe (Int)
+  , "Total" :: Maybe (Int)
   }
 derive instance newtypeCampaignLimits :: Newtype CampaignLimits _
 derive instance repGenericCampaignLimits :: Generic CampaignLimits _
@@ -743,37 +742,37 @@ instance encodeCampaignLimits :: Encode CampaignLimits where encode = genericEnc
 
 -- | Constructs CampaignLimits from required parameters
 newCampaignLimits :: CampaignLimits
-newCampaignLimits  = CampaignLimits { "Daily": (NullOrUndefined Nothing), "MaximumDuration": (NullOrUndefined Nothing), "MessagesPerSecond": (NullOrUndefined Nothing), "Total": (NullOrUndefined Nothing) }
+newCampaignLimits  = CampaignLimits { "Daily": Nothing, "MaximumDuration": Nothing, "MessagesPerSecond": Nothing, "Total": Nothing }
 
 -- | Constructs CampaignLimits's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignLimits' :: ( { "Daily" :: NullOrUndefined (Int) , "MaximumDuration" :: NullOrUndefined (Int) , "MessagesPerSecond" :: NullOrUndefined (Int) , "Total" :: NullOrUndefined (Int) } -> {"Daily" :: NullOrUndefined (Int) , "MaximumDuration" :: NullOrUndefined (Int) , "MessagesPerSecond" :: NullOrUndefined (Int) , "Total" :: NullOrUndefined (Int) } ) -> CampaignLimits
-newCampaignLimits'  customize = (CampaignLimits <<< customize) { "Daily": (NullOrUndefined Nothing), "MaximumDuration": (NullOrUndefined Nothing), "MessagesPerSecond": (NullOrUndefined Nothing), "Total": (NullOrUndefined Nothing) }
+newCampaignLimits' :: ( { "Daily" :: Maybe (Int) , "MaximumDuration" :: Maybe (Int) , "MessagesPerSecond" :: Maybe (Int) , "Total" :: Maybe (Int) } -> {"Daily" :: Maybe (Int) , "MaximumDuration" :: Maybe (Int) , "MessagesPerSecond" :: Maybe (Int) , "Total" :: Maybe (Int) } ) -> CampaignLimits
+newCampaignLimits'  customize = (CampaignLimits <<< customize) { "Daily": Nothing, "MaximumDuration": Nothing, "MessagesPerSecond": Nothing, "Total": Nothing }
 
 
 
 -- | Campaign definition
 newtype CampaignResponse = CampaignResponse 
-  { "AdditionalTreatments" :: NullOrUndefined (ListOfTreatmentResource)
-  , "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "DefaultState" :: NullOrUndefined (CampaignState)
-  , "Description" :: NullOrUndefined (String)
-  , "HoldoutPercent" :: NullOrUndefined (Int)
-  , "Hook" :: NullOrUndefined (CampaignHook)
-  , "Id" :: NullOrUndefined (String)
-  , "IsPaused" :: NullOrUndefined (Boolean)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Limits" :: NullOrUndefined (CampaignLimits)
-  , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration)
-  , "Name" :: NullOrUndefined (String)
-  , "Schedule" :: NullOrUndefined (Schedule)
-  , "SegmentId" :: NullOrUndefined (String)
-  , "SegmentVersion" :: NullOrUndefined (Int)
-  , "State" :: NullOrUndefined (CampaignState)
-  , "TreatmentDescription" :: NullOrUndefined (String)
-  , "TreatmentName" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "AdditionalTreatments" :: Maybe (ListOfTreatmentResource)
+  , "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "DefaultState" :: Maybe (CampaignState)
+  , "Description" :: Maybe (String)
+  , "HoldoutPercent" :: Maybe (Int)
+  , "Hook" :: Maybe (CampaignHook)
+  , "Id" :: Maybe (String)
+  , "IsPaused" :: Maybe (Boolean)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Limits" :: Maybe (CampaignLimits)
+  , "MessageConfiguration" :: Maybe (MessageConfiguration)
+  , "Name" :: Maybe (String)
+  , "Schedule" :: Maybe (Schedule)
+  , "SegmentId" :: Maybe (String)
+  , "SegmentVersion" :: Maybe (Int)
+  , "State" :: Maybe (CampaignState)
+  , "TreatmentDescription" :: Maybe (String)
+  , "TreatmentName" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeCampaignResponse :: Newtype CampaignResponse _
 derive instance repGenericCampaignResponse :: Generic CampaignResponse _
@@ -783,20 +782,20 @@ instance encodeCampaignResponse :: Encode CampaignResponse where encode = generi
 
 -- | Constructs CampaignResponse from required parameters
 newCampaignResponse :: CampaignResponse
-newCampaignResponse  = CampaignResponse { "AdditionalTreatments": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultState": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCampaignResponse  = CampaignResponse { "AdditionalTreatments": Nothing, "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultState": Nothing, "Description": Nothing, "HoldoutPercent": Nothing, "Hook": Nothing, "Id": Nothing, "IsPaused": Nothing, "LastModifiedDate": Nothing, "Limits": Nothing, "MessageConfiguration": Nothing, "Name": Nothing, "Schedule": Nothing, "SegmentId": Nothing, "SegmentVersion": Nothing, "State": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing, "Version": Nothing }
 
 -- | Constructs CampaignResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignResponse' :: ( { "AdditionalTreatments" :: NullOrUndefined (ListOfTreatmentResource) , "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultState" :: NullOrUndefined (CampaignState) , "Description" :: NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined (Int) , "Hook" :: NullOrUndefined (CampaignHook) , "Id" :: NullOrUndefined (String) , "IsPaused" :: NullOrUndefined (Boolean) , "LastModifiedDate" :: NullOrUndefined (String) , "Limits" :: NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined (String) , "Schedule" :: NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined (Int) , "State" :: NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"AdditionalTreatments" :: NullOrUndefined (ListOfTreatmentResource) , "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "DefaultState" :: NullOrUndefined (CampaignState) , "Description" :: NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined (Int) , "Hook" :: NullOrUndefined (CampaignHook) , "Id" :: NullOrUndefined (String) , "IsPaused" :: NullOrUndefined (Boolean) , "LastModifiedDate" :: NullOrUndefined (String) , "Limits" :: NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined (String) , "Schedule" :: NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined (Int) , "State" :: NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> CampaignResponse
-newCampaignResponse'  customize = (CampaignResponse <<< customize) { "AdditionalTreatments": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "DefaultState": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newCampaignResponse' :: ( { "AdditionalTreatments" :: Maybe (ListOfTreatmentResource) , "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultState" :: Maybe (CampaignState) , "Description" :: Maybe (String) , "HoldoutPercent" :: Maybe (Int) , "Hook" :: Maybe (CampaignHook) , "Id" :: Maybe (String) , "IsPaused" :: Maybe (Boolean) , "LastModifiedDate" :: Maybe (String) , "Limits" :: Maybe (CampaignLimits) , "MessageConfiguration" :: Maybe (MessageConfiguration) , "Name" :: Maybe (String) , "Schedule" :: Maybe (Schedule) , "SegmentId" :: Maybe (String) , "SegmentVersion" :: Maybe (Int) , "State" :: Maybe (CampaignState) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"AdditionalTreatments" :: Maybe (ListOfTreatmentResource) , "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "DefaultState" :: Maybe (CampaignState) , "Description" :: Maybe (String) , "HoldoutPercent" :: Maybe (Int) , "Hook" :: Maybe (CampaignHook) , "Id" :: Maybe (String) , "IsPaused" :: Maybe (Boolean) , "LastModifiedDate" :: Maybe (String) , "Limits" :: Maybe (CampaignLimits) , "MessageConfiguration" :: Maybe (MessageConfiguration) , "Name" :: Maybe (String) , "Schedule" :: Maybe (Schedule) , "SegmentId" :: Maybe (String) , "SegmentVersion" :: Maybe (Int) , "State" :: Maybe (CampaignState) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> CampaignResponse
+newCampaignResponse'  customize = (CampaignResponse <<< customize) { "AdditionalTreatments": Nothing, "ApplicationId": Nothing, "CreationDate": Nothing, "DefaultState": Nothing, "Description": Nothing, "HoldoutPercent": Nothing, "Hook": Nothing, "Id": Nothing, "IsPaused": Nothing, "LastModifiedDate": Nothing, "Limits": Nothing, "MessageConfiguration": Nothing, "Name": Nothing, "Schedule": Nothing, "SegmentId": Nothing, "SegmentVersion": Nothing, "State": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing, "Version": Nothing }
 
 
 
 -- | SMS message configuration.
 newtype CampaignSmsMessage = CampaignSmsMessage 
-  { "Body" :: NullOrUndefined (String)
-  , "MessageType" :: NullOrUndefined (MessageType)
-  , "SenderId" :: NullOrUndefined (String)
+  { "Body" :: Maybe (String)
+  , "MessageType" :: Maybe (MessageType)
+  , "SenderId" :: Maybe (String)
   }
 derive instance newtypeCampaignSmsMessage :: Newtype CampaignSmsMessage _
 derive instance repGenericCampaignSmsMessage :: Generic CampaignSmsMessage _
@@ -806,18 +805,18 @@ instance encodeCampaignSmsMessage :: Encode CampaignSmsMessage where encode = ge
 
 -- | Constructs CampaignSmsMessage from required parameters
 newCampaignSmsMessage :: CampaignSmsMessage
-newCampaignSmsMessage  = CampaignSmsMessage { "Body": (NullOrUndefined Nothing), "MessageType": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing) }
+newCampaignSmsMessage  = CampaignSmsMessage { "Body": Nothing, "MessageType": Nothing, "SenderId": Nothing }
 
 -- | Constructs CampaignSmsMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignSmsMessage' :: ( { "Body" :: NullOrUndefined (String) , "MessageType" :: NullOrUndefined (MessageType) , "SenderId" :: NullOrUndefined (String) } -> {"Body" :: NullOrUndefined (String) , "MessageType" :: NullOrUndefined (MessageType) , "SenderId" :: NullOrUndefined (String) } ) -> CampaignSmsMessage
-newCampaignSmsMessage'  customize = (CampaignSmsMessage <<< customize) { "Body": (NullOrUndefined Nothing), "MessageType": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing) }
+newCampaignSmsMessage' :: ( { "Body" :: Maybe (String) , "MessageType" :: Maybe (MessageType) , "SenderId" :: Maybe (String) } -> {"Body" :: Maybe (String) , "MessageType" :: Maybe (MessageType) , "SenderId" :: Maybe (String) } ) -> CampaignSmsMessage
+newCampaignSmsMessage'  customize = (CampaignSmsMessage <<< customize) { "Body": Nothing, "MessageType": Nothing, "SenderId": Nothing }
 
 
 
 -- | State of the Campaign
 newtype CampaignState = CampaignState 
-  { "CampaignStatus" :: NullOrUndefined (CampaignStatus)
+  { "CampaignStatus" :: Maybe (CampaignStatus)
   }
 derive instance newtypeCampaignState :: Newtype CampaignState _
 derive instance repGenericCampaignState :: Generic CampaignState _
@@ -827,12 +826,12 @@ instance encodeCampaignState :: Encode CampaignState where encode = genericEncod
 
 -- | Constructs CampaignState from required parameters
 newCampaignState :: CampaignState
-newCampaignState  = CampaignState { "CampaignStatus": (NullOrUndefined Nothing) }
+newCampaignState  = CampaignState { "CampaignStatus": Nothing }
 
 -- | Constructs CampaignState's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignState' :: ( { "CampaignStatus" :: NullOrUndefined (CampaignStatus) } -> {"CampaignStatus" :: NullOrUndefined (CampaignStatus) } ) -> CampaignState
-newCampaignState'  customize = (CampaignState <<< customize) { "CampaignStatus": (NullOrUndefined Nothing) }
+newCampaignState' :: ( { "CampaignStatus" :: Maybe (CampaignStatus) } -> {"CampaignStatus" :: Maybe (CampaignStatus) } ) -> CampaignState
+newCampaignState'  customize = (CampaignState <<< customize) { "CampaignStatus": Nothing }
 
 
 
@@ -847,8 +846,8 @@ instance encodeCampaignStatus :: Encode CampaignStatus where encode = genericEnc
 
 -- | List of available campaigns.
 newtype CampaignsResponse = CampaignsResponse 
-  { "Item" :: NullOrUndefined (ListOfCampaignResponse)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Item" :: Maybe (ListOfCampaignResponse)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeCampaignsResponse :: Newtype CampaignsResponse _
 derive instance repGenericCampaignsResponse :: Generic CampaignsResponse _
@@ -858,12 +857,12 @@ instance encodeCampaignsResponse :: Encode CampaignsResponse where encode = gene
 
 -- | Constructs CampaignsResponse from required parameters
 newCampaignsResponse :: CampaignsResponse
-newCampaignsResponse  = CampaignsResponse { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newCampaignsResponse  = CampaignsResponse { "Item": Nothing, "NextToken": Nothing }
 
 -- | Constructs CampaignsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCampaignsResponse' :: ( { "Item" :: NullOrUndefined (ListOfCampaignResponse) , "NextToken" :: NullOrUndefined (String) } -> {"Item" :: NullOrUndefined (ListOfCampaignResponse) , "NextToken" :: NullOrUndefined (String) } ) -> CampaignsResponse
-newCampaignsResponse'  customize = (CampaignsResponse <<< customize) { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newCampaignsResponse' :: ( { "Item" :: Maybe (ListOfCampaignResponse) , "NextToken" :: Maybe (String) } -> {"Item" :: Maybe (ListOfCampaignResponse) , "NextToken" :: Maybe (String) } ) -> CampaignsResponse
+newCampaignsResponse'  customize = (CampaignsResponse <<< customize) { "Item": Nothing, "NextToken": Nothing }
 
 
 
@@ -918,7 +917,7 @@ newCreateAppResponse' _ApplicationResponse customize = (CreateAppResponse <<< cu
 
 -- | Application Request.
 newtype CreateApplicationRequest = CreateApplicationRequest 
-  { "Name" :: NullOrUndefined (String)
+  { "Name" :: Maybe (String)
   }
 derive instance newtypeCreateApplicationRequest :: Newtype CreateApplicationRequest _
 derive instance repGenericCreateApplicationRequest :: Generic CreateApplicationRequest _
@@ -928,12 +927,12 @@ instance encodeCreateApplicationRequest :: Encode CreateApplicationRequest where
 
 -- | Constructs CreateApplicationRequest from required parameters
 newCreateApplicationRequest :: CreateApplicationRequest
-newCreateApplicationRequest  = CreateApplicationRequest { "Name": (NullOrUndefined Nothing) }
+newCreateApplicationRequest  = CreateApplicationRequest { "Name": Nothing }
 
 -- | Constructs CreateApplicationRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateApplicationRequest' :: ( { "Name" :: NullOrUndefined (String) } -> {"Name" :: NullOrUndefined (String) } ) -> CreateApplicationRequest
-newCreateApplicationRequest'  customize = (CreateApplicationRequest <<< customize) { "Name": (NullOrUndefined Nothing) }
+newCreateApplicationRequest' :: ( { "Name" :: Maybe (String) } -> {"Name" :: Maybe (String) } ) -> CreateApplicationRequest
+newCreateApplicationRequest'  customize = (CreateApplicationRequest <<< customize) { "Name": Nothing }
 
 
 
@@ -1103,8 +1102,8 @@ newCreateSegmentResponse' _SegmentResponse customize = (CreateSegmentResponse <<
 
 -- | Default Message across push notification, email, and sms.
 newtype DefaultMessage = DefaultMessage 
-  { "Body" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
+  { "Body" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
   }
 derive instance newtypeDefaultMessage :: Newtype DefaultMessage _
 derive instance repGenericDefaultMessage :: Generic DefaultMessage _
@@ -1114,24 +1113,24 @@ instance encodeDefaultMessage :: Encode DefaultMessage where encode = genericEnc
 
 -- | Constructs DefaultMessage from required parameters
 newDefaultMessage :: DefaultMessage
-newDefaultMessage  = DefaultMessage { "Body": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing) }
+newDefaultMessage  = DefaultMessage { "Body": Nothing, "Substitutions": Nothing }
 
 -- | Constructs DefaultMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDefaultMessage' :: ( { "Body" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) } -> {"Body" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) } ) -> DefaultMessage
-newDefaultMessage'  customize = (DefaultMessage <<< customize) { "Body": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing) }
+newDefaultMessage' :: ( { "Body" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) } -> {"Body" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) } ) -> DefaultMessage
+newDefaultMessage'  customize = (DefaultMessage <<< customize) { "Body": Nothing, "Substitutions": Nothing }
 
 
 
 -- | Default Push Notification Message.
 newtype DefaultPushNotificationMessage = DefaultPushNotificationMessage 
-  { "Action" :: NullOrUndefined (Action)
-  , "Body" :: NullOrUndefined (String)
-  , "Data" :: NullOrUndefined (MapOf__string)
-  , "SilentPush" :: NullOrUndefined (Boolean)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "Title" :: NullOrUndefined (String)
-  , "Url" :: NullOrUndefined (String)
+  { "Action" :: Maybe (Action)
+  , "Body" :: Maybe (String)
+  , "Data" :: Maybe (MapOf__string)
+  , "SilentPush" :: Maybe (Boolean)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "Title" :: Maybe (String)
+  , "Url" :: Maybe (String)
   }
 derive instance newtypeDefaultPushNotificationMessage :: Newtype DefaultPushNotificationMessage _
 derive instance repGenericDefaultPushNotificationMessage :: Generic DefaultPushNotificationMessage _
@@ -1141,12 +1140,12 @@ instance encodeDefaultPushNotificationMessage :: Encode DefaultPushNotificationM
 
 -- | Constructs DefaultPushNotificationMessage from required parameters
 newDefaultPushNotificationMessage :: DefaultPushNotificationMessage
-newDefaultPushNotificationMessage  = DefaultPushNotificationMessage { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newDefaultPushNotificationMessage  = DefaultPushNotificationMessage { "Action": Nothing, "Body": Nothing, "Data": Nothing, "SilentPush": Nothing, "Substitutions": Nothing, "Title": Nothing, "Url": Nothing }
 
 -- | Constructs DefaultPushNotificationMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDefaultPushNotificationMessage' :: ( { "Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "SilentPush" :: NullOrUndefined (Boolean) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } -> {"Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "SilentPush" :: NullOrUndefined (Boolean) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } ) -> DefaultPushNotificationMessage
-newDefaultPushNotificationMessage'  customize = (DefaultPushNotificationMessage <<< customize) { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newDefaultPushNotificationMessage' :: ( { "Action" :: Maybe (Action) , "Body" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "SilentPush" :: Maybe (Boolean) , "Substitutions" :: Maybe (MapOfListOf__string) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } -> {"Action" :: Maybe (Action) , "Body" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "SilentPush" :: Maybe (Boolean) , "Substitutions" :: Maybe (MapOfListOf__string) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } ) -> DefaultPushNotificationMessage
+newDefaultPushNotificationMessage'  customize = (DefaultPushNotificationMessage <<< customize) { "Action": Nothing, "Body": Nothing, "Data": Nothing, "SilentPush": Nothing, "Substitutions": Nothing, "Title": Nothing, "Url": Nothing }
 
 
 
@@ -1693,13 +1692,13 @@ instance encodeDimensionType :: Encode DimensionType where encode = genericEncod
 
 -- | The message configuration.
 newtype DirectMessageConfiguration = DirectMessageConfiguration 
-  { "ADMMessage" :: NullOrUndefined (ADMMessage)
-  , "APNSMessage" :: NullOrUndefined (APNSMessage)
-  , "BaiduMessage" :: NullOrUndefined (BaiduMessage)
-  , "DefaultMessage" :: NullOrUndefined (DefaultMessage)
-  , "DefaultPushNotificationMessage" :: NullOrUndefined (DefaultPushNotificationMessage)
-  , "GCMMessage" :: NullOrUndefined (GCMMessage)
-  , "SMSMessage" :: NullOrUndefined (SMSMessage)
+  { "ADMMessage" :: Maybe (ADMMessage)
+  , "APNSMessage" :: Maybe (APNSMessage)
+  , "BaiduMessage" :: Maybe (BaiduMessage)
+  , "DefaultMessage" :: Maybe (DefaultMessage)
+  , "DefaultPushNotificationMessage" :: Maybe (DefaultPushNotificationMessage)
+  , "GCMMessage" :: Maybe (GCMMessage)
+  , "SMSMessage" :: Maybe (SMSMessage)
   }
 derive instance newtypeDirectMessageConfiguration :: Newtype DirectMessageConfiguration _
 derive instance repGenericDirectMessageConfiguration :: Generic DirectMessageConfiguration _
@@ -1709,12 +1708,12 @@ instance encodeDirectMessageConfiguration :: Encode DirectMessageConfiguration w
 
 -- | Constructs DirectMessageConfiguration from required parameters
 newDirectMessageConfiguration :: DirectMessageConfiguration
-newDirectMessageConfiguration  = DirectMessageConfiguration { "ADMMessage": (NullOrUndefined Nothing), "APNSMessage": (NullOrUndefined Nothing), "BaiduMessage": (NullOrUndefined Nothing), "DefaultMessage": (NullOrUndefined Nothing), "DefaultPushNotificationMessage": (NullOrUndefined Nothing), "GCMMessage": (NullOrUndefined Nothing), "SMSMessage": (NullOrUndefined Nothing) }
+newDirectMessageConfiguration  = DirectMessageConfiguration { "ADMMessage": Nothing, "APNSMessage": Nothing, "BaiduMessage": Nothing, "DefaultMessage": Nothing, "DefaultPushNotificationMessage": Nothing, "GCMMessage": Nothing, "SMSMessage": Nothing }
 
 -- | Constructs DirectMessageConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDirectMessageConfiguration' :: ( { "ADMMessage" :: NullOrUndefined (ADMMessage) , "APNSMessage" :: NullOrUndefined (APNSMessage) , "BaiduMessage" :: NullOrUndefined (BaiduMessage) , "DefaultMessage" :: NullOrUndefined (DefaultMessage) , "DefaultPushNotificationMessage" :: NullOrUndefined (DefaultPushNotificationMessage) , "GCMMessage" :: NullOrUndefined (GCMMessage) , "SMSMessage" :: NullOrUndefined (SMSMessage) } -> {"ADMMessage" :: NullOrUndefined (ADMMessage) , "APNSMessage" :: NullOrUndefined (APNSMessage) , "BaiduMessage" :: NullOrUndefined (BaiduMessage) , "DefaultMessage" :: NullOrUndefined (DefaultMessage) , "DefaultPushNotificationMessage" :: NullOrUndefined (DefaultPushNotificationMessage) , "GCMMessage" :: NullOrUndefined (GCMMessage) , "SMSMessage" :: NullOrUndefined (SMSMessage) } ) -> DirectMessageConfiguration
-newDirectMessageConfiguration'  customize = (DirectMessageConfiguration <<< customize) { "ADMMessage": (NullOrUndefined Nothing), "APNSMessage": (NullOrUndefined Nothing), "BaiduMessage": (NullOrUndefined Nothing), "DefaultMessage": (NullOrUndefined Nothing), "DefaultPushNotificationMessage": (NullOrUndefined Nothing), "GCMMessage": (NullOrUndefined Nothing), "SMSMessage": (NullOrUndefined Nothing) }
+newDirectMessageConfiguration' :: ( { "ADMMessage" :: Maybe (ADMMessage) , "APNSMessage" :: Maybe (APNSMessage) , "BaiduMessage" :: Maybe (BaiduMessage) , "DefaultMessage" :: Maybe (DefaultMessage) , "DefaultPushNotificationMessage" :: Maybe (DefaultPushNotificationMessage) , "GCMMessage" :: Maybe (GCMMessage) , "SMSMessage" :: Maybe (SMSMessage) } -> {"ADMMessage" :: Maybe (ADMMessage) , "APNSMessage" :: Maybe (APNSMessage) , "BaiduMessage" :: Maybe (BaiduMessage) , "DefaultMessage" :: Maybe (DefaultMessage) , "DefaultPushNotificationMessage" :: Maybe (DefaultPushNotificationMessage) , "GCMMessage" :: Maybe (GCMMessage) , "SMSMessage" :: Maybe (SMSMessage) } ) -> DirectMessageConfiguration
+newDirectMessageConfiguration'  customize = (DirectMessageConfiguration <<< customize) { "ADMMessage": Nothing, "APNSMessage": Nothing, "BaiduMessage": Nothing, "DefaultMessage": Nothing, "DefaultPushNotificationMessage": Nothing, "GCMMessage": Nothing, "SMSMessage": Nothing }
 
 
 
@@ -1729,10 +1728,10 @@ instance encodeDuration :: Encode Duration where encode = genericEncode options
 
 -- | Email Channel Request
 newtype EmailChannelRequest = EmailChannelRequest 
-  { "Enabled" :: NullOrUndefined (Boolean)
-  , "FromAddress" :: NullOrUndefined (String)
-  , "Identity" :: NullOrUndefined (String)
-  , "RoleArn" :: NullOrUndefined (String)
+  { "Enabled" :: Maybe (Boolean)
+  , "FromAddress" :: Maybe (String)
+  , "Identity" :: Maybe (String)
+  , "RoleArn" :: Maybe (String)
   }
 derive instance newtypeEmailChannelRequest :: Newtype EmailChannelRequest _
 derive instance repGenericEmailChannelRequest :: Generic EmailChannelRequest _
@@ -1742,30 +1741,30 @@ instance encodeEmailChannelRequest :: Encode EmailChannelRequest where encode = 
 
 -- | Constructs EmailChannelRequest from required parameters
 newEmailChannelRequest :: EmailChannelRequest
-newEmailChannelRequest  = EmailChannelRequest { "Enabled": (NullOrUndefined Nothing), "FromAddress": (NullOrUndefined Nothing), "Identity": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newEmailChannelRequest  = EmailChannelRequest { "Enabled": Nothing, "FromAddress": Nothing, "Identity": Nothing, "RoleArn": Nothing }
 
 -- | Constructs EmailChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEmailChannelRequest' :: ( { "Enabled" :: NullOrUndefined (Boolean) , "FromAddress" :: NullOrUndefined (String) , "Identity" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } -> {"Enabled" :: NullOrUndefined (Boolean) , "FromAddress" :: NullOrUndefined (String) , "Identity" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } ) -> EmailChannelRequest
-newEmailChannelRequest'  customize = (EmailChannelRequest <<< customize) { "Enabled": (NullOrUndefined Nothing), "FromAddress": (NullOrUndefined Nothing), "Identity": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newEmailChannelRequest' :: ( { "Enabled" :: Maybe (Boolean) , "FromAddress" :: Maybe (String) , "Identity" :: Maybe (String) , "RoleArn" :: Maybe (String) } -> {"Enabled" :: Maybe (Boolean) , "FromAddress" :: Maybe (String) , "Identity" :: Maybe (String) , "RoleArn" :: Maybe (String) } ) -> EmailChannelRequest
+newEmailChannelRequest'  customize = (EmailChannelRequest <<< customize) { "Enabled": Nothing, "FromAddress": Nothing, "Identity": Nothing, "RoleArn": Nothing }
 
 
 
 -- | Email Channel Response.
 newtype EmailChannelResponse = EmailChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "FromAddress" :: NullOrUndefined (String)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "Identity" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "RoleArn" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "FromAddress" :: Maybe (String)
+  , "HasCredential" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "Identity" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "RoleArn" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeEmailChannelResponse :: Newtype EmailChannelResponse _
 derive instance repGenericEmailChannelResponse :: Generic EmailChannelResponse _
@@ -1775,29 +1774,29 @@ instance encodeEmailChannelResponse :: Encode EmailChannelResponse where encode 
 
 -- | Constructs EmailChannelResponse from required parameters
 newEmailChannelResponse :: EmailChannelResponse
-newEmailChannelResponse  = EmailChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "FromAddress": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Identity": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newEmailChannelResponse  = EmailChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "Enabled": Nothing, "FromAddress": Nothing, "HasCredential": Nothing, "Id": Nothing, "Identity": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "RoleArn": Nothing, "Version": Nothing }
 
 -- | Constructs EmailChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEmailChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "FromAddress" :: NullOrUndefined (String) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "Identity" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "FromAddress" :: NullOrUndefined (String) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "Identity" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> EmailChannelResponse
-newEmailChannelResponse'  customize = (EmailChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "FromAddress": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Identity": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newEmailChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "FromAddress" :: Maybe (String) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "Identity" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "RoleArn" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "FromAddress" :: Maybe (String) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "Identity" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "RoleArn" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> EmailChannelResponse
+newEmailChannelResponse'  customize = (EmailChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "Enabled": Nothing, "FromAddress": Nothing, "HasCredential": Nothing, "Id": Nothing, "Identity": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "RoleArn": Nothing, "Version": Nothing }
 
 
 
 -- | Endpoint update request
 newtype EndpointBatchItem = EndpointBatchItem 
-  { "Address" :: NullOrUndefined (String)
-  , "Attributes" :: NullOrUndefined (MapOfListOf__string)
-  , "ChannelType" :: NullOrUndefined (ChannelType)
-  , "Demographic" :: NullOrUndefined (EndpointDemographic)
-  , "EffectiveDate" :: NullOrUndefined (String)
-  , "EndpointStatus" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Location" :: NullOrUndefined (EndpointLocation)
-  , "Metrics" :: NullOrUndefined (MapOf__double)
-  , "OptOut" :: NullOrUndefined (String)
-  , "RequestId" :: NullOrUndefined (String)
-  , "User" :: NullOrUndefined (EndpointUser)
+  { "Address" :: Maybe (String)
+  , "Attributes" :: Maybe (MapOfListOf__string)
+  , "ChannelType" :: Maybe (ChannelType)
+  , "Demographic" :: Maybe (EndpointDemographic)
+  , "EffectiveDate" :: Maybe (String)
+  , "EndpointStatus" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Location" :: Maybe (EndpointLocation)
+  , "Metrics" :: Maybe (MapOf__double)
+  , "OptOut" :: Maybe (String)
+  , "RequestId" :: Maybe (String)
+  , "User" :: Maybe (EndpointUser)
   }
 derive instance newtypeEndpointBatchItem :: Newtype EndpointBatchItem _
 derive instance repGenericEndpointBatchItem :: Generic EndpointBatchItem _
@@ -1807,18 +1806,18 @@ instance encodeEndpointBatchItem :: Encode EndpointBatchItem where encode = gene
 
 -- | Constructs EndpointBatchItem from required parameters
 newEndpointBatchItem :: EndpointBatchItem
-newEndpointBatchItem  = EndpointBatchItem { "Address": (NullOrUndefined Nothing), "Attributes": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "EffectiveDate": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "Metrics": (NullOrUndefined Nothing), "OptOut": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newEndpointBatchItem  = EndpointBatchItem { "Address": Nothing, "Attributes": Nothing, "ChannelType": Nothing, "Demographic": Nothing, "EffectiveDate": Nothing, "EndpointStatus": Nothing, "Id": Nothing, "Location": Nothing, "Metrics": Nothing, "OptOut": Nothing, "RequestId": Nothing, "User": Nothing }
 
 -- | Constructs EndpointBatchItem's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointBatchItem' :: ( { "Address" :: NullOrUndefined (String) , "Attributes" :: NullOrUndefined (MapOfListOf__string) , "ChannelType" :: NullOrUndefined (ChannelType) , "Demographic" :: NullOrUndefined (EndpointDemographic) , "EffectiveDate" :: NullOrUndefined (String) , "EndpointStatus" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Location" :: NullOrUndefined (EndpointLocation) , "Metrics" :: NullOrUndefined (MapOf__double) , "OptOut" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "User" :: NullOrUndefined (EndpointUser) } -> {"Address" :: NullOrUndefined (String) , "Attributes" :: NullOrUndefined (MapOfListOf__string) , "ChannelType" :: NullOrUndefined (ChannelType) , "Demographic" :: NullOrUndefined (EndpointDemographic) , "EffectiveDate" :: NullOrUndefined (String) , "EndpointStatus" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Location" :: NullOrUndefined (EndpointLocation) , "Metrics" :: NullOrUndefined (MapOf__double) , "OptOut" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "User" :: NullOrUndefined (EndpointUser) } ) -> EndpointBatchItem
-newEndpointBatchItem'  customize = (EndpointBatchItem <<< customize) { "Address": (NullOrUndefined Nothing), "Attributes": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "EffectiveDate": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "Metrics": (NullOrUndefined Nothing), "OptOut": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newEndpointBatchItem' :: ( { "Address" :: Maybe (String) , "Attributes" :: Maybe (MapOfListOf__string) , "ChannelType" :: Maybe (ChannelType) , "Demographic" :: Maybe (EndpointDemographic) , "EffectiveDate" :: Maybe (String) , "EndpointStatus" :: Maybe (String) , "Id" :: Maybe (String) , "Location" :: Maybe (EndpointLocation) , "Metrics" :: Maybe (MapOf__double) , "OptOut" :: Maybe (String) , "RequestId" :: Maybe (String) , "User" :: Maybe (EndpointUser) } -> {"Address" :: Maybe (String) , "Attributes" :: Maybe (MapOfListOf__string) , "ChannelType" :: Maybe (ChannelType) , "Demographic" :: Maybe (EndpointDemographic) , "EffectiveDate" :: Maybe (String) , "EndpointStatus" :: Maybe (String) , "Id" :: Maybe (String) , "Location" :: Maybe (EndpointLocation) , "Metrics" :: Maybe (MapOf__double) , "OptOut" :: Maybe (String) , "RequestId" :: Maybe (String) , "User" :: Maybe (EndpointUser) } ) -> EndpointBatchItem
+newEndpointBatchItem'  customize = (EndpointBatchItem <<< customize) { "Address": Nothing, "Attributes": Nothing, "ChannelType": Nothing, "Demographic": Nothing, "EffectiveDate": Nothing, "EndpointStatus": Nothing, "Id": Nothing, "Location": Nothing, "Metrics": Nothing, "OptOut": Nothing, "RequestId": Nothing, "User": Nothing }
 
 
 
 -- | Endpoint batch update request.
 newtype EndpointBatchRequest = EndpointBatchRequest 
-  { "Item" :: NullOrUndefined (ListOfEndpointBatchItem)
+  { "Item" :: Maybe (ListOfEndpointBatchItem)
   }
 derive instance newtypeEndpointBatchRequest :: Newtype EndpointBatchRequest _
 derive instance repGenericEndpointBatchRequest :: Generic EndpointBatchRequest _
@@ -1828,25 +1827,25 @@ instance encodeEndpointBatchRequest :: Encode EndpointBatchRequest where encode 
 
 -- | Constructs EndpointBatchRequest from required parameters
 newEndpointBatchRequest :: EndpointBatchRequest
-newEndpointBatchRequest  = EndpointBatchRequest { "Item": (NullOrUndefined Nothing) }
+newEndpointBatchRequest  = EndpointBatchRequest { "Item": Nothing }
 
 -- | Constructs EndpointBatchRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointBatchRequest' :: ( { "Item" :: NullOrUndefined (ListOfEndpointBatchItem) } -> {"Item" :: NullOrUndefined (ListOfEndpointBatchItem) } ) -> EndpointBatchRequest
-newEndpointBatchRequest'  customize = (EndpointBatchRequest <<< customize) { "Item": (NullOrUndefined Nothing) }
+newEndpointBatchRequest' :: ( { "Item" :: Maybe (ListOfEndpointBatchItem) } -> {"Item" :: Maybe (ListOfEndpointBatchItem) } ) -> EndpointBatchRequest
+newEndpointBatchRequest'  customize = (EndpointBatchRequest <<< customize) { "Item": Nothing }
 
 
 
 -- | Endpoint demographic data
 newtype EndpointDemographic = EndpointDemographic 
-  { "AppVersion" :: NullOrUndefined (String)
-  , "Locale" :: NullOrUndefined (String)
-  , "Make" :: NullOrUndefined (String)
-  , "Model" :: NullOrUndefined (String)
-  , "ModelVersion" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "PlatformVersion" :: NullOrUndefined (String)
-  , "Timezone" :: NullOrUndefined (String)
+  { "AppVersion" :: Maybe (String)
+  , "Locale" :: Maybe (String)
+  , "Make" :: Maybe (String)
+  , "Model" :: Maybe (String)
+  , "ModelVersion" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "PlatformVersion" :: Maybe (String)
+  , "Timezone" :: Maybe (String)
   }
 derive instance newtypeEndpointDemographic :: Newtype EndpointDemographic _
 derive instance repGenericEndpointDemographic :: Generic EndpointDemographic _
@@ -1856,23 +1855,23 @@ instance encodeEndpointDemographic :: Encode EndpointDemographic where encode = 
 
 -- | Constructs EndpointDemographic from required parameters
 newEndpointDemographic :: EndpointDemographic
-newEndpointDemographic  = EndpointDemographic { "AppVersion": (NullOrUndefined Nothing), "Locale": (NullOrUndefined Nothing), "Make": (NullOrUndefined Nothing), "Model": (NullOrUndefined Nothing), "ModelVersion": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "PlatformVersion": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing) }
+newEndpointDemographic  = EndpointDemographic { "AppVersion": Nothing, "Locale": Nothing, "Make": Nothing, "Model": Nothing, "ModelVersion": Nothing, "Platform": Nothing, "PlatformVersion": Nothing, "Timezone": Nothing }
 
 -- | Constructs EndpointDemographic's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointDemographic' :: ( { "AppVersion" :: NullOrUndefined (String) , "Locale" :: NullOrUndefined (String) , "Make" :: NullOrUndefined (String) , "Model" :: NullOrUndefined (String) , "ModelVersion" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "PlatformVersion" :: NullOrUndefined (String) , "Timezone" :: NullOrUndefined (String) } -> {"AppVersion" :: NullOrUndefined (String) , "Locale" :: NullOrUndefined (String) , "Make" :: NullOrUndefined (String) , "Model" :: NullOrUndefined (String) , "ModelVersion" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "PlatformVersion" :: NullOrUndefined (String) , "Timezone" :: NullOrUndefined (String) } ) -> EndpointDemographic
-newEndpointDemographic'  customize = (EndpointDemographic <<< customize) { "AppVersion": (NullOrUndefined Nothing), "Locale": (NullOrUndefined Nothing), "Make": (NullOrUndefined Nothing), "Model": (NullOrUndefined Nothing), "ModelVersion": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "PlatformVersion": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing) }
+newEndpointDemographic' :: ( { "AppVersion" :: Maybe (String) , "Locale" :: Maybe (String) , "Make" :: Maybe (String) , "Model" :: Maybe (String) , "ModelVersion" :: Maybe (String) , "Platform" :: Maybe (String) , "PlatformVersion" :: Maybe (String) , "Timezone" :: Maybe (String) } -> {"AppVersion" :: Maybe (String) , "Locale" :: Maybe (String) , "Make" :: Maybe (String) , "Model" :: Maybe (String) , "ModelVersion" :: Maybe (String) , "Platform" :: Maybe (String) , "PlatformVersion" :: Maybe (String) , "Timezone" :: Maybe (String) } ) -> EndpointDemographic
+newEndpointDemographic'  customize = (EndpointDemographic <<< customize) { "AppVersion": Nothing, "Locale": Nothing, "Make": Nothing, "Model": Nothing, "ModelVersion": Nothing, "Platform": Nothing, "PlatformVersion": Nothing, "Timezone": Nothing }
 
 
 
 -- | Endpoint location data
 newtype EndpointLocation = EndpointLocation 
-  { "City" :: NullOrUndefined (String)
-  , "Country" :: NullOrUndefined (String)
-  , "Latitude" :: NullOrUndefined (Number)
-  , "Longitude" :: NullOrUndefined (Number)
-  , "PostalCode" :: NullOrUndefined (String)
-  , "Region" :: NullOrUndefined (String)
+  { "City" :: Maybe (String)
+  , "Country" :: Maybe (String)
+  , "Latitude" :: Maybe (Number)
+  , "Longitude" :: Maybe (Number)
+  , "PostalCode" :: Maybe (String)
+  , "Region" :: Maybe (String)
   }
 derive instance newtypeEndpointLocation :: Newtype EndpointLocation _
 derive instance repGenericEndpointLocation :: Generic EndpointLocation _
@@ -1882,22 +1881,22 @@ instance encodeEndpointLocation :: Encode EndpointLocation where encode = generi
 
 -- | Constructs EndpointLocation from required parameters
 newEndpointLocation :: EndpointLocation
-newEndpointLocation  = EndpointLocation { "City": (NullOrUndefined Nothing), "Country": (NullOrUndefined Nothing), "Latitude": (NullOrUndefined Nothing), "Longitude": (NullOrUndefined Nothing), "PostalCode": (NullOrUndefined Nothing), "Region": (NullOrUndefined Nothing) }
+newEndpointLocation  = EndpointLocation { "City": Nothing, "Country": Nothing, "Latitude": Nothing, "Longitude": Nothing, "PostalCode": Nothing, "Region": Nothing }
 
 -- | Constructs EndpointLocation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointLocation' :: ( { "City" :: NullOrUndefined (String) , "Country" :: NullOrUndefined (String) , "Latitude" :: NullOrUndefined (Number) , "Longitude" :: NullOrUndefined (Number) , "PostalCode" :: NullOrUndefined (String) , "Region" :: NullOrUndefined (String) } -> {"City" :: NullOrUndefined (String) , "Country" :: NullOrUndefined (String) , "Latitude" :: NullOrUndefined (Number) , "Longitude" :: NullOrUndefined (Number) , "PostalCode" :: NullOrUndefined (String) , "Region" :: NullOrUndefined (String) } ) -> EndpointLocation
-newEndpointLocation'  customize = (EndpointLocation <<< customize) { "City": (NullOrUndefined Nothing), "Country": (NullOrUndefined Nothing), "Latitude": (NullOrUndefined Nothing), "Longitude": (NullOrUndefined Nothing), "PostalCode": (NullOrUndefined Nothing), "Region": (NullOrUndefined Nothing) }
+newEndpointLocation' :: ( { "City" :: Maybe (String) , "Country" :: Maybe (String) , "Latitude" :: Maybe (Number) , "Longitude" :: Maybe (Number) , "PostalCode" :: Maybe (String) , "Region" :: Maybe (String) } -> {"City" :: Maybe (String) , "Country" :: Maybe (String) , "Latitude" :: Maybe (Number) , "Longitude" :: Maybe (Number) , "PostalCode" :: Maybe (String) , "Region" :: Maybe (String) } ) -> EndpointLocation
+newEndpointLocation'  customize = (EndpointLocation <<< customize) { "City": Nothing, "Country": Nothing, "Latitude": Nothing, "Longitude": Nothing, "PostalCode": Nothing, "Region": Nothing }
 
 
 
 -- | The result from sending a message to an endpoint.
 newtype EndpointMessageResult = EndpointMessageResult 
-  { "Address" :: NullOrUndefined (String)
-  , "DeliveryStatus" :: NullOrUndefined (DeliveryStatus)
-  , "StatusCode" :: NullOrUndefined (Int)
-  , "StatusMessage" :: NullOrUndefined (String)
-  , "UpdatedToken" :: NullOrUndefined (String)
+  { "Address" :: Maybe (String)
+  , "DeliveryStatus" :: Maybe (DeliveryStatus)
+  , "StatusCode" :: Maybe (Int)
+  , "StatusMessage" :: Maybe (String)
+  , "UpdatedToken" :: Maybe (String)
   }
 derive instance newtypeEndpointMessageResult :: Newtype EndpointMessageResult _
 derive instance repGenericEndpointMessageResult :: Generic EndpointMessageResult _
@@ -1907,28 +1906,28 @@ instance encodeEndpointMessageResult :: Encode EndpointMessageResult where encod
 
 -- | Constructs EndpointMessageResult from required parameters
 newEndpointMessageResult :: EndpointMessageResult
-newEndpointMessageResult  = EndpointMessageResult { "Address": (NullOrUndefined Nothing), "DeliveryStatus": (NullOrUndefined Nothing), "StatusCode": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "UpdatedToken": (NullOrUndefined Nothing) }
+newEndpointMessageResult  = EndpointMessageResult { "Address": Nothing, "DeliveryStatus": Nothing, "StatusCode": Nothing, "StatusMessage": Nothing, "UpdatedToken": Nothing }
 
 -- | Constructs EndpointMessageResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointMessageResult' :: ( { "Address" :: NullOrUndefined (String) , "DeliveryStatus" :: NullOrUndefined (DeliveryStatus) , "StatusCode" :: NullOrUndefined (Int) , "StatusMessage" :: NullOrUndefined (String) , "UpdatedToken" :: NullOrUndefined (String) } -> {"Address" :: NullOrUndefined (String) , "DeliveryStatus" :: NullOrUndefined (DeliveryStatus) , "StatusCode" :: NullOrUndefined (Int) , "StatusMessage" :: NullOrUndefined (String) , "UpdatedToken" :: NullOrUndefined (String) } ) -> EndpointMessageResult
-newEndpointMessageResult'  customize = (EndpointMessageResult <<< customize) { "Address": (NullOrUndefined Nothing), "DeliveryStatus": (NullOrUndefined Nothing), "StatusCode": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "UpdatedToken": (NullOrUndefined Nothing) }
+newEndpointMessageResult' :: ( { "Address" :: Maybe (String) , "DeliveryStatus" :: Maybe (DeliveryStatus) , "StatusCode" :: Maybe (Int) , "StatusMessage" :: Maybe (String) , "UpdatedToken" :: Maybe (String) } -> {"Address" :: Maybe (String) , "DeliveryStatus" :: Maybe (DeliveryStatus) , "StatusCode" :: Maybe (Int) , "StatusMessage" :: Maybe (String) , "UpdatedToken" :: Maybe (String) } ) -> EndpointMessageResult
+newEndpointMessageResult'  customize = (EndpointMessageResult <<< customize) { "Address": Nothing, "DeliveryStatus": Nothing, "StatusCode": Nothing, "StatusMessage": Nothing, "UpdatedToken": Nothing }
 
 
 
 -- | Endpoint update request
 newtype EndpointRequest = EndpointRequest 
-  { "Address" :: NullOrUndefined (String)
-  , "Attributes" :: NullOrUndefined (MapOfListOf__string)
-  , "ChannelType" :: NullOrUndefined (ChannelType)
-  , "Demographic" :: NullOrUndefined (EndpointDemographic)
-  , "EffectiveDate" :: NullOrUndefined (String)
-  , "EndpointStatus" :: NullOrUndefined (String)
-  , "Location" :: NullOrUndefined (EndpointLocation)
-  , "Metrics" :: NullOrUndefined (MapOf__double)
-  , "OptOut" :: NullOrUndefined (String)
-  , "RequestId" :: NullOrUndefined (String)
-  , "User" :: NullOrUndefined (EndpointUser)
+  { "Address" :: Maybe (String)
+  , "Attributes" :: Maybe (MapOfListOf__string)
+  , "ChannelType" :: Maybe (ChannelType)
+  , "Demographic" :: Maybe (EndpointDemographic)
+  , "EffectiveDate" :: Maybe (String)
+  , "EndpointStatus" :: Maybe (String)
+  , "Location" :: Maybe (EndpointLocation)
+  , "Metrics" :: Maybe (MapOf__double)
+  , "OptOut" :: Maybe (String)
+  , "RequestId" :: Maybe (String)
+  , "User" :: Maybe (EndpointUser)
   }
 derive instance newtypeEndpointRequest :: Newtype EndpointRequest _
 derive instance repGenericEndpointRequest :: Generic EndpointRequest _
@@ -1938,32 +1937,32 @@ instance encodeEndpointRequest :: Encode EndpointRequest where encode = genericE
 
 -- | Constructs EndpointRequest from required parameters
 newEndpointRequest :: EndpointRequest
-newEndpointRequest  = EndpointRequest { "Address": (NullOrUndefined Nothing), "Attributes": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "EffectiveDate": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "Metrics": (NullOrUndefined Nothing), "OptOut": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newEndpointRequest  = EndpointRequest { "Address": Nothing, "Attributes": Nothing, "ChannelType": Nothing, "Demographic": Nothing, "EffectiveDate": Nothing, "EndpointStatus": Nothing, "Location": Nothing, "Metrics": Nothing, "OptOut": Nothing, "RequestId": Nothing, "User": Nothing }
 
 -- | Constructs EndpointRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointRequest' :: ( { "Address" :: NullOrUndefined (String) , "Attributes" :: NullOrUndefined (MapOfListOf__string) , "ChannelType" :: NullOrUndefined (ChannelType) , "Demographic" :: NullOrUndefined (EndpointDemographic) , "EffectiveDate" :: NullOrUndefined (String) , "EndpointStatus" :: NullOrUndefined (String) , "Location" :: NullOrUndefined (EndpointLocation) , "Metrics" :: NullOrUndefined (MapOf__double) , "OptOut" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "User" :: NullOrUndefined (EndpointUser) } -> {"Address" :: NullOrUndefined (String) , "Attributes" :: NullOrUndefined (MapOfListOf__string) , "ChannelType" :: NullOrUndefined (ChannelType) , "Demographic" :: NullOrUndefined (EndpointDemographic) , "EffectiveDate" :: NullOrUndefined (String) , "EndpointStatus" :: NullOrUndefined (String) , "Location" :: NullOrUndefined (EndpointLocation) , "Metrics" :: NullOrUndefined (MapOf__double) , "OptOut" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "User" :: NullOrUndefined (EndpointUser) } ) -> EndpointRequest
-newEndpointRequest'  customize = (EndpointRequest <<< customize) { "Address": (NullOrUndefined Nothing), "Attributes": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "EffectiveDate": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "Metrics": (NullOrUndefined Nothing), "OptOut": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newEndpointRequest' :: ( { "Address" :: Maybe (String) , "Attributes" :: Maybe (MapOfListOf__string) , "ChannelType" :: Maybe (ChannelType) , "Demographic" :: Maybe (EndpointDemographic) , "EffectiveDate" :: Maybe (String) , "EndpointStatus" :: Maybe (String) , "Location" :: Maybe (EndpointLocation) , "Metrics" :: Maybe (MapOf__double) , "OptOut" :: Maybe (String) , "RequestId" :: Maybe (String) , "User" :: Maybe (EndpointUser) } -> {"Address" :: Maybe (String) , "Attributes" :: Maybe (MapOfListOf__string) , "ChannelType" :: Maybe (ChannelType) , "Demographic" :: Maybe (EndpointDemographic) , "EffectiveDate" :: Maybe (String) , "EndpointStatus" :: Maybe (String) , "Location" :: Maybe (EndpointLocation) , "Metrics" :: Maybe (MapOf__double) , "OptOut" :: Maybe (String) , "RequestId" :: Maybe (String) , "User" :: Maybe (EndpointUser) } ) -> EndpointRequest
+newEndpointRequest'  customize = (EndpointRequest <<< customize) { "Address": Nothing, "Attributes": Nothing, "ChannelType": Nothing, "Demographic": Nothing, "EffectiveDate": Nothing, "EndpointStatus": Nothing, "Location": Nothing, "Metrics": Nothing, "OptOut": Nothing, "RequestId": Nothing, "User": Nothing }
 
 
 
 -- | Endpoint response
 newtype EndpointResponse = EndpointResponse 
-  { "Address" :: NullOrUndefined (String)
-  , "ApplicationId" :: NullOrUndefined (String)
-  , "Attributes" :: NullOrUndefined (MapOfListOf__string)
-  , "ChannelType" :: NullOrUndefined (ChannelType)
-  , "CohortId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Demographic" :: NullOrUndefined (EndpointDemographic)
-  , "EffectiveDate" :: NullOrUndefined (String)
-  , "EndpointStatus" :: NullOrUndefined (String)
-  , "Id" :: NullOrUndefined (String)
-  , "Location" :: NullOrUndefined (EndpointLocation)
-  , "Metrics" :: NullOrUndefined (MapOf__double)
-  , "OptOut" :: NullOrUndefined (String)
-  , "RequestId" :: NullOrUndefined (String)
-  , "User" :: NullOrUndefined (EndpointUser)
+  { "Address" :: Maybe (String)
+  , "ApplicationId" :: Maybe (String)
+  , "Attributes" :: Maybe (MapOfListOf__string)
+  , "ChannelType" :: Maybe (ChannelType)
+  , "CohortId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Demographic" :: Maybe (EndpointDemographic)
+  , "EffectiveDate" :: Maybe (String)
+  , "EndpointStatus" :: Maybe (String)
+  , "Id" :: Maybe (String)
+  , "Location" :: Maybe (EndpointLocation)
+  , "Metrics" :: Maybe (MapOf__double)
+  , "OptOut" :: Maybe (String)
+  , "RequestId" :: Maybe (String)
+  , "User" :: Maybe (EndpointUser)
   }
 derive instance newtypeEndpointResponse :: Newtype EndpointResponse _
 derive instance repGenericEndpointResponse :: Generic EndpointResponse _
@@ -1973,22 +1972,22 @@ instance encodeEndpointResponse :: Encode EndpointResponse where encode = generi
 
 -- | Constructs EndpointResponse from required parameters
 newEndpointResponse :: EndpointResponse
-newEndpointResponse  = EndpointResponse { "Address": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "Attributes": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "CohortId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "EffectiveDate": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "Metrics": (NullOrUndefined Nothing), "OptOut": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newEndpointResponse  = EndpointResponse { "Address": Nothing, "ApplicationId": Nothing, "Attributes": Nothing, "ChannelType": Nothing, "CohortId": Nothing, "CreationDate": Nothing, "Demographic": Nothing, "EffectiveDate": Nothing, "EndpointStatus": Nothing, "Id": Nothing, "Location": Nothing, "Metrics": Nothing, "OptOut": Nothing, "RequestId": Nothing, "User": Nothing }
 
 -- | Constructs EndpointResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointResponse' :: ( { "Address" :: NullOrUndefined (String) , "ApplicationId" :: NullOrUndefined (String) , "Attributes" :: NullOrUndefined (MapOfListOf__string) , "ChannelType" :: NullOrUndefined (ChannelType) , "CohortId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Demographic" :: NullOrUndefined (EndpointDemographic) , "EffectiveDate" :: NullOrUndefined (String) , "EndpointStatus" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Location" :: NullOrUndefined (EndpointLocation) , "Metrics" :: NullOrUndefined (MapOf__double) , "OptOut" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "User" :: NullOrUndefined (EndpointUser) } -> {"Address" :: NullOrUndefined (String) , "ApplicationId" :: NullOrUndefined (String) , "Attributes" :: NullOrUndefined (MapOfListOf__string) , "ChannelType" :: NullOrUndefined (ChannelType) , "CohortId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Demographic" :: NullOrUndefined (EndpointDemographic) , "EffectiveDate" :: NullOrUndefined (String) , "EndpointStatus" :: NullOrUndefined (String) , "Id" :: NullOrUndefined (String) , "Location" :: NullOrUndefined (EndpointLocation) , "Metrics" :: NullOrUndefined (MapOf__double) , "OptOut" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "User" :: NullOrUndefined (EndpointUser) } ) -> EndpointResponse
-newEndpointResponse'  customize = (EndpointResponse <<< customize) { "Address": (NullOrUndefined Nothing), "ApplicationId": (NullOrUndefined Nothing), "Attributes": (NullOrUndefined Nothing), "ChannelType": (NullOrUndefined Nothing), "CohortId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "EffectiveDate": (NullOrUndefined Nothing), "EndpointStatus": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "Metrics": (NullOrUndefined Nothing), "OptOut": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "User": (NullOrUndefined Nothing) }
+newEndpointResponse' :: ( { "Address" :: Maybe (String) , "ApplicationId" :: Maybe (String) , "Attributes" :: Maybe (MapOfListOf__string) , "ChannelType" :: Maybe (ChannelType) , "CohortId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Demographic" :: Maybe (EndpointDemographic) , "EffectiveDate" :: Maybe (String) , "EndpointStatus" :: Maybe (String) , "Id" :: Maybe (String) , "Location" :: Maybe (EndpointLocation) , "Metrics" :: Maybe (MapOf__double) , "OptOut" :: Maybe (String) , "RequestId" :: Maybe (String) , "User" :: Maybe (EndpointUser) } -> {"Address" :: Maybe (String) , "ApplicationId" :: Maybe (String) , "Attributes" :: Maybe (MapOfListOf__string) , "ChannelType" :: Maybe (ChannelType) , "CohortId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Demographic" :: Maybe (EndpointDemographic) , "EffectiveDate" :: Maybe (String) , "EndpointStatus" :: Maybe (String) , "Id" :: Maybe (String) , "Location" :: Maybe (EndpointLocation) , "Metrics" :: Maybe (MapOf__double) , "OptOut" :: Maybe (String) , "RequestId" :: Maybe (String) , "User" :: Maybe (EndpointUser) } ) -> EndpointResponse
+newEndpointResponse'  customize = (EndpointResponse <<< customize) { "Address": Nothing, "ApplicationId": Nothing, "Attributes": Nothing, "ChannelType": Nothing, "CohortId": Nothing, "CreationDate": Nothing, "Demographic": Nothing, "EffectiveDate": Nothing, "EndpointStatus": Nothing, "Id": Nothing, "Location": Nothing, "Metrics": Nothing, "OptOut": Nothing, "RequestId": Nothing, "User": Nothing }
 
 
 
 -- | Endpoint send configuration.
 newtype EndpointSendConfiguration = EndpointSendConfiguration 
-  { "BodyOverride" :: NullOrUndefined (String)
-  , "Context" :: NullOrUndefined (MapOf__string)
-  , "RawContent" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "TitleOverride" :: NullOrUndefined (String)
+  { "BodyOverride" :: Maybe (String)
+  , "Context" :: Maybe (MapOf__string)
+  , "RawContent" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "TitleOverride" :: Maybe (String)
   }
 derive instance newtypeEndpointSendConfiguration :: Newtype EndpointSendConfiguration _
 derive instance repGenericEndpointSendConfiguration :: Generic EndpointSendConfiguration _
@@ -1998,19 +1997,19 @@ instance encodeEndpointSendConfiguration :: Encode EndpointSendConfiguration whe
 
 -- | Constructs EndpointSendConfiguration from required parameters
 newEndpointSendConfiguration :: EndpointSendConfiguration
-newEndpointSendConfiguration  = EndpointSendConfiguration { "BodyOverride": (NullOrUndefined Nothing), "Context": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "TitleOverride": (NullOrUndefined Nothing) }
+newEndpointSendConfiguration  = EndpointSendConfiguration { "BodyOverride": Nothing, "Context": Nothing, "RawContent": Nothing, "Substitutions": Nothing, "TitleOverride": Nothing }
 
 -- | Constructs EndpointSendConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointSendConfiguration' :: ( { "BodyOverride" :: NullOrUndefined (String) , "Context" :: NullOrUndefined (MapOf__string) , "RawContent" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "TitleOverride" :: NullOrUndefined (String) } -> {"BodyOverride" :: NullOrUndefined (String) , "Context" :: NullOrUndefined (MapOf__string) , "RawContent" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "TitleOverride" :: NullOrUndefined (String) } ) -> EndpointSendConfiguration
-newEndpointSendConfiguration'  customize = (EndpointSendConfiguration <<< customize) { "BodyOverride": (NullOrUndefined Nothing), "Context": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "TitleOverride": (NullOrUndefined Nothing) }
+newEndpointSendConfiguration' :: ( { "BodyOverride" :: Maybe (String) , "Context" :: Maybe (MapOf__string) , "RawContent" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "TitleOverride" :: Maybe (String) } -> {"BodyOverride" :: Maybe (String) , "Context" :: Maybe (MapOf__string) , "RawContent" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "TitleOverride" :: Maybe (String) } ) -> EndpointSendConfiguration
+newEndpointSendConfiguration'  customize = (EndpointSendConfiguration <<< customize) { "BodyOverride": Nothing, "Context": Nothing, "RawContent": Nothing, "Substitutions": Nothing, "TitleOverride": Nothing }
 
 
 
 -- | Endpoint user specific custom userAttributes
 newtype EndpointUser = EndpointUser 
-  { "UserAttributes" :: NullOrUndefined (MapOfListOf__string)
-  , "UserId" :: NullOrUndefined (String)
+  { "UserAttributes" :: Maybe (MapOfListOf__string)
+  , "UserId" :: Maybe (String)
   }
 derive instance newtypeEndpointUser :: Newtype EndpointUser _
 derive instance repGenericEndpointUser :: Generic EndpointUser _
@@ -2020,23 +2019,23 @@ instance encodeEndpointUser :: Encode EndpointUser where encode = genericEncode 
 
 -- | Constructs EndpointUser from required parameters
 newEndpointUser :: EndpointUser
-newEndpointUser  = EndpointUser { "UserAttributes": (NullOrUndefined Nothing), "UserId": (NullOrUndefined Nothing) }
+newEndpointUser  = EndpointUser { "UserAttributes": Nothing, "UserId": Nothing }
 
 -- | Constructs EndpointUser's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEndpointUser' :: ( { "UserAttributes" :: NullOrUndefined (MapOfListOf__string) , "UserId" :: NullOrUndefined (String) } -> {"UserAttributes" :: NullOrUndefined (MapOfListOf__string) , "UserId" :: NullOrUndefined (String) } ) -> EndpointUser
-newEndpointUser'  customize = (EndpointUser <<< customize) { "UserAttributes": (NullOrUndefined Nothing), "UserId": (NullOrUndefined Nothing) }
+newEndpointUser' :: ( { "UserAttributes" :: Maybe (MapOfListOf__string) , "UserId" :: Maybe (String) } -> {"UserAttributes" :: Maybe (MapOfListOf__string) , "UserId" :: Maybe (String) } ) -> EndpointUser
+newEndpointUser'  customize = (EndpointUser <<< customize) { "UserAttributes": Nothing, "UserId": Nothing }
 
 
 
 -- | Model for an event publishing subscription export.
 newtype EventStream = EventStream 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "DestinationStreamArn" :: NullOrUndefined (String)
-  , "ExternalId" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "LastUpdatedBy" :: NullOrUndefined (String)
-  , "RoleArn" :: NullOrUndefined (String)
+  { "ApplicationId" :: Maybe (String)
+  , "DestinationStreamArn" :: Maybe (String)
+  , "ExternalId" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "LastUpdatedBy" :: Maybe (String)
+  , "RoleArn" :: Maybe (String)
   }
 derive instance newtypeEventStream :: Newtype EventStream _
 derive instance repGenericEventStream :: Generic EventStream _
@@ -2046,19 +2045,19 @@ instance encodeEventStream :: Encode EventStream where encode = genericEncode op
 
 -- | Constructs EventStream from required parameters
 newEventStream :: EventStream
-newEventStream  = EventStream { "ApplicationId": (NullOrUndefined Nothing), "DestinationStreamArn": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "LastUpdatedBy": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newEventStream  = EventStream { "ApplicationId": Nothing, "DestinationStreamArn": Nothing, "ExternalId": Nothing, "LastModifiedDate": Nothing, "LastUpdatedBy": Nothing, "RoleArn": Nothing }
 
 -- | Constructs EventStream's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newEventStream' :: ( { "ApplicationId" :: NullOrUndefined (String) , "DestinationStreamArn" :: NullOrUndefined (String) , "ExternalId" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "LastUpdatedBy" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } -> {"ApplicationId" :: NullOrUndefined (String) , "DestinationStreamArn" :: NullOrUndefined (String) , "ExternalId" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "LastUpdatedBy" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } ) -> EventStream
-newEventStream'  customize = (EventStream <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "DestinationStreamArn": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "LastUpdatedBy": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newEventStream' :: ( { "ApplicationId" :: Maybe (String) , "DestinationStreamArn" :: Maybe (String) , "ExternalId" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "LastUpdatedBy" :: Maybe (String) , "RoleArn" :: Maybe (String) } -> {"ApplicationId" :: Maybe (String) , "DestinationStreamArn" :: Maybe (String) , "ExternalId" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "LastUpdatedBy" :: Maybe (String) , "RoleArn" :: Maybe (String) } ) -> EventStream
+newEventStream'  customize = (EventStream <<< customize) { "ApplicationId": Nothing, "DestinationStreamArn": Nothing, "ExternalId": Nothing, "LastModifiedDate": Nothing, "LastUpdatedBy": Nothing, "RoleArn": Nothing }
 
 
 
 newtype ExportJobRequest = ExportJobRequest 
-  { "RoleArn" :: NullOrUndefined (String)
-  , "S3UrlPrefix" :: NullOrUndefined (String)
-  , "SegmentId" :: NullOrUndefined (String)
+  { "RoleArn" :: Maybe (String)
+  , "S3UrlPrefix" :: Maybe (String)
+  , "SegmentId" :: Maybe (String)
   }
 derive instance newtypeExportJobRequest :: Newtype ExportJobRequest _
 derive instance repGenericExportJobRequest :: Generic ExportJobRequest _
@@ -2068,19 +2067,19 @@ instance encodeExportJobRequest :: Encode ExportJobRequest where encode = generi
 
 -- | Constructs ExportJobRequest from required parameters
 newExportJobRequest :: ExportJobRequest
-newExportJobRequest  = ExportJobRequest { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+newExportJobRequest  = ExportJobRequest { "RoleArn": Nothing, "S3UrlPrefix": Nothing, "SegmentId": Nothing }
 
 -- | Constructs ExportJobRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newExportJobRequest' :: ( { "RoleArn" :: NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) } -> {"RoleArn" :: NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) } ) -> ExportJobRequest
-newExportJobRequest'  customize = (ExportJobRequest <<< customize) { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+newExportJobRequest' :: ( { "RoleArn" :: Maybe (String) , "S3UrlPrefix" :: Maybe (String) , "SegmentId" :: Maybe (String) } -> {"RoleArn" :: Maybe (String) , "S3UrlPrefix" :: Maybe (String) , "SegmentId" :: Maybe (String) } ) -> ExportJobRequest
+newExportJobRequest'  customize = (ExportJobRequest <<< customize) { "RoleArn": Nothing, "S3UrlPrefix": Nothing, "SegmentId": Nothing }
 
 
 
 newtype ExportJobResource = ExportJobResource 
-  { "RoleArn" :: NullOrUndefined (String)
-  , "S3UrlPrefix" :: NullOrUndefined (String)
-  , "SegmentId" :: NullOrUndefined (String)
+  { "RoleArn" :: Maybe (String)
+  , "S3UrlPrefix" :: Maybe (String)
+  , "SegmentId" :: Maybe (String)
   }
 derive instance newtypeExportJobResource :: Newtype ExportJobResource _
 derive instance repGenericExportJobResource :: Generic ExportJobResource _
@@ -2090,29 +2089,29 @@ instance encodeExportJobResource :: Encode ExportJobResource where encode = gene
 
 -- | Constructs ExportJobResource from required parameters
 newExportJobResource :: ExportJobResource
-newExportJobResource  = ExportJobResource { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+newExportJobResource  = ExportJobResource { "RoleArn": Nothing, "S3UrlPrefix": Nothing, "SegmentId": Nothing }
 
 -- | Constructs ExportJobResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newExportJobResource' :: ( { "RoleArn" :: NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) } -> {"RoleArn" :: NullOrUndefined (String) , "S3UrlPrefix" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) } ) -> ExportJobResource
-newExportJobResource'  customize = (ExportJobResource <<< customize) { "RoleArn": (NullOrUndefined Nothing), "S3UrlPrefix": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing) }
+newExportJobResource' :: ( { "RoleArn" :: Maybe (String) , "S3UrlPrefix" :: Maybe (String) , "SegmentId" :: Maybe (String) } -> {"RoleArn" :: Maybe (String) , "S3UrlPrefix" :: Maybe (String) , "SegmentId" :: Maybe (String) } ) -> ExportJobResource
+newExportJobResource'  customize = (ExportJobResource <<< customize) { "RoleArn": Nothing, "S3UrlPrefix": Nothing, "SegmentId": Nothing }
 
 
 
 newtype ExportJobResponse = ExportJobResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CompletedPieces" :: NullOrUndefined (Int)
-  , "CompletionDate" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (ExportJobResource)
-  , "FailedPieces" :: NullOrUndefined (Int)
-  , "Failures" :: NullOrUndefined (ListOf__string)
-  , "Id" :: NullOrUndefined (String)
-  , "JobStatus" :: NullOrUndefined (JobStatus)
-  , "TotalFailures" :: NullOrUndefined (Int)
-  , "TotalPieces" :: NullOrUndefined (Int)
-  , "TotalProcessed" :: NullOrUndefined (Int)
-  , "Type" :: NullOrUndefined (String)
+  { "ApplicationId" :: Maybe (String)
+  , "CompletedPieces" :: Maybe (Int)
+  , "CompletionDate" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Definition" :: Maybe (ExportJobResource)
+  , "FailedPieces" :: Maybe (Int)
+  , "Failures" :: Maybe (ListOf__string)
+  , "Id" :: Maybe (String)
+  , "JobStatus" :: Maybe (JobStatus)
+  , "TotalFailures" :: Maybe (Int)
+  , "TotalPieces" :: Maybe (Int)
+  , "TotalProcessed" :: Maybe (Int)
+  , "Type" :: Maybe (String)
   }
 derive instance newtypeExportJobResponse :: Newtype ExportJobResponse _
 derive instance repGenericExportJobResponse :: Generic ExportJobResponse _
@@ -2122,19 +2121,19 @@ instance encodeExportJobResponse :: Encode ExportJobResponse where encode = gene
 
 -- | Constructs ExportJobResponse from required parameters
 newExportJobResponse :: ExportJobResponse
-newExportJobResponse  = ExportJobResponse { "ApplicationId": (NullOrUndefined Nothing), "CompletedPieces": (NullOrUndefined Nothing), "CompletionDate": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "FailedPieces": (NullOrUndefined Nothing), "Failures": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "TotalFailures": (NullOrUndefined Nothing), "TotalPieces": (NullOrUndefined Nothing), "TotalProcessed": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newExportJobResponse  = ExportJobResponse { "ApplicationId": Nothing, "CompletedPieces": Nothing, "CompletionDate": Nothing, "CreationDate": Nothing, "Definition": Nothing, "FailedPieces": Nothing, "Failures": Nothing, "Id": Nothing, "JobStatus": Nothing, "TotalFailures": Nothing, "TotalPieces": Nothing, "TotalProcessed": Nothing, "Type": Nothing }
 
 -- | Constructs ExportJobResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newExportJobResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CompletedPieces" :: NullOrUndefined (Int) , "CompletionDate" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (ExportJobResource) , "FailedPieces" :: NullOrUndefined (Int) , "Failures" :: NullOrUndefined (ListOf__string) , "Id" :: NullOrUndefined (String) , "JobStatus" :: NullOrUndefined (JobStatus) , "TotalFailures" :: NullOrUndefined (Int) , "TotalPieces" :: NullOrUndefined (Int) , "TotalProcessed" :: NullOrUndefined (Int) , "Type" :: NullOrUndefined (String) } -> {"ApplicationId" :: NullOrUndefined (String) , "CompletedPieces" :: NullOrUndefined (Int) , "CompletionDate" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (ExportJobResource) , "FailedPieces" :: NullOrUndefined (Int) , "Failures" :: NullOrUndefined (ListOf__string) , "Id" :: NullOrUndefined (String) , "JobStatus" :: NullOrUndefined (JobStatus) , "TotalFailures" :: NullOrUndefined (Int) , "TotalPieces" :: NullOrUndefined (Int) , "TotalProcessed" :: NullOrUndefined (Int) , "Type" :: NullOrUndefined (String) } ) -> ExportJobResponse
-newExportJobResponse'  customize = (ExportJobResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CompletedPieces": (NullOrUndefined Nothing), "CompletionDate": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "FailedPieces": (NullOrUndefined Nothing), "Failures": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "TotalFailures": (NullOrUndefined Nothing), "TotalPieces": (NullOrUndefined Nothing), "TotalProcessed": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newExportJobResponse' :: ( { "ApplicationId" :: Maybe (String) , "CompletedPieces" :: Maybe (Int) , "CompletionDate" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Definition" :: Maybe (ExportJobResource) , "FailedPieces" :: Maybe (Int) , "Failures" :: Maybe (ListOf__string) , "Id" :: Maybe (String) , "JobStatus" :: Maybe (JobStatus) , "TotalFailures" :: Maybe (Int) , "TotalPieces" :: Maybe (Int) , "TotalProcessed" :: Maybe (Int) , "Type" :: Maybe (String) } -> {"ApplicationId" :: Maybe (String) , "CompletedPieces" :: Maybe (Int) , "CompletionDate" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Definition" :: Maybe (ExportJobResource) , "FailedPieces" :: Maybe (Int) , "Failures" :: Maybe (ListOf__string) , "Id" :: Maybe (String) , "JobStatus" :: Maybe (JobStatus) , "TotalFailures" :: Maybe (Int) , "TotalPieces" :: Maybe (Int) , "TotalProcessed" :: Maybe (Int) , "Type" :: Maybe (String) } ) -> ExportJobResponse
+newExportJobResponse'  customize = (ExportJobResponse <<< customize) { "ApplicationId": Nothing, "CompletedPieces": Nothing, "CompletionDate": Nothing, "CreationDate": Nothing, "Definition": Nothing, "FailedPieces": Nothing, "Failures": Nothing, "Id": Nothing, "JobStatus": Nothing, "TotalFailures": Nothing, "TotalPieces": Nothing, "TotalProcessed": Nothing, "Type": Nothing }
 
 
 
 -- | Export job list.
 newtype ExportJobsResponse = ExportJobsResponse 
-  { "Item" :: NullOrUndefined (ListOfExportJobResponse)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Item" :: Maybe (ListOfExportJobResponse)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeExportJobsResponse :: Newtype ExportJobsResponse _
 derive instance repGenericExportJobsResponse :: Generic ExportJobsResponse _
@@ -2144,19 +2143,19 @@ instance encodeExportJobsResponse :: Encode ExportJobsResponse where encode = ge
 
 -- | Constructs ExportJobsResponse from required parameters
 newExportJobsResponse :: ExportJobsResponse
-newExportJobsResponse  = ExportJobsResponse { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newExportJobsResponse  = ExportJobsResponse { "Item": Nothing, "NextToken": Nothing }
 
 -- | Constructs ExportJobsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newExportJobsResponse' :: ( { "Item" :: NullOrUndefined (ListOfExportJobResponse) , "NextToken" :: NullOrUndefined (String) } -> {"Item" :: NullOrUndefined (ListOfExportJobResponse) , "NextToken" :: NullOrUndefined (String) } ) -> ExportJobsResponse
-newExportJobsResponse'  customize = (ExportJobsResponse <<< customize) { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newExportJobsResponse' :: ( { "Item" :: Maybe (ListOfExportJobResponse) , "NextToken" :: Maybe (String) } -> {"Item" :: Maybe (ListOfExportJobResponse) , "NextToken" :: Maybe (String) } ) -> ExportJobsResponse
+newExportJobsResponse'  customize = (ExportJobsResponse <<< customize) { "Item": Nothing, "NextToken": Nothing }
 
 
 
 -- | Simple message object.
 newtype ForbiddenException = ForbiddenException 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeForbiddenException :: Newtype ForbiddenException _
 derive instance repGenericForbiddenException :: Generic ForbiddenException _
@@ -2166,12 +2165,12 @@ instance encodeForbiddenException :: Encode ForbiddenException where encode = ge
 
 -- | Constructs ForbiddenException from required parameters
 newForbiddenException :: ForbiddenException
-newForbiddenException  = ForbiddenException { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newForbiddenException  = ForbiddenException { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs ForbiddenException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newForbiddenException' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> ForbiddenException
-newForbiddenException'  customize = (ForbiddenException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newForbiddenException' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> ForbiddenException
+newForbiddenException'  customize = (ForbiddenException <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
@@ -2195,8 +2194,8 @@ instance encodeFrequency :: Encode Frequency where encode = genericEncode option
 
 -- | Google Cloud Messaging credentials
 newtype GCMChannelRequest = GCMChannelRequest 
-  { "ApiKey" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
+  { "ApiKey" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
   }
 derive instance newtypeGCMChannelRequest :: Newtype GCMChannelRequest _
 derive instance repGenericGCMChannelRequest :: Generic GCMChannelRequest _
@@ -2206,28 +2205,28 @@ instance encodeGCMChannelRequest :: Encode GCMChannelRequest where encode = gene
 
 -- | Constructs GCMChannelRequest from required parameters
 newGCMChannelRequest :: GCMChannelRequest
-newGCMChannelRequest  = GCMChannelRequest { "ApiKey": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing) }
+newGCMChannelRequest  = GCMChannelRequest { "ApiKey": Nothing, "Enabled": Nothing }
 
 -- | Constructs GCMChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGCMChannelRequest' :: ( { "ApiKey" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) } -> {"ApiKey" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) } ) -> GCMChannelRequest
-newGCMChannelRequest'  customize = (GCMChannelRequest <<< customize) { "ApiKey": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing) }
+newGCMChannelRequest' :: ( { "ApiKey" :: Maybe (String) , "Enabled" :: Maybe (Boolean) } -> {"ApiKey" :: Maybe (String) , "Enabled" :: Maybe (Boolean) } ) -> GCMChannelRequest
+newGCMChannelRequest'  customize = (GCMChannelRequest <<< customize) { "ApiKey": Nothing, "Enabled": Nothing }
 
 
 
 -- | Google Cloud Messaging channel definition
 newtype GCMChannelResponse = GCMChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Credential" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Credential" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeGCMChannelResponse :: Newtype GCMChannelResponse _
 derive instance repGenericGCMChannelResponse :: Generic GCMChannelResponse _
@@ -2237,34 +2236,34 @@ instance encodeGCMChannelResponse :: Encode GCMChannelResponse where encode = ge
 
 -- | Constructs GCMChannelResponse from required parameters
 newGCMChannelResponse :: GCMChannelResponse
-newGCMChannelResponse  = GCMChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Credential": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGCMChannelResponse  = GCMChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "Credential": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 -- | Constructs GCMChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGCMChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Credential" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Credential" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> GCMChannelResponse
-newGCMChannelResponse'  customize = (GCMChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Credential": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newGCMChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Credential" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Credential" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> GCMChannelResponse
+newGCMChannelResponse'  customize = (GCMChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "Credential": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "Version": Nothing }
 
 
 
 -- | GCM Message.
 newtype GCMMessage = GCMMessage 
-  { "Action" :: NullOrUndefined (Action)
-  , "Body" :: NullOrUndefined (String)
-  , "CollapseKey" :: NullOrUndefined (String)
-  , "Data" :: NullOrUndefined (MapOf__string)
-  , "IconReference" :: NullOrUndefined (String)
-  , "ImageIconUrl" :: NullOrUndefined (String)
-  , "ImageUrl" :: NullOrUndefined (String)
-  , "Priority" :: NullOrUndefined (String)
-  , "RawContent" :: NullOrUndefined (String)
-  , "RestrictedPackageName" :: NullOrUndefined (String)
-  , "SilentPush" :: NullOrUndefined (Boolean)
-  , "SmallImageIconUrl" :: NullOrUndefined (String)
-  , "Sound" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
-  , "TimeToLive" :: NullOrUndefined (Int)
-  , "Title" :: NullOrUndefined (String)
-  , "Url" :: NullOrUndefined (String)
+  { "Action" :: Maybe (Action)
+  , "Body" :: Maybe (String)
+  , "CollapseKey" :: Maybe (String)
+  , "Data" :: Maybe (MapOf__string)
+  , "IconReference" :: Maybe (String)
+  , "ImageIconUrl" :: Maybe (String)
+  , "ImageUrl" :: Maybe (String)
+  , "Priority" :: Maybe (String)
+  , "RawContent" :: Maybe (String)
+  , "RestrictedPackageName" :: Maybe (String)
+  , "SilentPush" :: Maybe (Boolean)
+  , "SmallImageIconUrl" :: Maybe (String)
+  , "Sound" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
+  , "TimeToLive" :: Maybe (Int)
+  , "Title" :: Maybe (String)
+  , "Url" :: Maybe (String)
   }
 derive instance newtypeGCMMessage :: Newtype GCMMessage _
 derive instance repGenericGCMMessage :: Generic GCMMessage _
@@ -2274,12 +2273,12 @@ instance encodeGCMMessage :: Encode GCMMessage where encode = genericEncode opti
 
 -- | Constructs GCMMessage from required parameters
 newGCMMessage :: GCMMessage
-newGCMMessage  = GCMMessage { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "CollapseKey": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "IconReference": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "Priority": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "RestrictedPackageName": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "SmallImageIconUrl": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "TimeToLive": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newGCMMessage  = GCMMessage { "Action": Nothing, "Body": Nothing, "CollapseKey": Nothing, "Data": Nothing, "IconReference": Nothing, "ImageIconUrl": Nothing, "ImageUrl": Nothing, "Priority": Nothing, "RawContent": Nothing, "RestrictedPackageName": Nothing, "SilentPush": Nothing, "SmallImageIconUrl": Nothing, "Sound": Nothing, "Substitutions": Nothing, "TimeToLive": Nothing, "Title": Nothing, "Url": Nothing }
 
 -- | Constructs GCMMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGCMMessage' :: ( { "Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "CollapseKey" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "IconReference" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "Priority" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "RestrictedPackageName" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "SmallImageIconUrl" :: NullOrUndefined (String) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "TimeToLive" :: NullOrUndefined (Int) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } -> {"Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "CollapseKey" :: NullOrUndefined (String) , "Data" :: NullOrUndefined (MapOf__string) , "IconReference" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "Priority" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "RestrictedPackageName" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "SmallImageIconUrl" :: NullOrUndefined (String) , "Sound" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) , "TimeToLive" :: NullOrUndefined (Int) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } ) -> GCMMessage
-newGCMMessage'  customize = (GCMMessage <<< customize) { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "CollapseKey": (NullOrUndefined Nothing), "Data": (NullOrUndefined Nothing), "IconReference": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "Priority": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "RestrictedPackageName": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "SmallImageIconUrl": (NullOrUndefined Nothing), "Sound": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing), "TimeToLive": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newGCMMessage' :: ( { "Action" :: Maybe (Action) , "Body" :: Maybe (String) , "CollapseKey" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "IconReference" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "Priority" :: Maybe (String) , "RawContent" :: Maybe (String) , "RestrictedPackageName" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "SmallImageIconUrl" :: Maybe (String) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "TimeToLive" :: Maybe (Int) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } -> {"Action" :: Maybe (Action) , "Body" :: Maybe (String) , "CollapseKey" :: Maybe (String) , "Data" :: Maybe (MapOf__string) , "IconReference" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "Priority" :: Maybe (String) , "RawContent" :: Maybe (String) , "RestrictedPackageName" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "SmallImageIconUrl" :: Maybe (String) , "Sound" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) , "TimeToLive" :: Maybe (Int) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } ) -> GCMMessage
+newGCMMessage'  customize = (GCMMessage <<< customize) { "Action": Nothing, "Body": Nothing, "CollapseKey": Nothing, "Data": Nothing, "IconReference": Nothing, "ImageIconUrl": Nothing, "ImageUrl": Nothing, "Priority": Nothing, "RawContent": Nothing, "RestrictedPackageName": Nothing, "SilentPush": Nothing, "SmallImageIconUrl": Nothing, "Sound": Nothing, "Substitutions": Nothing, "TimeToLive": Nothing, "Title": Nothing, "Url": Nothing }
 
 
 
@@ -2564,8 +2563,8 @@ newGetApplicationSettingsResponse' _ApplicationSettingsResource customize = (Get
 
 
 newtype GetAppsRequest = GetAppsRequest 
-  { "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  { "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetAppsRequest :: Newtype GetAppsRequest _
 derive instance repGenericGetAppsRequest :: Generic GetAppsRequest _
@@ -2575,12 +2574,12 @@ instance encodeGetAppsRequest :: Encode GetAppsRequest where encode = genericEnc
 
 -- | Constructs GetAppsRequest from required parameters
 newGetAppsRequest :: GetAppsRequest
-newGetAppsRequest  = GetAppsRequest { "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetAppsRequest  = GetAppsRequest { "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetAppsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetAppsRequest' :: ( { "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetAppsRequest
-newGetAppsRequest'  customize = (GetAppsRequest <<< customize) { "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetAppsRequest' :: ( { "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetAppsRequest
+newGetAppsRequest'  customize = (GetAppsRequest <<< customize) { "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -2647,8 +2646,8 @@ newGetBaiduChannelResponse' _BaiduChannelResponse customize = (GetBaiduChannelRe
 newtype GetCampaignActivitiesRequest = GetCampaignActivitiesRequest 
   { "ApplicationId" :: (String)
   , "CampaignId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetCampaignActivitiesRequest :: Newtype GetCampaignActivitiesRequest _
 derive instance repGenericGetCampaignActivitiesRequest :: Generic GetCampaignActivitiesRequest _
@@ -2658,12 +2657,12 @@ instance encodeGetCampaignActivitiesRequest :: Encode GetCampaignActivitiesReque
 
 -- | Constructs GetCampaignActivitiesRequest from required parameters
 newGetCampaignActivitiesRequest :: String -> String -> GetCampaignActivitiesRequest
-newGetCampaignActivitiesRequest _ApplicationId _CampaignId = GetCampaignActivitiesRequest { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetCampaignActivitiesRequest _ApplicationId _CampaignId = GetCampaignActivitiesRequest { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetCampaignActivitiesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetCampaignActivitiesRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetCampaignActivitiesRequest
-newGetCampaignActivitiesRequest' _ApplicationId _CampaignId customize = (GetCampaignActivitiesRequest <<< customize) { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetCampaignActivitiesRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetCampaignActivitiesRequest
+newGetCampaignActivitiesRequest' _ApplicationId _CampaignId customize = (GetCampaignActivitiesRequest <<< customize) { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -2773,8 +2772,8 @@ newGetCampaignVersionResponse' _CampaignResponse customize = (GetCampaignVersion
 newtype GetCampaignVersionsRequest = GetCampaignVersionsRequest 
   { "ApplicationId" :: (String)
   , "CampaignId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetCampaignVersionsRequest :: Newtype GetCampaignVersionsRequest _
 derive instance repGenericGetCampaignVersionsRequest :: Generic GetCampaignVersionsRequest _
@@ -2784,12 +2783,12 @@ instance encodeGetCampaignVersionsRequest :: Encode GetCampaignVersionsRequest w
 
 -- | Constructs GetCampaignVersionsRequest from required parameters
 newGetCampaignVersionsRequest :: String -> String -> GetCampaignVersionsRequest
-newGetCampaignVersionsRequest _ApplicationId _CampaignId = GetCampaignVersionsRequest { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetCampaignVersionsRequest _ApplicationId _CampaignId = GetCampaignVersionsRequest { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetCampaignVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetCampaignVersionsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetCampaignVersionsRequest
-newGetCampaignVersionsRequest' _ApplicationId _CampaignId customize = (GetCampaignVersionsRequest <<< customize) { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetCampaignVersionsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "CampaignId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetCampaignVersionsRequest
+newGetCampaignVersionsRequest' _ApplicationId _CampaignId customize = (GetCampaignVersionsRequest <<< customize) { "ApplicationId": _ApplicationId, "CampaignId": _CampaignId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -2815,8 +2814,8 @@ newGetCampaignVersionsResponse' _CampaignsResponse customize = (GetCampaignVersi
 
 newtype GetCampaignsRequest = GetCampaignsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetCampaignsRequest :: Newtype GetCampaignsRequest _
 derive instance repGenericGetCampaignsRequest :: Generic GetCampaignsRequest _
@@ -2826,12 +2825,12 @@ instance encodeGetCampaignsRequest :: Encode GetCampaignsRequest where encode = 
 
 -- | Constructs GetCampaignsRequest from required parameters
 newGetCampaignsRequest :: String -> GetCampaignsRequest
-newGetCampaignsRequest _ApplicationId = GetCampaignsRequest { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetCampaignsRequest _ApplicationId = GetCampaignsRequest { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetCampaignsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetCampaignsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetCampaignsRequest
-newGetCampaignsRequest' _ApplicationId customize = (GetCampaignsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetCampaignsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetCampaignsRequest
+newGetCampaignsRequest' _ApplicationId customize = (GetCampaignsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3020,8 +3019,8 @@ newGetExportJobResponse' _ExportJobResponse customize = (GetExportJobResponse <<
 
 newtype GetExportJobsRequest = GetExportJobsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetExportJobsRequest :: Newtype GetExportJobsRequest _
 derive instance repGenericGetExportJobsRequest :: Generic GetExportJobsRequest _
@@ -3031,12 +3030,12 @@ instance encodeGetExportJobsRequest :: Encode GetExportJobsRequest where encode 
 
 -- | Constructs GetExportJobsRequest from required parameters
 newGetExportJobsRequest :: String -> GetExportJobsRequest
-newGetExportJobsRequest _ApplicationId = GetExportJobsRequest { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetExportJobsRequest _ApplicationId = GetExportJobsRequest { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetExportJobsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetExportJobsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetExportJobsRequest
-newGetExportJobsRequest' _ApplicationId customize = (GetExportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetExportJobsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetExportJobsRequest
+newGetExportJobsRequest' _ApplicationId customize = (GetExportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3143,8 +3142,8 @@ newGetImportJobResponse' _ImportJobResponse customize = (GetImportJobResponse <<
 
 newtype GetImportJobsRequest = GetImportJobsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetImportJobsRequest :: Newtype GetImportJobsRequest _
 derive instance repGenericGetImportJobsRequest :: Generic GetImportJobsRequest _
@@ -3154,12 +3153,12 @@ instance encodeGetImportJobsRequest :: Encode GetImportJobsRequest where encode 
 
 -- | Constructs GetImportJobsRequest from required parameters
 newGetImportJobsRequest :: String -> GetImportJobsRequest
-newGetImportJobsRequest _ApplicationId = GetImportJobsRequest { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetImportJobsRequest _ApplicationId = GetImportJobsRequest { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetImportJobsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetImportJobsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetImportJobsRequest
-newGetImportJobsRequest' _ApplicationId customize = (GetImportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetImportJobsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetImportJobsRequest
+newGetImportJobsRequest' _ApplicationId customize = (GetImportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3185,9 +3184,9 @@ newGetImportJobsResponse' _ImportJobsResponse customize = (GetImportJobsResponse
 
 newtype GetSegmentExportJobsRequest = GetSegmentExportJobsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
   , "SegmentId" :: (String)
-  , "Token" :: NullOrUndefined (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetSegmentExportJobsRequest :: Newtype GetSegmentExportJobsRequest _
 derive instance repGenericGetSegmentExportJobsRequest :: Generic GetSegmentExportJobsRequest _
@@ -3197,12 +3196,12 @@ instance encodeGetSegmentExportJobsRequest :: Encode GetSegmentExportJobsRequest
 
 -- | Constructs GetSegmentExportJobsRequest from required parameters
 newGetSegmentExportJobsRequest :: String -> String -> GetSegmentExportJobsRequest
-newGetSegmentExportJobsRequest _ApplicationId _SegmentId = GetSegmentExportJobsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentExportJobsRequest _ApplicationId _SegmentId = GetSegmentExportJobsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetSegmentExportJobsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSegmentExportJobsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined (String) } ) -> GetSegmentExportJobsRequest
-newGetSegmentExportJobsRequest' _ApplicationId _SegmentId customize = (GetSegmentExportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentExportJobsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "SegmentId" :: (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "SegmentId" :: (String) , "Token" :: Maybe (String) } ) -> GetSegmentExportJobsRequest
+newGetSegmentExportJobsRequest' _ApplicationId _SegmentId customize = (GetSegmentExportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3228,9 +3227,9 @@ newGetSegmentExportJobsResponse' _ExportJobsResponse customize = (GetSegmentExpo
 
 newtype GetSegmentImportJobsRequest = GetSegmentImportJobsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
   , "SegmentId" :: (String)
-  , "Token" :: NullOrUndefined (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetSegmentImportJobsRequest :: Newtype GetSegmentImportJobsRequest _
 derive instance repGenericGetSegmentImportJobsRequest :: Generic GetSegmentImportJobsRequest _
@@ -3240,12 +3239,12 @@ instance encodeGetSegmentImportJobsRequest :: Encode GetSegmentImportJobsRequest
 
 -- | Constructs GetSegmentImportJobsRequest from required parameters
 newGetSegmentImportJobsRequest :: String -> String -> GetSegmentImportJobsRequest
-newGetSegmentImportJobsRequest _ApplicationId _SegmentId = GetSegmentImportJobsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentImportJobsRequest _ApplicationId _SegmentId = GetSegmentImportJobsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetSegmentImportJobsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSegmentImportJobsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined (String) } ) -> GetSegmentImportJobsRequest
-newGetSegmentImportJobsRequest' _ApplicationId _SegmentId customize = (GetSegmentImportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentImportJobsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "SegmentId" :: (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "SegmentId" :: (String) , "Token" :: Maybe (String) } ) -> GetSegmentImportJobsRequest
+newGetSegmentImportJobsRequest' _ApplicationId _SegmentId customize = (GetSegmentImportJobsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3354,9 +3353,9 @@ newGetSegmentVersionResponse' _SegmentResponse customize = (GetSegmentVersionRes
 
 newtype GetSegmentVersionsRequest = GetSegmentVersionsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
   , "SegmentId" :: (String)
-  , "Token" :: NullOrUndefined (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetSegmentVersionsRequest :: Newtype GetSegmentVersionsRequest _
 derive instance repGenericGetSegmentVersionsRequest :: Generic GetSegmentVersionsRequest _
@@ -3366,12 +3365,12 @@ instance encodeGetSegmentVersionsRequest :: Encode GetSegmentVersionsRequest whe
 
 -- | Constructs GetSegmentVersionsRequest from required parameters
 newGetSegmentVersionsRequest :: String -> String -> GetSegmentVersionsRequest
-newGetSegmentVersionsRequest _ApplicationId _SegmentId = GetSegmentVersionsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentVersionsRequest _ApplicationId _SegmentId = GetSegmentVersionsRequest { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetSegmentVersionsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSegmentVersionsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "SegmentId" :: (String) , "Token" :: NullOrUndefined (String) } ) -> GetSegmentVersionsRequest
-newGetSegmentVersionsRequest' _ApplicationId _SegmentId customize = (GetSegmentVersionsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentVersionsRequest' :: String -> String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "SegmentId" :: (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "SegmentId" :: (String) , "Token" :: Maybe (String) } ) -> GetSegmentVersionsRequest
+newGetSegmentVersionsRequest' _ApplicationId _SegmentId customize = (GetSegmentVersionsRequest <<< customize) { "ApplicationId": _ApplicationId, "SegmentId": _SegmentId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3397,8 +3396,8 @@ newGetSegmentVersionsResponse' _SegmentsResponse customize = (GetSegmentVersions
 
 newtype GetSegmentsRequest = GetSegmentsRequest 
   { "ApplicationId" :: (String)
-  , "PageSize" :: NullOrUndefined (String)
-  , "Token" :: NullOrUndefined (String)
+  , "PageSize" :: Maybe (String)
+  , "Token" :: Maybe (String)
   }
 derive instance newtypeGetSegmentsRequest :: Newtype GetSegmentsRequest _
 derive instance repGenericGetSegmentsRequest :: Generic GetSegmentsRequest _
@@ -3408,12 +3407,12 @@ instance encodeGetSegmentsRequest :: Encode GetSegmentsRequest where encode = ge
 
 -- | Constructs GetSegmentsRequest from required parameters
 newGetSegmentsRequest :: String -> GetSegmentsRequest
-newGetSegmentsRequest _ApplicationId = GetSegmentsRequest { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentsRequest _ApplicationId = GetSegmentsRequest { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 -- | Constructs GetSegmentsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSegmentsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } -> {"ApplicationId" :: (String) , "PageSize" :: NullOrUndefined (String) , "Token" :: NullOrUndefined (String) } ) -> GetSegmentsRequest
-newGetSegmentsRequest' _ApplicationId customize = (GetSegmentsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": (NullOrUndefined Nothing), "Token": (NullOrUndefined Nothing) }
+newGetSegmentsRequest' :: String -> ( { "ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } -> {"ApplicationId" :: (String) , "PageSize" :: Maybe (String) , "Token" :: Maybe (String) } ) -> GetSegmentsRequest
+newGetSegmentsRequest' _ApplicationId customize = (GetSegmentsRequest <<< customize) { "ApplicationId": _ApplicationId, "PageSize": Nothing, "Token": Nothing }
 
 
 
@@ -3478,14 +3477,14 @@ newGetSmsChannelResponse' _SMSChannelResponse customize = (GetSmsChannelResponse
 
 
 newtype ImportJobRequest = ImportJobRequest 
-  { "DefineSegment" :: NullOrUndefined (Boolean)
-  , "ExternalId" :: NullOrUndefined (String)
-  , "Format" :: NullOrUndefined (Format)
-  , "RegisterEndpoints" :: NullOrUndefined (Boolean)
-  , "RoleArn" :: NullOrUndefined (String)
-  , "S3Url" :: NullOrUndefined (String)
-  , "SegmentId" :: NullOrUndefined (String)
-  , "SegmentName" :: NullOrUndefined (String)
+  { "DefineSegment" :: Maybe (Boolean)
+  , "ExternalId" :: Maybe (String)
+  , "Format" :: Maybe (Format)
+  , "RegisterEndpoints" :: Maybe (Boolean)
+  , "RoleArn" :: Maybe (String)
+  , "S3Url" :: Maybe (String)
+  , "SegmentId" :: Maybe (String)
+  , "SegmentName" :: Maybe (String)
   }
 derive instance newtypeImportJobRequest :: Newtype ImportJobRequest _
 derive instance repGenericImportJobRequest :: Generic ImportJobRequest _
@@ -3495,24 +3494,24 @@ instance encodeImportJobRequest :: Encode ImportJobRequest where encode = generi
 
 -- | Constructs ImportJobRequest from required parameters
 newImportJobRequest :: ImportJobRequest
-newImportJobRequest  = ImportJobRequest { "DefineSegment": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "Format": (NullOrUndefined Nothing), "RegisterEndpoints": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "S3Url": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentName": (NullOrUndefined Nothing) }
+newImportJobRequest  = ImportJobRequest { "DefineSegment": Nothing, "ExternalId": Nothing, "Format": Nothing, "RegisterEndpoints": Nothing, "RoleArn": Nothing, "S3Url": Nothing, "SegmentId": Nothing, "SegmentName": Nothing }
 
 -- | Constructs ImportJobRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newImportJobRequest' :: ( { "DefineSegment" :: NullOrUndefined (Boolean) , "ExternalId" :: NullOrUndefined (String) , "Format" :: NullOrUndefined (Format) , "RegisterEndpoints" :: NullOrUndefined (Boolean) , "RoleArn" :: NullOrUndefined (String) , "S3Url" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) , "SegmentName" :: NullOrUndefined (String) } -> {"DefineSegment" :: NullOrUndefined (Boolean) , "ExternalId" :: NullOrUndefined (String) , "Format" :: NullOrUndefined (Format) , "RegisterEndpoints" :: NullOrUndefined (Boolean) , "RoleArn" :: NullOrUndefined (String) , "S3Url" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) , "SegmentName" :: NullOrUndefined (String) } ) -> ImportJobRequest
-newImportJobRequest'  customize = (ImportJobRequest <<< customize) { "DefineSegment": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "Format": (NullOrUndefined Nothing), "RegisterEndpoints": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "S3Url": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentName": (NullOrUndefined Nothing) }
+newImportJobRequest' :: ( { "DefineSegment" :: Maybe (Boolean) , "ExternalId" :: Maybe (String) , "Format" :: Maybe (Format) , "RegisterEndpoints" :: Maybe (Boolean) , "RoleArn" :: Maybe (String) , "S3Url" :: Maybe (String) , "SegmentId" :: Maybe (String) , "SegmentName" :: Maybe (String) } -> {"DefineSegment" :: Maybe (Boolean) , "ExternalId" :: Maybe (String) , "Format" :: Maybe (Format) , "RegisterEndpoints" :: Maybe (Boolean) , "RoleArn" :: Maybe (String) , "S3Url" :: Maybe (String) , "SegmentId" :: Maybe (String) , "SegmentName" :: Maybe (String) } ) -> ImportJobRequest
+newImportJobRequest'  customize = (ImportJobRequest <<< customize) { "DefineSegment": Nothing, "ExternalId": Nothing, "Format": Nothing, "RegisterEndpoints": Nothing, "RoleArn": Nothing, "S3Url": Nothing, "SegmentId": Nothing, "SegmentName": Nothing }
 
 
 
 newtype ImportJobResource = ImportJobResource 
-  { "DefineSegment" :: NullOrUndefined (Boolean)
-  , "ExternalId" :: NullOrUndefined (String)
-  , "Format" :: NullOrUndefined (Format)
-  , "RegisterEndpoints" :: NullOrUndefined (Boolean)
-  , "RoleArn" :: NullOrUndefined (String)
-  , "S3Url" :: NullOrUndefined (String)
-  , "SegmentId" :: NullOrUndefined (String)
-  , "SegmentName" :: NullOrUndefined (String)
+  { "DefineSegment" :: Maybe (Boolean)
+  , "ExternalId" :: Maybe (String)
+  , "Format" :: Maybe (Format)
+  , "RegisterEndpoints" :: Maybe (Boolean)
+  , "RoleArn" :: Maybe (String)
+  , "S3Url" :: Maybe (String)
+  , "SegmentId" :: Maybe (String)
+  , "SegmentName" :: Maybe (String)
   }
 derive instance newtypeImportJobResource :: Newtype ImportJobResource _
 derive instance repGenericImportJobResource :: Generic ImportJobResource _
@@ -3522,29 +3521,29 @@ instance encodeImportJobResource :: Encode ImportJobResource where encode = gene
 
 -- | Constructs ImportJobResource from required parameters
 newImportJobResource :: ImportJobResource
-newImportJobResource  = ImportJobResource { "DefineSegment": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "Format": (NullOrUndefined Nothing), "RegisterEndpoints": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "S3Url": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentName": (NullOrUndefined Nothing) }
+newImportJobResource  = ImportJobResource { "DefineSegment": Nothing, "ExternalId": Nothing, "Format": Nothing, "RegisterEndpoints": Nothing, "RoleArn": Nothing, "S3Url": Nothing, "SegmentId": Nothing, "SegmentName": Nothing }
 
 -- | Constructs ImportJobResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newImportJobResource' :: ( { "DefineSegment" :: NullOrUndefined (Boolean) , "ExternalId" :: NullOrUndefined (String) , "Format" :: NullOrUndefined (Format) , "RegisterEndpoints" :: NullOrUndefined (Boolean) , "RoleArn" :: NullOrUndefined (String) , "S3Url" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) , "SegmentName" :: NullOrUndefined (String) } -> {"DefineSegment" :: NullOrUndefined (Boolean) , "ExternalId" :: NullOrUndefined (String) , "Format" :: NullOrUndefined (Format) , "RegisterEndpoints" :: NullOrUndefined (Boolean) , "RoleArn" :: NullOrUndefined (String) , "S3Url" :: NullOrUndefined (String) , "SegmentId" :: NullOrUndefined (String) , "SegmentName" :: NullOrUndefined (String) } ) -> ImportJobResource
-newImportJobResource'  customize = (ImportJobResource <<< customize) { "DefineSegment": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "Format": (NullOrUndefined Nothing), "RegisterEndpoints": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "S3Url": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentName": (NullOrUndefined Nothing) }
+newImportJobResource' :: ( { "DefineSegment" :: Maybe (Boolean) , "ExternalId" :: Maybe (String) , "Format" :: Maybe (Format) , "RegisterEndpoints" :: Maybe (Boolean) , "RoleArn" :: Maybe (String) , "S3Url" :: Maybe (String) , "SegmentId" :: Maybe (String) , "SegmentName" :: Maybe (String) } -> {"DefineSegment" :: Maybe (Boolean) , "ExternalId" :: Maybe (String) , "Format" :: Maybe (Format) , "RegisterEndpoints" :: Maybe (Boolean) , "RoleArn" :: Maybe (String) , "S3Url" :: Maybe (String) , "SegmentId" :: Maybe (String) , "SegmentName" :: Maybe (String) } ) -> ImportJobResource
+newImportJobResource'  customize = (ImportJobResource <<< customize) { "DefineSegment": Nothing, "ExternalId": Nothing, "Format": Nothing, "RegisterEndpoints": Nothing, "RoleArn": Nothing, "S3Url": Nothing, "SegmentId": Nothing, "SegmentName": Nothing }
 
 
 
 newtype ImportJobResponse = ImportJobResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CompletedPieces" :: NullOrUndefined (Int)
-  , "CompletionDate" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Definition" :: NullOrUndefined (ImportJobResource)
-  , "FailedPieces" :: NullOrUndefined (Int)
-  , "Failures" :: NullOrUndefined (ListOf__string)
-  , "Id" :: NullOrUndefined (String)
-  , "JobStatus" :: NullOrUndefined (JobStatus)
-  , "TotalFailures" :: NullOrUndefined (Int)
-  , "TotalPieces" :: NullOrUndefined (Int)
-  , "TotalProcessed" :: NullOrUndefined (Int)
-  , "Type" :: NullOrUndefined (String)
+  { "ApplicationId" :: Maybe (String)
+  , "CompletedPieces" :: Maybe (Int)
+  , "CompletionDate" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Definition" :: Maybe (ImportJobResource)
+  , "FailedPieces" :: Maybe (Int)
+  , "Failures" :: Maybe (ListOf__string)
+  , "Id" :: Maybe (String)
+  , "JobStatus" :: Maybe (JobStatus)
+  , "TotalFailures" :: Maybe (Int)
+  , "TotalPieces" :: Maybe (Int)
+  , "TotalProcessed" :: Maybe (Int)
+  , "Type" :: Maybe (String)
   }
 derive instance newtypeImportJobResponse :: Newtype ImportJobResponse _
 derive instance repGenericImportJobResponse :: Generic ImportJobResponse _
@@ -3554,19 +3553,19 @@ instance encodeImportJobResponse :: Encode ImportJobResponse where encode = gene
 
 -- | Constructs ImportJobResponse from required parameters
 newImportJobResponse :: ImportJobResponse
-newImportJobResponse  = ImportJobResponse { "ApplicationId": (NullOrUndefined Nothing), "CompletedPieces": (NullOrUndefined Nothing), "CompletionDate": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "FailedPieces": (NullOrUndefined Nothing), "Failures": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "TotalFailures": (NullOrUndefined Nothing), "TotalPieces": (NullOrUndefined Nothing), "TotalProcessed": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newImportJobResponse  = ImportJobResponse { "ApplicationId": Nothing, "CompletedPieces": Nothing, "CompletionDate": Nothing, "CreationDate": Nothing, "Definition": Nothing, "FailedPieces": Nothing, "Failures": Nothing, "Id": Nothing, "JobStatus": Nothing, "TotalFailures": Nothing, "TotalPieces": Nothing, "TotalProcessed": Nothing, "Type": Nothing }
 
 -- | Constructs ImportJobResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newImportJobResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CompletedPieces" :: NullOrUndefined (Int) , "CompletionDate" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (ImportJobResource) , "FailedPieces" :: NullOrUndefined (Int) , "Failures" :: NullOrUndefined (ListOf__string) , "Id" :: NullOrUndefined (String) , "JobStatus" :: NullOrUndefined (JobStatus) , "TotalFailures" :: NullOrUndefined (Int) , "TotalPieces" :: NullOrUndefined (Int) , "TotalProcessed" :: NullOrUndefined (Int) , "Type" :: NullOrUndefined (String) } -> {"ApplicationId" :: NullOrUndefined (String) , "CompletedPieces" :: NullOrUndefined (Int) , "CompletionDate" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Definition" :: NullOrUndefined (ImportJobResource) , "FailedPieces" :: NullOrUndefined (Int) , "Failures" :: NullOrUndefined (ListOf__string) , "Id" :: NullOrUndefined (String) , "JobStatus" :: NullOrUndefined (JobStatus) , "TotalFailures" :: NullOrUndefined (Int) , "TotalPieces" :: NullOrUndefined (Int) , "TotalProcessed" :: NullOrUndefined (Int) , "Type" :: NullOrUndefined (String) } ) -> ImportJobResponse
-newImportJobResponse'  customize = (ImportJobResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CompletedPieces": (NullOrUndefined Nothing), "CompletionDate": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Definition": (NullOrUndefined Nothing), "FailedPieces": (NullOrUndefined Nothing), "Failures": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "JobStatus": (NullOrUndefined Nothing), "TotalFailures": (NullOrUndefined Nothing), "TotalPieces": (NullOrUndefined Nothing), "TotalProcessed": (NullOrUndefined Nothing), "Type": (NullOrUndefined Nothing) }
+newImportJobResponse' :: ( { "ApplicationId" :: Maybe (String) , "CompletedPieces" :: Maybe (Int) , "CompletionDate" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Definition" :: Maybe (ImportJobResource) , "FailedPieces" :: Maybe (Int) , "Failures" :: Maybe (ListOf__string) , "Id" :: Maybe (String) , "JobStatus" :: Maybe (JobStatus) , "TotalFailures" :: Maybe (Int) , "TotalPieces" :: Maybe (Int) , "TotalProcessed" :: Maybe (Int) , "Type" :: Maybe (String) } -> {"ApplicationId" :: Maybe (String) , "CompletedPieces" :: Maybe (Int) , "CompletionDate" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Definition" :: Maybe (ImportJobResource) , "FailedPieces" :: Maybe (Int) , "Failures" :: Maybe (ListOf__string) , "Id" :: Maybe (String) , "JobStatus" :: Maybe (JobStatus) , "TotalFailures" :: Maybe (Int) , "TotalPieces" :: Maybe (Int) , "TotalProcessed" :: Maybe (Int) , "Type" :: Maybe (String) } ) -> ImportJobResponse
+newImportJobResponse'  customize = (ImportJobResponse <<< customize) { "ApplicationId": Nothing, "CompletedPieces": Nothing, "CompletionDate": Nothing, "CreationDate": Nothing, "Definition": Nothing, "FailedPieces": Nothing, "Failures": Nothing, "Id": Nothing, "JobStatus": Nothing, "TotalFailures": Nothing, "TotalPieces": Nothing, "TotalProcessed": Nothing, "Type": Nothing }
 
 
 
 -- | Import job list.
 newtype ImportJobsResponse = ImportJobsResponse 
-  { "Item" :: NullOrUndefined (ListOfImportJobResponse)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Item" :: Maybe (ListOfImportJobResponse)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeImportJobsResponse :: Newtype ImportJobsResponse _
 derive instance repGenericImportJobsResponse :: Generic ImportJobsResponse _
@@ -3576,19 +3575,19 @@ instance encodeImportJobsResponse :: Encode ImportJobsResponse where encode = ge
 
 -- | Constructs ImportJobsResponse from required parameters
 newImportJobsResponse :: ImportJobsResponse
-newImportJobsResponse  = ImportJobsResponse { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newImportJobsResponse  = ImportJobsResponse { "Item": Nothing, "NextToken": Nothing }
 
 -- | Constructs ImportJobsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newImportJobsResponse' :: ( { "Item" :: NullOrUndefined (ListOfImportJobResponse) , "NextToken" :: NullOrUndefined (String) } -> {"Item" :: NullOrUndefined (ListOfImportJobResponse) , "NextToken" :: NullOrUndefined (String) } ) -> ImportJobsResponse
-newImportJobsResponse'  customize = (ImportJobsResponse <<< customize) { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newImportJobsResponse' :: ( { "Item" :: Maybe (ListOfImportJobResponse) , "NextToken" :: Maybe (String) } -> {"Item" :: Maybe (ListOfImportJobResponse) , "NextToken" :: Maybe (String) } ) -> ImportJobsResponse
+newImportJobsResponse'  customize = (ImportJobsResponse <<< customize) { "Item": Nothing, "NextToken": Nothing }
 
 
 
 -- | Simple message object.
 newtype InternalServerErrorException = InternalServerErrorException 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeInternalServerErrorException :: Newtype InternalServerErrorException _
 derive instance repGenericInternalServerErrorException :: Generic InternalServerErrorException _
@@ -3598,12 +3597,12 @@ instance encodeInternalServerErrorException :: Encode InternalServerErrorExcepti
 
 -- | Constructs InternalServerErrorException from required parameters
 newInternalServerErrorException :: InternalServerErrorException
-newInternalServerErrorException  = InternalServerErrorException { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newInternalServerErrorException  = InternalServerErrorException { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs InternalServerErrorException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInternalServerErrorException' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> InternalServerErrorException
-newInternalServerErrorException'  customize = (InternalServerErrorException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newInternalServerErrorException' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> InternalServerErrorException
+newInternalServerErrorException'  customize = (InternalServerErrorException <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
@@ -3797,17 +3796,17 @@ instance encodeMapOf__string :: Encode MapOf__string where encode = genericEncod
 
 
 newtype Message = Message 
-  { "Action" :: NullOrUndefined (Action)
-  , "Body" :: NullOrUndefined (String)
-  , "ImageIconUrl" :: NullOrUndefined (String)
-  , "ImageSmallIconUrl" :: NullOrUndefined (String)
-  , "ImageUrl" :: NullOrUndefined (String)
-  , "JsonBody" :: NullOrUndefined (String)
-  , "MediaUrl" :: NullOrUndefined (String)
-  , "RawContent" :: NullOrUndefined (String)
-  , "SilentPush" :: NullOrUndefined (Boolean)
-  , "Title" :: NullOrUndefined (String)
-  , "Url" :: NullOrUndefined (String)
+  { "Action" :: Maybe (Action)
+  , "Body" :: Maybe (String)
+  , "ImageIconUrl" :: Maybe (String)
+  , "ImageSmallIconUrl" :: Maybe (String)
+  , "ImageUrl" :: Maybe (String)
+  , "JsonBody" :: Maybe (String)
+  , "MediaUrl" :: Maybe (String)
+  , "RawContent" :: Maybe (String)
+  , "SilentPush" :: Maybe (Boolean)
+  , "Title" :: Maybe (String)
+  , "Url" :: Maybe (String)
   }
 derive instance newtypeMessage :: Newtype Message _
 derive instance repGenericMessage :: Generic Message _
@@ -3817,19 +3816,19 @@ instance encodeMessage :: Encode Message where encode = genericEncode options
 
 -- | Constructs Message from required parameters
 newMessage :: Message
-newMessage  = Message { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageSmallIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "JsonBody": (NullOrUndefined Nothing), "MediaUrl": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newMessage  = Message { "Action": Nothing, "Body": Nothing, "ImageIconUrl": Nothing, "ImageSmallIconUrl": Nothing, "ImageUrl": Nothing, "JsonBody": Nothing, "MediaUrl": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "Title": Nothing, "Url": Nothing }
 
 -- | Constructs Message's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMessage' :: ( { "Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageSmallIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "JsonBody" :: NullOrUndefined (String) , "MediaUrl" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } -> {"Action" :: NullOrUndefined (Action) , "Body" :: NullOrUndefined (String) , "ImageIconUrl" :: NullOrUndefined (String) , "ImageSmallIconUrl" :: NullOrUndefined (String) , "ImageUrl" :: NullOrUndefined (String) , "JsonBody" :: NullOrUndefined (String) , "MediaUrl" :: NullOrUndefined (String) , "RawContent" :: NullOrUndefined (String) , "SilentPush" :: NullOrUndefined (Boolean) , "Title" :: NullOrUndefined (String) , "Url" :: NullOrUndefined (String) } ) -> Message
-newMessage'  customize = (Message <<< customize) { "Action": (NullOrUndefined Nothing), "Body": (NullOrUndefined Nothing), "ImageIconUrl": (NullOrUndefined Nothing), "ImageSmallIconUrl": (NullOrUndefined Nothing), "ImageUrl": (NullOrUndefined Nothing), "JsonBody": (NullOrUndefined Nothing), "MediaUrl": (NullOrUndefined Nothing), "RawContent": (NullOrUndefined Nothing), "SilentPush": (NullOrUndefined Nothing), "Title": (NullOrUndefined Nothing), "Url": (NullOrUndefined Nothing) }
+newMessage' :: ( { "Action" :: Maybe (Action) , "Body" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageSmallIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "JsonBody" :: Maybe (String) , "MediaUrl" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } -> {"Action" :: Maybe (Action) , "Body" :: Maybe (String) , "ImageIconUrl" :: Maybe (String) , "ImageSmallIconUrl" :: Maybe (String) , "ImageUrl" :: Maybe (String) , "JsonBody" :: Maybe (String) , "MediaUrl" :: Maybe (String) , "RawContent" :: Maybe (String) , "SilentPush" :: Maybe (Boolean) , "Title" :: Maybe (String) , "Url" :: Maybe (String) } ) -> Message
+newMessage'  customize = (Message <<< customize) { "Action": Nothing, "Body": Nothing, "ImageIconUrl": Nothing, "ImageSmallIconUrl": Nothing, "ImageUrl": Nothing, "JsonBody": Nothing, "MediaUrl": Nothing, "RawContent": Nothing, "SilentPush": Nothing, "Title": Nothing, "Url": Nothing }
 
 
 
 -- | Simple message object.
 newtype MessageBody = MessageBody 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeMessageBody :: Newtype MessageBody _
 derive instance repGenericMessageBody :: Generic MessageBody _
@@ -3839,24 +3838,24 @@ instance encodeMessageBody :: Encode MessageBody where encode = genericEncode op
 
 -- | Constructs MessageBody from required parameters
 newMessageBody :: MessageBody
-newMessageBody  = MessageBody { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newMessageBody  = MessageBody { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs MessageBody's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMessageBody' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> MessageBody
-newMessageBody'  customize = (MessageBody <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newMessageBody' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> MessageBody
+newMessageBody'  customize = (MessageBody <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
 -- | Message configuration for a campaign.
 newtype MessageConfiguration = MessageConfiguration 
-  { "ADMMessage" :: NullOrUndefined (Message)
-  , "APNSMessage" :: NullOrUndefined (Message)
-  , "BaiduMessage" :: NullOrUndefined (Message)
-  , "DefaultMessage" :: NullOrUndefined (Message)
-  , "EmailMessage" :: NullOrUndefined (CampaignEmailMessage)
-  , "GCMMessage" :: NullOrUndefined (Message)
-  , "SMSMessage" :: NullOrUndefined (CampaignSmsMessage)
+  { "ADMMessage" :: Maybe (Message)
+  , "APNSMessage" :: Maybe (Message)
+  , "BaiduMessage" :: Maybe (Message)
+  , "DefaultMessage" :: Maybe (Message)
+  , "EmailMessage" :: Maybe (CampaignEmailMessage)
+  , "GCMMessage" :: Maybe (Message)
+  , "SMSMessage" :: Maybe (CampaignSmsMessage)
   }
 derive instance newtypeMessageConfiguration :: Newtype MessageConfiguration _
 derive instance repGenericMessageConfiguration :: Generic MessageConfiguration _
@@ -3866,21 +3865,21 @@ instance encodeMessageConfiguration :: Encode MessageConfiguration where encode 
 
 -- | Constructs MessageConfiguration from required parameters
 newMessageConfiguration :: MessageConfiguration
-newMessageConfiguration  = MessageConfiguration { "ADMMessage": (NullOrUndefined Nothing), "APNSMessage": (NullOrUndefined Nothing), "BaiduMessage": (NullOrUndefined Nothing), "DefaultMessage": (NullOrUndefined Nothing), "EmailMessage": (NullOrUndefined Nothing), "GCMMessage": (NullOrUndefined Nothing), "SMSMessage": (NullOrUndefined Nothing) }
+newMessageConfiguration  = MessageConfiguration { "ADMMessage": Nothing, "APNSMessage": Nothing, "BaiduMessage": Nothing, "DefaultMessage": Nothing, "EmailMessage": Nothing, "GCMMessage": Nothing, "SMSMessage": Nothing }
 
 -- | Constructs MessageConfiguration's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMessageConfiguration' :: ( { "ADMMessage" :: NullOrUndefined (Message) , "APNSMessage" :: NullOrUndefined (Message) , "BaiduMessage" :: NullOrUndefined (Message) , "DefaultMessage" :: NullOrUndefined (Message) , "EmailMessage" :: NullOrUndefined (CampaignEmailMessage) , "GCMMessage" :: NullOrUndefined (Message) , "SMSMessage" :: NullOrUndefined (CampaignSmsMessage) } -> {"ADMMessage" :: NullOrUndefined (Message) , "APNSMessage" :: NullOrUndefined (Message) , "BaiduMessage" :: NullOrUndefined (Message) , "DefaultMessage" :: NullOrUndefined (Message) , "EmailMessage" :: NullOrUndefined (CampaignEmailMessage) , "GCMMessage" :: NullOrUndefined (Message) , "SMSMessage" :: NullOrUndefined (CampaignSmsMessage) } ) -> MessageConfiguration
-newMessageConfiguration'  customize = (MessageConfiguration <<< customize) { "ADMMessage": (NullOrUndefined Nothing), "APNSMessage": (NullOrUndefined Nothing), "BaiduMessage": (NullOrUndefined Nothing), "DefaultMessage": (NullOrUndefined Nothing), "EmailMessage": (NullOrUndefined Nothing), "GCMMessage": (NullOrUndefined Nothing), "SMSMessage": (NullOrUndefined Nothing) }
+newMessageConfiguration' :: ( { "ADMMessage" :: Maybe (Message) , "APNSMessage" :: Maybe (Message) , "BaiduMessage" :: Maybe (Message) , "DefaultMessage" :: Maybe (Message) , "EmailMessage" :: Maybe (CampaignEmailMessage) , "GCMMessage" :: Maybe (Message) , "SMSMessage" :: Maybe (CampaignSmsMessage) } -> {"ADMMessage" :: Maybe (Message) , "APNSMessage" :: Maybe (Message) , "BaiduMessage" :: Maybe (Message) , "DefaultMessage" :: Maybe (Message) , "EmailMessage" :: Maybe (CampaignEmailMessage) , "GCMMessage" :: Maybe (Message) , "SMSMessage" :: Maybe (CampaignSmsMessage) } ) -> MessageConfiguration
+newMessageConfiguration'  customize = (MessageConfiguration <<< customize) { "ADMMessage": Nothing, "APNSMessage": Nothing, "BaiduMessage": Nothing, "DefaultMessage": Nothing, "EmailMessage": Nothing, "GCMMessage": Nothing, "SMSMessage": Nothing }
 
 
 
 -- | Send message request.
 newtype MessageRequest = MessageRequest 
-  { "Addresses" :: NullOrUndefined (MapOfAddressConfiguration)
-  , "Context" :: NullOrUndefined (MapOf__string)
-  , "Endpoints" :: NullOrUndefined (MapOfEndpointSendConfiguration)
-  , "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration)
+  { "Addresses" :: Maybe (MapOfAddressConfiguration)
+  , "Context" :: Maybe (MapOf__string)
+  , "Endpoints" :: Maybe (MapOfEndpointSendConfiguration)
+  , "MessageConfiguration" :: Maybe (DirectMessageConfiguration)
   }
 derive instance newtypeMessageRequest :: Newtype MessageRequest _
 derive instance repGenericMessageRequest :: Generic MessageRequest _
@@ -3890,21 +3889,21 @@ instance encodeMessageRequest :: Encode MessageRequest where encode = genericEnc
 
 -- | Constructs MessageRequest from required parameters
 newMessageRequest :: MessageRequest
-newMessageRequest  = MessageRequest { "Addresses": (NullOrUndefined Nothing), "Context": (NullOrUndefined Nothing), "Endpoints": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing) }
+newMessageRequest  = MessageRequest { "Addresses": Nothing, "Context": Nothing, "Endpoints": Nothing, "MessageConfiguration": Nothing }
 
 -- | Constructs MessageRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMessageRequest' :: ( { "Addresses" :: NullOrUndefined (MapOfAddressConfiguration) , "Context" :: NullOrUndefined (MapOf__string) , "Endpoints" :: NullOrUndefined (MapOfEndpointSendConfiguration) , "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) } -> {"Addresses" :: NullOrUndefined (MapOfAddressConfiguration) , "Context" :: NullOrUndefined (MapOf__string) , "Endpoints" :: NullOrUndefined (MapOfEndpointSendConfiguration) , "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) } ) -> MessageRequest
-newMessageRequest'  customize = (MessageRequest <<< customize) { "Addresses": (NullOrUndefined Nothing), "Context": (NullOrUndefined Nothing), "Endpoints": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing) }
+newMessageRequest' :: ( { "Addresses" :: Maybe (MapOfAddressConfiguration) , "Context" :: Maybe (MapOf__string) , "Endpoints" :: Maybe (MapOfEndpointSendConfiguration) , "MessageConfiguration" :: Maybe (DirectMessageConfiguration) } -> {"Addresses" :: Maybe (MapOfAddressConfiguration) , "Context" :: Maybe (MapOf__string) , "Endpoints" :: Maybe (MapOfEndpointSendConfiguration) , "MessageConfiguration" :: Maybe (DirectMessageConfiguration) } ) -> MessageRequest
+newMessageRequest'  customize = (MessageRequest <<< customize) { "Addresses": Nothing, "Context": Nothing, "Endpoints": Nothing, "MessageConfiguration": Nothing }
 
 
 
 -- | Send message response.
 newtype MessageResponse = MessageResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "EndpointResult" :: NullOrUndefined (MapOfEndpointMessageResult)
-  , "RequestId" :: NullOrUndefined (String)
-  , "Result" :: NullOrUndefined (MapOfMessageResult)
+  { "ApplicationId" :: Maybe (String)
+  , "EndpointResult" :: Maybe (MapOfEndpointMessageResult)
+  , "RequestId" :: Maybe (String)
+  , "Result" :: Maybe (MapOfMessageResult)
   }
 derive instance newtypeMessageResponse :: Newtype MessageResponse _
 derive instance repGenericMessageResponse :: Generic MessageResponse _
@@ -3914,21 +3913,21 @@ instance encodeMessageResponse :: Encode MessageResponse where encode = genericE
 
 -- | Constructs MessageResponse from required parameters
 newMessageResponse :: MessageResponse
-newMessageResponse  = MessageResponse { "ApplicationId": (NullOrUndefined Nothing), "EndpointResult": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Result": (NullOrUndefined Nothing) }
+newMessageResponse  = MessageResponse { "ApplicationId": Nothing, "EndpointResult": Nothing, "RequestId": Nothing, "Result": Nothing }
 
 -- | Constructs MessageResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMessageResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "EndpointResult" :: NullOrUndefined (MapOfEndpointMessageResult) , "RequestId" :: NullOrUndefined (String) , "Result" :: NullOrUndefined (MapOfMessageResult) } -> {"ApplicationId" :: NullOrUndefined (String) , "EndpointResult" :: NullOrUndefined (MapOfEndpointMessageResult) , "RequestId" :: NullOrUndefined (String) , "Result" :: NullOrUndefined (MapOfMessageResult) } ) -> MessageResponse
-newMessageResponse'  customize = (MessageResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "EndpointResult": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Result": (NullOrUndefined Nothing) }
+newMessageResponse' :: ( { "ApplicationId" :: Maybe (String) , "EndpointResult" :: Maybe (MapOfEndpointMessageResult) , "RequestId" :: Maybe (String) , "Result" :: Maybe (MapOfMessageResult) } -> {"ApplicationId" :: Maybe (String) , "EndpointResult" :: Maybe (MapOfEndpointMessageResult) , "RequestId" :: Maybe (String) , "Result" :: Maybe (MapOfMessageResult) } ) -> MessageResponse
+newMessageResponse'  customize = (MessageResponse <<< customize) { "ApplicationId": Nothing, "EndpointResult": Nothing, "RequestId": Nothing, "Result": Nothing }
 
 
 
 -- | The result from sending a message to an address.
 newtype MessageResult = MessageResult 
-  { "DeliveryStatus" :: NullOrUndefined (DeliveryStatus)
-  , "StatusCode" :: NullOrUndefined (Int)
-  , "StatusMessage" :: NullOrUndefined (String)
-  , "UpdatedToken" :: NullOrUndefined (String)
+  { "DeliveryStatus" :: Maybe (DeliveryStatus)
+  , "StatusCode" :: Maybe (Int)
+  , "StatusMessage" :: Maybe (String)
+  , "UpdatedToken" :: Maybe (String)
   }
 derive instance newtypeMessageResult :: Newtype MessageResult _
 derive instance repGenericMessageResult :: Generic MessageResult _
@@ -3938,12 +3937,12 @@ instance encodeMessageResult :: Encode MessageResult where encode = genericEncod
 
 -- | Constructs MessageResult from required parameters
 newMessageResult :: MessageResult
-newMessageResult  = MessageResult { "DeliveryStatus": (NullOrUndefined Nothing), "StatusCode": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "UpdatedToken": (NullOrUndefined Nothing) }
+newMessageResult  = MessageResult { "DeliveryStatus": Nothing, "StatusCode": Nothing, "StatusMessage": Nothing, "UpdatedToken": Nothing }
 
 -- | Constructs MessageResult's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMessageResult' :: ( { "DeliveryStatus" :: NullOrUndefined (DeliveryStatus) , "StatusCode" :: NullOrUndefined (Int) , "StatusMessage" :: NullOrUndefined (String) , "UpdatedToken" :: NullOrUndefined (String) } -> {"DeliveryStatus" :: NullOrUndefined (DeliveryStatus) , "StatusCode" :: NullOrUndefined (Int) , "StatusMessage" :: NullOrUndefined (String) , "UpdatedToken" :: NullOrUndefined (String) } ) -> MessageResult
-newMessageResult'  customize = (MessageResult <<< customize) { "DeliveryStatus": (NullOrUndefined Nothing), "StatusCode": (NullOrUndefined Nothing), "StatusMessage": (NullOrUndefined Nothing), "UpdatedToken": (NullOrUndefined Nothing) }
+newMessageResult' :: ( { "DeliveryStatus" :: Maybe (DeliveryStatus) , "StatusCode" :: Maybe (Int) , "StatusMessage" :: Maybe (String) , "UpdatedToken" :: Maybe (String) } -> {"DeliveryStatus" :: Maybe (DeliveryStatus) , "StatusCode" :: Maybe (Int) , "StatusMessage" :: Maybe (String) , "UpdatedToken" :: Maybe (String) } ) -> MessageResult
+newMessageResult'  customize = (MessageResult <<< customize) { "DeliveryStatus": Nothing, "StatusCode": Nothing, "StatusMessage": Nothing, "UpdatedToken": Nothing }
 
 
 
@@ -3958,8 +3957,8 @@ instance encodeMessageType :: Encode MessageType where encode = genericEncode op
 
 -- | Simple message object.
 newtype MethodNotAllowedException = MethodNotAllowedException 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeMethodNotAllowedException :: Newtype MethodNotAllowedException _
 derive instance repGenericMethodNotAllowedException :: Generic MethodNotAllowedException _
@@ -3969,12 +3968,12 @@ instance encodeMethodNotAllowedException :: Encode MethodNotAllowedException whe
 
 -- | Constructs MethodNotAllowedException from required parameters
 newMethodNotAllowedException :: MethodNotAllowedException
-newMethodNotAllowedException  = MethodNotAllowedException { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newMethodNotAllowedException  = MethodNotAllowedException { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs MethodNotAllowedException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newMethodNotAllowedException' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> MethodNotAllowedException
-newMethodNotAllowedException'  customize = (MethodNotAllowedException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newMethodNotAllowedException' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> MethodNotAllowedException
+newMethodNotAllowedException'  customize = (MethodNotAllowedException <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
@@ -3989,8 +3988,8 @@ instance encodeMode :: Encode Mode where encode = genericEncode options
 
 -- | Simple message object.
 newtype NotFoundException = NotFoundException 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeNotFoundException :: Newtype NotFoundException _
 derive instance repGenericNotFoundException :: Generic NotFoundException _
@@ -4000,12 +3999,12 @@ instance encodeNotFoundException :: Encode NotFoundException where encode = gene
 
 -- | Constructs NotFoundException from required parameters
 newNotFoundException :: NotFoundException
-newNotFoundException  = NotFoundException { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newNotFoundException  = NotFoundException { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs NotFoundException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newNotFoundException' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> NotFoundException
-newNotFoundException'  customize = (NotFoundException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newNotFoundException' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> NotFoundException
+newNotFoundException'  customize = (NotFoundException <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
@@ -4052,8 +4051,8 @@ newPutEventStreamResponse' _EventStream customize = (PutEventStreamResponse <<< 
 
 -- | Quiet Time
 newtype QuietTime = QuietTime 
-  { "End" :: NullOrUndefined (String)
-  , "Start" :: NullOrUndefined (String)
+  { "End" :: Maybe (String)
+  , "Start" :: Maybe (String)
   }
 derive instance newtypeQuietTime :: Newtype QuietTime _
 derive instance repGenericQuietTime :: Generic QuietTime _
@@ -4063,19 +4062,19 @@ instance encodeQuietTime :: Encode QuietTime where encode = genericEncode option
 
 -- | Constructs QuietTime from required parameters
 newQuietTime :: QuietTime
-newQuietTime  = QuietTime { "End": (NullOrUndefined Nothing), "Start": (NullOrUndefined Nothing) }
+newQuietTime  = QuietTime { "End": Nothing, "Start": Nothing }
 
 -- | Constructs QuietTime's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newQuietTime' :: ( { "End" :: NullOrUndefined (String) , "Start" :: NullOrUndefined (String) } -> {"End" :: NullOrUndefined (String) , "Start" :: NullOrUndefined (String) } ) -> QuietTime
-newQuietTime'  customize = (QuietTime <<< customize) { "End": (NullOrUndefined Nothing), "Start": (NullOrUndefined Nothing) }
+newQuietTime' :: ( { "End" :: Maybe (String) , "Start" :: Maybe (String) } -> {"End" :: Maybe (String) , "Start" :: Maybe (String) } ) -> QuietTime
+newQuietTime'  customize = (QuietTime <<< customize) { "End": Nothing, "Start": Nothing }
 
 
 
 -- | Define how a segment based on recency of use.
 newtype RecencyDimension = RecencyDimension 
-  { "Duration" :: NullOrUndefined (Duration)
-  , "RecencyType" :: NullOrUndefined (RecencyType)
+  { "Duration" :: Maybe (Duration)
+  , "RecencyType" :: Maybe (RecencyType)
   }
 derive instance newtypeRecencyDimension :: Newtype RecencyDimension _
 derive instance repGenericRecencyDimension :: Generic RecencyDimension _
@@ -4085,12 +4084,12 @@ instance encodeRecencyDimension :: Encode RecencyDimension where encode = generi
 
 -- | Constructs RecencyDimension from required parameters
 newRecencyDimension :: RecencyDimension
-newRecencyDimension  = RecencyDimension { "Duration": (NullOrUndefined Nothing), "RecencyType": (NullOrUndefined Nothing) }
+newRecencyDimension  = RecencyDimension { "Duration": Nothing, "RecencyType": Nothing }
 
 -- | Constructs RecencyDimension's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRecencyDimension' :: ( { "Duration" :: NullOrUndefined (Duration) , "RecencyType" :: NullOrUndefined (RecencyType) } -> {"Duration" :: NullOrUndefined (Duration) , "RecencyType" :: NullOrUndefined (RecencyType) } ) -> RecencyDimension
-newRecencyDimension'  customize = (RecencyDimension <<< customize) { "Duration": (NullOrUndefined Nothing), "RecencyType": (NullOrUndefined Nothing) }
+newRecencyDimension' :: ( { "Duration" :: Maybe (Duration) , "RecencyType" :: Maybe (RecencyType) } -> {"Duration" :: Maybe (Duration) , "RecencyType" :: Maybe (RecencyType) } ) -> RecencyDimension
+newRecencyDimension'  customize = (RecencyDimension <<< customize) { "Duration": Nothing, "RecencyType": Nothing }
 
 
 
@@ -4105,9 +4104,9 @@ instance encodeRecencyType :: Encode RecencyType where encode = genericEncode op
 
 -- | SMS Channel Request
 newtype SMSChannelRequest = SMSChannelRequest 
-  { "Enabled" :: NullOrUndefined (Boolean)
-  , "SenderId" :: NullOrUndefined (String)
-  , "ShortCode" :: NullOrUndefined (String)
+  { "Enabled" :: Maybe (Boolean)
+  , "SenderId" :: Maybe (String)
+  , "ShortCode" :: Maybe (String)
   }
 derive instance newtypeSMSChannelRequest :: Newtype SMSChannelRequest _
 derive instance repGenericSMSChannelRequest :: Generic SMSChannelRequest _
@@ -4117,29 +4116,29 @@ instance encodeSMSChannelRequest :: Encode SMSChannelRequest where encode = gene
 
 -- | Constructs SMSChannelRequest from required parameters
 newSMSChannelRequest :: SMSChannelRequest
-newSMSChannelRequest  = SMSChannelRequest { "Enabled": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing), "ShortCode": (NullOrUndefined Nothing) }
+newSMSChannelRequest  = SMSChannelRequest { "Enabled": Nothing, "SenderId": Nothing, "ShortCode": Nothing }
 
 -- | Constructs SMSChannelRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSMSChannelRequest' :: ( { "Enabled" :: NullOrUndefined (Boolean) , "SenderId" :: NullOrUndefined (String) , "ShortCode" :: NullOrUndefined (String) } -> {"Enabled" :: NullOrUndefined (Boolean) , "SenderId" :: NullOrUndefined (String) , "ShortCode" :: NullOrUndefined (String) } ) -> SMSChannelRequest
-newSMSChannelRequest'  customize = (SMSChannelRequest <<< customize) { "Enabled": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing), "ShortCode": (NullOrUndefined Nothing) }
+newSMSChannelRequest' :: ( { "Enabled" :: Maybe (Boolean) , "SenderId" :: Maybe (String) , "ShortCode" :: Maybe (String) } -> {"Enabled" :: Maybe (Boolean) , "SenderId" :: Maybe (String) , "ShortCode" :: Maybe (String) } ) -> SMSChannelRequest
+newSMSChannelRequest'  customize = (SMSChannelRequest <<< customize) { "Enabled": Nothing, "SenderId": Nothing, "ShortCode": Nothing }
 
 
 
 -- | SMS Channel Response.
 newtype SMSChannelResponse = SMSChannelResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Enabled" :: NullOrUndefined (Boolean)
-  , "HasCredential" :: NullOrUndefined (Boolean)
-  , "Id" :: NullOrUndefined (String)
-  , "IsArchived" :: NullOrUndefined (Boolean)
-  , "LastModifiedBy" :: NullOrUndefined (String)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Platform" :: NullOrUndefined (String)
-  , "SenderId" :: NullOrUndefined (String)
-  , "ShortCode" :: NullOrUndefined (String)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Enabled" :: Maybe (Boolean)
+  , "HasCredential" :: Maybe (Boolean)
+  , "Id" :: Maybe (String)
+  , "IsArchived" :: Maybe (Boolean)
+  , "LastModifiedBy" :: Maybe (String)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Platform" :: Maybe (String)
+  , "SenderId" :: Maybe (String)
+  , "ShortCode" :: Maybe (String)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeSMSChannelResponse :: Newtype SMSChannelResponse _
 derive instance repGenericSMSChannelResponse :: Generic SMSChannelResponse _
@@ -4149,21 +4148,21 @@ instance encodeSMSChannelResponse :: Encode SMSChannelResponse where encode = ge
 
 -- | Constructs SMSChannelResponse from required parameters
 newSMSChannelResponse :: SMSChannelResponse
-newSMSChannelResponse  = SMSChannelResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing), "ShortCode": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newSMSChannelResponse  = SMSChannelResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "SenderId": Nothing, "ShortCode": Nothing, "Version": Nothing }
 
 -- | Constructs SMSChannelResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSMSChannelResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "SenderId" :: NullOrUndefined (String) , "ShortCode" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Enabled" :: NullOrUndefined (Boolean) , "HasCredential" :: NullOrUndefined (Boolean) , "Id" :: NullOrUndefined (String) , "IsArchived" :: NullOrUndefined (Boolean) , "LastModifiedBy" :: NullOrUndefined (String) , "LastModifiedDate" :: NullOrUndefined (String) , "Platform" :: NullOrUndefined (String) , "SenderId" :: NullOrUndefined (String) , "ShortCode" :: NullOrUndefined (String) , "Version" :: NullOrUndefined (Int) } ) -> SMSChannelResponse
-newSMSChannelResponse'  customize = (SMSChannelResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Enabled": (NullOrUndefined Nothing), "HasCredential": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "IsArchived": (NullOrUndefined Nothing), "LastModifiedBy": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing), "ShortCode": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newSMSChannelResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "SenderId" :: Maybe (String) , "ShortCode" :: Maybe (String) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Enabled" :: Maybe (Boolean) , "HasCredential" :: Maybe (Boolean) , "Id" :: Maybe (String) , "IsArchived" :: Maybe (Boolean) , "LastModifiedBy" :: Maybe (String) , "LastModifiedDate" :: Maybe (String) , "Platform" :: Maybe (String) , "SenderId" :: Maybe (String) , "ShortCode" :: Maybe (String) , "Version" :: Maybe (Int) } ) -> SMSChannelResponse
+newSMSChannelResponse'  customize = (SMSChannelResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "Enabled": Nothing, "HasCredential": Nothing, "Id": Nothing, "IsArchived": Nothing, "LastModifiedBy": Nothing, "LastModifiedDate": Nothing, "Platform": Nothing, "SenderId": Nothing, "ShortCode": Nothing, "Version": Nothing }
 
 
 
 -- | SMS Message.
 newtype SMSMessage = SMSMessage 
-  { "Body" :: NullOrUndefined (String)
-  , "MessageType" :: NullOrUndefined (MessageType)
-  , "SenderId" :: NullOrUndefined (String)
-  , "Substitutions" :: NullOrUndefined (MapOfListOf__string)
+  { "Body" :: Maybe (String)
+  , "MessageType" :: Maybe (MessageType)
+  , "SenderId" :: Maybe (String)
+  , "Substitutions" :: Maybe (MapOfListOf__string)
   }
 derive instance newtypeSMSMessage :: Newtype SMSMessage _
 derive instance repGenericSMSMessage :: Generic SMSMessage _
@@ -4173,23 +4172,23 @@ instance encodeSMSMessage :: Encode SMSMessage where encode = genericEncode opti
 
 -- | Constructs SMSMessage from required parameters
 newSMSMessage :: SMSMessage
-newSMSMessage  = SMSMessage { "Body": (NullOrUndefined Nothing), "MessageType": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing) }
+newSMSMessage  = SMSMessage { "Body": Nothing, "MessageType": Nothing, "SenderId": Nothing, "Substitutions": Nothing }
 
 -- | Constructs SMSMessage's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSMSMessage' :: ( { "Body" :: NullOrUndefined (String) , "MessageType" :: NullOrUndefined (MessageType) , "SenderId" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) } -> {"Body" :: NullOrUndefined (String) , "MessageType" :: NullOrUndefined (MessageType) , "SenderId" :: NullOrUndefined (String) , "Substitutions" :: NullOrUndefined (MapOfListOf__string) } ) -> SMSMessage
-newSMSMessage'  customize = (SMSMessage <<< customize) { "Body": (NullOrUndefined Nothing), "MessageType": (NullOrUndefined Nothing), "SenderId": (NullOrUndefined Nothing), "Substitutions": (NullOrUndefined Nothing) }
+newSMSMessage' :: ( { "Body" :: Maybe (String) , "MessageType" :: Maybe (MessageType) , "SenderId" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) } -> {"Body" :: Maybe (String) , "MessageType" :: Maybe (MessageType) , "SenderId" :: Maybe (String) , "Substitutions" :: Maybe (MapOfListOf__string) } ) -> SMSMessage
+newSMSMessage'  customize = (SMSMessage <<< customize) { "Body": Nothing, "MessageType": Nothing, "SenderId": Nothing, "Substitutions": Nothing }
 
 
 
 -- | Shcedule that defines when a campaign is run.
 newtype Schedule = Schedule 
-  { "EndTime" :: NullOrUndefined (String)
-  , "Frequency" :: NullOrUndefined (Frequency)
-  , "IsLocalTime" :: NullOrUndefined (Boolean)
-  , "QuietTime" :: NullOrUndefined (QuietTime)
-  , "StartTime" :: NullOrUndefined (String)
-  , "Timezone" :: NullOrUndefined (String)
+  { "EndTime" :: Maybe (String)
+  , "Frequency" :: Maybe (Frequency)
+  , "IsLocalTime" :: Maybe (Boolean)
+  , "QuietTime" :: Maybe (QuietTime)
+  , "StartTime" :: Maybe (String)
+  , "Timezone" :: Maybe (String)
   }
 derive instance newtypeSchedule :: Newtype Schedule _
 derive instance repGenericSchedule :: Generic Schedule _
@@ -4199,18 +4198,18 @@ instance encodeSchedule :: Encode Schedule where encode = genericEncode options
 
 -- | Constructs Schedule from required parameters
 newSchedule :: Schedule
-newSchedule  = Schedule { "EndTime": (NullOrUndefined Nothing), "Frequency": (NullOrUndefined Nothing), "IsLocalTime": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing) }
+newSchedule  = Schedule { "EndTime": Nothing, "Frequency": Nothing, "IsLocalTime": Nothing, "QuietTime": Nothing, "StartTime": Nothing, "Timezone": Nothing }
 
 -- | Constructs Schedule's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSchedule' :: ( { "EndTime" :: NullOrUndefined (String) , "Frequency" :: NullOrUndefined (Frequency) , "IsLocalTime" :: NullOrUndefined (Boolean) , "QuietTime" :: NullOrUndefined (QuietTime) , "StartTime" :: NullOrUndefined (String) , "Timezone" :: NullOrUndefined (String) } -> {"EndTime" :: NullOrUndefined (String) , "Frequency" :: NullOrUndefined (Frequency) , "IsLocalTime" :: NullOrUndefined (Boolean) , "QuietTime" :: NullOrUndefined (QuietTime) , "StartTime" :: NullOrUndefined (String) , "Timezone" :: NullOrUndefined (String) } ) -> Schedule
-newSchedule'  customize = (Schedule <<< customize) { "EndTime": (NullOrUndefined Nothing), "Frequency": (NullOrUndefined Nothing), "IsLocalTime": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing), "StartTime": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing) }
+newSchedule' :: ( { "EndTime" :: Maybe (String) , "Frequency" :: Maybe (Frequency) , "IsLocalTime" :: Maybe (Boolean) , "QuietTime" :: Maybe (QuietTime) , "StartTime" :: Maybe (String) , "Timezone" :: Maybe (String) } -> {"EndTime" :: Maybe (String) , "Frequency" :: Maybe (Frequency) , "IsLocalTime" :: Maybe (Boolean) , "QuietTime" :: Maybe (QuietTime) , "StartTime" :: Maybe (String) , "Timezone" :: Maybe (String) } ) -> Schedule
+newSchedule'  customize = (Schedule <<< customize) { "EndTime": Nothing, "Frequency": Nothing, "IsLocalTime": Nothing, "QuietTime": Nothing, "StartTime": Nothing, "Timezone": Nothing }
 
 
 
 -- | Segment behavior dimensions
 newtype SegmentBehaviors = SegmentBehaviors 
-  { "Recency" :: NullOrUndefined (RecencyDimension)
+  { "Recency" :: Maybe (RecencyDimension)
   }
 derive instance newtypeSegmentBehaviors :: Newtype SegmentBehaviors _
 derive instance repGenericSegmentBehaviors :: Generic SegmentBehaviors _
@@ -4220,23 +4219,23 @@ instance encodeSegmentBehaviors :: Encode SegmentBehaviors where encode = generi
 
 -- | Constructs SegmentBehaviors from required parameters
 newSegmentBehaviors :: SegmentBehaviors
-newSegmentBehaviors  = SegmentBehaviors { "Recency": (NullOrUndefined Nothing) }
+newSegmentBehaviors  = SegmentBehaviors { "Recency": Nothing }
 
 -- | Constructs SegmentBehaviors's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentBehaviors' :: ( { "Recency" :: NullOrUndefined (RecencyDimension) } -> {"Recency" :: NullOrUndefined (RecencyDimension) } ) -> SegmentBehaviors
-newSegmentBehaviors'  customize = (SegmentBehaviors <<< customize) { "Recency": (NullOrUndefined Nothing) }
+newSegmentBehaviors' :: ( { "Recency" :: Maybe (RecencyDimension) } -> {"Recency" :: Maybe (RecencyDimension) } ) -> SegmentBehaviors
+newSegmentBehaviors'  customize = (SegmentBehaviors <<< customize) { "Recency": Nothing }
 
 
 
 -- | Segment demographic dimensions
 newtype SegmentDemographics = SegmentDemographics 
-  { "AppVersion" :: NullOrUndefined (SetDimension)
-  , "Channel" :: NullOrUndefined (SetDimension)
-  , "DeviceType" :: NullOrUndefined (SetDimension)
-  , "Make" :: NullOrUndefined (SetDimension)
-  , "Model" :: NullOrUndefined (SetDimension)
-  , "Platform" :: NullOrUndefined (SetDimension)
+  { "AppVersion" :: Maybe (SetDimension)
+  , "Channel" :: Maybe (SetDimension)
+  , "DeviceType" :: Maybe (SetDimension)
+  , "Make" :: Maybe (SetDimension)
+  , "Model" :: Maybe (SetDimension)
+  , "Platform" :: Maybe (SetDimension)
   }
 derive instance newtypeSegmentDemographics :: Newtype SegmentDemographics _
 derive instance repGenericSegmentDemographics :: Generic SegmentDemographics _
@@ -4246,22 +4245,22 @@ instance encodeSegmentDemographics :: Encode SegmentDemographics where encode = 
 
 -- | Constructs SegmentDemographics from required parameters
 newSegmentDemographics :: SegmentDemographics
-newSegmentDemographics  = SegmentDemographics { "AppVersion": (NullOrUndefined Nothing), "Channel": (NullOrUndefined Nothing), "DeviceType": (NullOrUndefined Nothing), "Make": (NullOrUndefined Nothing), "Model": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing) }
+newSegmentDemographics  = SegmentDemographics { "AppVersion": Nothing, "Channel": Nothing, "DeviceType": Nothing, "Make": Nothing, "Model": Nothing, "Platform": Nothing }
 
 -- | Constructs SegmentDemographics's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentDemographics' :: ( { "AppVersion" :: NullOrUndefined (SetDimension) , "Channel" :: NullOrUndefined (SetDimension) , "DeviceType" :: NullOrUndefined (SetDimension) , "Make" :: NullOrUndefined (SetDimension) , "Model" :: NullOrUndefined (SetDimension) , "Platform" :: NullOrUndefined (SetDimension) } -> {"AppVersion" :: NullOrUndefined (SetDimension) , "Channel" :: NullOrUndefined (SetDimension) , "DeviceType" :: NullOrUndefined (SetDimension) , "Make" :: NullOrUndefined (SetDimension) , "Model" :: NullOrUndefined (SetDimension) , "Platform" :: NullOrUndefined (SetDimension) } ) -> SegmentDemographics
-newSegmentDemographics'  customize = (SegmentDemographics <<< customize) { "AppVersion": (NullOrUndefined Nothing), "Channel": (NullOrUndefined Nothing), "DeviceType": (NullOrUndefined Nothing), "Make": (NullOrUndefined Nothing), "Model": (NullOrUndefined Nothing), "Platform": (NullOrUndefined Nothing) }
+newSegmentDemographics' :: ( { "AppVersion" :: Maybe (SetDimension) , "Channel" :: Maybe (SetDimension) , "DeviceType" :: Maybe (SetDimension) , "Make" :: Maybe (SetDimension) , "Model" :: Maybe (SetDimension) , "Platform" :: Maybe (SetDimension) } -> {"AppVersion" :: Maybe (SetDimension) , "Channel" :: Maybe (SetDimension) , "DeviceType" :: Maybe (SetDimension) , "Make" :: Maybe (SetDimension) , "Model" :: Maybe (SetDimension) , "Platform" :: Maybe (SetDimension) } ) -> SegmentDemographics
+newSegmentDemographics'  customize = (SegmentDemographics <<< customize) { "AppVersion": Nothing, "Channel": Nothing, "DeviceType": Nothing, "Make": Nothing, "Model": Nothing, "Platform": Nothing }
 
 
 
 -- | Segment dimensions
 newtype SegmentDimensions = SegmentDimensions 
-  { "Attributes" :: NullOrUndefined (MapOfAttributeDimension)
-  , "Behavior" :: NullOrUndefined (SegmentBehaviors)
-  , "Demographic" :: NullOrUndefined (SegmentDemographics)
-  , "Location" :: NullOrUndefined (SegmentLocation)
-  , "UserAttributes" :: NullOrUndefined (MapOfAttributeDimension)
+  { "Attributes" :: Maybe (MapOfAttributeDimension)
+  , "Behavior" :: Maybe (SegmentBehaviors)
+  , "Demographic" :: Maybe (SegmentDemographics)
+  , "Location" :: Maybe (SegmentLocation)
+  , "UserAttributes" :: Maybe (MapOfAttributeDimension)
   }
 derive instance newtypeSegmentDimensions :: Newtype SegmentDimensions _
 derive instance repGenericSegmentDimensions :: Generic SegmentDimensions _
@@ -4271,23 +4270,23 @@ instance encodeSegmentDimensions :: Encode SegmentDimensions where encode = gene
 
 -- | Constructs SegmentDimensions from required parameters
 newSegmentDimensions :: SegmentDimensions
-newSegmentDimensions  = SegmentDimensions { "Attributes": (NullOrUndefined Nothing), "Behavior": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "UserAttributes": (NullOrUndefined Nothing) }
+newSegmentDimensions  = SegmentDimensions { "Attributes": Nothing, "Behavior": Nothing, "Demographic": Nothing, "Location": Nothing, "UserAttributes": Nothing }
 
 -- | Constructs SegmentDimensions's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentDimensions' :: ( { "Attributes" :: NullOrUndefined (MapOfAttributeDimension) , "Behavior" :: NullOrUndefined (SegmentBehaviors) , "Demographic" :: NullOrUndefined (SegmentDemographics) , "Location" :: NullOrUndefined (SegmentLocation) , "UserAttributes" :: NullOrUndefined (MapOfAttributeDimension) } -> {"Attributes" :: NullOrUndefined (MapOfAttributeDimension) , "Behavior" :: NullOrUndefined (SegmentBehaviors) , "Demographic" :: NullOrUndefined (SegmentDemographics) , "Location" :: NullOrUndefined (SegmentLocation) , "UserAttributes" :: NullOrUndefined (MapOfAttributeDimension) } ) -> SegmentDimensions
-newSegmentDimensions'  customize = (SegmentDimensions <<< customize) { "Attributes": (NullOrUndefined Nothing), "Behavior": (NullOrUndefined Nothing), "Demographic": (NullOrUndefined Nothing), "Location": (NullOrUndefined Nothing), "UserAttributes": (NullOrUndefined Nothing) }
+newSegmentDimensions' :: ( { "Attributes" :: Maybe (MapOfAttributeDimension) , "Behavior" :: Maybe (SegmentBehaviors) , "Demographic" :: Maybe (SegmentDemographics) , "Location" :: Maybe (SegmentLocation) , "UserAttributes" :: Maybe (MapOfAttributeDimension) } -> {"Attributes" :: Maybe (MapOfAttributeDimension) , "Behavior" :: Maybe (SegmentBehaviors) , "Demographic" :: Maybe (SegmentDemographics) , "Location" :: Maybe (SegmentLocation) , "UserAttributes" :: Maybe (MapOfAttributeDimension) } ) -> SegmentDimensions
+newSegmentDimensions'  customize = (SegmentDimensions <<< customize) { "Attributes": Nothing, "Behavior": Nothing, "Demographic": Nothing, "Location": Nothing, "UserAttributes": Nothing }
 
 
 
 -- | Segment import definition.
 newtype SegmentImportResource = SegmentImportResource 
-  { "ChannelCounts" :: NullOrUndefined (MapOf__integer)
-  , "ExternalId" :: NullOrUndefined (String)
-  , "Format" :: NullOrUndefined (Format)
-  , "RoleArn" :: NullOrUndefined (String)
-  , "S3Url" :: NullOrUndefined (String)
-  , "Size" :: NullOrUndefined (Int)
+  { "ChannelCounts" :: Maybe (MapOf__integer)
+  , "ExternalId" :: Maybe (String)
+  , "Format" :: Maybe (Format)
+  , "RoleArn" :: Maybe (String)
+  , "S3Url" :: Maybe (String)
+  , "Size" :: Maybe (Int)
   }
 derive instance newtypeSegmentImportResource :: Newtype SegmentImportResource _
 derive instance repGenericSegmentImportResource :: Generic SegmentImportResource _
@@ -4297,18 +4296,18 @@ instance encodeSegmentImportResource :: Encode SegmentImportResource where encod
 
 -- | Constructs SegmentImportResource from required parameters
 newSegmentImportResource :: SegmentImportResource
-newSegmentImportResource  = SegmentImportResource { "ChannelCounts": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "Format": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "S3Url": (NullOrUndefined Nothing), "Size": (NullOrUndefined Nothing) }
+newSegmentImportResource  = SegmentImportResource { "ChannelCounts": Nothing, "ExternalId": Nothing, "Format": Nothing, "RoleArn": Nothing, "S3Url": Nothing, "Size": Nothing }
 
 -- | Constructs SegmentImportResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentImportResource' :: ( { "ChannelCounts" :: NullOrUndefined (MapOf__integer) , "ExternalId" :: NullOrUndefined (String) , "Format" :: NullOrUndefined (Format) , "RoleArn" :: NullOrUndefined (String) , "S3Url" :: NullOrUndefined (String) , "Size" :: NullOrUndefined (Int) } -> {"ChannelCounts" :: NullOrUndefined (MapOf__integer) , "ExternalId" :: NullOrUndefined (String) , "Format" :: NullOrUndefined (Format) , "RoleArn" :: NullOrUndefined (String) , "S3Url" :: NullOrUndefined (String) , "Size" :: NullOrUndefined (Int) } ) -> SegmentImportResource
-newSegmentImportResource'  customize = (SegmentImportResource <<< customize) { "ChannelCounts": (NullOrUndefined Nothing), "ExternalId": (NullOrUndefined Nothing), "Format": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing), "S3Url": (NullOrUndefined Nothing), "Size": (NullOrUndefined Nothing) }
+newSegmentImportResource' :: ( { "ChannelCounts" :: Maybe (MapOf__integer) , "ExternalId" :: Maybe (String) , "Format" :: Maybe (Format) , "RoleArn" :: Maybe (String) , "S3Url" :: Maybe (String) , "Size" :: Maybe (Int) } -> {"ChannelCounts" :: Maybe (MapOf__integer) , "ExternalId" :: Maybe (String) , "Format" :: Maybe (Format) , "RoleArn" :: Maybe (String) , "S3Url" :: Maybe (String) , "Size" :: Maybe (Int) } ) -> SegmentImportResource
+newSegmentImportResource'  customize = (SegmentImportResource <<< customize) { "ChannelCounts": Nothing, "ExternalId": Nothing, "Format": Nothing, "RoleArn": Nothing, "S3Url": Nothing, "Size": Nothing }
 
 
 
 -- | Segment location dimensions
 newtype SegmentLocation = SegmentLocation 
-  { "Country" :: NullOrUndefined (SetDimension)
+  { "Country" :: Maybe (SetDimension)
   }
 derive instance newtypeSegmentLocation :: Newtype SegmentLocation _
 derive instance repGenericSegmentLocation :: Generic SegmentLocation _
@@ -4318,26 +4317,26 @@ instance encodeSegmentLocation :: Encode SegmentLocation where encode = genericE
 
 -- | Constructs SegmentLocation from required parameters
 newSegmentLocation :: SegmentLocation
-newSegmentLocation  = SegmentLocation { "Country": (NullOrUndefined Nothing) }
+newSegmentLocation  = SegmentLocation { "Country": Nothing }
 
 -- | Constructs SegmentLocation's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentLocation' :: ( { "Country" :: NullOrUndefined (SetDimension) } -> {"Country" :: NullOrUndefined (SetDimension) } ) -> SegmentLocation
-newSegmentLocation'  customize = (SegmentLocation <<< customize) { "Country": (NullOrUndefined Nothing) }
+newSegmentLocation' :: ( { "Country" :: Maybe (SetDimension) } -> {"Country" :: Maybe (SetDimension) } ) -> SegmentLocation
+newSegmentLocation'  customize = (SegmentLocation <<< customize) { "Country": Nothing }
 
 
 
 -- | Segment definition.
 newtype SegmentResponse = SegmentResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "CreationDate" :: NullOrUndefined (String)
-  , "Dimensions" :: NullOrUndefined (SegmentDimensions)
-  , "Id" :: NullOrUndefined (String)
-  , "ImportDefinition" :: NullOrUndefined (SegmentImportResource)
-  , "LastModifiedDate" :: NullOrUndefined (String)
-  , "Name" :: NullOrUndefined (String)
-  , "SegmentType" :: NullOrUndefined (SegmentType)
-  , "Version" :: NullOrUndefined (Int)
+  { "ApplicationId" :: Maybe (String)
+  , "CreationDate" :: Maybe (String)
+  , "Dimensions" :: Maybe (SegmentDimensions)
+  , "Id" :: Maybe (String)
+  , "ImportDefinition" :: Maybe (SegmentImportResource)
+  , "LastModifiedDate" :: Maybe (String)
+  , "Name" :: Maybe (String)
+  , "SegmentType" :: Maybe (SegmentType)
+  , "Version" :: Maybe (Int)
   }
 derive instance newtypeSegmentResponse :: Newtype SegmentResponse _
 derive instance repGenericSegmentResponse :: Generic SegmentResponse _
@@ -4347,12 +4346,12 @@ instance encodeSegmentResponse :: Encode SegmentResponse where encode = genericE
 
 -- | Constructs SegmentResponse from required parameters
 newSegmentResponse :: SegmentResponse
-newSegmentResponse  = SegmentResponse { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Dimensions": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "ImportDefinition": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "SegmentType": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newSegmentResponse  = SegmentResponse { "ApplicationId": Nothing, "CreationDate": Nothing, "Dimensions": Nothing, "Id": Nothing, "ImportDefinition": Nothing, "LastModifiedDate": Nothing, "Name": Nothing, "SegmentType": Nothing, "Version": Nothing }
 
 -- | Constructs SegmentResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Dimensions" :: NullOrUndefined (SegmentDimensions) , "Id" :: NullOrUndefined (String) , "ImportDefinition" :: NullOrUndefined (SegmentImportResource) , "LastModifiedDate" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) , "SegmentType" :: NullOrUndefined (SegmentType) , "Version" :: NullOrUndefined (Int) } -> {"ApplicationId" :: NullOrUndefined (String) , "CreationDate" :: NullOrUndefined (String) , "Dimensions" :: NullOrUndefined (SegmentDimensions) , "Id" :: NullOrUndefined (String) , "ImportDefinition" :: NullOrUndefined (SegmentImportResource) , "LastModifiedDate" :: NullOrUndefined (String) , "Name" :: NullOrUndefined (String) , "SegmentType" :: NullOrUndefined (SegmentType) , "Version" :: NullOrUndefined (Int) } ) -> SegmentResponse
-newSegmentResponse'  customize = (SegmentResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "CreationDate": (NullOrUndefined Nothing), "Dimensions": (NullOrUndefined Nothing), "Id": (NullOrUndefined Nothing), "ImportDefinition": (NullOrUndefined Nothing), "LastModifiedDate": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "SegmentType": (NullOrUndefined Nothing), "Version": (NullOrUndefined Nothing) }
+newSegmentResponse' :: ( { "ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Dimensions" :: Maybe (SegmentDimensions) , "Id" :: Maybe (String) , "ImportDefinition" :: Maybe (SegmentImportResource) , "LastModifiedDate" :: Maybe (String) , "Name" :: Maybe (String) , "SegmentType" :: Maybe (SegmentType) , "Version" :: Maybe (Int) } -> {"ApplicationId" :: Maybe (String) , "CreationDate" :: Maybe (String) , "Dimensions" :: Maybe (SegmentDimensions) , "Id" :: Maybe (String) , "ImportDefinition" :: Maybe (SegmentImportResource) , "LastModifiedDate" :: Maybe (String) , "Name" :: Maybe (String) , "SegmentType" :: Maybe (SegmentType) , "Version" :: Maybe (Int) } ) -> SegmentResponse
+newSegmentResponse'  customize = (SegmentResponse <<< customize) { "ApplicationId": Nothing, "CreationDate": Nothing, "Dimensions": Nothing, "Id": Nothing, "ImportDefinition": Nothing, "LastModifiedDate": Nothing, "Name": Nothing, "SegmentType": Nothing, "Version": Nothing }
 
 
 
@@ -4367,8 +4366,8 @@ instance encodeSegmentType :: Encode SegmentType where encode = genericEncode op
 
 -- | Segments in your account.
 newtype SegmentsResponse = SegmentsResponse 
-  { "Item" :: NullOrUndefined (ListOfSegmentResponse)
-  , "NextToken" :: NullOrUndefined (String)
+  { "Item" :: Maybe (ListOfSegmentResponse)
+  , "NextToken" :: Maybe (String)
   }
 derive instance newtypeSegmentsResponse :: Newtype SegmentsResponse _
 derive instance repGenericSegmentsResponse :: Generic SegmentsResponse _
@@ -4378,12 +4377,12 @@ instance encodeSegmentsResponse :: Encode SegmentsResponse where encode = generi
 
 -- | Constructs SegmentsResponse from required parameters
 newSegmentsResponse :: SegmentsResponse
-newSegmentsResponse  = SegmentsResponse { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newSegmentsResponse  = SegmentsResponse { "Item": Nothing, "NextToken": Nothing }
 
 -- | Constructs SegmentsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSegmentsResponse' :: ( { "Item" :: NullOrUndefined (ListOfSegmentResponse) , "NextToken" :: NullOrUndefined (String) } -> {"Item" :: NullOrUndefined (ListOfSegmentResponse) , "NextToken" :: NullOrUndefined (String) } ) -> SegmentsResponse
-newSegmentsResponse'  customize = (SegmentsResponse <<< customize) { "Item": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newSegmentsResponse' :: ( { "Item" :: Maybe (ListOfSegmentResponse) , "NextToken" :: Maybe (String) } -> {"Item" :: Maybe (ListOfSegmentResponse) , "NextToken" :: Maybe (String) } ) -> SegmentsResponse
+newSegmentsResponse'  customize = (SegmentsResponse <<< customize) { "Item": Nothing, "NextToken": Nothing }
 
 
 
@@ -4430,9 +4429,9 @@ newSendMessagesResponse' _MessageResponse customize = (SendMessagesResponse <<< 
 
 -- | Send message request.
 newtype SendUsersMessageRequest = SendUsersMessageRequest 
-  { "Context" :: NullOrUndefined (MapOf__string)
-  , "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration)
-  , "Users" :: NullOrUndefined (MapOfEndpointSendConfiguration)
+  { "Context" :: Maybe (MapOf__string)
+  , "MessageConfiguration" :: Maybe (DirectMessageConfiguration)
+  , "Users" :: Maybe (MapOfEndpointSendConfiguration)
   }
 derive instance newtypeSendUsersMessageRequest :: Newtype SendUsersMessageRequest _
 derive instance repGenericSendUsersMessageRequest :: Generic SendUsersMessageRequest _
@@ -4442,20 +4441,20 @@ instance encodeSendUsersMessageRequest :: Encode SendUsersMessageRequest where e
 
 -- | Constructs SendUsersMessageRequest from required parameters
 newSendUsersMessageRequest :: SendUsersMessageRequest
-newSendUsersMessageRequest  = SendUsersMessageRequest { "Context": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Users": (NullOrUndefined Nothing) }
+newSendUsersMessageRequest  = SendUsersMessageRequest { "Context": Nothing, "MessageConfiguration": Nothing, "Users": Nothing }
 
 -- | Constructs SendUsersMessageRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSendUsersMessageRequest' :: ( { "Context" :: NullOrUndefined (MapOf__string) , "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) , "Users" :: NullOrUndefined (MapOfEndpointSendConfiguration) } -> {"Context" :: NullOrUndefined (MapOf__string) , "MessageConfiguration" :: NullOrUndefined (DirectMessageConfiguration) , "Users" :: NullOrUndefined (MapOfEndpointSendConfiguration) } ) -> SendUsersMessageRequest
-newSendUsersMessageRequest'  customize = (SendUsersMessageRequest <<< customize) { "Context": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Users": (NullOrUndefined Nothing) }
+newSendUsersMessageRequest' :: ( { "Context" :: Maybe (MapOf__string) , "MessageConfiguration" :: Maybe (DirectMessageConfiguration) , "Users" :: Maybe (MapOfEndpointSendConfiguration) } -> {"Context" :: Maybe (MapOf__string) , "MessageConfiguration" :: Maybe (DirectMessageConfiguration) , "Users" :: Maybe (MapOfEndpointSendConfiguration) } ) -> SendUsersMessageRequest
+newSendUsersMessageRequest'  customize = (SendUsersMessageRequest <<< customize) { "Context": Nothing, "MessageConfiguration": Nothing, "Users": Nothing }
 
 
 
 -- | User send message response.
 newtype SendUsersMessageResponse = SendUsersMessageResponse 
-  { "ApplicationId" :: NullOrUndefined (String)
-  , "RequestId" :: NullOrUndefined (String)
-  , "Result" :: NullOrUndefined (MapOfMapOfEndpointMessageResult)
+  { "ApplicationId" :: Maybe (String)
+  , "RequestId" :: Maybe (String)
+  , "Result" :: Maybe (MapOfMapOfEndpointMessageResult)
   }
 derive instance newtypeSendUsersMessageResponse :: Newtype SendUsersMessageResponse _
 derive instance repGenericSendUsersMessageResponse :: Generic SendUsersMessageResponse _
@@ -4465,12 +4464,12 @@ instance encodeSendUsersMessageResponse :: Encode SendUsersMessageResponse where
 
 -- | Constructs SendUsersMessageResponse from required parameters
 newSendUsersMessageResponse :: SendUsersMessageResponse
-newSendUsersMessageResponse  = SendUsersMessageResponse { "ApplicationId": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Result": (NullOrUndefined Nothing) }
+newSendUsersMessageResponse  = SendUsersMessageResponse { "ApplicationId": Nothing, "RequestId": Nothing, "Result": Nothing }
 
 -- | Constructs SendUsersMessageResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSendUsersMessageResponse' :: ( { "ApplicationId" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "Result" :: NullOrUndefined (MapOfMapOfEndpointMessageResult) } -> {"ApplicationId" :: NullOrUndefined (String) , "RequestId" :: NullOrUndefined (String) , "Result" :: NullOrUndefined (MapOfMapOfEndpointMessageResult) } ) -> SendUsersMessageResponse
-newSendUsersMessageResponse'  customize = (SendUsersMessageResponse <<< customize) { "ApplicationId": (NullOrUndefined Nothing), "RequestId": (NullOrUndefined Nothing), "Result": (NullOrUndefined Nothing) }
+newSendUsersMessageResponse' :: ( { "ApplicationId" :: Maybe (String) , "RequestId" :: Maybe (String) , "Result" :: Maybe (MapOfMapOfEndpointMessageResult) } -> {"ApplicationId" :: Maybe (String) , "RequestId" :: Maybe (String) , "Result" :: Maybe (MapOfMapOfEndpointMessageResult) } ) -> SendUsersMessageResponse
+newSendUsersMessageResponse'  customize = (SendUsersMessageResponse <<< customize) { "ApplicationId": Nothing, "RequestId": Nothing, "Result": Nothing }
 
 
 
@@ -4517,8 +4516,8 @@ newSendUsersMessagesResponse' _SendUsersMessageResponse customize = (SendUsersMe
 
 -- | Dimension specification of a segment.
 newtype SetDimension = SetDimension 
-  { "DimensionType" :: NullOrUndefined (DimensionType)
-  , "Values" :: NullOrUndefined (ListOf__string)
+  { "DimensionType" :: Maybe (DimensionType)
+  , "Values" :: Maybe (ListOf__string)
   }
 derive instance newtypeSetDimension :: Newtype SetDimension _
 derive instance repGenericSetDimension :: Generic SetDimension _
@@ -4528,19 +4527,19 @@ instance encodeSetDimension :: Encode SetDimension where encode = genericEncode 
 
 -- | Constructs SetDimension from required parameters
 newSetDimension :: SetDimension
-newSetDimension  = SetDimension { "DimensionType": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newSetDimension  = SetDimension { "DimensionType": Nothing, "Values": Nothing }
 
 -- | Constructs SetDimension's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSetDimension' :: ( { "DimensionType" :: NullOrUndefined (DimensionType) , "Values" :: NullOrUndefined (ListOf__string) } -> {"DimensionType" :: NullOrUndefined (DimensionType) , "Values" :: NullOrUndefined (ListOf__string) } ) -> SetDimension
-newSetDimension'  customize = (SetDimension <<< customize) { "DimensionType": (NullOrUndefined Nothing), "Values": (NullOrUndefined Nothing) }
+newSetDimension' :: ( { "DimensionType" :: Maybe (DimensionType) , "Values" :: Maybe (ListOf__string) } -> {"DimensionType" :: Maybe (DimensionType) , "Values" :: Maybe (ListOf__string) } ) -> SetDimension
+newSetDimension'  customize = (SetDimension <<< customize) { "DimensionType": Nothing, "Values": Nothing }
 
 
 
 -- | Simple message object.
 newtype TooManyRequestsException = TooManyRequestsException 
-  { "Message" :: NullOrUndefined (String)
-  , "RequestID" :: NullOrUndefined (String)
+  { "Message" :: Maybe (String)
+  , "RequestID" :: Maybe (String)
   }
 derive instance newtypeTooManyRequestsException :: Newtype TooManyRequestsException _
 derive instance repGenericTooManyRequestsException :: Generic TooManyRequestsException _
@@ -4550,24 +4549,24 @@ instance encodeTooManyRequestsException :: Encode TooManyRequestsException where
 
 -- | Constructs TooManyRequestsException from required parameters
 newTooManyRequestsException :: TooManyRequestsException
-newTooManyRequestsException  = TooManyRequestsException { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newTooManyRequestsException  = TooManyRequestsException { "Message": Nothing, "RequestID": Nothing }
 
 -- | Constructs TooManyRequestsException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTooManyRequestsException' :: ( { "Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } -> {"Message" :: NullOrUndefined (String) , "RequestID" :: NullOrUndefined (String) } ) -> TooManyRequestsException
-newTooManyRequestsException'  customize = (TooManyRequestsException <<< customize) { "Message": (NullOrUndefined Nothing), "RequestID": (NullOrUndefined Nothing) }
+newTooManyRequestsException' :: ( { "Message" :: Maybe (String) , "RequestID" :: Maybe (String) } -> {"Message" :: Maybe (String) , "RequestID" :: Maybe (String) } ) -> TooManyRequestsException
+newTooManyRequestsException'  customize = (TooManyRequestsException <<< customize) { "Message": Nothing, "RequestID": Nothing }
 
 
 
 -- | Treatment resource
 newtype TreatmentResource = TreatmentResource 
-  { "Id" :: NullOrUndefined (String)
-  , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration)
-  , "Schedule" :: NullOrUndefined (Schedule)
-  , "SizePercent" :: NullOrUndefined (Int)
-  , "State" :: NullOrUndefined (CampaignState)
-  , "TreatmentDescription" :: NullOrUndefined (String)
-  , "TreatmentName" :: NullOrUndefined (String)
+  { "Id" :: Maybe (String)
+  , "MessageConfiguration" :: Maybe (MessageConfiguration)
+  , "Schedule" :: Maybe (Schedule)
+  , "SizePercent" :: Maybe (Int)
+  , "State" :: Maybe (CampaignState)
+  , "TreatmentDescription" :: Maybe (String)
+  , "TreatmentName" :: Maybe (String)
   }
 derive instance newtypeTreatmentResource :: Newtype TreatmentResource _
 derive instance repGenericTreatmentResource :: Generic TreatmentResource _
@@ -4577,12 +4576,12 @@ instance encodeTreatmentResource :: Encode TreatmentResource where encode = gene
 
 -- | Constructs TreatmentResource from required parameters
 newTreatmentResource :: TreatmentResource
-newTreatmentResource  = TreatmentResource { "Id": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SizePercent": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newTreatmentResource  = TreatmentResource { "Id": Nothing, "MessageConfiguration": Nothing, "Schedule": Nothing, "SizePercent": Nothing, "State": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing }
 
 -- | Constructs TreatmentResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTreatmentResource' :: ( { "Id" :: NullOrUndefined (String) , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Schedule" :: NullOrUndefined (Schedule) , "SizePercent" :: NullOrUndefined (Int) , "State" :: NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) } -> {"Id" :: NullOrUndefined (String) , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Schedule" :: NullOrUndefined (Schedule) , "SizePercent" :: NullOrUndefined (Int) , "State" :: NullOrUndefined (CampaignState) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) } ) -> TreatmentResource
-newTreatmentResource'  customize = (TreatmentResource <<< customize) { "Id": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SizePercent": (NullOrUndefined Nothing), "State": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newTreatmentResource' :: ( { "Id" :: Maybe (String) , "MessageConfiguration" :: Maybe (MessageConfiguration) , "Schedule" :: Maybe (Schedule) , "SizePercent" :: Maybe (Int) , "State" :: Maybe (CampaignState) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) } -> {"Id" :: Maybe (String) , "MessageConfiguration" :: Maybe (MessageConfiguration) , "Schedule" :: Maybe (Schedule) , "SizePercent" :: Maybe (Int) , "State" :: Maybe (CampaignState) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) } ) -> TreatmentResource
+newTreatmentResource'  customize = (TreatmentResource <<< customize) { "Id": Nothing, "MessageConfiguration": Nothing, "Schedule": Nothing, "SizePercent": Nothing, "State": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing }
 
 
 
@@ -5165,9 +5164,9 @@ newUpdateSmsChannelResponse' _SMSChannelResponse customize = (UpdateSmsChannelRe
 
 -- | Creating application setting request
 newtype WriteApplicationSettingsRequest = WriteApplicationSettingsRequest 
-  { "CampaignHook" :: NullOrUndefined (CampaignHook)
-  , "Limits" :: NullOrUndefined (CampaignLimits)
-  , "QuietTime" :: NullOrUndefined (QuietTime)
+  { "CampaignHook" :: Maybe (CampaignHook)
+  , "Limits" :: Maybe (CampaignLimits)
+  , "QuietTime" :: Maybe (QuietTime)
   }
 derive instance newtypeWriteApplicationSettingsRequest :: Newtype WriteApplicationSettingsRequest _
 derive instance repGenericWriteApplicationSettingsRequest :: Generic WriteApplicationSettingsRequest _
@@ -5177,30 +5176,30 @@ instance encodeWriteApplicationSettingsRequest :: Encode WriteApplicationSetting
 
 -- | Constructs WriteApplicationSettingsRequest from required parameters
 newWriteApplicationSettingsRequest :: WriteApplicationSettingsRequest
-newWriteApplicationSettingsRequest  = WriteApplicationSettingsRequest { "CampaignHook": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newWriteApplicationSettingsRequest  = WriteApplicationSettingsRequest { "CampaignHook": Nothing, "Limits": Nothing, "QuietTime": Nothing }
 
 -- | Constructs WriteApplicationSettingsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteApplicationSettingsRequest' :: ( { "CampaignHook" :: NullOrUndefined (CampaignHook) , "Limits" :: NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined (QuietTime) } -> {"CampaignHook" :: NullOrUndefined (CampaignHook) , "Limits" :: NullOrUndefined (CampaignLimits) , "QuietTime" :: NullOrUndefined (QuietTime) } ) -> WriteApplicationSettingsRequest
-newWriteApplicationSettingsRequest'  customize = (WriteApplicationSettingsRequest <<< customize) { "CampaignHook": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "QuietTime": (NullOrUndefined Nothing) }
+newWriteApplicationSettingsRequest' :: ( { "CampaignHook" :: Maybe (CampaignHook) , "Limits" :: Maybe (CampaignLimits) , "QuietTime" :: Maybe (QuietTime) } -> {"CampaignHook" :: Maybe (CampaignHook) , "Limits" :: Maybe (CampaignLimits) , "QuietTime" :: Maybe (QuietTime) } ) -> WriteApplicationSettingsRequest
+newWriteApplicationSettingsRequest'  customize = (WriteApplicationSettingsRequest <<< customize) { "CampaignHook": Nothing, "Limits": Nothing, "QuietTime": Nothing }
 
 
 
 -- | Used to create a campaign.
 newtype WriteCampaignRequest = WriteCampaignRequest 
-  { "AdditionalTreatments" :: NullOrUndefined (ListOfWriteTreatmentResource)
-  , "Description" :: NullOrUndefined (String)
-  , "HoldoutPercent" :: NullOrUndefined (Int)
-  , "Hook" :: NullOrUndefined (CampaignHook)
-  , "IsPaused" :: NullOrUndefined (Boolean)
-  , "Limits" :: NullOrUndefined (CampaignLimits)
-  , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration)
-  , "Name" :: NullOrUndefined (String)
-  , "Schedule" :: NullOrUndefined (Schedule)
-  , "SegmentId" :: NullOrUndefined (String)
-  , "SegmentVersion" :: NullOrUndefined (Int)
-  , "TreatmentDescription" :: NullOrUndefined (String)
-  , "TreatmentName" :: NullOrUndefined (String)
+  { "AdditionalTreatments" :: Maybe (ListOfWriteTreatmentResource)
+  , "Description" :: Maybe (String)
+  , "HoldoutPercent" :: Maybe (Int)
+  , "Hook" :: Maybe (CampaignHook)
+  , "IsPaused" :: Maybe (Boolean)
+  , "Limits" :: Maybe (CampaignLimits)
+  , "MessageConfiguration" :: Maybe (MessageConfiguration)
+  , "Name" :: Maybe (String)
+  , "Schedule" :: Maybe (Schedule)
+  , "SegmentId" :: Maybe (String)
+  , "SegmentVersion" :: Maybe (Int)
+  , "TreatmentDescription" :: Maybe (String)
+  , "TreatmentName" :: Maybe (String)
   }
 derive instance newtypeWriteCampaignRequest :: Newtype WriteCampaignRequest _
 derive instance repGenericWriteCampaignRequest :: Generic WriteCampaignRequest _
@@ -5210,19 +5209,19 @@ instance encodeWriteCampaignRequest :: Encode WriteCampaignRequest where encode 
 
 -- | Constructs WriteCampaignRequest from required parameters
 newWriteCampaignRequest :: WriteCampaignRequest
-newWriteCampaignRequest  = WriteCampaignRequest { "AdditionalTreatments": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newWriteCampaignRequest  = WriteCampaignRequest { "AdditionalTreatments": Nothing, "Description": Nothing, "HoldoutPercent": Nothing, "Hook": Nothing, "IsPaused": Nothing, "Limits": Nothing, "MessageConfiguration": Nothing, "Name": Nothing, "Schedule": Nothing, "SegmentId": Nothing, "SegmentVersion": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing }
 
 -- | Constructs WriteCampaignRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteCampaignRequest' :: ( { "AdditionalTreatments" :: NullOrUndefined (ListOfWriteTreatmentResource) , "Description" :: NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined (Int) , "Hook" :: NullOrUndefined (CampaignHook) , "IsPaused" :: NullOrUndefined (Boolean) , "Limits" :: NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined (String) , "Schedule" :: NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) } -> {"AdditionalTreatments" :: NullOrUndefined (ListOfWriteTreatmentResource) , "Description" :: NullOrUndefined (String) , "HoldoutPercent" :: NullOrUndefined (Int) , "Hook" :: NullOrUndefined (CampaignHook) , "IsPaused" :: NullOrUndefined (Boolean) , "Limits" :: NullOrUndefined (CampaignLimits) , "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Name" :: NullOrUndefined (String) , "Schedule" :: NullOrUndefined (Schedule) , "SegmentId" :: NullOrUndefined (String) , "SegmentVersion" :: NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) } ) -> WriteCampaignRequest
-newWriteCampaignRequest'  customize = (WriteCampaignRequest <<< customize) { "AdditionalTreatments": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "HoldoutPercent": (NullOrUndefined Nothing), "Hook": (NullOrUndefined Nothing), "IsPaused": (NullOrUndefined Nothing), "Limits": (NullOrUndefined Nothing), "MessageConfiguration": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SegmentId": (NullOrUndefined Nothing), "SegmentVersion": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newWriteCampaignRequest' :: ( { "AdditionalTreatments" :: Maybe (ListOfWriteTreatmentResource) , "Description" :: Maybe (String) , "HoldoutPercent" :: Maybe (Int) , "Hook" :: Maybe (CampaignHook) , "IsPaused" :: Maybe (Boolean) , "Limits" :: Maybe (CampaignLimits) , "MessageConfiguration" :: Maybe (MessageConfiguration) , "Name" :: Maybe (String) , "Schedule" :: Maybe (Schedule) , "SegmentId" :: Maybe (String) , "SegmentVersion" :: Maybe (Int) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) } -> {"AdditionalTreatments" :: Maybe (ListOfWriteTreatmentResource) , "Description" :: Maybe (String) , "HoldoutPercent" :: Maybe (Int) , "Hook" :: Maybe (CampaignHook) , "IsPaused" :: Maybe (Boolean) , "Limits" :: Maybe (CampaignLimits) , "MessageConfiguration" :: Maybe (MessageConfiguration) , "Name" :: Maybe (String) , "Schedule" :: Maybe (Schedule) , "SegmentId" :: Maybe (String) , "SegmentVersion" :: Maybe (Int) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) } ) -> WriteCampaignRequest
+newWriteCampaignRequest'  customize = (WriteCampaignRequest <<< customize) { "AdditionalTreatments": Nothing, "Description": Nothing, "HoldoutPercent": Nothing, "Hook": Nothing, "IsPaused": Nothing, "Limits": Nothing, "MessageConfiguration": Nothing, "Name": Nothing, "Schedule": Nothing, "SegmentId": Nothing, "SegmentVersion": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing }
 
 
 
 -- | Request to save an EventStream.
 newtype WriteEventStream = WriteEventStream 
-  { "DestinationStreamArn" :: NullOrUndefined (String)
-  , "RoleArn" :: NullOrUndefined (String)
+  { "DestinationStreamArn" :: Maybe (String)
+  , "RoleArn" :: Maybe (String)
   }
 derive instance newtypeWriteEventStream :: Newtype WriteEventStream _
 derive instance repGenericWriteEventStream :: Generic WriteEventStream _
@@ -5232,19 +5231,19 @@ instance encodeWriteEventStream :: Encode WriteEventStream where encode = generi
 
 -- | Constructs WriteEventStream from required parameters
 newWriteEventStream :: WriteEventStream
-newWriteEventStream  = WriteEventStream { "DestinationStreamArn": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newWriteEventStream  = WriteEventStream { "DestinationStreamArn": Nothing, "RoleArn": Nothing }
 
 -- | Constructs WriteEventStream's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteEventStream' :: ( { "DestinationStreamArn" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } -> {"DestinationStreamArn" :: NullOrUndefined (String) , "RoleArn" :: NullOrUndefined (String) } ) -> WriteEventStream
-newWriteEventStream'  customize = (WriteEventStream <<< customize) { "DestinationStreamArn": (NullOrUndefined Nothing), "RoleArn": (NullOrUndefined Nothing) }
+newWriteEventStream' :: ( { "DestinationStreamArn" :: Maybe (String) , "RoleArn" :: Maybe (String) } -> {"DestinationStreamArn" :: Maybe (String) , "RoleArn" :: Maybe (String) } ) -> WriteEventStream
+newWriteEventStream'  customize = (WriteEventStream <<< customize) { "DestinationStreamArn": Nothing, "RoleArn": Nothing }
 
 
 
 -- | Segment definition.
 newtype WriteSegmentRequest = WriteSegmentRequest 
-  { "Dimensions" :: NullOrUndefined (SegmentDimensions)
-  , "Name" :: NullOrUndefined (String)
+  { "Dimensions" :: Maybe (SegmentDimensions)
+  , "Name" :: Maybe (String)
   }
 derive instance newtypeWriteSegmentRequest :: Newtype WriteSegmentRequest _
 derive instance repGenericWriteSegmentRequest :: Generic WriteSegmentRequest _
@@ -5254,22 +5253,22 @@ instance encodeWriteSegmentRequest :: Encode WriteSegmentRequest where encode = 
 
 -- | Constructs WriteSegmentRequest from required parameters
 newWriteSegmentRequest :: WriteSegmentRequest
-newWriteSegmentRequest  = WriteSegmentRequest { "Dimensions": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newWriteSegmentRequest  = WriteSegmentRequest { "Dimensions": Nothing, "Name": Nothing }
 
 -- | Constructs WriteSegmentRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteSegmentRequest' :: ( { "Dimensions" :: NullOrUndefined (SegmentDimensions) , "Name" :: NullOrUndefined (String) } -> {"Dimensions" :: NullOrUndefined (SegmentDimensions) , "Name" :: NullOrUndefined (String) } ) -> WriteSegmentRequest
-newWriteSegmentRequest'  customize = (WriteSegmentRequest <<< customize) { "Dimensions": (NullOrUndefined Nothing), "Name": (NullOrUndefined Nothing) }
+newWriteSegmentRequest' :: ( { "Dimensions" :: Maybe (SegmentDimensions) , "Name" :: Maybe (String) } -> {"Dimensions" :: Maybe (SegmentDimensions) , "Name" :: Maybe (String) } ) -> WriteSegmentRequest
+newWriteSegmentRequest'  customize = (WriteSegmentRequest <<< customize) { "Dimensions": Nothing, "Name": Nothing }
 
 
 
 -- | Used to create a campaign treatment.
 newtype WriteTreatmentResource = WriteTreatmentResource 
-  { "MessageConfiguration" :: NullOrUndefined (MessageConfiguration)
-  , "Schedule" :: NullOrUndefined (Schedule)
-  , "SizePercent" :: NullOrUndefined (Int)
-  , "TreatmentDescription" :: NullOrUndefined (String)
-  , "TreatmentName" :: NullOrUndefined (String)
+  { "MessageConfiguration" :: Maybe (MessageConfiguration)
+  , "Schedule" :: Maybe (Schedule)
+  , "SizePercent" :: Maybe (Int)
+  , "TreatmentDescription" :: Maybe (String)
+  , "TreatmentName" :: Maybe (String)
   }
 derive instance newtypeWriteTreatmentResource :: Newtype WriteTreatmentResource _
 derive instance repGenericWriteTreatmentResource :: Generic WriteTreatmentResource _
@@ -5279,10 +5278,10 @@ instance encodeWriteTreatmentResource :: Encode WriteTreatmentResource where enc
 
 -- | Constructs WriteTreatmentResource from required parameters
 newWriteTreatmentResource :: WriteTreatmentResource
-newWriteTreatmentResource  = WriteTreatmentResource { "MessageConfiguration": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SizePercent": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newWriteTreatmentResource  = WriteTreatmentResource { "MessageConfiguration": Nothing, "Schedule": Nothing, "SizePercent": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing }
 
 -- | Constructs WriteTreatmentResource's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newWriteTreatmentResource' :: ( { "MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Schedule" :: NullOrUndefined (Schedule) , "SizePercent" :: NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) } -> {"MessageConfiguration" :: NullOrUndefined (MessageConfiguration) , "Schedule" :: NullOrUndefined (Schedule) , "SizePercent" :: NullOrUndefined (Int) , "TreatmentDescription" :: NullOrUndefined (String) , "TreatmentName" :: NullOrUndefined (String) } ) -> WriteTreatmentResource
-newWriteTreatmentResource'  customize = (WriteTreatmentResource <<< customize) { "MessageConfiguration": (NullOrUndefined Nothing), "Schedule": (NullOrUndefined Nothing), "SizePercent": (NullOrUndefined Nothing), "TreatmentDescription": (NullOrUndefined Nothing), "TreatmentName": (NullOrUndefined Nothing) }
+newWriteTreatmentResource' :: ( { "MessageConfiguration" :: Maybe (MessageConfiguration) , "Schedule" :: Maybe (Schedule) , "SizePercent" :: Maybe (Int) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) } -> {"MessageConfiguration" :: Maybe (MessageConfiguration) , "Schedule" :: Maybe (Schedule) , "SizePercent" :: Maybe (Int) , "TreatmentDescription" :: Maybe (String) , "TreatmentName" :: Maybe (String) } ) -> WriteTreatmentResource
+newWriteTreatmentResource'  customize = (WriteTreatmentResource <<< customize) { "MessageConfiguration": Nothing, "Schedule": Nothing, "SizePercent": Nothing, "TreatmentDescription": Nothing, "TreatmentName": Nothing }
 
